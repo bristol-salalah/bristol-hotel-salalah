@@ -105,5 +105,12 @@
     els.forEach(function (el) { io.observe(el); });
   } else { els.forEach(function (el) { el.classList.add("in"); }); }
 
+  // language menu closes on outside click or Escape
+  var langs = document.querySelector("details.langs");
+  if (langs) {
+    document.addEventListener("click", function (e) { if (!langs.contains(e.target)) langs.open = false; });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") langs.open = false; });
+  }
+
   var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
 })();
