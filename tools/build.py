@@ -73,7 +73,7 @@ def tel_nbsp(html):
         while re.search(r"(\d) (\d)", text):
             text = re.sub(r"(\d) (\d)", r"\1&nbsp;\2", text)
         return m.group(1) + text + m.group(3)
-    return re.sub(r'(<a href="tel:[^"]*">)(.*?)(</a>)', fix, html, flags=re.S)
+    return re.sub(r'(<a [^>]*href="tel:[^"]*"[^>]*>)(.*?)(</a>)', fix, html, flags=re.S)
 
 
 def shared(html, code):
