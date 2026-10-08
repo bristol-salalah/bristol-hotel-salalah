@@ -17,7 +17,7 @@ assets/css/style.css  All styles (colours and fonts are set at the top in :root)
 assets/css/fonts.css  Self-hosted fonts (no Google requests), incl. Latin-extended and Cyrillic subsets
 assets/js/main.js     WhatsApp booking form, photo lightbox, gallery filter, language menu, mobile menu, animations
 assets/img/           favicon.svg, apple-touch-icon.png (the hotel's own B logo), og-image.jpg, map.svg, pattern.svg
-assets/img/photos/    47 hotel photos, recompressed (originals from the hotel's listing photos); each room card opens a 4-photo set
+assets/img/photos/    46 hotel photos, recompressed (originals from the hotel's listing photos); each room card opens a 4-photo set
 robots.txt, sitemap.xml, .nojekyll
 ```
 
@@ -38,6 +38,7 @@ The translations were machine-made, including the guest quotes. Ask a native spe
 ```
 python3 tools/check_html.py   # balanced tags, duplicate ids, heading order, anchors, alt text, JSON-LD, file references
 python3 tools/check_i18n.py   # every language complete, no broken placeholders
+npx html-validate@8 index.html ar/index.html de/index.html   # optional HTML5 lint (needs Node)
 ```
 
 ## Preview locally

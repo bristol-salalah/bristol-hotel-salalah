@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
@@ -57,11 +57,11 @@
     {"@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true},
     {"@type": "LocationFeatureSpecification", "name": "Free parking", "value": true},
     {"@type": "LocationFeatureSpecification", "name": "Heated indoor pool", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Spa and sauna", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Spa, sauna & steam room", "value": true},
     {"@type": "LocationFeatureSpecification", "name": "Fitness centre", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Restaurant", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "24-hour front desk", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Airport shuttle", "value": true}
+    {"@type": "LocationFeatureSpecification", "name": "Silk Road Restaurant", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "24-hour desk", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Airport transfer", "value": true}
   ]
 }
 </script>
@@ -69,7 +69,7 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<svg width="0" height="0" class="icons" aria-hidden="true">
   <symbol id="i-mark" viewBox="0 0 48 56"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M24 2.5 L45 14.5 L45 41.5 L24 53.5 L3 41.5 L3 14.5 Z"/><path fill="none" stroke="currentColor" stroke-width="1" opacity=".55" d="M24 2.5 L24 53.5 M3 14.5 L45 41.5 M45 14.5 L3 41.5"/><circle cx="24" cy="28" r="13" fill="currentColor"/><text x="24" y="34.5" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#F8F4EC">B</text></symbol>
   <symbol id="i-camera" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
@@ -103,7 +103,7 @@
 <div class="topbar">
   <div class="container">
     <span>Book direct on WhatsApp <span class="dot">·</span><span class="hide-sm">Free Wi-Fi &amp; parking · Heated indoor pool</span></span>
-    <a href="https://wa.me/96897260111" data-wa>+968 9726 0111</a>
+    <a class="nowrap" href="https://wa.me/96897260111" data-wa>+968 9726 0111</a>
   </div>
 </div>
 
@@ -222,7 +222,7 @@
       <li class="reveal"><strong>2019</strong><span>opened on As Saadah Street</span></li>
       <li class="reveal"><strong>7.9</strong><span>Booking.com score, 172 reviews</span></li>
       <li class="reveal"><strong>4.0<small>/5</small></strong><span>Google rating, 364 reviews</span></li>
-      <li class="reveal"><strong>15<small> min</small></strong><span>from Salalah Airport</span></li>
+      <li class="reveal"><strong>15 <small>min</small></strong><span>from Salalah Airport</span></li>
     </ul>
   </div>
 </section>
@@ -322,7 +322,7 @@
   <div class="container">
     <div class="section-head reveal">
       <div><span class="eyebrow">Photos</span><h2>Take a look inside.</h2></div>
-      <div class="tabs" aria-label="Filter photos">
+      <div class="tabs" role="group" aria-label="Filter photos">
         <button class="tab is-active" type="button" data-filter="all" aria-pressed="true">All</button>
         <button class="tab" type="button" data-filter="rooms" aria-pressed="false">Rooms</button>
         <button class="tab" type="button" data-filter="spa" aria-pressed="false">Pool &amp; spa</button>
@@ -446,7 +446,7 @@
         <div><small>Breakfast</small><strong>7:00 – 10:30 · $5 per person</strong></div>
         <div><small>Lunch &amp; dinner</small><strong>À la carte, plus room service</strong></div>
       </div>
-      <p class="fine" style="margin-top:18px">Breakfast is continental and halal. Add it when you book, or decide in the morning.</p>
+      <p class="fine u-mt-18">Breakfast is continental and halal. Add it when you book, or decide in the morning.</p>
     </div>
   </div>
 </section>
@@ -463,10 +463,10 @@
     <div class="season-strip reveal" role="img" aria-label="Season chart: beach season October to March, hot and dry April to June, Khareef July to September">
       <div class="months" aria-hidden="true"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
       <div class="bands" aria-hidden="true">
-        <span class="band band-sun" style="--from:1;--to:3">Beach</span>
-        <span class="band band-hot" style="--from:4;--to:6">Hot &amp; dry</span>
-        <span class="band band-khareef" style="--from:7;--to:9">Khareef</span>
-        <span class="band band-sun" style="--from:10;--to:12">Beach</span>
+        <span class="band band-sun m1-3">Beach</span>
+        <span class="band band-hot m4-6">Hot &amp; dry</span>
+        <span class="band band-khareef m7-9">Khareef</span>
+        <span class="band band-sun m10-12">Beach</span>
       </div>
     </div>
     <div class="season-cards">
@@ -501,9 +501,9 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Parking</b> is free on site for the whole stay.</span></li>
         </ul>
       </div>
-      <p style="margin-top:24px"><a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Bristol+Hotel+Salalah+As+Saadah+Street+Salalah" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Open in Google Maps</a></p>
+      <p class="u-mt-24"><a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Bristol+Hotel+Salalah+As+Saadah+Street+Salalah" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Open in Google Maps</a></p>
     </div>
-    <figure class="map-card reveal" style="margin:0">
+    <figure class="map-card reveal">
       <img src="assets/img/map.svg" alt="Illustrated map: Bristol Hotel in the Saadah district, the airport to the west, Al Baleed and Al Haffa to the south-west, Dahariz Beach to the south-east and the Dhofar mountains to the north" width="720" height="560" loading="lazy">
       <figcaption>Illustration, not to scale</figcaption>
     </figure>
@@ -518,12 +518,12 @@
       <div class="score-label">Good · 172 verified Booking.com reviews</div>
       <div class="score-sub">Couples rate the location 9.1 for a two-person trip.</div>
       <div class="bars">
-        <div class="bar"><span>Staff</span><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div><b>9.0</b></div>
-        <div class="bar"><span>Location</span><div class="bar-track"><div class="bar-fill" style="width:89%"></div></div><b>8.9</b></div>
-        <div class="bar"><span>Free Wi-Fi</span><div class="bar-track"><div class="bar-fill" style="width:84%"></div></div><b>8.4</b></div>
-        <div class="bar"><span>Comfort</span><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div><b>8.2</b></div>
-        <div class="bar"><span>Value</span><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div><b>8.2</b></div>
-        <div class="bar"><span>Cleanliness</span><div class="bar-track"><div class="bar-fill" style="width:81%"></div></div><b>8.1</b></div>
+        <div class="bar"><span>Staff</span><div class="bar-track"><div class="bar-fill w90"></div></div><b>9.0</b></div>
+        <div class="bar"><span>Location</span><div class="bar-track"><div class="bar-fill w89"></div></div><b>8.9</b></div>
+        <div class="bar"><span>Free Wi-Fi</span><div class="bar-track"><div class="bar-fill w84"></div></div><b>8.4</b></div>
+        <div class="bar"><span>Comfort</span><div class="bar-track"><div class="bar-fill w82"></div></div><b>8.2</b></div>
+        <div class="bar"><span>Value</span><div class="bar-track"><div class="bar-fill w82"></div></div><b>8.2</b></div>
+        <div class="bar"><span>Cleanliness</span><div class="bar-track"><div class="bar-fill w81"></div></div><b>8.1</b></div>
       </div>
       <div class="google"><strong>4.0</strong><div><span class="stars" aria-hidden="true">★★★★☆</span><br>364 reviews on Google</div></div>
     </div>
@@ -569,7 +569,7 @@
         <div class="panel-body">
           <h3>Khareef families</h3>
           <p>Kitchenette suites, weekly rates and a heated indoor pool make the monsoon weeks easy with children.</p>
-          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20Khareef%20rates%20for%20a%20family." target="_blank" rel="noopener">Ask for Khareef rates</a></p>
+          <p class="u-mt-auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20Khareef%20rates%20for%20a%20family." target="_blank" rel="noopener">Ask for Khareef rates</a></p>
         </div>
       </article>
       <article class="panel reveal">
@@ -577,7 +577,7 @@
         <div class="panel-body">
           <h3>Honeymoon &amp; celebrations</h3>
           <p>Tell us you’re celebrating and we’ll have the room ready before you arrive. Ask about the honeymoon offer.</p>
-          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20the%20honeymoon%20offer." target="_blank" rel="noopener">Ask about the honeymoon offer</a></p>
+          <p class="u-mt-auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20the%20honeymoon%20offer." target="_blank" rel="noopener">Ask about the honeymoon offer</a></p>
         </div>
       </article>
       <article class="panel reveal">
@@ -585,7 +585,7 @@
         <div class="panel-body">
           <h3>Ramadan &amp; Eid</h3>
           <p>Ramadan room rates and iftar menus at the Silk Road Restaurant are posted on Instagram every year.</p>
-          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/bristol_hotel_salalah/" target="_blank" rel="noopener">Follow us on Instagram</a></p>
+          <p class="u-mt-auto"><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/bristol_hotel_salalah/" target="_blank" rel="noopener">Follow us on Instagram</a></p>
         </div>
       </article>
     </div>
@@ -599,14 +599,14 @@
       <span class="eyebrow">Events &amp; meetings</span>
       <h2>Laylati Hall, for the days that matter.</h2>
       <p class="lead">Weddings, engagement nights, family gatherings and company meetings, with catering from the Silk Road Restaurant and rooms upstairs for guests who travel in.</p>
-      <ul class="ticks" style="margin-top:22px">
+      <ul class="ticks u-mt-22">
         <li><svg aria-hidden="true"><use href="#i-hall"/></svg>Function hall for celebrations and ladies’ events</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Two meeting rooms for business groups</li>
         <li><svg aria-hidden="true"><use href="#i-cup"/></svg>Buffet and set menus from our own kitchen</li>
         <li><svg aria-hidden="true"><use href="#i-bell"/></svg>Group room rates for your guests</li>
       </ul>
-      <blockquote class="quote" style="margin-top:28px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)"><p style="color:#fff;font-size:22px">Service for events was very commendable… price is reasonable… staff are good and honest.</p><cite style="color:#B9C5C0">Ophel V · Google review, October 2025</cite></blockquote>
-      <p style="margin-top:26px"><a class="btn btn-gold" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20booking%20the%20hall%20for%20an%20event." data-wa-fixed><svg aria-hidden="true"><use href="#i-wa"/></svg>Ask about an event</a></p>
+      <blockquote class="quote"><p>Service for events was very commendable… price is reasonable… staff are good and honest.</p><cite>Ophel V · Google review, October 2025</cite></blockquote>
+      <p class="u-mt-26"><a class="btn btn-gold" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20booking%20the%20hall%20for%20an%20event." data-wa-fixed><svg aria-hidden="true"><use href="#i-wa"/></svg>Ask about an event</a></p>
     </div>
   </div>
 </section>
@@ -649,7 +649,7 @@
     <svg aria-hidden="true"><use href="#i-mark"/></svg>
     <h2>Your room in Salalah is one message away.</h2>
     <p>Tell us your dates and we’ll reply with your price and confirm your room. No booking fees, no payment until you arrive.</p>
-    <a class="btn btn-gold" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp +968 9726 0111</a>
+    <a class="btn btn-gold" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp <span class="nowrap">+968 9726 0111</span></a>
   </div>
 </section>
 </main>
@@ -659,8 +659,8 @@
     <div class="footer-grid">
       <div>
         <a class="brand" href="#top"><svg aria-hidden="true"><use href="#i-mark"/></svg><span class="brand-text"><span class="brand-name">Bristol</span><span class="brand-sub">Hotel · Salalah</span></span></a>
-        <p style="margin-top:18px;max-width:320px">A 3-star hotel with rooms and kitchenette suites in the Saadah district of Salalah, Dhofar, Oman.</p>
-        <p style="margin:0;max-width:320px;font-size:13px">Ministry of Heritage &amp; Tourism licence MHT L1169594</p>
+        <p class="footer-blurb">A 3-star hotel with rooms and kitchenette suites in the Saadah district of Salalah, Dhofar, Oman.</p>
+        <p class="footer-licence">Ministry of Heritage &amp; Tourism licence MHT L1169594</p>
       </div>
       <div>
         <h3 class="footer-h">Visit</h3>
@@ -674,8 +674,8 @@
       <div>
         <h3 class="footer-h">Book</h3>
         <ul>
-          <li><a href="https://wa.me/96897260111" data-wa>WhatsApp +968 9726 0111</a></li>
-          <li><a href="tel:+96823321666">Call +968 23 321666</a></li>
+          <li><a href="https://wa.me/96897260111" data-wa>WhatsApp <span class="nowrap">+968 9726 0111</span></a></li>
+          <li><a href="tel:+96823321666">Call <span class="nowrap">+968 23 321666</span></a></li>
           <li><a href="https://www.instagram.com/bristol_hotel_salalah/" target="_blank" rel="noopener">Instagram @bristol_hotel_salalah</a></li>
         </ul>
       </div>
@@ -705,7 +705,7 @@
 <div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
   <button class="lb-close" type="button" aria-label="Close"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
   <button class="lb-prev" type="button" aria-label="Previous photo"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
-  <figure class="lb-fig"><img class="lb-img" alt=""><figcaption><span class="lb-count"></span><span class="lb-cap"></span></figcaption></figure>
+  <figure class="lb-fig"><img class="lb-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""><figcaption><span class="lb-count"></span><span class="lb-cap"></span></figcaption></figure>
   <button class="lb-next" type="button" aria-label="Next photo"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
 </div>
 

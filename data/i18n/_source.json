@@ -215,7 +215,7 @@
  "Cafés, bakeries, shops, Al Saadah Health Centre opposite": [
   "index.html"
  ],
- "Call +{0} {1} {2}": [
+ "Call <0>+{0} {1} {2}</0>": [
   "index.html"
  ],
  "Can I cancel?": [
@@ -980,7 +980,7 @@
  "What guests say": [
   "index.html"
  ],
- "WhatsApp +{0} {1} {2}": [
+ "WhatsApp <0>+{0} {1} {2}</0>": [
   "index.html"
  ],
  "Wheelchair accessible · accessible bathrooms": [

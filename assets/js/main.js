@@ -137,13 +137,15 @@
       idx = (i + items.length) % items.length;
       lbImg.src = items[idx].src; lbImg.alt = items[idx].alt;
       lbCap.textContent = items[idx].alt; lbCount.textContent = (idx + 1) + " / " + items.length;
+      if (items.length > 1) { new Image().src = items[(idx + 1) % items.length].src; new Image().src = items[(idx - 1 + items.length) % items.length].src; }
     }
     function openLb(list, i, trigger) {
       if (!list.length) return;
       items = list; lastFocus = trigger; lb.hidden = false; document.body.classList.add("lb-open");
-      show(i); lb.querySelector(".lb-close").focus();
+      setInert(true); show(i); lb.querySelector(".lb-close").focus();
     }
-    function closeLb() { lb.hidden = true; document.body.classList.remove("lb-open"); if (lastFocus) lastFocus.focus(); }
+    function closeLb() { lb.hidden = true; document.body.classList.remove("lb-open"); setInert(false); if (lastFocus) lastFocus.focus(); }
+    function setInert(on) { document.querySelectorAll("body > :not(#lightbox):not(script)").forEach(function (el) { if (on) el.setAttribute("inert", ""); else el.removeAttribute("inert"); }); }
     function item(img) { return { src: img.currentSrc || img.src, alt: img.alt }; }
     if (gal) gal.querySelectorAll("figure").forEach(function (fig) {
       var b = fig.querySelector(".g-open"); if (!b) return;
