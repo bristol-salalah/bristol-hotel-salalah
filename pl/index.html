@@ -34,6 +34,9 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-mark" viewBox="0 0 48 56"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M24 2.5 L45 14.5 L45 41.5 L24 53.5 L3 41.5 L3 14.5 Z"/><path fill="none" stroke="currentColor" stroke-width="1" opacity=".55" d="M24 2.5 L24 53.5 M3 14.5 L45 41.5 M45 14.5 L3 41.5"/><circle cx="24" cy="28" r="13" fill="currentColor"/><text x="24" y="34.5" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#F8F4EC">B</text></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></symbol>
   <symbol id="i-cup" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9zm12 1h1.5a2.5 2.5 0 0 1 0 5H16M8 3c0 1.2 1 1.2 1 2.4M12 3c0 1.2 1 1.2 1 2.4M3 22h16"/></symbol>
   <symbol id="i-wifi" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M2 8.8a15 15 0 0 1 20 0M5 12.3a10 10 0 0 1 14 0M8.5 15.8a5 5 0 0 1 7 0"/><circle cx="12" cy="19.3" r="1.2" fill="currentColor"/></symbol>
@@ -171,6 +174,18 @@
   </div>
 </section>
 
+<section class="glance" aria-label="Bristol Hotel w skrócie">
+  <div class="container">
+    <ul class="glance-grid">
+      <li class="reveal"><strong>42</strong><span>pokoje i apartamenty</span></li>
+      <li class="reveal"><strong>2019</strong><span>otwarty przy As Saadah Street</span></li>
+      <li class="reveal"><strong>7.9</strong><span>Ocena Booking.com, 172 opinii</span></li>
+      <li class="reveal"><strong>4.0<small>/5</small></strong><span>Ocena Google, 364 opinii</span></li>
+      <li class="reveal"><strong>15<small>min</small></strong><span>od lotniska Salalah</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="section rooms" id="rooms">
   <div class="container">
     <div class="section-head reveal">
@@ -183,7 +198,12 @@
     </div>
     <div class="room-grid">
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">Najlepsza cena</span><img src="../assets/img/photos/room-deluxe.jpg" alt="Pokój Deluxe z łóżkiem king, białą pościelą i brązowym bieżnikiem" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">Najlepsza cena</span><button class="room-photos" type="button" aria-label="Zobacz 4 zdjęcia pokoju Deluxe"><img src="../assets/img/photos/room-deluxe.jpg" alt="Pokój Deluxe z łóżkiem king, białą pościelą i brązowym bieżnikiem" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 zdjęcia</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/room-king-window.jpg" title="Sypialnia z łóżkiem king, łabędziami z ręczników na łóżku i oknem na miasto">2</a></li>
+            <li><a href="../assets/img/photos/room-deluxe-2.jpg" title="Pokój Deluxe z łóżkiem king i biurkiem">3</a></li>
+            <li><a href="../assets/img/photos/bathroom.jpg" title="Łazienka z beżowymi płytkami i szklaną kabiną prysznicową">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>Pokój Deluxe</h3>
           <p>Przestronne 40 m² z łóżkiem king-size, widokiem na miasto i porządną łazienką. Wszystko, czego potrzeba na noc lub dwie.</p>
@@ -195,7 +215,12 @@
         </div>
       </article>
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">Aneks kuchenny</span><img src="../assets/img/photos/suite-junior.jpg" alt="Salon apartamentu Junior z morską sofą i stolikiem kawowym" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">Aneks kuchenny</span><button class="room-photos" type="button" aria-label="Zobacz 4 zdjęcia apartamentu Junior"><img src="../assets/img/photos/suite-junior.jpg" alt="Salon apartamentu Junior z morską sofą i stolikiem kawowym" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 zdjęcia</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/suite-living.jpg" title="Salon apartamentu z morską sofą, stolikiem kawowym i drzwiami do sypialni">2</a></li>
+            <li><a href="../assets/img/photos/kitchen.jpg" title="Aneks kuchenny apartamentu z białymi szafkami, zlewem i stołem jadalnym">3</a></li>
+            <li><a href="../assets/img/photos/suite-desk.jpg" title="Salon apartamentu z biurkiem, telewizorem na ścianie i sofą">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>Apartament Junior</h3>
           <p>Sypialnia z łóżkiem king oraz osobny salon z rozkładaną sofą i aneksem kuchennym. Gotuj, pracuj, rozgość się.</p>
@@ -207,7 +232,12 @@
         </div>
       </article>
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">Balkon i widoki</span><img src="../assets/img/photos/suite-superior.jpg" alt="Część wypoczynkowa apartamentu Superior z fotelem przy wysokim oknie" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">Balkon i widoki</span><button class="room-photos" type="button" aria-label="Zobacz 4 zdjęcia apartamentu Superior"><img src="../assets/img/photos/suite-superior.jpg" alt="Część wypoczynkowa apartamentu Superior z fotelem przy wysokim oknie" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 zdjęcia</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/room-lamp.jpg" title="Sypialnia z lampką nocną i ciemnymi zasłonami">2</a></li>
+            <li><a href="../assets/img/photos/room-sitting.jpg" title="Sypialnia z łóżkiem king i małym kącikiem wypoczynkowym">3</a></li>
+            <li><a href="../assets/img/photos/suite-tv-2.jpg" title="Salon apartamentu z sofą, telewizorem i stolikiem">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>Apartament Superior</h3>
           <p>Układ apartamentu Junior na wysokim piętrze, z balkonem i tarasem z widokiem ponad miastem na góry Dhofar.</p>
@@ -219,7 +249,12 @@
         </div>
       </article>
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">Dla rodzin</span><img src="../assets/img/photos/suite-executive.jpg" alt="Salon apartamentu Executive z długą sofą, stołem jadalnym i telewizorem na ścianie" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">Dla rodzin</span><button class="room-photos" type="button" aria-label="Zobacz 4 zdjęcia apartamentu Executive"><img src="../assets/img/photos/suite-executive.jpg" alt="Salon apartamentu Executive z długą sofą, stołem jadalnym i telewizorem na ścianie" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 zdjęcia</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/room-twin.jpg" title="Sypialnia z dwoma pojedynczymi łóżkami w apartamencie Executive">2</a></li>
+            <li><a href="../assets/img/photos/suite-tv.jpg" title="Salon apartamentu z sofą i telewizorem na ścianie">3</a></li>
+            <li><a href="../assets/img/photos/room-twin-window.jpg" title="Pokój z dwoma pojedynczymi łóżkami i oknem na ulicę">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>Apartament Executive</h3>
           <p>Dwie sypialnie, jedna z łóżkiem king i jedna z dwoma pojedynczymi, salon z rozkładaną sofą, aneks kuchenny i balkon. Nasz największy apartament.</p>
@@ -242,18 +277,46 @@
   </div>
 </section>
 
-<section class="gallery" aria-label="Zajrzyj do środka">
+<section class="gallery" id="gallery" aria-label="Zajrzyj do środka">
   <div class="container">
-    <div class="gallery-grid">
-      <figure class="g-wide reveal"><img src="../assets/img/photos/pool.jpg" alt="Podgrzewany basen kryty z białymi płytkami i drewnianymi leżakami" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/lounge-gold.jpg" alt="Lobby ze złotą sofą na tle marmurowej ściany" width="1023" height="700" loading="lazy"></figure>
-      <figure class="g-tall reveal"><img src="../assets/img/photos/gym-2.jpg" alt="Siłownia z bieżniami i maszynami siłowymi" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/terrace.jpg" alt="Taras zewnętrzny ze stolikami i krzesłami przy wejściu do hotelu" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/room-king-window.jpg" alt="Sypialnia z łóżkiem king, łabędziami z ręczników na łóżku i oknem na miasto" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/kitchen.jpg" alt="Aneks kuchenny apartamentu z białymi szafkami, zlewem i stołem jadalnym" width="1023" height="700" loading="lazy"></figure>
-      <figure class="g-wide reveal"><img src="../assets/img/photos/restaurant.jpg" alt="Sala restauracji Silk Road z kremowymi krzesłami i marmurową podłogą" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/sauna.jpg" alt="Sauna wyłożona drewnem z wiadrem i chochlą" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/bathroom.jpg" alt="Łazienka z beżowymi płytkami i szklaną kabiną prysznicową" width="1023" height="700" loading="lazy"></figure>
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Zdjęcia</span><h2>Zajrzyj do środka.</h2></div>
+      <div class="tabs" aria-label="Filtruj zdjęcia">
+        <button class="tab is-active" type="button" data-filter="all" aria-pressed="true">Wszystkie</button>
+        <button class="tab" type="button" data-filter="rooms" aria-pressed="false">Pokoje</button>
+        <button class="tab" type="button" data-filter="spa" aria-pressed="false">Basen i spa</button>
+        <button class="tab" type="button" data-filter="dining" aria-pressed="false">Restauracja</button>
+        <button class="tab" type="button" data-filter="hotel" aria-pressed="false">Hotel</button>
+      </div>
+    </div>
+    <div class="gallery-grid" data-lightbox="gallery">
+      <figure class="g-wide reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool.jpg" alt="Podgrzewany basen kryty z białymi płytkami i drewnianymi leżakami" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/lounge-gold.jpg" alt="Lobby ze złotą sofą na tle marmurowej ściany" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="g-tall reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/gym-2.jpg" alt="Siłownia z bieżniami i maszynami siłowymi" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/terrace.jpg" alt="Taras zewnętrzny ze stolikami i krzesłami przy wejściu do hotelu" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/room-king-window.jpg" alt="Sypialnia z łóżkiem king, łabędziami z ręczników na łóżku i oknem na miasto" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/kitchen.jpg" alt="Aneks kuchenny apartamentu z białymi szafkami, zlewem i stołem jadalnym" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="g-wide reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/restaurant.jpg" alt="Sala restauracji Silk Road z kremowymi krzesłami i marmurową podłogą" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/sauna.jpg" alt="Sauna wyłożona drewnem z wiadrem i chochlą" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/bathroom.jpg" alt="Łazienka z beżowymi płytkami i szklaną kabiną prysznicową" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/dining-window.jpg" alt="Stoliki restauracyjne nakryte do kolacji przy oknie" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool-loungers.jpg" alt="Basen kryty z leżakami wzdłuż ściany" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/room-sitting.jpg" alt="Sypialnia z łóżkiem king i małym kącikiem wypoczynkowym" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/coffee.jpg" alt="Arabska kawa i róża na tacy" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/terrace-umbrella.jpg" alt="Stoliki na tarasie pod parasolem przy szklanej fasadzie" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/lobby-seating.jpg" alt="Lobby z fotelami i lustrem" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/suite-desk.jpg" alt="Salon apartamentu z biurkiem, telewizorem na ścianie i sofą" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/buffet.jpg" alt="Bufet śniadaniowy z podgrzewaczami" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool-columns.jpg" alt="Basen kryty widziany między marmurowymi kolumnami" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/exterior-low.jpg" alt="Niebieska szklana fasada od strony ulicy" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/room-twin-window.jpg" alt="Pokój z dwoma pojedynczymi łóżkami i oknem na ulicę" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/dining-table.jpg" alt="Nakryty stół z podkładkami i sztućcami" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/gym-wide.jpg" alt="Siłownia z maszynami siłowymi i drewnianym sufitem" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/reception-2.jpg" alt="Recepcja pod żyrandolem" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/sauna-2.jpg" alt="Ławka w saunie z drewnianym wiadrem" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/corridor.jpg" alt="Hotelowy korytarz z marmurową podłogą" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/restaurant-2.jpg" alt="Restauracja Silk Road z kremowymi krzesłami" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool-hall.jpg" alt="Hala basenowa z wysokim sufitem" width="1080" height="700" loading="lazy"></button></figure>
     </div>
   </div>
 </section>
@@ -347,6 +410,32 @@
   </div>
 </section>
 
+<section class="section seasons" id="seasons">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Kiedy przyjechać</span>
+        <h2>Salalah ma dwa lata.</h2>
+        <p class="lead">Od końca czerwca do początku września Khareef przynosi mgłę, mżawkę i zielone wzgórza. Przez resztę roku jest słońce i spokojne morze. Podgrzewanemu basenowi krytemu jest wszystko jedno.</p>
+      </div>
+    </div>
+    <div class="season-strip reveal" role="img" aria-label="Wykres sezonów: sezon plażowy od października do marca, gorąco i sucho od kwietnia do czerwca, Khareef od lipca do września">
+      <div class="months" aria-hidden="true"><span>Sty</span><span>Lut</span><span>Mar</span><span>Kwi</span><span>Maj</span><span>Cze</span><span>Lip</span><span>Sie</span><span>Wrz</span><span>Paź</span><span>Lis</span><span>Gru</span></div>
+      <div class="bands" aria-hidden="true">
+        <span class="band band-sun" style="--from:1;--to:3">Plaża</span>
+        <span class="band band-hot" style="--from:4;--to:6">Gorąco i sucho</span>
+        <span class="band band-khareef" style="--from:7;--to:9">Khareef</span>
+        <span class="band band-sun" style="--from:10;--to:12">Plaża</span>
+      </div>
+    </div>
+    <div class="season-cards">
+      <article class="season reveal"><h3><span class="dot dot-sun" aria-hidden="true"></span>Październik – marzec</h3><p>Sezon plażowy: słonecznie, 27–30 °C w dzień i łagodne wieczory. Najlepszy czas na Al Baleed, Mughsail i rejsy łodzią.</p></article>
+      <article class="season reveal"><h3><span class="dot dot-hot" aria-hidden="true"></span>Kwiecień – czerwiec</h3><p>Gorąco i wilgotno, 31–34 °C. Spokojne miesiące z niższymi cenami, a basen kryty i spa czekają.</p></article>
+      <article class="season reveal"><h3><span class="dot dot-khareef" aria-hidden="true"></span>Koniec czerwca – początek września: Khareef</h3><p>Mżawka, mgła i 24–27 °C, zielone wzgórza i wodospady oraz Salalah Tourism Festival w lipcu i sierpniu. Najbardziej oblegany sezon, więc rezerwuj wcześnie.</p></article>
+    </div>
+  </div>
+</section>
+
 <section class="section location" id="location">
   <div class="container">
     <div class="reveal">
@@ -363,6 +452,14 @@
         <li><span class="num">7</span><div><strong>Wadi Darbat</strong><span class="d">Wodospady i zielone wzgórza w czasie Khareefu</span></div><span class="t">45 km · 50 min</span></li>
       </ol>
       <figure class="find-us"><img src="../assets/img/photos/exterior-day.jpg" alt="Bristol Hotel Salalah za dnia: wysoki niebieski szklany budynek ze złotymi wykończeniami" width="1023" height="700" loading="lazy"><figcaption>Szukaj niebieskiej szklanej wieży ze złotymi wykończeniami przy As Saadah Street, naprzeciwko ośrodka zdrowia Al Saadah.</figcaption></figure>
+      <div class="getting reveal">
+        <h3>Jak dojechać</h3>
+        <ul class="ticks">
+          <li><svg aria-hidden="true"><use href="#i-plane"/></svg><span><b>Samolotem:</b> międzynarodowe lotnisko Salalah (SLL) ma bezpośrednie loty z Maskatu, Dubaju, Dohy, Rijadu, Dżuddy i Kuwejtu, a w sezonie z miast w Indiach. Piętnaście minut taksówką.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-car"/></svg><span><b>Samochodem z Maskatu:</b> około 1,000 km drogą nr 31, mniej więcej 10 godzin jazdy. Z Dubaju około 1,200 km.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Parking</b> na miejscu jest bezpłatny przez cały pobyt.</span></li>
+        </ul>
+      </div>
       <p style="margin-top:24px"><a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Bristol+Hotel+Salalah+As+Saadah+Street+Salalah" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Otwórz w Google Maps</a></p>
     </div>
     <figure class="map-card reveal" style="margin:0">
@@ -416,6 +513,44 @@
   </div>
 </section>
 
+<section class="section offers" id="offers">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Nasze oferty</span>
+        <h2>Oferta na każdą porę roku.</h2>
+        <p class="lead">Oferty publikujemy na Instagramie przez cały rok. O te trzy goście pytają najczęściej.</p>
+      </div>
+    </div>
+    <div class="unwind-grid">
+      <article class="panel reveal">
+        <div class="panel-media"><img src="../assets/img/photos/suite-tv.jpg" alt="Salon apartamentu z sofą i telewizorem na ścianie" width="1080" height="700" loading="lazy"></div>
+        <div class="panel-body">
+          <h3>Rodziny w Khareef</h3>
+          <p>Apartamenty z aneksem kuchennym, ceny tygodniowe i podgrzewany basen kryty ułatwiają monsunowe tygodnie z dziećmi.</p>
+          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20Khareef%20rates%20for%20a%20family." target="_blank" rel="noopener">Zapytaj o ceny na Khareef</a></p>
+        </div>
+      </article>
+      <article class="panel reveal">
+        <div class="panel-media"><img src="../assets/img/photos/room-king-window.jpg" alt="Sypialnia z łóżkiem king, łabędziami z ręczników na łóżku i oknem na miasto" width="1080" height="700" loading="lazy"></div>
+        <div class="panel-body">
+          <h3>Miesiąc miodowy i uroczystości</h3>
+          <p>Powiedz nam, że świętujesz, a pokój będzie gotowy przed Twoim przyjazdem. Zapytaj o ofertę dla nowożeńców.</p>
+          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20the%20honeymoon%20offer." target="_blank" rel="noopener">Zapytaj o ofertę dla nowożeńców</a></p>
+        </div>
+      </article>
+      <article class="panel reveal">
+        <div class="panel-media"><img src="../assets/img/photos/buffet.jpg" alt="Bufet śniadaniowy z podgrzewaczami" width="1080" height="700" loading="lazy"></div>
+        <div class="panel-body">
+          <h3>Ramadan i Id</h3>
+          <p>Ceny na Ramadan i menu iftar w restauracji Silk Road publikujemy co roku na Instagramie.</p>
+          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/bristol_hotel_salalah/" target="_blank" rel="noopener">Obserwuj nas na Instagramie</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="section events" id="events">
   <div class="container">
     <div class="events-media reveal"><img src="../assets/img/photos/hall.jpg" alt="Sala bankietowa z rzędami stołów i kremowymi krzesłami pod kasetonowym sufitem" width="1023" height="700" loading="lazy"></div>
@@ -462,6 +597,8 @@
       <details><summary>Czy odbierzecie mnie z lotniska?</summary><p>Tak. Organizujemy płatne transfery z międzynarodowego lotniska Salalah, około 15 minut drogi. Prześlij nam numer lotu na WhatsApp.</p></details>
       <details><summary>Późny przyjazd?</summary><p>Zameldowanie trwa do 11:00 pm, a recepcja jest czynna 24 godziny na dobę. Jeśli przyjedziesz później, napisz nam godzinę przyjazdu, a będziemy czekać.</p></details>
       <details><summary>Czy dzieci mogą korzystać z basenu?</summary><p>Tak. Basen kryty jest podgrzewany, a obok jest płytki brodzik dla dzieci. Dzieci muszą być pod opieką dorosłego.</p></details>
+      <details><summary>Czy ozdobicie pokój na miesiąc miodowy lub urodziny?</summary><p>Tak. Powiedz nam przy rezerwacji, a pokój będzie gotowy przed Twoim przyjazdem.</p></details>
+      <details><summary>Czy hotel nadaje się dla rodzin z małymi dziećmi?</summary><p>Tak. Apartamenty mają salon i aneks kuchenny, a obok basenu jest płytki brodzik dla dzieci. Nie mamy łóżeczek, więc zabierz łóżeczko turystyczne, jeśli go potrzebujesz.</p></details>
     </div>
   </div>
 </section>
@@ -522,6 +659,13 @@
 <div class="mobile-bar">
   <a class="btn btn-primary" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
   <a class="btn btn-gold" href="#book">Sprawdź terminy</a>
+</div>
+
+<div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Przeglądarka zdjęć">
+  <button class="lb-close" type="button" aria-label="Zamknij"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="lb-prev" type="button" aria-label="Poprzednie zdjęcie"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+  <figure class="lb-fig"><img class="lb-img" alt=""><figcaption><span class="lb-count"></span><span class="lb-cap"></span></figcaption></figure>
+  <button class="lb-next" type="button" aria-label="Następne zdjęcie"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
 </div>
 
 <script src="../assets/js/main.js" defer></script>

@@ -62,6 +62,9 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-mark" viewBox="0 0 48 56"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M24 2.5 L45 14.5 L45 41.5 L24 53.5 L3 41.5 L3 14.5 Z"/><path fill="none" stroke="currentColor" stroke-width="1" opacity=".55" d="M24 2.5 L24 53.5 M3 14.5 L45 41.5 M45 14.5 L3 41.5"/><circle cx="24" cy="28" r="13" fill="currentColor"/><text x="24" y="34.5" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#F8F4EC">B</text></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></symbol>
   <symbol id="i-cup" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9zm12 1h1.5a2.5 2.5 0 0 1 0 5H16M8 3c0 1.2 1 1.2 1 2.4M12 3c0 1.2 1 1.2 1 2.4M3 22h16"/></symbol>
   <symbol id="i-wifi" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M2 8.8a15 15 0 0 1 20 0M5 12.3a10 10 0 0 1 14 0M8.5 15.8a5 5 0 0 1 7 0"/><circle cx="12" cy="19.3" r="1.2" fill="currentColor"/></symbol>
@@ -200,6 +203,18 @@
   </div>
 </section>
 
+<section class="glance" aria-label="فندق بريستول في لمحة">
+  <div class="container">
+    <ul class="glance-grid">
+      <li class="reveal"><strong>42</strong><span>غرفة وجناحاً</span></li>
+      <li class="reveal"><strong>2019</strong><span>سنة الافتتاح على شارع السعادة</span></li>
+      <li class="reveal"><strong>7.9</strong><span>تقييم Booking.com، 172 تقييماً</span></li>
+      <li class="reveal"><strong>4.0<small>/5</small></strong><span>تقييم جوجل، 364 تقييماً</span></li>
+      <li class="reveal"><strong>15<small> دقيقة</small></strong><span>من مطار صلالة</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="section rooms" id="rooms">
   <div class="container">
     <div class="section-head reveal">
@@ -212,7 +227,12 @@
     </div>
     <div class="room-grid">
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">الأفضل قيمة</span><img src="../assets/img/photos/room-deluxe.jpg" alt="غرفة ديلوكس بسرير كينج وبياضات بيضاء وشرشف بني" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">الأفضل قيمة</span><button class="room-photos" type="button" aria-label="شاهد 4 صور لـغرفة ديلوكس"><img src="../assets/img/photos/room-deluxe.jpg" alt="غرفة ديلوكس بسرير كينج وبياضات بيضاء وشرشف بني" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 صور</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/room-king-window.jpg" title="غرفة نوم بسرير كينج وبجعات من المناشف ونافذة على المدينة">2</a></li>
+            <li><a href="../assets/img/photos/room-deluxe-2.jpg" title="غرفة ديلوكس بسرير كينج ومكتب">3</a></li>
+            <li><a href="../assets/img/photos/bathroom.jpg" title="حمام ببلاط بيج ودُش زجاجي">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>غرفة ديلوكس</h3>
           <p>مساحة رحبة 40 م² مع سرير كينج وإطلالة على المدينة وحمام كامل. كل ما تحتاجه لليلة أو ليلتين.</p>
@@ -224,7 +244,12 @@
         </div>
       </article>
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">مطبخ صغير</span><img src="../assets/img/photos/suite-junior.jpg" alt="غرفة معيشة جناح جونيور مع أريكة زرقاء مخضرّة وطاولة قهوة" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">مطبخ صغير</span><button class="room-photos" type="button" aria-label="شاهد 4 صور لـجناح جونيور"><img src="../assets/img/photos/suite-junior.jpg" alt="غرفة معيشة جناح جونيور مع أريكة زرقاء مخضرّة وطاولة قهوة" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 صور</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/suite-living.jpg" title="غرفة معيشة في الجناح مع أريكة وطاولة قهوة وباب غرفة النوم">2</a></li>
+            <li><a href="../assets/img/photos/kitchen.jpg" title="مطبخ صغير في الجناح بخزائن بيضاء وحوض وطاولة طعام">3</a></li>
+            <li><a href="../assets/img/photos/suite-desk.jpg" title="غرفة معيشة في الجناح مع مكتب وتلفزيون معلق وأريكة">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>جناح جونيور</h3>
           <p>غرفة نوم بسرير كينج وغرفة معيشة منفصلة مع أريكة سرير ومطبخ صغير. اطبخ، اعمل، وخذ راحتك.</p>
@@ -236,7 +261,12 @@
         </div>
       </article>
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">شرفة وإطلالة</span><img src="../assets/img/photos/suite-superior.jpg" alt="ركن جلوس في جناح سوبيريور مع كرسي بجانب نافذة عالية" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">شرفة وإطلالة</span><button class="room-photos" type="button" aria-label="شاهد 4 صور لـجناح سوبيريور"><img src="../assets/img/photos/suite-superior.jpg" alt="ركن جلوس في جناح سوبيريور مع كرسي بجانب نافذة عالية" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 صور</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/room-lamp.jpg" title="غرفة نوم مع مصباح جانبي وستائر داكنة">2</a></li>
+            <li><a href="../assets/img/photos/room-sitting.jpg" title="غرفة نوم بسرير كينج وركن جلوس صغير">3</a></li>
+            <li><a href="../assets/img/photos/suite-tv-2.jpg" title="غرفة معيشة في الجناح مع أريكة وتلفزيون وطاولة جانبية">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>جناح سوبيريور</h3>
           <p>تصميم جناح جونيور في طابق مرتفع، مع شرفة وتراس يطلان على المدينة وجبال ظفار.</p>
@@ -248,7 +278,12 @@
         </div>
       </article>
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">للعائلات</span><img src="../assets/img/photos/suite-executive.jpg" alt="غرفة معيشة الجناح التنفيذي مع أريكة طويلة وطاولة طعام وتلفزيون معلق" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">للعائلات</span><button class="room-photos" type="button" aria-label="شاهد 4 صور لـالجناح التنفيذي"><img src="../assets/img/photos/suite-executive.jpg" alt="غرفة معيشة الجناح التنفيذي مع أريكة طويلة وطاولة طعام وتلفزيون معلق" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 صور</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/room-twin.jpg" title="غرفة نوم بسريرين مفردين في الجناح التنفيذي">2</a></li>
+            <li><a href="../assets/img/photos/suite-tv.jpg" title="غرفة معيشة في الجناح مع أريكة وتلفزيون معلق">3</a></li>
+            <li><a href="../assets/img/photos/room-twin-window.jpg" title="غرفة بسريرين مفردين ونافذة على الشارع">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>جناح تنفيذي</h3>
           <p>غرفتا نوم، إحداهما بسرير كينج والأخرى بسريرين مفردين، وغرفة معيشة مع أريكة سرير ومطبخ صغير وشرفة. أكبر أجنحتنا.</p>
@@ -271,18 +306,46 @@
   </div>
 </section>
 
-<section class="gallery" aria-label="ألقِ نظرة في الداخل">
+<section class="gallery" id="gallery" aria-label="ألقِ نظرة في الداخل">
   <div class="container">
-    <div class="gallery-grid">
-      <figure class="g-wide reveal"><img src="../assets/img/photos/pool.jpg" alt="مسبح داخلي مدفأ ببلاط أبيض وكراسي استرخاء خشبية" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/lounge-gold.jpg" alt="صالة البهو مع أريكة ذهبية أمام جدار رخامي" width="1023" height="700" loading="lazy"></figure>
-      <figure class="g-tall reveal"><img src="../assets/img/photos/gym-2.jpg" alt="صالة اللياقة مع أجهزة المشي وأجهزة الأثقال" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/terrace.jpg" alt="تراس خارجي بطاولات وكراسي بجانب مدخل الفندق" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/room-king-window.jpg" alt="غرفة نوم بسرير كينج وبجعات من المناشف ونافذة على المدينة" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/kitchen.jpg" alt="مطبخ صغير في الجناح بخزائن بيضاء وحوض وطاولة طعام" width="1023" height="700" loading="lazy"></figure>
-      <figure class="g-wide reveal"><img src="../assets/img/photos/restaurant.jpg" alt="قاعة مطعم طريق الحرير بكراسي كريمية وأرضية رخامية" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/sauna.jpg" alt="ساونا خشبية مع دلو ومغرفة" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/bathroom.jpg" alt="حمام ببلاط بيج ودُش زجاجي" width="1023" height="700" loading="lazy"></figure>
+    <div class="section-head reveal">
+      <div><span class="eyebrow">الصور</span><h2>ألقِ نظرة في الداخل.</h2></div>
+      <div class="tabs" aria-label="تصفية الصور">
+        <button class="tab is-active" type="button" data-filter="all" aria-pressed="true">الكل</button>
+        <button class="tab" type="button" data-filter="rooms" aria-pressed="false">الغرف</button>
+        <button class="tab" type="button" data-filter="spa" aria-pressed="false">المسبح والسبا</button>
+        <button class="tab" type="button" data-filter="dining" aria-pressed="false">المطعم</button>
+        <button class="tab" type="button" data-filter="hotel" aria-pressed="false">الفندق</button>
+      </div>
+    </div>
+    <div class="gallery-grid" data-lightbox="gallery">
+      <figure class="g-wide reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool.jpg" alt="مسبح داخلي مدفأ ببلاط أبيض وكراسي استرخاء خشبية" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/lounge-gold.jpg" alt="صالة البهو مع أريكة ذهبية أمام جدار رخامي" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="g-tall reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/gym-2.jpg" alt="صالة اللياقة مع أجهزة المشي وأجهزة الأثقال" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/terrace.jpg" alt="تراس خارجي بطاولات وكراسي بجانب مدخل الفندق" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/room-king-window.jpg" alt="غرفة نوم بسرير كينج وبجعات من المناشف ونافذة على المدينة" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/kitchen.jpg" alt="مطبخ صغير في الجناح بخزائن بيضاء وحوض وطاولة طعام" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="g-wide reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/restaurant.jpg" alt="قاعة مطعم طريق الحرير بكراسي كريمية وأرضية رخامية" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/sauna.jpg" alt="ساونا خشبية مع دلو ومغرفة" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/bathroom.jpg" alt="حمام ببلاط بيج ودُش زجاجي" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/dining-window.jpg" alt="طاولات المطعم مجهزة للعشاء بجانب النافذة" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool-loungers.jpg" alt="المسبح الداخلي مع كراسي استرخاء على طول الجدار" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/room-sitting.jpg" alt="غرفة نوم بسرير كينج وركن جلوس صغير" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/coffee.jpg" alt="قهوة عربية ووردة على صينية" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/terrace-umbrella.jpg" alt="طاولات التراس تحت مظلة بجانب الواجهة الزجاجية" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/lobby-seating.jpg" alt="جلسة في البهو مع كراسي ومرآة" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/suite-desk.jpg" alt="غرفة معيشة في الجناح مع مكتب وتلفزيون معلق وأريكة" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/buffet.jpg" alt="بوفيه الإفطار مع أواني التسخين" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool-columns.jpg" alt="المسبح الداخلي بين أعمدة رخامية" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/exterior-low.jpg" alt="الواجهة الزجاجية الزرقاء من الشارع" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/room-twin-window.jpg" alt="غرفة بسريرين مفردين ونافذة على الشارع" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/dining-table.jpg" alt="طاولة مجهزة بمفارش وأدوات مائدة" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/gym-wide.jpg" alt="صالة رياضية بأجهزة أثقال وسقف خشبي" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/reception-2.jpg" alt="مكتب الاستقبال تحت الثريا" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/sauna-2.jpg" alt="مقعد الساونا مع دلو خشبي" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/corridor.jpg" alt="ممر الفندق بأرضية رخامية" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/restaurant-2.jpg" alt="مطعم طريق الحرير بكراسيه الكريمية" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool-hall.jpg" alt="قاعة المسبح بسقفها العالي" width="1080" height="700" loading="lazy"></button></figure>
     </div>
   </div>
 </section>
@@ -376,6 +439,32 @@
   </div>
 </section>
 
+<section class="section seasons" id="seasons">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">متى تأتي</span>
+        <h2>صلالة لها صيفان.</h2>
+        <p class="lead">من أواخر يونيو إلى أوائل سبتمبر يجلب الخريف الضباب والرذاذ والتلال الخضراء. وبقية السنة شمس وبحر هادئ. والمسبح الداخلي المدفأ لا يبالي بالطقس.</p>
+      </div>
+    </div>
+    <div class="season-strip reveal" role="img" aria-label="مخطط المواسم: موسم الشاطئ من أكتوبر إلى مارس، حار وجاف من أبريل إلى يونيو، الخريف من يوليو إلى سبتمبر">
+      <div class="months" aria-hidden="true"><span>ينا</span><span>فبر</span><span>مار</span><span>أبر</span><span>ماي</span><span>يون</span><span>يول</span><span>أغس</span><span>سبت</span><span>أكت</span><span>نوف</span><span>ديس</span></div>
+      <div class="bands" aria-hidden="true">
+        <span class="band band-sun" style="--from:1;--to:3">الشاطئ</span>
+        <span class="band band-hot" style="--from:4;--to:6">حار وجاف</span>
+        <span class="band band-khareef" style="--from:7;--to:9">الخريف</span>
+        <span class="band band-sun" style="--from:10;--to:12">الشاطئ</span>
+      </div>
+    </div>
+    <div class="season-cards">
+      <article class="season reveal"><h3><span class="dot dot-sun" aria-hidden="true"></span>أكتوبر – مارس</h3><p>موسم الشاطئ: شمس، 27–30 درجة نهاراً وأمسيات لطيفة. أفضل وقت للبليد والمغسيل ورحلات القوارب.</p></article>
+      <article class="season reveal"><h3><span class="dot dot-hot" aria-hidden="true"></span>أبريل – يونيو</h3><p>حار ورطب، 31–34 درجة. أشهر هادئة بأسعار أقل، والمسبح الداخلي والسبا في انتظارك.</p></article>
+      <article class="season reveal"><h3><span class="dot dot-khareef" aria-hidden="true"></span>أواخر يونيو – أوائل سبتمبر: الخريف</h3><p>رذاذ وضباب و24–27 درجة، تلال خضراء وشلالات، ومهرجان صلالة السياحي في يوليو وأغسطس. أكثر المواسم ازدحاماً، فاحجز مبكراً.</p></article>
+    </div>
+  </div>
+</section>
+
 <section class="section location" id="location">
   <div class="container">
     <div class="reveal">
@@ -392,6 +481,14 @@
         <li><span class="num">7</span><div><strong>وادي دربات</strong><span class="d">شلالات وتلال خضراء في الخريف</span></div><span class="t">45 كم · 50 دقيقة</span></li>
       </ol>
       <figure class="find-us"><img src="../assets/img/photos/exterior-day.jpg" alt="فندق بريستول صلالة نهاراً: مبنى زجاجي أزرق مرتفع بإطار ذهبي" width="1023" height="700" loading="lazy"><figcaption>ابحث عن البرج الزجاجي الأزرق بالإطار الذهبي على شارع السعادة، مقابل مركز السعادة الصحي.</figcaption></figure>
+      <div class="getting reveal">
+        <h3>كيف تصل إلينا</h3>
+        <ul class="ticks">
+          <li><svg aria-hidden="true"><use href="#i-plane"/></svg><span><b>جواً:</b> مطار صلالة الدولي (SLL) تصله رحلات مباشرة من مسقط ودبي والدوحة والرياض وجدة والكويت، ومن مدن هندية في الموسم. خمس عشرة دقيقة بسيارة الأجرة.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-car"/></svg><span><b>براً من مسقط:</b> نحو 1,000 كم على الطريق 31، حوالي 10 ساعات قيادة. ومن دبي نحو 1,200 كم.</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>المواقف</b> مجانية في الفندق طوال إقامتك.</span></li>
+        </ul>
+      </div>
       <p style="margin-top:24px"><a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Bristol+Hotel+Salalah+As+Saadah+Street+Salalah" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>افتح في خرائط جوجل</a></p>
     </div>
     <figure class="map-card reveal" style="margin:0">
@@ -445,6 +542,44 @@
   </div>
 </section>
 
+<section class="section offers" id="offers">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">عروضنا</span>
+        <h2>عرض لكل موسم.</h2>
+        <p class="lead">ننشر عروضنا على إنستغرام على مدار السنة. هذه الثلاثة هي التي يسأل عنها الضيوف أكثر من غيرها.</p>
+      </div>
+    </div>
+    <div class="unwind-grid">
+      <article class="panel reveal">
+        <div class="panel-media"><img src="../assets/img/photos/suite-tv.jpg" alt="غرفة معيشة في الجناح مع أريكة وتلفزيون معلق" width="1080" height="700" loading="lazy"></div>
+        <div class="panel-body">
+          <h3>عائلات الخريف</h3>
+          <p>أجنحة بمطبخ صغير، وأسعار أسبوعية، ومسبح داخلي مدفأ تجعل أسابيع الخريف مع الأطفال أسهل.</p>
+          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D9%86%D8%AF%D9%82%20%D8%A8%D8%B1%D9%8A%D8%B3%D8%AA%D9%88%D9%84%20%D8%B5%D9%84%D8%A7%D9%84%D8%A9%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AE%D8%B1%D9%8A%D9%81%20%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D8%A9." target="_blank" rel="noopener">اسأل عن أسعار الخريف</a></p>
+        </div>
+      </article>
+      <article class="panel reveal">
+        <div class="panel-media"><img src="../assets/img/photos/room-king-window.jpg" alt="غرفة نوم بسرير كينج وبجعات من المناشف ونافذة على المدينة" width="1080" height="700" loading="lazy"></div>
+        <div class="panel-body">
+          <h3>شهر العسل والمناسبات</h3>
+          <p>أخبرنا أنك تحتفل ونجهّز الغرفة قبل وصولك. اسأل عن عرض شهر العسل.</p>
+          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D9%86%D8%AF%D9%82%20%D8%A8%D8%B1%D9%8A%D8%B3%D8%AA%D9%88%D9%84%20%D8%B5%D9%84%D8%A7%D9%84%D8%A9%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B9%D8%B1%D8%B6%20%D8%B4%D9%87%D8%B1%20%D8%A7%D9%84%D8%B9%D8%B3%D9%84." target="_blank" rel="noopener">اسأل عن عرض شهر العسل</a></p>
+        </div>
+      </article>
+      <article class="panel reveal">
+        <div class="panel-media"><img src="../assets/img/photos/buffet.jpg" alt="بوفيه الإفطار مع أواني التسخين" width="1080" height="700" loading="lazy"></div>
+        <div class="panel-body">
+          <h3>رمضان والعيد</h3>
+          <p>أسعار رمضان وقوائم الإفطار في مطعم طريق الحرير تُنشر كل عام على إنستغرام.</p>
+          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/bristol_hotel_salalah/" target="_blank" rel="noopener">تابعنا على إنستغرام</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="section events" id="events">
   <div class="container">
     <div class="events-media reveal"><img src="../assets/img/photos/hall.jpg" alt="قاعة طعام مجهزة بصفوف من الطاولات والكراسي الكريمية تحت سقف مزخرف" width="1023" height="700" loading="lazy"></div>
@@ -491,6 +626,8 @@
       <details><summary>هل توفرون توصيلاً من المطار؟</summary><p>نعم. نرتب توصيلاً برسوم من مطار صلالة الدولي، على بُعد نحو 15 دقيقة. أرسل لنا رقم رحلتك عبر واتساب.</p></details>
       <details><summary>وصول متأخر؟</summary><p>تسجيل الوصول متاح حتى 11:00 مساءً، والاستقبال يعمل 24 ساعة. إن كنت ستصل بعد ذلك، راسلنا بوقت وصولك ونكون بانتظارك.</p></details>
       <details><summary>هل يمكن للأطفال استخدام المسبح؟</summary><p>نعم. المسبح الداخلي مدفأ وبجانبه مسبح ضحل للأطفال. يجب أن يكون الأطفال برفقة شخص بالغ.</p></details>
+      <details><summary>هل تزيّنون الغرفة لشهر العسل أو عيد الميلاد؟</summary><p>نعم. أخبرنا عند الحجز ونجهّز الغرفة قبل وصولك.</p></details>
+      <details><summary>هل الفندق مناسب للعائلات مع أطفال صغار؟</summary><p>نعم. الأجنحة فيها غرفة معيشة ومطبخ صغير، وهناك مسبح ضحل للأطفال. لا توجد أسرّة أطفال، فأحضر سرير السفر الخاص بك إن لزم.</p></details>
     </div>
   </div>
 </section>
@@ -551,6 +688,13 @@
 <div class="mobile-bar">
   <a class="btn btn-primary" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg>واتساب</a>
   <a class="btn btn-gold" href="#book">تحقق من المواعيد</a>
+</div>
+
+<div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="عارض الصور">
+  <button class="lb-close" type="button" aria-label="إغلاق"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="lb-prev" type="button" aria-label="الصورة السابقة"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+  <figure class="lb-fig"><img class="lb-img" alt=""><figcaption><span class="lb-count"></span><span class="lb-cap"></span></figcaption></figure>
+  <button class="lb-next" type="button" aria-label="الصورة التالية"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
 </div>
 
 <script src="../assets/js/main.js" defer></script>

@@ -34,6 +34,9 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-mark" viewBox="0 0 48 56"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M24 2.5 L45 14.5 L45 41.5 L24 53.5 L3 41.5 L3 14.5 Z"/><path fill="none" stroke="currentColor" stroke-width="1" opacity=".55" d="M24 2.5 L24 53.5 M3 14.5 L45 41.5 M45 14.5 L3 41.5"/><circle cx="24" cy="28" r="13" fill="currentColor"/><text x="24" y="34.5" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#F8F4EC">B</text></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></symbol>
   <symbol id="i-cup" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9zm12 1h1.5a2.5 2.5 0 0 1 0 5H16M8 3c0 1.2 1 1.2 1 2.4M12 3c0 1.2 1 1.2 1 2.4M3 22h16"/></symbol>
   <symbol id="i-wifi" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M2 8.8a15 15 0 0 1 20 0M5 12.3a10 10 0 0 1 14 0M8.5 15.8a5 5 0 0 1 7 0"/><circle cx="12" cy="19.3" r="1.2" fill="currentColor"/></symbol>
@@ -171,6 +174,18 @@
   </div>
 </section>
 
+<section class="glance" aria-label="ब्रिस्टल होटल एक नज़र में">
+  <div class="container">
+    <ul class="glance-grid">
+      <li class="reveal"><strong>42</strong><span>कमरे और सुइट्स</span></li>
+      <li class="reveal"><strong>2019</strong><span>अस सआदा स्ट्रीट पर खुला</span></li>
+      <li class="reveal"><strong>7.9</strong><span>Booking.com स्कोर, 172 समीक्षाएँ</span></li>
+      <li class="reveal"><strong>4.0<small>/5</small></strong><span>Google रेटिंग, 364 समीक्षाएँ</span></li>
+      <li class="reveal"><strong>15<small>मिनट</small></strong><span>सलालाह हवाई अड्डे से</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="section rooms" id="rooms">
   <div class="container">
     <div class="section-head reveal">
@@ -183,7 +198,12 @@
     </div>
     <div class="room-grid">
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">सबसे किफ़ायती</span><img src="../assets/img/photos/room-deluxe.jpg" alt="किंग बेड, सफ़ेद चादरों और भूरे बेड रनर वाला डीलक्स रूम" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">सबसे किफ़ायती</span><button class="room-photos" type="button" aria-label="डीलक्स रूम की 4 फ़ोटो देखें"><img src="../assets/img/photos/room-deluxe.jpg" alt="किंग बेड, सफ़ेद चादरों और भूरे बेड रनर वाला डीलक्स रूम" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 फ़ोटो</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/room-king-window.jpg" title="बिस्तर पर तौलिये के हंसों और शहर की ओर खुलती खिड़की वाला किंग बेडरूम">2</a></li>
+            <li><a href="../assets/img/photos/room-deluxe-2.jpg" title="किंग बेड और डेस्क वाला डीलक्स रूम">3</a></li>
+            <li><a href="../assets/img/photos/bathroom.jpg" title="बेज टाइलों और काँच के शावर वाला बाथरूम">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>डीलक्स रूम</h3>
           <p>किंग-साइज़ बेड, शहर के नज़ारे और पूरे बाथरूम के साथ खुला-खुला 40 वर्ग मीटर। एक-दो रातों के लिए जो चाहिए, सब कुछ।</p>
@@ -195,7 +215,12 @@
         </div>
       </article>
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">किचनेट</span><img src="../assets/img/photos/suite-junior.jpg" alt="टील सोफ़े और कॉफ़ी टेबल वाला जूनियर सुइट का लिविंग रूम" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">किचनेट</span><button class="room-photos" type="button" aria-label="जूनियर सुइट की 4 फ़ोटो देखें"><img src="../assets/img/photos/suite-junior.jpg" alt="टील सोफ़े और कॉफ़ी टेबल वाला जूनियर सुइट का लिविंग रूम" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 फ़ोटो</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/suite-living.jpg" title="टील सोफ़े, कॉफ़ी टेबल और बेडरूम के दरवाज़े वाला सुइट का लिविंग रूम">2</a></li>
+            <li><a href="../assets/img/photos/kitchen.jpg" title="सफ़ेद अलमारियों, सिंक और डाइनिंग टेबल वाली सुइट की किचनेट">3</a></li>
+            <li><a href="../assets/img/photos/suite-desk.jpg" title="डेस्क, दीवार पर टीवी और सोफ़े वाला सुइट का लिविंग रूम">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>जूनियर सुइट</h3>
           <p>किंग बेड वाला बेडरूम और सोफ़ा-बेड व किचनेट वाला अलग लिविंग रूम। खाना बनाइए, काम कीजिए, आराम से रहिए।</p>
@@ -207,7 +232,12 @@
         </div>
       </article>
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">बालकनी और नज़ारे</span><img src="../assets/img/photos/suite-superior.jpg" alt="ऊँची खिड़की के पास आरामकुर्सी वाला सुपीरियर सुइट का बैठने का क्षेत्र" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">बालकनी और नज़ारे</span><button class="room-photos" type="button" aria-label="सुपीरियर सुइट की 4 फ़ोटो देखें"><img src="../assets/img/photos/suite-superior.jpg" alt="ऊँची खिड़की के पास आरामकुर्सी वाला सुपीरियर सुइट का बैठने का क्षेत्र" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 फ़ोटो</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/room-lamp.jpg" title="बेडसाइड लैंप और गहरे पर्दों वाला बेडरूम">2</a></li>
+            <li><a href="../assets/img/photos/room-sitting.jpg" title="किंग बेड और छोटे बैठने के क्षेत्र वाला बेडरूम">3</a></li>
+            <li><a href="../assets/img/photos/suite-tv-2.jpg" title="सोफ़े, टीवी और साइड टेबल वाला सुइट का लिविंग रूम">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>सुपीरियर सुइट</h3>
           <p>ऊँची मंज़िल पर जूनियर सुइट का लेआउट, बालकनी और छत के साथ जहाँ से शहर के पार ज़ोफ़ार के पहाड़ दिखते हैं।</p>
@@ -219,7 +249,12 @@
         </div>
       </article>
       <article class="room reveal">
-        <div class="room-img"><span class="room-tag">परिवारों के लिए</span><img src="../assets/img/photos/suite-executive.jpg" alt="लंबे सोफ़े, डाइनिंग टेबल और दीवार पर लगे टीवी वाला एग्ज़ीक्यूटिव सुइट का लिविंग रूम" width="1023" height="700" loading="lazy"></div>
+        <div class="room-img"><span class="room-tag">परिवारों के लिए</span><button class="room-photos" type="button" aria-label="एग्ज़ीक्यूटिव सुइट की 4 फ़ोटो देखें"><img src="../assets/img/photos/suite-executive.jpg" alt="लंबे सोफ़े, डाइनिंग टेबल और दीवार पर लगे टीवी वाला एग्ज़ीक्यूटिव सुइट का लिविंग रूम" width="1023" height="700" loading="lazy"></button><span class="room-count"><svg aria-hidden="true"><use href="#i-camera"/></svg>4 फ़ोटो</span>
+          <ul class="room-more" hidden>
+            <li><a href="../assets/img/photos/room-twin.jpg" title="एग्ज़ीक्यूटिव सुइट का दो सिंगल बेड वाला बेडरूम">2</a></li>
+            <li><a href="../assets/img/photos/suite-tv.jpg" title="सोफ़े और दीवार पर लगे टीवी वाला सुइट का लिविंग रूम">3</a></li>
+            <li><a href="../assets/img/photos/room-twin-window.jpg" title="सड़क की ओर खिड़की वाला दो सिंगल बेड का कमरा">4</a></li>
+          </ul></div>
         <div class="room-body">
           <h3>एग्ज़ीक्यूटिव सुइट</h3>
           <p>दो बेडरूम, एक किंग बेड वाला और एक दो सिंगल बेड वाला, सोफ़ा-बेड वाला लिविंग रूम, किचनेट और बालकनी। हमारा सबसे बड़ा सुइट।</p>
@@ -242,18 +277,46 @@
   </div>
 </section>
 
-<section class="gallery" aria-label="अंदर की झलक देखें">
+<section class="gallery" id="gallery" aria-label="अंदर की झलक देखें">
   <div class="container">
-    <div class="gallery-grid">
-      <figure class="g-wide reveal"><img src="../assets/img/photos/pool.jpg" alt="सफ़ेद टाइलों और लकड़ी के लाउंजर वाला गर्म इनडोर पूल" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/lounge-gold.jpg" alt="संगमरमर की दीवार के सामने सुनहरे सोफ़े वाला लॉबी लाउंज" width="1023" height="700" loading="lazy"></figure>
-      <figure class="g-tall reveal"><img src="../assets/img/photos/gym-2.jpg" alt="ट्रेडमिल और वेट मशीनों वाला फ़िटनेस सेंटर" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/terrace.jpg" alt="होटल के प्रवेश द्वार के पास मेज़-कुर्सियों वाली बाहरी छत" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/room-king-window.jpg" alt="बिस्तर पर तौलिये के हंसों और शहर की ओर खुलती खिड़की वाला किंग बेडरूम" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/kitchen.jpg" alt="सफ़ेद अलमारियों, सिंक और डाइनिंग टेबल वाली सुइट की किचनेट" width="1023" height="700" loading="lazy"></figure>
-      <figure class="g-wide reveal"><img src="../assets/img/photos/restaurant.jpg" alt="क्रीम कुर्सियों और संगमरमर के फ़र्श वाला सिल्क रोड रेस्तराँ का भोजन कक्ष" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/sauna.jpg" alt="बाल्टी और करछुल के साथ लकड़ी की दीवारों वाला सौना" width="1023" height="700" loading="lazy"></figure>
-      <figure class="reveal"><img src="../assets/img/photos/bathroom.jpg" alt="बेज टाइलों और काँच के शावर वाला बाथरूम" width="1023" height="700" loading="lazy"></figure>
+    <div class="section-head reveal">
+      <div><span class="eyebrow">फ़ोटो</span><h2>अंदर की झलक देखें।</h2></div>
+      <div class="tabs" aria-label="फ़ोटो छाँटें">
+        <button class="tab is-active" type="button" data-filter="all" aria-pressed="true">सभी</button>
+        <button class="tab" type="button" data-filter="rooms" aria-pressed="false">कमरे</button>
+        <button class="tab" type="button" data-filter="spa" aria-pressed="false">पूल और स्पा</button>
+        <button class="tab" type="button" data-filter="dining" aria-pressed="false">भोजन</button>
+        <button class="tab" type="button" data-filter="hotel" aria-pressed="false">होटल</button>
+      </div>
+    </div>
+    <div class="gallery-grid" data-lightbox="gallery">
+      <figure class="g-wide reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool.jpg" alt="सफ़ेद टाइलों और लकड़ी के लाउंजर वाला गर्म इनडोर पूल" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/lounge-gold.jpg" alt="संगमरमर की दीवार के सामने सुनहरे सोफ़े वाला लॉबी लाउंज" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="g-tall reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/gym-2.jpg" alt="ट्रेडमिल और वेट मशीनों वाला फ़िटनेस सेंटर" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/terrace.jpg" alt="होटल के प्रवेश द्वार के पास मेज़-कुर्सियों वाली बाहरी छत" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/room-king-window.jpg" alt="बिस्तर पर तौलिये के हंसों और शहर की ओर खुलती खिड़की वाला किंग बेडरूम" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/kitchen.jpg" alt="सफ़ेद अलमारियों, सिंक और डाइनिंग टेबल वाली सुइट की किचनेट" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="g-wide reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/restaurant.jpg" alt="क्रीम कुर्सियों और संगमरमर के फ़र्श वाला सिल्क रोड रेस्तराँ का भोजन कक्ष" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/sauna.jpg" alt="बाल्टी और करछुल के साथ लकड़ी की दीवारों वाला सौना" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/bathroom.jpg" alt="बेज टाइलों और काँच के शावर वाला बाथरूम" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/dining-window.jpg" alt="खिड़की के पास रात के खाने के लिए सजी रेस्तराँ की मेज़ें" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool-loungers.jpg" alt="दीवार के साथ लाउंजर वाला इनडोर पूल" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/room-sitting.jpg" alt="किंग बेड और छोटे बैठने के क्षेत्र वाला बेडरूम" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/coffee.jpg" alt="ट्रे पर अरबी कॉफ़ी और एक गुलाब" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/terrace-umbrella.jpg" alt="काँच की दीवार के पास छतरी के नीचे टेरेस की मेज़ें" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/lobby-seating.jpg" alt="आरामकुर्सियों और आईने वाला लॉबी का बैठने का क्षेत्र" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/suite-desk.jpg" alt="डेस्क, दीवार पर टीवी और सोफ़े वाला सुइट का लिविंग रूम" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/buffet.jpg" alt="गर्म रखने वाले बर्तनों के साथ नाश्ते का बुफ़े" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool-columns.jpg" alt="संगमरमर के खंभों के बीच से दिखता इनडोर पूल" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/exterior-low.jpg" alt="सड़क से दिखती नीली काँच की दीवार" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="rooms"><button class="g-open" type="button"><img src="../assets/img/photos/room-twin-window.jpg" alt="सड़क की ओर खिड़की वाला दो सिंगल बेड का कमरा" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/dining-table.jpg" alt="प्लेसमैट और कटलरी के साथ सजी मेज़" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/gym-wide.jpg" alt="वेट मशीनों और लकड़ी की छत वाला जिम" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/reception-2.jpg" alt="झूमर के नीचे रिसेप्शन डेस्क" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/sauna-2.jpg" alt="लकड़ी की बाल्टी के साथ सौना की बेंच" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img src="../assets/img/photos/corridor.jpg" alt="संगमरमर के फ़र्श वाला होटल का गलियारा" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img src="../assets/img/photos/restaurant-2.jpg" alt="क्रीम कुर्सियों वाला सिल्क रोड रेस्तराँ" width="1080" height="700" loading="lazy"></button></figure>
+      <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img src="../assets/img/photos/pool-hall.jpg" alt="ऊँची छत वाला पूल हॉल" width="1080" height="700" loading="lazy"></button></figure>
     </div>
   </div>
 </section>
@@ -347,6 +410,32 @@
   </div>
 </section>
 
+<section class="section seasons" id="seasons">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">कब आएँ</span>
+        <h2>सलालाह में दो गर्मियाँ हैं।</h2>
+        <p class="lead">जून के अंत से सितंबर की शुरुआत तक ख़रीफ़ कोहरा, बूँदाबाँदी और हरी पहाड़ियाँ लाता है। बाक़ी साल धूप और शांत समुद्र। गर्म इनडोर पूल को दोनों से फ़र्क़ नहीं पड़ता।</p>
+      </div>
+    </div>
+    <div class="season-strip reveal" role="img" aria-label="मौसम चार्ट: अक्टूबर से मार्च समुद्र तट का मौसम, अप्रैल से जून गर्म और सूखा, जुलाई से सितंबर ख़रीफ़">
+      <div class="months" aria-hidden="true"><span>जन</span><span>फ़र</span><span>मार्च</span><span>अप्रै</span><span>मई</span><span>जून</span><span>जुला</span><span>अग</span><span>सित</span><span>अक्टू</span><span>नव</span><span>दिस</span></div>
+      <div class="bands" aria-hidden="true">
+        <span class="band band-sun" style="--from:1;--to:3">समुद्र तट</span>
+        <span class="band band-hot" style="--from:4;--to:6">गर्म और सूखा</span>
+        <span class="band band-khareef" style="--from:7;--to:9">ख़रीफ़</span>
+        <span class="band band-sun" style="--from:10;--to:12">समुद्र तट</span>
+      </div>
+    </div>
+    <div class="season-cards">
+      <article class="season reveal"><h3><span class="dot dot-sun" aria-hidden="true"></span>अक्टूबर – मार्च</h3><p>समुद्र तट का मौसम: धूप, दिन में 27–30 °C और सुहावनी शामें। अल बलीद, मुग़सैल और नाव की सैर के लिए सबसे अच्छा समय।</p></article>
+      <article class="season reveal"><h3><span class="dot dot-hot" aria-hidden="true"></span>अप्रैल – जून</h3><p>गर्म और उमस भरा, 31–34 °C। कम दरों वाले शांत महीने, और इनडोर पूल व स्पा आपके इंतज़ार में।</p></article>
+      <article class="season reveal"><h3><span class="dot dot-khareef" aria-hidden="true"></span>जून के अंत – सितंबर की शुरुआत: ख़रीफ़</h3><p>बूँदाबाँदी, कोहरा और 24–27 °C, हरी पहाड़ियाँ और झरने, और जुलाई-अगस्त में सलालाह पर्यटन महोत्सव। सबसे व्यस्त मौसम, इसलिए जल्दी बुक करें।</p></article>
+    </div>
+  </div>
+</section>
+
 <section class="section location" id="location">
   <div class="container">
     <div class="reveal">
@@ -363,6 +452,14 @@
         <li><span class="num">7</span><div><strong>वादी दरबात</strong><span class="d">ख़रीफ़ में झरने और हरी पहाड़ियाँ</span></div><span class="t">45 किमी · 50 मिनट</span></li>
       </ol>
       <figure class="find-us"><img src="../assets/img/photos/exterior-day.jpg" alt="दिन में ब्रिस्टल होटल सलालाह: सुनहरी किनारी वाली ऊँची नीली काँच की इमारत" width="1023" height="700" loading="lazy"><figcaption>अस सआदा स्ट्रीट पर, अल सआदा हेल्थ सेंटर के सामने, सुनहरी किनारी वाला नीले काँच का टावर ढूँढें।</figcaption></figure>
+      <div class="getting reveal">
+        <h3>यहाँ कैसे पहुँचें</h3>
+        <ul class="ticks">
+          <li><svg aria-hidden="true"><use href="#i-plane"/></svg><span><b>हवाई मार्ग से:</b> सलालाह अंतरराष्ट्रीय हवाई अड्डे (SLL) के लिए मस्कट, दुबई, दोहा, रियाद, जेद्दा और कुवैत से सीधी उड़ानें हैं, और मौसम में भारतीय शहरों से भी। टैक्सी से पंद्रह मिनट।</span></li>
+          <li><svg aria-hidden="true"><use href="#i-car"/></svg><span><b>मस्कट से सड़क मार्ग से:</b> रूट 31 पर लगभग 1,000 किमी, करीब 10 घंटे की ड्राइव। दुबई से लगभग 1,200 किमी।</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>पार्किंग</b> पूरे ठहराव के दौरान होटल में मुफ़्त है।</span></li>
+        </ul>
+      </div>
       <p style="margin-top:24px"><a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Bristol+Hotel+Salalah+As+Saadah+Street+Salalah" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Google Maps में खोलें</a></p>
     </div>
     <figure class="map-card reveal" style="margin:0">
@@ -416,6 +513,44 @@
   </div>
 </section>
 
+<section class="section offers" id="offers">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">हमारे ऑफ़र</span>
+        <h2>हर मौसम के लिए एक ऑफ़र।</h2>
+        <p class="lead">हम साल भर अपने ऑफ़र Instagram पर पोस्ट करते हैं। ये तीन वे हैं जिनके बारे में मेहमान सबसे ज़्यादा पूछते हैं।</p>
+      </div>
+    </div>
+    <div class="unwind-grid">
+      <article class="panel reveal">
+        <div class="panel-media"><img src="../assets/img/photos/suite-tv.jpg" alt="सोफ़े और दीवार पर लगे टीवी वाला सुइट का लिविंग रूम" width="1080" height="700" loading="lazy"></div>
+        <div class="panel-body">
+          <h3>ख़रीफ़ में परिवार</h3>
+          <p>किचनेट वाले सुइट्स, साप्ताहिक दरें और गर्म इनडोर पूल बच्चों के साथ मानसून के हफ़्तों को आसान बनाते हैं।</p>
+          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20Khareef%20rates%20for%20a%20family." target="_blank" rel="noopener">ख़रीफ़ की दरें पूछें</a></p>
+        </div>
+      </article>
+      <article class="panel reveal">
+        <div class="panel-media"><img src="../assets/img/photos/room-king-window.jpg" alt="बिस्तर पर तौलिये के हंसों और शहर की ओर खुलती खिड़की वाला किंग बेडरूम" width="1080" height="700" loading="lazy"></div>
+        <div class="panel-body">
+          <h3>हनीमून और उत्सव</h3>
+          <p>हमें बताएँ कि आप जश्न मना रहे हैं और आपके आने से पहले कमरा तैयार होगा। हनीमून ऑफ़र के बारे में पूछें।</p>
+          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://wa.me/96897260111?text=Hi%20Bristol%20Hotel%20Salalah%2C%20I%27d%20like%20to%20ask%20about%20the%20honeymoon%20offer." target="_blank" rel="noopener">हनीमून ऑफ़र के बारे में पूछें</a></p>
+        </div>
+      </article>
+      <article class="panel reveal">
+        <div class="panel-media"><img src="../assets/img/photos/buffet.jpg" alt="गर्म रखने वाले बर्तनों के साथ नाश्ते का बुफ़े" width="1080" height="700" loading="lazy"></div>
+        <div class="panel-body">
+          <h3>रमज़ान और ईद</h3>
+          <p>रमज़ान की कमरा दरें और सिल्क रोड रेस्तराँ के इफ़्तार मेन्यू हर साल Instagram पर पोस्ट किए जाते हैं।</p>
+          <p style="margin-top:auto"><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/bristol_hotel_salalah/" target="_blank" rel="noopener">Instagram पर हमें फ़ॉलो करें</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="section events" id="events">
   <div class="container">
     <div class="events-media reveal"><img src="../assets/img/photos/hall.jpg" alt="सजी हुई छत के नीचे मेज़ों की क़तारों और क्रीम कुर्सियों वाला भोजन कक्ष" width="1023" height="700" loading="lazy"></div>
@@ -462,6 +597,8 @@
       <details><summary>क्या आप मुझे हवाई अड्डे से ले सकते हैं?</summary><p>हाँ। हम सलालाह अंतरराष्ट्रीय हवाई अड्डे से, लगभग 15 मिनट दूर, सशुल्क ट्रांसफ़र की व्यवस्था करते हैं। WhatsApp पर हमें अपना फ़्लाइट नंबर भेजें।</p></details>
       <details><summary>देर से पहुँच रहे हैं?</summary><p>चेक-इन 11:00 pm तक चलता है और फ़्रंट डेस्क 24 घंटे खुला रहता है। अगर आप बाद में आएँगे, तो हमें अपना आगमन समय भेजें और हम आपके लिए तैयार रहेंगे।</p></details>
       <details><summary>क्या बच्चे पूल का उपयोग कर सकते हैं?</summary><p>हाँ। इनडोर पूल गर्म है और उसके बगल में बच्चों के लिए उथला पूल है। बच्चों के साथ कोई वयस्क होना चाहिए।</p></details>
+      <details><summary>क्या आप हनीमून या जन्मदिन के लिए कमरा सजा सकते हैं?</summary><p>हाँ। बुकिंग के समय हमें बताएँ और आपके आने से पहले कमरा तैयार होगा।</p></details>
+      <details><summary>क्या होटल छोटे बच्चों वाले परिवारों के लिए उपयुक्त है?</summary><p>हाँ। सुइट्स में लिविंग रूम और किचनेट है, और बच्चों के लिए उथला पूल है। हमारे पास पालने नहीं हैं, इसलिए ज़रूरत हो तो ट्रैवल कॉट साथ लाएँ।</p></details>
     </div>
   </div>
 </section>
@@ -522,6 +659,13 @@
 <div class="mobile-bar">
   <a class="btn btn-primary" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
   <a class="btn btn-gold" href="#book">तारीख़ें देखें</a>
+</div>
+
+<div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="फ़ोटो व्यूअर">
+  <button class="lb-close" type="button" aria-label="बंद करें"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="lb-prev" type="button" aria-label="पिछली फ़ोटो"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+  <figure class="lb-fig"><img class="lb-img" alt=""><figcaption><span class="lb-count"></span><span class="lb-cap"></span></figcaption></figure>
+  <button class="lb-next" type="button" aria-label="अगली फ़ोटो"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
 </div>
 
 <script src="../assets/js/main.js" defer></script>

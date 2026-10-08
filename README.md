@@ -15,9 +15,9 @@ tools/                build.py, i18n.py, check_i18n.py (Python 3, nothing to ins
 404.html              "Page not found" page
 assets/css/style.css  All styles (colours and fonts are set at the top in :root)
 assets/css/fonts.css  Self-hosted fonts (no Google requests), incl. Latin-extended and Cyrillic subsets
-assets/js/main.js     WhatsApp booking form, language menu, mobile menu, animations
+assets/js/main.js     WhatsApp booking form, photo lightbox, gallery filter, language menu, mobile menu, animations
 assets/img/           favicon.svg, apple-touch-icon.png (the hotel's own B logo), og-image.jpg, map.svg, pattern.svg
-assets/img/photos/    Hotel photos, recompressed (originals from the hotel's listing photos)
+assets/img/photos/    47 hotel photos, recompressed (originals from the hotel's listing photos); each room card opens a 4-photo set
 robots.txt, sitemap.xml, .nojekyll
 ```
 
@@ -51,6 +51,10 @@ four A records (185.199.108.153, .109.153, .110.153, .111.153) plus a `www` CNAM
 
 Netlify and Cloudflare Pages also work: drag and drop the folder.
 
+## Sections
+
+Hero and WhatsApp booking card · included-with-every-stay strip · welcome story · numbers strip · rooms and suites (each card opens a 4-photo lightbox) · filterable photo gallery (27 photos) · suites for long stays · pool, spa and gym · Silk Road Restaurant · season guide (beach season, hot months, Khareef) · location with illustrated map and "Getting here" · reviews · Dhofar trips · seasonal offers · Laylati Hall events · good to know and FAQ · footer.
+
 ## Where the facts came from
 
 | Fact | Source |
@@ -80,6 +84,10 @@ Netlify and Cloudflare Pages also work: drag and drop the folder.
 | Languages | Arabic & English | Reviews mention Omani, Egyptian and Indian staff |
 | Accessibility | "Wheelchair accessible, accessible bathrooms" | Booking.com accessibility filters; lift not confirmed |
 | Email | not shown | Add one if the hotel wants it |
+| Room decoration | "Tell us you're celebrating and we'll have the room ready" | The listing photos show towel swans and petals; confirm it is offered |
+| Ramadan & iftar | "Ramadan room rates and iftar menus are posted on Instagram" | From the Instagram "Ramadan" highlight; confirm the restaurant serves iftar |
+| Direct flights | Muscat, Dubai, Doha, Riyadh, Jeddah, Kuwait, Indian cities in season | General SLL route knowledge; check against the current season |
+| Season temperatures | 27–30 °C (Oct–Mar), 31–34 °C (Apr–Jun), 24–27 °C (Khareef) | Typical Salalah climate figures, rounded |
 
 ## Editing
 

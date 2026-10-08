@@ -112,5 +112,72 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") langs.open = false; });
   }
 
+  // gallery filter tabs
+  var gal = document.querySelector("[data-lightbox='gallery']");
+  var tabs = document.querySelectorAll(".tabs .tab");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var f = tab.getAttribute("data-filter");
+      tabs.forEach(function (x) { var on = x === tab; x.classList.toggle("is-active", on); x.setAttribute("aria-pressed", on ? "true" : "false"); });
+      if (!gal) return;
+      gal.querySelectorAll("figure").forEach(function (fig) {
+        var show = f === "all" || fig.getAttribute("data-cat") === f;
+        fig.hidden = !show;
+        if (show) fig.classList.add("in");
+      });
+    });
+  });
+
+  // lightbox: gallery figures and room photo sets
+  var lb = document.getElementById("lightbox");
+  if (lb) {
+    var lbImg = lb.querySelector(".lb-img"), lbCap = lb.querySelector(".lb-cap"), lbCount = lb.querySelector(".lb-count");
+    var items = [], idx = 0, lastFocus = null, rtl = document.documentElement.dir === "rtl";
+    function show(i) {
+      idx = (i + items.length) % items.length;
+      lbImg.src = items[idx].src; lbImg.alt = items[idx].alt;
+      lbCap.textContent = items[idx].alt; lbCount.textContent = (idx + 1) + " / " + items.length;
+    }
+    function openLb(list, i, trigger) {
+      if (!list.length) return;
+      items = list; lastFocus = trigger; lb.hidden = false; document.body.classList.add("lb-open");
+      show(i); lb.querySelector(".lb-close").focus();
+    }
+    function closeLb() { lb.hidden = true; document.body.classList.remove("lb-open"); if (lastFocus) lastFocus.focus(); }
+    function item(img) { return { src: img.currentSrc || img.src, alt: img.alt }; }
+    if (gal) gal.querySelectorAll("figure").forEach(function (fig) {
+      var b = fig.querySelector(".g-open"); if (!b) return;
+      b.addEventListener("click", function () {
+        var vis = [].filter.call(gal.querySelectorAll("figure"), function (x) { return !x.hidden; });
+        openLb(vis.map(function (x) { return item(x.querySelector("img")); }), vis.indexOf(fig), b);
+      });
+    });
+    document.querySelectorAll(".room").forEach(function (card) {
+      var b = card.querySelector(".room-photos"); if (!b) return;
+      b.addEventListener("click", function () {
+        var list = [item(b.querySelector("img"))];
+        card.querySelectorAll(".room-more a").forEach(function (a) { list.push({ src: a.href, alt: a.title }); });
+        openLb(list, 0, b);
+      });
+    });
+    lb.querySelector(".lb-close").addEventListener("click", closeLb);
+    lb.querySelector(".lb-prev").addEventListener("click", function () { show(idx - 1); });
+    lb.querySelector(".lb-next").addEventListener("click", function () { show(idx + 1); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+    document.addEventListener("keydown", function (e) {
+      if (lb.hidden) return;
+      if (e.key === "Escape") closeLb();
+      else if (e.key === "ArrowRight") show(idx + (rtl ? -1 : 1));
+      else if (e.key === "ArrowLeft") show(idx + (rtl ? 1 : -1));
+    });
+    var touchX = null;
+    lb.addEventListener("touchstart", function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", function (e) {
+      if (touchX === null) return;
+      var dx = e.changedTouches[0].clientX - touchX; touchX = null;
+      if (Math.abs(dx) > 40) show(idx + ((dx < 0) !== rtl ? 1 : -1));
+    });
+  }
+
   var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
 })();

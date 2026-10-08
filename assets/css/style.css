@@ -434,3 +434,99 @@ html:is([lang="hi"],[lang="zh-Hans"]) :is(.eyebrow,.brand-sub,.price small,.fact
 html:is([lang="hi"],[lang="zh-Hans"]) :is(em.accent,.hero h1 em,.suite h2 em,.signature span){font-style:normal}
 html:is([lang="hi"],[lang="zh-Hans"]) .quote p{font-size:21px;line-height:1.6}
 html[lang="zh-Hans"] body{line-break:strict}
+
+/* at a glance */
+.glance{background:var(--green-deep);color:#D9E6E0;position:relative;overflow:hidden}
+.glance::before{content:"";position:absolute;inset:0;background:url("../img/pattern.svg") center/160px repeat;opacity:.07;pointer-events:none}
+.glance-grid{position:relative;list-style:none;margin:0;padding:44px 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.glance li{display:flex;flex-direction:column;gap:6px;border-inline-start:1px solid rgba(255,255,255,.14);padding-inline-start:22px}
+.glance li:first-child{border:0;padding-inline-start:0}
+.glance strong{font-family:"Cormorant Garamond",serif;font-size:52px;line-height:1;color:var(--gold-soft);font-weight:700}
+.glance strong small{font-size:22px;font-weight:600}
+.glance span{font-size:14px;color:#C4D6CF}
+
+/* room photo sets */
+.room-photos{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in;font:inherit}
+.room-photos img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.room-photos:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.room-count{position:absolute;bottom:12px;inset-inline-end:12px;background:rgba(23,41,42,.78);color:#fff;font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;display:inline-flex;gap:6px;align-items:center;pointer-events:none}
+.room-count svg{width:14px;height:14px}
+
+/* gallery tabs + openers */
+.gallery{padding:24px 0 120px}
+.gallery .section-head{margin-bottom:32px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--stone-dark);background:#fff;font:600 14px var(--sans);color:var(--charcoal);cursor:pointer}
+.tab:hover{border-color:var(--green)}
+.tab.is-active{background:var(--green);border-color:var(--green);color:#fff}
+.g-open{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in;font:inherit}
+.g-open:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.gallery-grid figure[hidden]{display:none}
+
+/* seasons */
+.seasons{background:var(--cream)}
+.season-strip{margin:0 0 24px;background:#fff;border:1px solid var(--stone-dark);border-radius:var(--radius);padding:18px 20px 20px}
+.months{display:grid;grid-template-columns:repeat(12,1fr);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;text-align:center;margin-bottom:10px}
+.bands{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;height:46px}
+.band{grid-column:var(--from) / calc(var(--to) + 1);border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;padding:0 10px;white-space:nowrap;overflow:hidden}
+.band-sun,.dot-sun{background:var(--gold)}
+.band-hot,.dot-hot{background:#C96A3A}
+.band-khareef,.dot-khareef{background:var(--green)}
+.season-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.season{background:#fff;border:1px solid var(--stone-dark);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px}
+.season h3{font-size:24px;display:flex;align-items:center;gap:10px}
+.season .dot{width:12px;height:12px;border-radius:50%;flex:none}
+.season p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* getting here */
+.getting{margin-top:28px;background:#fff;border:1px solid var(--stone-dark);border-radius:var(--radius);padding:24px 26px}
+.getting h3{font-size:22px;margin-bottom:12px}
+.getting .ticks li{font-size:15px}
+.getting .ticks svg{color:var(--green)}
+.getting b{color:var(--charcoal)}
+
+/* offers */
+.offers{background:var(--mist)}
+.offers .panel-body .btn{margin-top:6px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(15,54,48,.95);display:flex;align-items:center;justify-content:center;padding:56px 80px}
+.lb[hidden]{display:none}
+.lb-fig{margin:0;max-width:min(1100px,100%);display:flex;flex-direction:column;gap:12px;align-items:center}
+.lb-img{max-width:100%;max-height:calc(100vh - 150px);border-radius:14px;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb-fig figcaption{color:#E3ECE8;font-size:14px;text-align:center;display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
+.lb-count{color:var(--gold-soft);font-weight:700;font-size:13px;letter-spacing:.1em}
+.lb button{position:absolute;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.lb button svg{width:24px;height:24px}
+.lb button:hover{background:rgba(255,255,255,.25)}
+.lb-close{top:16px;inset-inline-end:16px}
+.lb-prev{inset-inline-start:16px;top:50%;transform:translateY(-50%)}
+.lb-next{inset-inline-end:16px;top:50%;transform:translateY(-50%)}
+.lb-prev svg{transform:scaleX(-1)}
+html[dir="rtl"] .lb-prev svg{transform:none}
+html[dir="rtl"] .lb-next svg{transform:scaleX(-1)}
+body.lb-open{overflow:hidden}
+
+@media (max-width:1100px){
+  .glance-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .glance li:nth-child(4){border:0;padding-inline-start:0}
+  .season-cards{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .gallery{padding:16px 0 84px}
+  .glance-grid{grid-template-columns:1fr 1fr;padding:32px 0;gap:20px}
+  .glance li:nth-child(odd){border:0;padding-inline-start:0}
+  .glance li:nth-child(4){border-inline-start:1px solid rgba(255,255,255,.14);padding-inline-start:22px}
+  .glance strong{font-size:40px}
+  .lb{padding:70px 10px 20px}
+  .lb-prev{inset-inline-start:6px}
+  .lb-next{inset-inline-end:6px}
+  .lb button{width:42px;height:42px}
+  .lb-img{max-height:calc(100vh - 170px);border-radius:10px}
+}
+@media (max-width:560px){
+  .months{font-size:10px;letter-spacing:0}
+  .band{font-size:12px;padding:0 6px}
+  .bands{height:40px}
+  .tab{min-height:36px;padding:0 12px;font-size:13px}
+}
