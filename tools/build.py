@@ -66,8 +66,19 @@ def hreflangs():
     return "\n".join(links)
 
 
+def tel_nbsp(html):
+    """Digits inside a tel: link are joined with &nbsp; so the number never wraps."""
+    def fix(m):
+        text = m.group(2)
+        while re.search(r"(\d) (\d)", text):
+            text = re.sub(r"(\d) (\d)", r"\1&nbsp;\2", text)
+        return m.group(1) + text + m.group(3)
+    return re.sub(r'(<a href="tel:[^"]*">)(.*?)(</a>)', fix, html, flags=re.S)
+
+
 def shared(html, code):
     """Switcher and hreflang links, the same in every language."""
+    html = tel_nbsp(html)
     html = re.sub(r'<!--langs-->.*?<!--/langs-->|<a class="lang" href="[^"]*" hreflang="[^"]*" lang="[^"]*">[^<]*</a>',
                   lambda m: switcher(code), html, count=1, flags=re.S)
     html = re.sub(r'(?:<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?)+', "", html)
