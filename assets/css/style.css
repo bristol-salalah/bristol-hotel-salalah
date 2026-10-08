@@ -326,6 +326,7 @@ html[lang="ar"] .footer .footer-h{letter-spacing:0;font-size:15px}
 .footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
 .footer .brand{color:#fff}
 .footer .brand-sub{color:#8D9A95}
+.credit{margin:22px 0 0;text-align:center;font-size:12px;color:#8D9A95;letter-spacing:.04em}
 .footer-bottom{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8D9A95}
 
 /* sticky mobile bar */
