@@ -45,19 +45,33 @@
     });
   }
 
+  // estimate: nights x "from" price of the chosen room
+  var est = document.getElementById("estimate");
+  function updateEstimate() {
+    if (!est || !froom || !fin || !fout) return;
+    var opt = froom.options[froom.selectedIndex], price = opt ? +opt.getAttribute("data-price") : 0;
+    var nights = (fin.value && fout.value) ? Math.round((new Date(fout.value) - new Date(fin.value)) / 86400000) : 0;
+    if (!price || nights < 1) { est.innerHTML = ""; return; }
+    var tpl = form.getAttribute(nights === 1 ? "data-t-est1" : nights === 2 ? "data-t-est2" : "data-t-est") || form.getAttribute("data-t-est") || "";
+    est.innerHTML = tpl.replace("{n}", nights).replace("${total}", "<strong>$" + (nights * price) + "</strong>");
+  }
+
   // room buttons preselect the room and jump to the form
   var froom = document.getElementById("f-room");
+  var form = document.getElementById("booking-form");
+  [froom, fin, fout].forEach(function (el) { if (el) el.addEventListener("change", updateEstimate); });
+  updateEstimate();
   document.querySelectorAll("[data-room]").forEach(function (el) {
     el.addEventListener("click", function () {
       if (!froom) return;
       var v = el.getAttribute("data-room");
       for (var i = 0; i < froom.options.length; i++) if (froom.options[i].value === v) froom.selectedIndex = i;
+      updateEstimate();
       setTimeout(function () { froom.focus({ preventScroll: true }); }, 450);
     });
   });
 
   // booking form -> WhatsApp with a prefilled message
-  var form = document.getElementById("booking-form");
   if (form) form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (!fin.value || !fout.value) { alertInline(form.getAttribute("data-t-pick") || T.pickDates); return; }
@@ -146,7 +160,7 @@
     }
     function closeLb() { lb.hidden = true; document.body.classList.remove("lb-open"); setInert(false); if (lastFocus) lastFocus.focus(); }
     function setInert(on) { document.querySelectorAll("body > :not(#lightbox):not(script)").forEach(function (el) { if (on) el.setAttribute("inert", ""); else el.removeAttribute("inert"); }); }
-    function item(img) { return { src: img.currentSrc || img.src, alt: img.alt }; }
+    function item(img) { return { src: img.src, alt: img.alt }; }  // img.src is the full-size JPEG, srcset holds the smaller WebPs
     if (gal) gal.querySelectorAll("figure").forEach(function (fig) {
       var b = fig.querySelector(".g-open"); if (!b) return;
       b.addEventListener("click", function () {

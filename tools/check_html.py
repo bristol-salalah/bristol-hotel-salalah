@@ -59,7 +59,8 @@ for page in PAGES:
         except ValueError as e:
             problems.append(f"JSON-LD: {e}")
     base = os.path.dirname(page)
-    for u in set(re.findall(r'(?:src|href)="([^"#]+)"', s)):
+    srcset = [c.strip().split()[0] for v in re.findall(r'srcset="([^"]+)"', s) for c in v.split(",")]
+    for u in set(re.findall(r'(?:src|href)="([^"#]+)"', s)) | set(srcset):
         if u.startswith(("http", "mailto:", "tel:", "data:")) or not u:
             continue
         p = u.lstrip("/") if u.startswith("/") else os.path.normpath(os.path.join(base, u))

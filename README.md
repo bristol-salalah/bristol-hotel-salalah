@@ -11,13 +11,14 @@ index.html            English home page (the source for the generated languages)
 ar/index.html         Arabic home page (right to left, hand-written)
 hi/ de/ ru/ fr/ it/ pl/ zh/   Generated language pages (don't edit; run the build)
 data/i18n/            Translation catalogs, one JSON per language (+ _source.json, written by the build)
-tools/                build.py, i18n.py, check_i18n.py, check_html.py (Python 3, nothing to install)
+tools/                build.py, i18n.py, images.py, check_i18n.py, check_html.py (Python 3; images.py needs cwebp)
 404.html              "Page not found" page
 assets/css/style.css  All styles (colours and fonts are set at the top in :root)
 assets/css/fonts.css  Self-hosted fonts (no Google requests), incl. Latin-extended and Cyrillic subsets
 assets/js/main.js     WhatsApp booking form, photo lightbox, gallery filter, language menu, mobile menu, animations
 assets/img/           favicon.svg, apple-touch-icon.png (the hotel's own B logo), og-image.jpg, map.svg, pattern.svg
-assets/img/photos/    46 hotel photos, recompressed (originals from the hotel's listing photos); each room card opens a 4-photo set
+favicon.ico           32 px icon for older browsers
+assets/img/photos/    46 hotel photos as JPEG plus WebP variants at 540/800/1080 px (made by tools/images.py); each room card opens a 4-photo set
 robots.txt, sitemap.xml, .nojekyll
 ```
 
@@ -25,7 +26,7 @@ robots.txt, sitemap.xml, .nojekyll
 
 Why these seven: the Khareef crowd is Omani and GCC (Arabic), then visitors from India and the subcontinent (Hindi), with Europeans in the winter season (German, Russian, French, Italian, Polish) and a growing number from China.
 
-**After changing the English page**, run `python3 tools/build.py`. It rewrites the language menu, the `hreflang` links and `sitemap.xml` in every page, regenerates `data/i18n/_source.json` (every English string), and rebuilds the seven generated pages. New or changed text shows in English on those pages until you add it to `data/i18n/<code>.json`; `python3 tools/check_i18n.py` lists what is missing and fails if a translation adds or drops a placeholder.
+**After changing the English page**, run `python3 tools/build.py`. It rewrites the language menu, the `hreflang` links and `sitemap.xml` in every page, adds the WebP `srcset` to every photo (making missing variants with cwebp), regenerates the structured data (rooms and FAQ) from the page text, regenerates `data/i18n/_source.json` (every English string), and rebuilds the seven generated pages. New or changed text shows in English on those pages until you add it to `data/i18n/<code>.json`; `python3 tools/check_i18n.py` lists what is missing and fails if a translation adds or drops a placeholder.
 
 Strings hide numbers and HTML behind placeholders, so a translation can't change a price or break a link: `<strong>$32</strong> / night` becomes `<0>${0}</0> / night`. Keep every `{0}`, `<0>…</0>` and `<0/>`. The Arabic page is still edited by hand.
 
@@ -63,6 +64,10 @@ Netlify and Cloudflare Pages also work: drag and drop the folder.
 
 Hero and WhatsApp booking card · included-with-every-stay strip · welcome story · numbers strip · rooms and suites (each card opens a 4-photo lightbox) · filterable photo gallery (27 photos) · suites for long stays · pool, spa and gym · Silk Road Restaurant · season guide (beach season, hot months, Khareef) · location with illustrated map and "Getting here" · reviews · Dhofar trips · seasonal offers · Laylati Hall events · good to know and FAQ · footer.
 
+## Structured data
+
+Each page carries two JSON-LD blocks that the build regenerates from the page text: the `Hotel` (address, geo, map link, amenities, and the four rooms as `HotelRoom` with size, beds, occupancy and the "from" price) and a `FAQPage` built from the FAQ. Occupancy and bed types come from `ROOM_FACTS` in `tools/build.py`, because they are not written on the page. No `aggregateRating` is included on purpose: Google's review-snippet policy only allows ratings collected on the site itself, not Booking.com's.
+
 ## Where the facts came from
 
 | Fact | Source |
@@ -99,9 +104,9 @@ Hero and WhatsApp booking card · included-with-every-stay strip · welcome stor
 
 ## Editing
 
-* **Prices:** search `index.html` and `ar/index.html` for `$32` / `$39` / `$42` / `$44`, update the `<option>` labels in the booking form, then run `python3 tools/build.py` (numbers are placeholders, so the other languages pick them up without a new translation).
+* **Prices:** search `index.html` and `ar/index.html` for `$32` / `$39` / `$42` / `$44`, update the `<option>` labels and their `data-price` values in the booking form (the estimate line multiplies `data-price` by the nights), then run `python3 tools/build.py` (numbers are placeholders, so the other languages pick them up without a new translation).
 * **WhatsApp number:** change `PHONE` in `assets/js/main.js` and the `wa.me/96897260111` links in `index.html` and `ar/index.html`, then run the build.
-* **Photos:** replace files in `assets/img/photos/` with the same names. Photos are 1080 px wide; larger originals from the hotel will improve the site, especially `hero.jpg`.
+* **Photos:** replace files in `assets/img/photos/` with the same names, delete that photo's `-540/-800/-1080.webp` variants, and run the build to remake them. Photos are 1080 px wide; larger originals from the hotel will improve the site, especially `hero.jpg`.
 * **Reviews:** verbatim quotes from verified Booking.com reviews (English page: Khalid, Prasath, Marwan; Arabic page: Asim, Mohamed, Khuwar, Rashedi) and Google (Renny J, Ophel V). Keep the attribution if you change them.
 * **Arabic page:** `ar/index.html` is written by hand; keep it in step with `index.html` when you change facts. The other languages follow `index.html` automatically through the build.
 

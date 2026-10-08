@@ -683,6 +683,9 @@
  "Prasath, United Arab Emirates · Verified Booking.com review": [
   "index.html"
  ],
+ "Prefer to pay by card online? Book on Booking.com": [
+  "index.html"
+ ],
  "Previous photo": [
   "index.html"
  ],
@@ -699,6 +702,9 @@
   "index.html"
  ],
  "Rated {0} by guests, everywhere in the hotel": [
+  "index.html"
+ ],
+ "Read all {0} reviews on Booking.com →": [
   "index.html"
  ],
  "Reception desk in cream marble under a crystal chandelier": [
@@ -780,6 +786,9 @@
   "index.html"
  ],
  "See rooms & prices": [
+  "index.html"
+ ],
+ "See the reviews on Google →": [
   "index.html"
  ],
  "See {0} photos of the Deluxe Room": [
@@ -1067,6 +1076,12 @@
  "{0} m²": [
   "index.html"
  ],
+ "{0} night from ${total}, before taxes": [
+  "index.html"
+ ],
+ "{0} nights from ${total}, before taxes": [
+  "index.html"
+ ],
  "{0} photos": [
   "index.html"
  ],
@@ -1083,6 +1098,9 @@
   "index.html"
  ],
  "{0}–{1} m²": [
+  "index.html"
+ ],
+ "{n} nights from ${total}, before taxes": [
   "index.html"
  ],
  "© <0>{0}</0> Bristol Hotel Salalah · فندق بريستول صلالة": [
