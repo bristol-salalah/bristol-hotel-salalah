@@ -125,7 +125,7 @@
     <div class="header-actions">
       <!--langs--><details class="langs" translate="no"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>EN</summary><ul><li><a href="./" hreflang="en" lang="en" aria-current="true">English</a></li><li><a href="ar/" hreflang="ar" lang="ar">العربية</a></li><li><a href="hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="it/" hreflang="it" lang="it">Italiano</a></li><li><a href="pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li></ul></details><!--/langs-->
       <a class="btn btn-primary btn-sm" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="btn-wa-text">Book on WhatsApp</span><span class="sr-only">Book on WhatsApp</span></a>
-      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <button class="menu-btn" type="button" data-t-open="Open menu" data-t-close="Close menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
@@ -152,7 +152,7 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" aria-label="Request a booking on WhatsApp">
+    <form class="booking-card" id="booking-form" data-t-pick="Please choose your check-in and check-out dates" data-t-err="Check-out must be after check-in" aria-label="Request a booking on WhatsApp">
       <label class="field field-room">Room
         <select name="room" id="f-room">
           <option value="Deluxe Room">Deluxe Room, from $32</option>
@@ -663,7 +663,7 @@
         <p style="margin:0;max-width:320px;font-size:13px">Ministry of Heritage &amp; Tourism licence MHT L1169594</p>
       </div>
       <div>
-        <h4>Visit</h4>
+        <h3 class="footer-h">Visit</h3>
         <ul>
           <li>As Saadah Street, South Saadah</li>
           <li>Opposite Al Saadah Health Centre</li>
@@ -672,7 +672,7 @@
         </ul>
       </div>
       <div>
-        <h4>Book</h4>
+        <h3 class="footer-h">Book</h3>
         <ul>
           <li><a href="https://wa.me/96897260111" data-wa>WhatsApp +968 9726 0111</a></li>
           <li><a href="tel:+96823321666">Call +968 23 321666</a></li>
@@ -680,7 +680,7 @@
         </ul>
       </div>
       <div>
-        <h4>Explore</h4>
+        <h3 class="footer-h">Explore</h3>
         <ul>
           <li><a href="#rooms">Rooms &amp; prices</a></li>
           <li><a href="#wellness">Pool &amp; spa</a></li>

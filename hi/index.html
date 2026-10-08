@@ -88,7 +88,7 @@
     <div class="header-actions">
       <!--langs--><details class="langs" translate="no"><summary aria-label="Language: हिन्दी"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>HI</summary><ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../ar/" hreflang="ar" lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi" aria-current="true">हिन्दी</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li></ul></details><!--/langs-->
       <a class="btn btn-primary btn-sm" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="btn-wa-text">WhatsApp पर बुक करें</span><span class="sr-only">WhatsApp पर बुक करें</span></a>
-      <button class="menu-btn" type="button" aria-label="मेन्यू खोलें" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <button class="menu-btn" type="button" data-t-open="मेन्यू खोलें" data-t-close="मेन्यू बंद करें" aria-label="मेन्यू खोलें" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
@@ -115,7 +115,7 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" aria-label="WhatsApp पर बुकिंग का अनुरोध करें">
+    <form class="booking-card" id="booking-form" data-t-pick="कृपया चेक-इन और चेक-आउट की तारीख़ें चुनें" data-t-err="चेक-आउट चेक-इन के बाद होना चाहिए" aria-label="WhatsApp पर बुकिंग का अनुरोध करें">
       <label class="field field-room">कमरा<select name="room" id="f-room">
           <option value="Deluxe Room">डीलक्स रूम, $32 से</option>
           <option value="Junior Suite">जूनियर सुइट, $39 से</option>
@@ -622,7 +622,7 @@
         <p style="margin:0;max-width:320px;font-size:13px">विरासत और पर्यटन मंत्रालय लाइसेंस MHT L1169594</p>
       </div>
       <div>
-        <h4>पता</h4>
+        <h3 class="footer-h">पता</h3>
         <ul>
           <li>अस सआदा स्ट्रीट, दक्षिण सआदा</li>
           <li>अल सआदा हेल्थ सेंटर के सामने</li>
@@ -631,7 +631,7 @@
         </ul>
       </div>
       <div>
-        <h4>बुक करें</h4>
+        <h3 class="footer-h">बुक करें</h3>
         <ul>
           <li><a href="https://wa.me/96897260111" data-wa>WhatsApp +968 9726 0111</a></li>
           <li><a href="tel:+96823321666">कॉल करें +968 23 321666</a></li>
@@ -639,7 +639,7 @@
         </ul>
       </div>
       <div>
-        <h4>देखें</h4>
+        <h3 class="footer-h">देखें</h3>
         <ul>
           <li><a href="#rooms">कमरे और क़ीमतें</a></li>
           <li><a href="#wellness">पूल और स्पा</a></li>

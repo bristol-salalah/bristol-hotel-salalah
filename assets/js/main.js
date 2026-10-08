@@ -60,8 +60,8 @@
   var form = document.getElementById("booking-form");
   if (form) form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if (!fin.value || !fout.value) { alertInline(T.pickDates); return; }
-    if (fout.value <= fin.value) { alertInline(T.badDates); return; }
+    if (!fin.value || !fout.value) { alertInline(form.getAttribute("data-t-pick") || T.pickDates); return; }
+    if (fout.value <= fin.value) { alertInline(form.getAttribute("data-t-err") || T.badDates); return; }
     var nights = Math.round((new Date(fout.value) - new Date(fin.value)) / 86400000);
     var g = document.getElementById("f-guests");
     var msg = T.hello + "\n" +
@@ -91,7 +91,7 @@
     btn.addEventListener("click", function () {
       var open = nav.classList.toggle("open");
       btn.setAttribute("aria-expanded", open ? "true" : "false");
-      btn.setAttribute("aria-label", open ? T.close : T.open);
+      btn.setAttribute("aria-label", open ? (btn.getAttribute("data-t-close") || T.close) : (btn.getAttribute("data-t-open") || T.open));
     });
     nav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); }); });
   }
@@ -166,6 +166,12 @@
     lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
     document.addEventListener("keydown", function (e) {
       if (lb.hidden) return;
+      if (e.key === "Tab") {
+        var f = lb.querySelectorAll("button"), first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        return;
+      }
       if (e.key === "Escape") closeLb();
       else if (e.key === "ArrowRight") show(idx + (rtl ? -1 : 1));
       else if (e.key === "ArrowLeft") show(idx + (rtl ? 1 : -1));

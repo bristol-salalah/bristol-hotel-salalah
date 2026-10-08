@@ -88,7 +88,7 @@
     <div class="header-actions">
       <!--langs--><details class="langs" translate="no"><summary aria-label="Language: Русский"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>RU</summary><ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../ar/" hreflang="ar" lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../ru/" hreflang="ru" lang="ru" aria-current="true">Русский</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li></ul></details><!--/langs-->
       <a class="btn btn-primary btn-sm" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="btn-wa-text">Бронь в WhatsApp</span><span class="sr-only">Бронь в WhatsApp</span></a>
-      <button class="menu-btn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <button class="menu-btn" type="button" data-t-open="Открыть меню" data-t-close="Закрыть меню" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
@@ -115,7 +115,7 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" aria-label="Запросить бронирование в WhatsApp">
+    <form class="booking-card" id="booking-form" data-t-pick="Выберите даты заезда и выезда" data-t-err="Выезд должен быть позже заезда" aria-label="Запросить бронирование в WhatsApp">
       <label class="field field-room">Номер<select name="room" id="f-room">
           <option value="Deluxe Room">Номер Deluxe, от $32</option>
           <option value="Junior Suite">Люкс Junior, от $39</option>
@@ -207,7 +207,7 @@
         <div class="room-body">
           <h3>Номер Deluxe</h3>
           <p>Просторные 40 м² с кроватью king-size, видом на город и полноценной ванной. Всё, что нужно на ночь или две.</p>
-          <ul class="chips"><li>40 м²</li><li>1 кровать king</li><li>До 2 гостей</li><li>Вид на город</li></ul>
+          <ul class="chips"><li>40 м²</li><li>1 кровать кинг-сайз</li><li>До 2 гостей</li><li>Вид на город</li></ul>
           <div class="room-foot">
             <div class="price"><small>От</small><strong>$32 <span>/ ночь</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Deluxe Room">Забронировать</a>
@@ -224,7 +224,7 @@
         <div class="room-body">
           <h3>Люкс Junior</h3>
           <p>Спальня с кроватью king плюс отдельная гостиная с диваном-кроватью и мини-кухней. Готовьте, работайте, располагайтесь.</p>
-          <ul class="chips"><li>70 м²</li><li>King + диван-кровать</li><li>Гостиная</li><li>Мини-кухня</li></ul>
+          <ul class="chips"><li>70 м²</li><li>Кинг-сайз + диван-кровать</li><li>Гостиная</li><li>Мини-кухня</li></ul>
           <div class="room-foot">
             <div class="price"><small>От</small><strong>$39 <span>/ ночь</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Junior Suite">Забронировать</a>
@@ -241,7 +241,7 @@
         <div class="room-body">
           <h3>Люкс Superior</h3>
           <p>Планировка люкса Junior на высоком этаже, с балконом и террасой с видом через город на горы Дофара.</p>
-          <ul class="chips"><li>70 м²</li><li>King + диван-кровать</li><li>Балкон</li><li>Вид на горы и город</li></ul>
+          <ul class="chips"><li>70 м²</li><li>Кинг-сайз + диван-кровать</li><li>Балкон</li><li>Вид на горы и город</li></ul>
           <div class="room-foot">
             <div class="price"><small>От</small><strong>$42 <span>/ ночь</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Superior Suite">Забронировать</a>
@@ -258,7 +258,7 @@
         <div class="room-body">
           <h3>Люкс Executive</h3>
           <p>Две спальни, одна с кроватью king и одна с двумя односпальными, гостиная с диваном-кроватью, мини-кухня и балкон. Наш самый большой люкс.</p>
-          <ul class="chips"><li>95 м²</li><li>2 спальни</li><li>King + 2 односпальные + диван-кровать</li><li>Балкон</li></ul>
+          <ul class="chips"><li>95 м²</li><li>2 спальни</li><li>Кинг-сайз + 2 односпальные + диван-кровать</li><li>Балкон</li></ul>
           <div class="room-foot">
             <div class="price"><small>От</small><strong>$44 <span>/ ночь</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Executive Suite (2 bedrooms)">Забронировать</a>
@@ -622,7 +622,7 @@
         <p style="margin:0;max-width:320px;font-size:13px">Лицензия Министерства наследия и туризма MHT L1169594</p>
       </div>
       <div>
-        <h4>Адрес</h4>
+        <h3 class="footer-h">Адрес</h3>
         <ul>
           <li>Улица Ас-Саада, Южная Саада</li>
           <li>Напротив медицинского центра Аль-Саада</li>
@@ -631,7 +631,7 @@
         </ul>
       </div>
       <div>
-        <h4>Забронировать</h4>
+        <h3 class="footer-h">Забронировать</h3>
         <ul>
           <li><a href="https://wa.me/96897260111" data-wa>WhatsApp +968 9726 0111</a></li>
           <li><a href="tel:+96823321666">Позвонить +968 23 321666</a></li>
@@ -639,7 +639,7 @@
         </ul>
       </div>
       <div>
-        <h4>Разделы</h4>
+        <h3 class="footer-h">Разделы</h3>
         <ul>
           <li><a href="#rooms">Номера и цены</a></li>
           <li><a href="#wellness">Бассейн и спа</a></li>

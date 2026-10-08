@@ -88,7 +88,7 @@
     <div class="header-actions">
       <!--langs--><details class="langs" translate="no"><summary aria-label="Language: Deutsch"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>DE</summary><ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../ar/" hreflang="ar" lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="../de/" hreflang="de" lang="de" aria-current="true">Deutsch</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li></ul></details><!--/langs-->
       <a class="btn btn-primary btn-sm" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="btn-wa-text">Per WhatsApp buchen</span><span class="sr-only">Per WhatsApp buchen</span></a>
-      <button class="menu-btn" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <button class="menu-btn" type="button" data-t-open="Menü öffnen" data-t-close="Menü schließen" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
@@ -115,7 +115,7 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" aria-label="Buchung per WhatsApp anfragen">
+    <form class="booking-card" id="booking-form" data-t-pick="Bitte wählen Sie An- und Abreisedatum" data-t-err="Die Abreise muss nach der Anreise liegen" aria-label="Buchung per WhatsApp anfragen">
       <label class="field field-room">Zimmer<select name="room" id="f-room">
           <option value="Deluxe Room">Deluxe-Zimmer, ab $32</option>
           <option value="Junior Suite">Junior Suite, ab $39</option>
@@ -622,7 +622,7 @@
         <p style="margin:0;max-width:320px;font-size:13px">Lizenz des Ministeriums für Kulturerbe &amp; Tourismus MHT L1169594</p>
       </div>
       <div>
-        <h4>Besuchen</h4>
+        <h3 class="footer-h">Besuchen</h3>
         <ul>
           <li>As Saadah Street, Süd-Saadah</li>
           <li>Gegenüber dem Al Saadah Health Centre</li>
@@ -631,7 +631,7 @@
         </ul>
       </div>
       <div>
-        <h4>Buchen</h4>
+        <h3 class="footer-h">Buchen</h3>
         <ul>
           <li><a href="https://wa.me/96897260111" data-wa>WhatsApp +968 9726 0111</a></li>
           <li><a href="tel:+96823321666">Anrufen +968 23 321666</a></li>
@@ -639,7 +639,7 @@
         </ul>
       </div>
       <div>
-        <h4>Entdecken</h4>
+        <h3 class="footer-h">Entdecken</h3>
         <ul>
           <li><a href="#rooms">Zimmer &amp; Preise</a></li>
           <li><a href="#wellness">Pool &amp; Spa</a></li>

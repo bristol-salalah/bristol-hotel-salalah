@@ -251,6 +251,9 @@
  "Check-out": [
   "index.html"
  ],
+ "Check-out must be after check-in": [
+  "index.html"
+ ],
  "Children": [
   "index.html"
  ],
@@ -270,6 +273,9 @@
   "index.html"
  ],
  "Close": [
+  "index.html"
+ ],
+ "Close menu": [
   "index.html"
  ],
  "Comfort": [
@@ -660,6 +666,9 @@
   "index.html"
  ],
  "Platters of grilled meat, rice and salads on a restaurant table": [
+  "index.html"
+ ],
+ "Please choose your check-in and check-out dates": [
   "index.html"
  ],
  "Plus room service and luggage storage": [

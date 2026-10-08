@@ -88,7 +88,7 @@
     <div class="header-actions">
       <!--langs--><details class="langs" translate="no"><summary aria-label="Language: 简体中文"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>ZH</summary><ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../ar/" hreflang="ar" lang="ar">العربية</a></li><li><a href="../hi/" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../zh/" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">简体中文</a></li></ul></details><!--/langs-->
       <a class="btn btn-primary btn-sm" href="https://wa.me/96897260111" data-wa><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="btn-wa-text">WhatsApp 预订</span><span class="sr-only">WhatsApp 预订</span></a>
-      <button class="menu-btn" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <button class="menu-btn" type="button" data-t-open="打开菜单" data-t-close="关闭菜单" aria-label="打开菜单" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
@@ -115,7 +115,7 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" aria-label="通过 WhatsApp 申请预订">
+    <form class="booking-card" id="booking-form" data-t-pick="请选择入住和退房日期" data-t-err="退房日期必须晚于入住日期" aria-label="通过 WhatsApp 申请预订">
       <label class="field field-room">房型<select name="room" id="f-room">
           <option value="Deluxe Room">豪华客房，$32 起</option>
           <option value="Junior Suite">初级套房，$39 起</option>
@@ -622,7 +622,7 @@
         <p style="margin:0;max-width:320px;font-size:13px">遗产与旅游部许可证 MHT L1169594</p>
       </div>
       <div>
-        <h4>地址</h4>
+        <h3 class="footer-h">地址</h3>
         <ul>
           <li>萨阿达大街，南萨阿达</li>
           <li>萨阿达健康中心对面</li>
@@ -631,7 +631,7 @@
         </ul>
       </div>
       <div>
-        <h4>预订</h4>
+        <h3 class="footer-h">预订</h3>
         <ul>
           <li><a href="https://wa.me/96897260111" data-wa>WhatsApp +968 9726 0111</a></li>
           <li><a href="tel:+96823321666">致电 +968 23 321666</a></li>
@@ -639,7 +639,7 @@
         </ul>
       </div>
       <div>
-        <h4>浏览</h4>
+        <h3 class="footer-h">浏览</h3>
         <ul>
           <li><a href="#rooms">房型与价格</a></li>
           <li><a href="#wellness">泳池与水疗</a></li>

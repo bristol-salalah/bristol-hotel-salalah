@@ -317,8 +317,8 @@ html[lang="ar"] .fact small{letter-spacing:0;font-size:13px}
 /* footer */
 .footer{background:var(--ink);color:#B9C5C0;padding:72px 0 32px;font-size:15px}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
-.footer h4{font-family:var(--sans);color:#fff;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 16px}
-html[lang="ar"] .footer h4{letter-spacing:0;font-size:15px}
+.footer .footer-h{font-family:var(--sans);color:#fff;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 16px;font-weight:700}
+html[lang="ar"] .footer .footer-h{letter-spacing:0;font-size:15px}
 .footer a{color:#E0E8E4;text-decoration:none}
 .footer a:hover{color:var(--gold-soft)}
 .footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
@@ -430,7 +430,7 @@ html:is([lang="hi"],[lang="zh-Hans"]) :is(h1,h2,h3){line-height:1.3;letter-spaci
 html:is([lang="hi"],[lang="zh-Hans"]) h1{font-size:clamp(34px,4.8vw,62px)}
 html:is([lang="hi"],[lang="zh-Hans"]) h2{font-size:clamp(28px,3.4vw,44px)}
 html:is([lang="hi"],[lang="zh-Hans"]) h3{font-size:22px}
-html:is([lang="hi"],[lang="zh-Hans"]) :is(.eyebrow,.brand-sub,.price small,.fact small,.hours small,.room-tag,.footer h4,.langs summary){letter-spacing:.04em}
+html:is([lang="hi"],[lang="zh-Hans"]) :is(.eyebrow,.brand-sub,.price small,.fact small,.hours small,.room-tag,.footer .footer-h,.langs summary){letter-spacing:.04em}
 html:is([lang="hi"],[lang="zh-Hans"]) :is(em.accent,.hero h1 em,.suite h2 em,.signature span){font-style:normal}
 html:is([lang="hi"],[lang="zh-Hans"]) .quote p{font-size:21px;line-height:1.6}
 html[lang="zh-Hans"] body{line-break:strict}
@@ -529,4 +529,18 @@ body.lb-open{overflow:hidden}
   .band{font-size:12px;padding:0 6px}
   .bands{height:40px}
   .tab{min-height:36px;padding:0 12px;font-size:13px}
+}
+@media (max-width:400px){
+  .brand-sub{display:none}
+  .brand-name{font-size:19px;letter-spacing:.12em}
+  html[lang="ar"] .brand-name{font-size:18px}
+  .header-actions{gap:6px}
+  .langs summary{min-height:40px;padding:0 8px;font-size:13px}
+  .menu-btn{width:44px;height:44px}
+  .header-actions .btn-sm{min-height:44px;padding:0 13px}
+}
+@media (max-width:360px){
+  .brand{gap:8px}
+  .brand svg{width:30px;height:35px}
+  .header-actions{gap:4px}
 }

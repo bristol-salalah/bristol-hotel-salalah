@@ -5,10 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found | Bristol Hotel Salalah</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/fonts.css">
-<link rel="stylesheet" href="/assets/css/style.css">
 <style>
+  :root{--green-deep:#0F3630;--gold-soft:#E2B65C;--ink:#171C1B}
+  body{margin:0;font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+  h1{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-weight:600;line-height:1.05;margin:0 0 16px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:1.5px solid transparent}
+  .btn-gold{background:var(--gold-soft);color:var(--ink)}
+  .btn-light{border-color:rgba(255,255,255,.7);color:#fff}
   .nf{min-height:100vh;display:grid;place-items:center;text-align:center;padding:48px 24px;background:var(--green-deep);color:#fff}
   .nf h1{color:#fff;font-size:clamp(40px,6vw,72px)}
   .nf p{color:#C4D6CF;font-size:19px;max-width:520px;margin:0 auto}
@@ -23,10 +26,15 @@
     <h1>That page has checked out.</h1>
     <p>The link you followed doesn’t exist any more. The hotel, the pool and the WhatsApp line are all still here.</p>
     <div class="btns">
-      <a class="btn btn-gold" href="/">Back to the home page</a>
-      <a class="btn btn-light" href="/ar/" lang="ar">الصفحة الرئيسية بالعربية</a>
+      <a class="btn btn-gold" href="/" data-root="">Back to the home page</a>
+      <a class="btn btn-light" href="/ar/" data-root="ar/" lang="ar">الصفحة الرئيسية بالعربية</a>
     </div>
   </div>
 </main>
+<script>
+  // On GitHub Pages the site may live under /bristol-hotel-salalah/; on the hotel's own domain it lives at /.
+  var base = location.pathname.indexOf("/bristol-hotel-salalah/") === 0 ? "/bristol-hotel-salalah/" : "/";
+  document.querySelectorAll("a[data-root]").forEach(function (a) { a.href = base + a.getAttribute("data-root"); });
+</script>
 </body>
 </html>

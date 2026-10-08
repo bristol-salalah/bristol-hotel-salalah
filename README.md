@@ -11,7 +11,7 @@ index.html            English home page (the source for the generated languages)
 ar/index.html         Arabic home page (right to left, hand-written)
 hi/ de/ ru/ fr/ it/ pl/ zh/   Generated language pages (don't edit; run the build)
 data/i18n/            Translation catalogs, one JSON per language (+ _source.json, written by the build)
-tools/                build.py, i18n.py, check_i18n.py (Python 3, nothing to install)
+tools/                build.py, i18n.py, check_i18n.py, check_html.py (Python 3, nothing to install)
 404.html              "Page not found" page
 assets/css/style.css  All styles (colours and fonts are set at the top in :root)
 assets/css/fonts.css  Self-hosted fonts (no Google requests), incl. Latin-extended and Cyrillic subsets
@@ -32,6 +32,13 @@ Strings hide numbers and HTML behind placeholders, so a translation can't change
 The WhatsApp message a guest sends is in English on every page except the Arabic one, so the front desk can always read it. Hindi and Chinese pages use the device's own fonts for those scripts; Polish and Russian use the same Manrope and Cormorant Garamond as English (Latin-extended and Cyrillic subsets are included).
 
 The translations were machine-made, including the guest quotes. Ask a native speaker to read through each language when you can.
+
+## Checks
+
+```
+python3 tools/check_html.py   # balanced tags, duplicate ids, heading order, anchors, alt text, JSON-LD, file references
+python3 tools/check_i18n.py   # every language complete, no broken placeholders
+```
 
 ## Preview locally
 
