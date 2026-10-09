@@ -297,29 +297,26 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" data-t-est="{n} nuits dès ${total}, hors taxes" data-t-est1="1 nuit dès ${total}, hors taxes" data-t-est2="2 nuits dès ${total}, hors taxes" data-t-pick="Veuillez choisir vos dates d’arrivée et de départ" data-t-err="Le départ doit être après l’arrivée" aria-label="Demander une réservation sur WhatsApp">
+    <form class="booking-card" id="booking-form" data-t-age="Âge de l’enfant {n}" data-t-under1="Moins de 1 an" data-t-cap="Cette chambre accueille en général jusqu’à {n} personnes. Nous vous proposerons la meilleure option pour votre groupe sur WhatsApp." data-t-ages="Veuillez indiquer l’âge de chaque enfant" data-t-choose="Choisir" data-t-est="{n} nuits dès ${total}, hors taxes" data-t-est1="1 nuit dès ${total}, hors taxes" data-t-est2="2 nuits dès ${total}, hors taxes" data-t-pick="Veuillez choisir vos dates d’arrivée et de départ" data-t-err="Le départ doit être après l’arrivée" aria-label="Demander une réservation sur WhatsApp">
       <label class="field field-room">Chambre<select name="room" id="f-room">
-          <option value="Deluxe Room" data-price="32">Chambre Deluxe, dès $32</option>
-          <option value="Junior Suite" data-price="39">Suite Junior, dès $39</option>
-          <option value="Superior Suite" data-price="42">Suite Supérieure avec balcon, dès $42</option>
-          <option value="Executive Suite (2 bedrooms)" data-price="44">Suite Executive, 2 chambres, dès $44</option>
+          <option value="Deluxe Room" data-price="32" data-max="2">Chambre Deluxe, dès $32</option>
+          <option value="Junior Suite" data-price="39" data-max="3">Suite Junior, dès $39</option>
+          <option value="Superior Suite" data-price="42" data-max="3">Suite Supérieure avec balcon, dès $42</option>
+          <option value="Executive Suite (2 bedrooms)" data-price="44" data-max="5">Suite Executive, 2 chambres, dès $44</option>
         </select>
       </label>
       <label class="field">Arrivée<input type="date" name="checkin" id="f-in" required>
       </label>
       <label class="field">Départ<input type="date" name="checkout" id="f-out" required>
       </label>
-      <label class="field">Voyageurs<select name="guests" id="f-guests">
-          <option>1 adulte</option>
-          <option selected>2 adultes</option>
-          <option>2 adultes + 1 enfant</option>
-          <option>2 adultes + 2 enfants</option>
-          <option>3 adultes</option>
-          <option>Famille ou groupe (dites-le-nous sur WhatsApp)</option>
-        </select>
+      <label class="field field-n">Adultes<select name="adults" id="f-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      </label>
+      <label class="field field-n">Enfants<select name="children" id="f-children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
       </label>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Envoyer sur WhatsApp</button>
+      <div class="ages" id="f-ages" hidden></div>
       <p class="estimate" id="estimate" aria-live="polite"></p>
+      <p class="capacity" id="capacity" role="status" hidden></p>
     </form>
   </div>
 </section>

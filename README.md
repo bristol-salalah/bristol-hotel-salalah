@@ -105,7 +105,7 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 | Number of rooms | 42 | Booking/Expedia/Trip.com say 42, topomanhotels says 53 |
 | Check-in / out | 2:00–11:00 pm / before 12:00 noon | Booking.com house rules |
 | Payment | "At the hotel, cash accepted; ask about card" | Booking.com lists cash only, Trip.com says cash and cards |
-| Suite occupancy | "King + sofa bed", Executive "family of five" | Booking showed max 2 for a 2-adult search; bed counts suggest more |
+| Room capacity | Booking form notes when guests exceed: Deluxe 2, Junior 3, Superior 3, Executive 5 (`data-max` on the room options) | Booking showed max 2 for a 2-adult search; bed counts suggest more. The note is advice only, it never blocks the request |
 | Events hall name | "Laylati Hall" (قاعة ليلتي) | Taken from an Instagram highlight title; confirm the name and what it hosts |
 | Cancellation | "We'll explain the terms on WhatsApp" | Not published for direct bookings |
 | Massage / spa prices | "charged separately" | Not published |
@@ -119,6 +119,7 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 
 ## Editing
 
+* **Guests:** the form has separate Adults (1–8) and Children (0–6) menus; choosing children adds one required age menu per child (Under 1, 1–17), and the WhatsApp message lists them, e.g. "2 adults, 2 children (ages: under 1, 7)".
 * **Prices:** search `index.html` and `ar/index.html` for `$32` / `$39` / `$42` / `$44`, update the `<option>` labels and their `data-price` values in the booking form (the estimate line multiplies `data-price` by the nights), then run `python3 tools/build.py` (numbers are placeholders, so the other languages pick them up without a new translation).
 * **WhatsApp number:** change `PHONE` in `assets/js/main.js` and the `wa.me/96897260111` links in `index.html` and `ar/index.html`, then run the build.
 * **Photos:** replace files in `assets/img/photos/` with the same names, delete that photo's `-540/-800/-1080.webp` variants, and run the build to remake them. Photos are 1080 px wide; larger originals from the hotel will improve the site, especially `hero.jpg`.

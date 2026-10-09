@@ -19,7 +19,7 @@ SKIP = {"script", "style", "svg", "textarea", "canvas"}
 # Attributes whose text is shown to people (or read by screen readers or search engines).
 # The form's data-t-hello, data-t-room ... build the WhatsApp message and stay in English.
 ATTRS = {"alt", "aria-label", "placeholder", "title", "data-title", "data-remove", "data-t-photo",
-         "data-t-bed", "data-t-err", "data-t-est", "data-t-est1", "data-t-est2", "data-t-pick", "data-t-per", "data-t-open", "data-t-close", "data-ui-night", "data-ui-nights"}
+         "data-t-bed", "data-t-err", "data-t-est", "data-t-est1", "data-t-est2", "data-t-pick", "data-t-per", "data-t-open", "data-t-close", "data-t-age", "data-t-under1", "data-t-cap", "data-t-ages", "data-t-choose", "data-ui-night", "data-ui-nights"}
 META = {("name", "description"), ("property", "og:title"), ("property", "og:description")}
 # Names and brands that stay as they are.
 KEEP = {"Bristol Hotel Salalah", "WhatsApp", "Booking.com", "Google", "Google Maps", "Instagram @bristol_hotel_salalah", "MHT L{0}"}

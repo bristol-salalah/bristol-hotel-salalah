@@ -118,7 +118,7 @@ html[lang="ar"] .hero h1 em{font-style:normal}
 
 /* booking card */
 .booking{position:relative;z-index:2;margin-bottom:-74px;scroll-margin-top:100px}
-.booking-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:grid;grid-template-columns:1.3fr 1fr 1fr .8fr auto;gap:14px;align-items:end;border:1px solid rgba(23,77,69,.1)}
+.booking-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:grid;grid-template-columns:1.3fr 1fr 1fr .6fr .6fr auto;gap:14px;align-items:end;border:1px solid rgba(23,77,69,.1)}
 .field{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.02em}
 .field select,.field input{min-height:52px;border:1.5px solid var(--stone-dark);border-radius:var(--radius-sm);padding:0 14px;font:inherit;font-weight:500;font-size:16px;color:var(--ink);background:#fff;width:100%}
 .field select:focus,.field input:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(184,137,59,.25)}
@@ -703,3 +703,13 @@ html[lang="ar"] .mobile-bar .btn{font-size:15px}
 .trip.feature .trip-img svg{color:var(--green) !important}
 .trip{transition:transform .2s,box-shadow .2s}.trip:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 @media (prefers-reduced-motion:reduce){.trip:hover,.trip:hover .trip-img img{transform:none}}
+
+/* guests: adults, children, ages, capacity note */
+.ages{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:12px;padding:14px 16px;background:var(--cream);border-radius:var(--radius-sm);border:1px dashed var(--stone-dark)}
+.ages[hidden]{display:none}
+.ages .field{width:140px}
+.capacity{grid-column:1 / -1;margin:0;font-size:14px;color:#8A4A1F;background:#FBF1E6;border:1px solid #EBCDAE;border-radius:var(--radius-sm);padding:10px 14px}
+.capacity[hidden]{display:none}
+@media (max-width:1100px){.booking-card .field-n{grid-column:span 1}}
+@media (max-width:560px){.booking-card{grid-template-columns:1fr 1fr}.booking-card .field-room,.booking-card .btn,.booking-card .field:not(.field-n):not(.field-age){grid-column:1 / -1}.ages .field{width:calc(50% - 6px)}}
+@media (max-width:1100px){.booking-card .ages{order:1}.booking-card .btn{order:2}.booking-card .estimate{order:3}.booking-card .capacity{order:4}.booking-card .form-msg{order:5}}

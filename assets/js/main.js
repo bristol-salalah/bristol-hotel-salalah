@@ -3,7 +3,7 @@
   var isAr = document.documentElement.lang === "ar";
   var T = isAr ? {
     hello: "مرحباً فندق بريستول صلالة، أود الحجز:",
-    room: "الغرفة", in: "تاريخ الوصول", out: "تاريخ المغادرة", guests: "عدد الضيوف", nights: "ليالٍ", night1: "ليلة واحدة", night2: "ليلتان", loc: "ar-OM",
+    room: "الغرفة", in: "تاريخ الوصول", out: "تاريخ المغادرة", guests: "عدد الضيوف", adult1: "بالغ واحد", adult2: "بالغان", adultN: "{n} بالغين", child1: "طفل واحد", child2: "طفلان", childN: "{n} أطفال", agesLbl: "الأعمار", under1: "أقل من سنة", sep: "، ", nights: "ليالٍ", night1: "ليلة واحدة", night2: "ليلتان", loc: "ar-OM",
     ask: "هل الغرفة متاحة وما هو السعر؟ شكراً",
     general: "مرحباً فندق بريستول صلالة، أود الاستفسار عن الحجز.",
     pickDates: "يرجى اختيار تاريخ الوصول والمغادرة",
@@ -11,7 +11,7 @@
     open: "فتح القائمة", close: "إغلاق القائمة"
   } : {
     hello: "Hi Bristol Hotel Salalah, I'd like to book:",
-    room: "Room", in: "Check-in", out: "Check-out", guests: "Guests", nights: "nights", night1: "1 night", night2: "2 nights", loc: "en-GB",
+    room: "Room", in: "Check-in", out: "Check-out", guests: "Guests", adult1: "1 adult", adult2: "2 adults", adultN: "{n} adults", child1: "1 child", child2: "2 children", childN: "{n} children", agesLbl: "ages", under1: "under 1", sep: ", ", nights: "nights", night1: "1 night", night2: "2 nights", loc: "en-GB",
     ask: "Is it available, and what's the price? Thank you!",
     general: "Hi Bristol Hotel Salalah, I'd like to ask about a booking.",
     pickDates: "Please choose your check-in and check-out dates",
@@ -56,9 +56,41 @@
     est.innerHTML = tpl.replace("{n}", nights).replace("${total}", "<strong>$" + (nights * price) + "</strong>");
   }
 
+  // guests: adults + children, one age picker per child, and a gentle note when the room is small
+  var fadults = document.getElementById("f-adults"), fchildren = document.getElementById("f-children");
+  var agesBox = document.getElementById("f-ages"), capNote = document.getElementById("capacity");
+  function renderAges() {
+    if (!agesBox || !fchildren) return;
+    var n = +fchildren.value, old = [].map.call(agesBox.querySelectorAll("select"), function (x) { return x.value; });
+    agesBox.innerHTML = "";
+    for (var i = 1; i <= n; i++) {
+      var lab = document.createElement("label"); lab.className = "field field-age";
+      lab.appendChild(document.createTextNode((form.getAttribute("data-t-age") || "Age of child {n}").replace("{n}", i)));
+      var sel = document.createElement("select"); sel.name = "age" + i; sel.required = true;
+      var o = document.createElement("option"); o.value = ""; o.textContent = form.getAttribute("data-t-choose") || "Choose"; sel.appendChild(o);
+      o = document.createElement("option"); o.value = "0"; o.textContent = form.getAttribute("data-t-under1") || "Under 1"; sel.appendChild(o);
+      for (var a = 1; a <= 17; a++) { o = document.createElement("option"); o.value = String(a); o.textContent = String(a); sel.appendChild(o); }
+      if (old[i - 1] !== undefined) sel.value = old[i - 1];
+      lab.appendChild(sel); agesBox.appendChild(lab);
+    }
+    agesBox.hidden = n === 0;
+    var msg = form.querySelector(".form-msg"); if (msg && n === 0) msg.textContent = "";
+  }
+  function checkCapacity() {
+    if (!capNote || !froom || !fadults || !fchildren) return;
+    var max = +froom.options[froom.selectedIndex].getAttribute("data-max");
+    var total = +fadults.value + +fchildren.value;
+    var over = max && total > max;
+    capNote.hidden = !over;
+    capNote.textContent = over ? (form.getAttribute("data-t-cap") || "").replace("{n}", max) : "";
+  }
+
   // room buttons preselect the room and jump to the form
   var froom = document.getElementById("f-room");
   var form = document.getElementById("booking-form");
+  if (fchildren) fchildren.addEventListener("change", function () { renderAges(); checkCapacity(); });
+  if (fadults) fadults.addEventListener("change", checkCapacity);
+  if (froom) froom.addEventListener("change", checkCapacity);
   [froom, fin, fout].forEach(function (el) { if (el) el.addEventListener("change", updateEstimate); });
   updateEstimate();
   document.querySelectorAll("[data-room]").forEach(function (el) {
@@ -66,7 +98,7 @@
       if (!froom) return;
       var v = el.getAttribute("data-room");
       for (var i = 0; i < froom.options.length; i++) if (froom.options[i].value === v) froom.selectedIndex = i;
-      updateEstimate();
+      updateEstimate(); checkCapacity();
       setTimeout(function () { froom.focus({ preventScroll: true }); }, 450);
     });
   });
@@ -77,18 +109,31 @@
     if (!fin.value || !fout.value) { alertInline(form.getAttribute("data-t-pick") || T.pickDates); return; }
     if (fout.value <= fin.value) { alertInline(form.getAttribute("data-t-err") || T.badDates); return; }
     var nights = Math.round((new Date(fout.value) - new Date(fin.value)) / 86400000);
-    var g = document.getElementById("f-guests");
+    var ageVals = [].map.call(document.querySelectorAll("#f-ages select"), function (x) { return x.value; });
+    if (ageVals.some(function (v) { return v === ""; })) {
+      alertInline(form.getAttribute("data-t-ages") || "Please choose the age of each child");
+      var firstEmpty = [].filter.call(document.querySelectorAll("#f-ages select"), function (x) { return !x.value; })[0];
+      if (firstEmpty) firstEmpty.focus();
+      return;
+    }
     var msg = T.hello + "\n" +
       T.room + ": " + froom.options[froom.selectedIndex].value + "\n" +
       T.in + ": " + fmt(fin.value) + "\n" +
       T.out + ": " + fmt(fout.value) + " (" + nn(nights) + ")\n" +
-      T.guests + ": " + g.options[g.selectedIndex].text + "\n\n" + T.ask;
+      T.guests + ": " + guestText(ageVals) + "\n\n" + T.ask;
     window.open(wa(msg), "_blank", "noopener");
   });
 
   function fmt(v) {
     var p = v.split("-"); var d = new Date(+p[0], +p[1] - 1, +p[2]);
     try { return d.toLocaleDateString(T.loc, { weekday: "short", day: "numeric", month: "short", year: "numeric" }); } catch (e) { return v; }
+  }
+  function plural(n, one, two, many) { return n === 1 ? one : n === 2 ? two : many.replace("{n}", n); }
+  function guestText(ageVals) {
+    var a = +fadults.value, c = +fchildren.value;
+    var t = plural(a, T.adult1, T.adult2, T.adultN);
+    if (c > 0) t += T.sep + plural(c, T.child1, T.child2, T.childN) + " (" + T.agesLbl + ": " + ageVals.map(function (v) { return v === "0" ? T.under1 : v; }).join(T.sep) + ")";
+    return t;
   }
   function nn(n) { return n === 1 ? T.night1 : n === 2 ? T.night2 : n + " " + T.nights; }
 

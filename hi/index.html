@@ -297,29 +297,26 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" data-t-est="{n} रातें, ${total} से, कर से पहले" data-t-est1="1 रात, ${total} से, कर से पहले" data-t-est2="2 रातें, ${total} से, कर से पहले" data-t-pick="कृपया चेक-इन और चेक-आउट की तारीख़ें चुनें" data-t-err="चेक-आउट चेक-इन के बाद होना चाहिए" aria-label="WhatsApp पर बुकिंग का अनुरोध करें">
+    <form class="booking-card" id="booking-form" data-t-age="बच्चे {n} की उम्र" data-t-under1="1 साल से कम" data-t-cap="इस कमरे में आमतौर पर {n} लोग तक ठहर सकते हैं। हम WhatsApp पर आपके समूह के लिए सबसे अच्छा विकल्प सुझाएँगे।" data-t-ages="कृपया हर बच्चे की उम्र चुनें" data-t-choose="चुनें" data-t-est="{n} रातें, ${total} से, कर से पहले" data-t-est1="1 रात, ${total} से, कर से पहले" data-t-est2="2 रातें, ${total} से, कर से पहले" data-t-pick="कृपया चेक-इन और चेक-आउट की तारीख़ें चुनें" data-t-err="चेक-आउट चेक-इन के बाद होना चाहिए" aria-label="WhatsApp पर बुकिंग का अनुरोध करें">
       <label class="field field-room">कमरा<select name="room" id="f-room">
-          <option value="Deluxe Room" data-price="32">डीलक्स रूम, $32 से</option>
-          <option value="Junior Suite" data-price="39">जूनियर सुइट, $39 से</option>
-          <option value="Superior Suite" data-price="42">बालकनी वाला सुपीरियर सुइट, $42 से</option>
-          <option value="Executive Suite (2 bedrooms)" data-price="44">एग्ज़ीक्यूटिव सुइट, 2 बेडरूम, $44 से</option>
+          <option value="Deluxe Room" data-price="32" data-max="2">डीलक्स रूम, $32 से</option>
+          <option value="Junior Suite" data-price="39" data-max="3">जूनियर सुइट, $39 से</option>
+          <option value="Superior Suite" data-price="42" data-max="3">बालकनी वाला सुपीरियर सुइट, $42 से</option>
+          <option value="Executive Suite (2 bedrooms)" data-price="44" data-max="5">एग्ज़ीक्यूटिव सुइट, 2 बेडरूम, $44 से</option>
         </select>
       </label>
       <label class="field">चेक-इन<input type="date" name="checkin" id="f-in" required>
       </label>
       <label class="field">चेक-आउट<input type="date" name="checkout" id="f-out" required>
       </label>
-      <label class="field">मेहमान<select name="guests" id="f-guests">
-          <option>1 वयस्क</option>
-          <option selected>2 वयस्क</option>
-          <option>2 वयस्क + 1 बच्चा</option>
-          <option>2 वयस्क + 2 बच्चे</option>
-          <option>3 वयस्क</option>
-          <option>परिवार या समूह (हमें WhatsApp पर बताएँ)</option>
-        </select>
+      <label class="field field-n">वयस्क<select name="adults" id="f-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      </label>
+      <label class="field field-n">बच्चे<select name="children" id="f-children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
       </label>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp पर भेजें</button>
+      <div class="ages" id="f-ages" hidden></div>
       <p class="estimate" id="estimate" aria-live="polite"></p>
+      <p class="capacity" id="capacity" role="status" hidden></p>
     </form>
   </div>
 </section>

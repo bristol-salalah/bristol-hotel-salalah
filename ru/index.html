@@ -277,29 +277,26 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" data-t-est="Ночей: {n}, от ${total}, без налогов" data-t-est1="1 ночь от ${total}, без налогов" data-t-est2="2 ночи от ${total}, без налогов" data-t-pick="Выберите даты заезда и выезда" data-t-err="Выезд должен быть позже заезда" aria-label="Запросить бронирование в WhatsApp">
+    <form class="booking-card" id="booking-form" data-t-age="Возраст ребёнка {n}" data-t-under1="До 1 года" data-t-cap="Обычно в этом номере размещаются до {n} человек. Мы предложим в WhatsApp лучший вариант для вашей группы." data-t-ages="Укажите возраст каждого ребёнка" data-t-choose="Выбрать" data-t-est="Ночей: {n}, от ${total}, без налогов" data-t-est1="1 ночь от ${total}, без налогов" data-t-est2="2 ночи от ${total}, без налогов" data-t-pick="Выберите даты заезда и выезда" data-t-err="Выезд должен быть позже заезда" aria-label="Запросить бронирование в WhatsApp">
       <label class="field field-room">Номер<select name="room" id="f-room">
-          <option value="Deluxe Room" data-price="32">Номер Deluxe, от $32</option>
-          <option value="Junior Suite" data-price="39">Люкс Junior, от $39</option>
-          <option value="Superior Suite" data-price="42">Люкс Superior с балконом, от $42</option>
-          <option value="Executive Suite (2 bedrooms)" data-price="44">Люкс Executive, 2 спальни, от $44</option>
+          <option value="Deluxe Room" data-price="32" data-max="2">Номер Deluxe, от $32</option>
+          <option value="Junior Suite" data-price="39" data-max="3">Люкс Junior, от $39</option>
+          <option value="Superior Suite" data-price="42" data-max="3">Люкс Superior с балконом, от $42</option>
+          <option value="Executive Suite (2 bedrooms)" data-price="44" data-max="5">Люкс Executive, 2 спальни, от $44</option>
         </select>
       </label>
       <label class="field">Заезд<input type="date" name="checkin" id="f-in" required>
       </label>
       <label class="field">Выезд<input type="date" name="checkout" id="f-out" required>
       </label>
-      <label class="field">Гости<select name="guests" id="f-guests">
-          <option>1 взрослый</option>
-          <option selected>2 взрослых</option>
-          <option>2 взрослых + 1 ребёнок</option>
-          <option>2 взрослых + 2 детей</option>
-          <option>3 взрослых</option>
-          <option>Семья или группа (напишите нам в WhatsApp)</option>
-        </select>
+      <label class="field field-n">Взрослые<select name="adults" id="f-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      </label>
+      <label class="field field-n">Дети<select name="children" id="f-children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
       </label>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Отправить в WhatsApp</button>
+      <div class="ages" id="f-ages" hidden></div>
       <p class="estimate" id="estimate" aria-live="polite"></p>
+      <p class="capacity" id="capacity" role="status" hidden></p>
     </form>
   </div>
 </section>

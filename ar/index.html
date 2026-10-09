@@ -255,13 +255,13 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" data-t-est="{n} ليالٍ من ${total}، قبل الضرائب" data-t-est1="ليلة واحدة من ${total}، قبل الضرائب" data-t-est2="ليلتان من ${total}، قبل الضرائب" data-t-pick="يرجى اختيار تاريخ الوصول والمغادرة" data-t-err="يجب أن يكون تاريخ المغادرة بعد تاريخ الوصول" aria-label="طلب حجز عبر واتساب">
+    <form class="booking-card" id="booking-form" data-t-age="عمر الطفل {n}" data-t-under1="أقل من سنة" data-t-cap="السعة المعتادة لهذه الغرفة: {n} ضيوف كحد أقصى. سنقترح عليك الخيار الأنسب لمجموعتك عبر واتساب." data-t-ages="يرجى اختيار عمر كل طفل" data-t-choose="اختر" data-t-est="{n} ليالٍ من ${total}، قبل الضرائب" data-t-est1="ليلة واحدة من ${total}، قبل الضرائب" data-t-est2="ليلتان من ${total}، قبل الضرائب" data-t-pick="يرجى اختيار تاريخ الوصول والمغادرة" data-t-err="يجب أن يكون تاريخ المغادرة بعد تاريخ الوصول" aria-label="طلب حجز عبر واتساب">
       <label class="field field-room">الغرفة
         <select name="room" id="f-room">
-          <option value="غرفة ديلوكس" data-price="32">غرفة ديلوكس، من $32</option>
-          <option value="جناح جونيور" data-price="39">جناح جونيور، من $39</option>
-          <option value="جناح سوبيريور" data-price="42">جناح سوبيريور مع شرفة، من $42</option>
-          <option value="جناح تنفيذي بغرفتي نوم" data-price="44">جناح تنفيذي بغرفتي نوم، من $44</option>
+          <option value="غرفة ديلوكس" data-price="32" data-max="2">غرفة ديلوكس، من $32</option>
+          <option value="جناح جونيور" data-price="39" data-max="3">جناح جونيور، من $39</option>
+          <option value="جناح سوبيريور" data-price="42" data-max="3">جناح سوبيريور مع شرفة، من $42</option>
+          <option value="جناح تنفيذي بغرفتي نوم" data-price="44" data-max="5">جناح تنفيذي بغرفتي نوم، من $44</option>
         </select>
       </label>
       <label class="field">تاريخ الوصول
@@ -270,18 +270,16 @@
       <label class="field">تاريخ المغادرة
         <input type="date" name="checkout" id="f-out" required>
       </label>
-      <label class="field">الضيوف
-        <select name="guests" id="f-guests">
-          <option>بالغ واحد</option>
-          <option selected>بالغان</option>
-          <option>بالغان + طفل</option>
-          <option>بالغان + طفلان</option>
-          <option>3 بالغين</option>
-          <option>عائلة أو مجموعة (أخبرنا عبر واتساب)</option>
-        </select>
+      <label class="field field-n">البالغون
+        <select name="adults" id="f-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      </label>
+      <label class="field field-n">الأطفال
+        <select name="children" id="f-children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
       </label>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>أرسل عبر واتساب</button>
+      <div class="ages" id="f-ages" hidden></div>
       <p class="estimate" id="estimate" aria-live="polite"></p>
+      <p class="capacity" id="capacity" role="status" hidden></p>
     </form>
   </div>
 </section>

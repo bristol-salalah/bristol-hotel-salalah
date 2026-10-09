@@ -299,13 +299,13 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" data-t-est="{n} nights from ${total}, before taxes" data-t-est1="1 night from ${total}, before taxes" data-t-est2="2 nights from ${total}, before taxes" data-t-pick="Please choose your check-in and check-out dates" data-t-err="Check-out must be after check-in" aria-label="Request a booking on WhatsApp">
+    <form class="booking-card" id="booking-form" data-t-age="Age of child {n}" data-t-under1="Under 1" data-t-cap="This room usually sleeps up to {n}. We’ll suggest the best option for your group on WhatsApp." data-t-ages="Please choose the age of each child" data-t-choose="Choose" data-t-est="{n} nights from ${total}, before taxes" data-t-est1="1 night from ${total}, before taxes" data-t-est2="2 nights from ${total}, before taxes" data-t-pick="Please choose your check-in and check-out dates" data-t-err="Check-out must be after check-in" aria-label="Request a booking on WhatsApp">
       <label class="field field-room">Room
         <select name="room" id="f-room">
-          <option value="Deluxe Room" data-price="32">Deluxe Room, from $32</option>
-          <option value="Junior Suite" data-price="39">Junior Suite, from $39</option>
-          <option value="Superior Suite" data-price="42">Superior Suite with balcony, from $42</option>
-          <option value="Executive Suite (2 bedrooms)" data-price="44">Executive Suite, 2 bedrooms, from $44</option>
+          <option value="Deluxe Room" data-price="32" data-max="2">Deluxe Room, from $32</option>
+          <option value="Junior Suite" data-price="39" data-max="3">Junior Suite, from $39</option>
+          <option value="Superior Suite" data-price="42" data-max="3">Superior Suite with balcony, from $42</option>
+          <option value="Executive Suite (2 bedrooms)" data-price="44" data-max="5">Executive Suite, 2 bedrooms, from $44</option>
         </select>
       </label>
       <label class="field">Check-in
@@ -314,18 +314,16 @@
       <label class="field">Check-out
         <input type="date" name="checkout" id="f-out" required>
       </label>
-      <label class="field">Guests
-        <select name="guests" id="f-guests">
-          <option>1 adult</option>
-          <option selected>2 adults</option>
-          <option>2 adults + 1 child</option>
-          <option>2 adults + 2 children</option>
-          <option>3 adults</option>
-          <option>Family or group (tell us on WhatsApp)</option>
-        </select>
+      <label class="field field-n">Adults
+        <select name="adults" id="f-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      </label>
+      <label class="field field-n">Children
+        <select name="children" id="f-children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
       </label>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send on WhatsApp</button>
+      <div class="ages" id="f-ages" hidden></div>
       <p class="estimate" id="estimate" aria-live="polite"></p>
+      <p class="capacity" id="capacity" role="status" hidden></p>
     </form>
   </div>
 </section>

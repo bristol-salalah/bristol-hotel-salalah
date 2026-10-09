@@ -99,8 +99,14 @@
  "Accessibility": [
   "index.html"
  ],
+ "Adults": [
+  "index.html"
+ ],
  "Afternoon": [
   "guide/index.html"
+ ],
+ "Age of child {n}": [
+  "index.html"
  ],
  "Ahlan wa sahlan, welcome to Salalah.": [
   "index.html"
@@ -388,6 +394,9 @@
  "Children’s pool": [
   "index.html"
  ],
+ "Choose": [
+  "index.html"
+ ],
  "Choose your room and dates above and tap “Send on WhatsApp”. Your request opens in WhatsApp with everything filled in. We reply with your price and confirm the room. There’s no booking fee.": [
   "index.html"
  ],
@@ -502,9 +511,6 @@
   "guide/index.html",
   "index.html"
  ],
- "Family or group (tell us on WhatsApp)": [
-  "index.html"
- ],
  "Fazayah Beach": [
   "guide/index.html"
  ],
@@ -605,9 +611,6 @@
   "index.html"
  ],
  "Group room rates for your guests": [
-  "index.html"
- ],
- "Guests": [
   "index.html"
  ],
  "Gym with weight machines and a wooden ceiling": [
@@ -942,6 +945,9 @@
   "index.html"
  ],
  "Platters of grilled meat, rice and salads on a restaurant table": [
+  "index.html"
+ ],
+ "Please choose the age of each child": [
   "index.html"
  ],
  "Please choose your check-in and check-out dates": [
@@ -1286,6 +1292,9 @@
  "Things to do in Salalah | A local guide from Bristol Hotel Salalah": [
   "guide/index.html"
  ],
+ "This room usually sleeps up to {n}. We’ll suggest the best option for your group on WhatsApp.": [
+  "index.html"
+ ],
  "Tomb of the Prophet Job (Nabi Ayoub)": [
   "guide/index.html"
  ],
@@ -1324,6 +1333,9 @@
  ],
  "Ubar & the Empty Quarter dunes": [
   "guide/index.html"
+ ],
+ "Under {0}": [
+  "index.html"
  ],
  "Unwind without leaving the building.": [
   "index.html"
@@ -1459,18 +1471,6 @@
  ],
  "to the nearest beach": [
   "guide/index.html"
- ],
- "{0} adult": [
-  "index.html"
- ],
- "{0} adults": [
-  "index.html"
- ],
- "{0} adults + {1} child": [
-  "index.html"
- ],
- "{0} adults + {1} children": [
-  "index.html"
  ],
  "{0} bedrooms": [
   "index.html"

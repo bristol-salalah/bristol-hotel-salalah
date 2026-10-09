@@ -297,29 +297,26 @@
   </div>
 
   <div class="container booking" id="book">
-    <form class="booking-card" id="booking-form" data-t-est="{n} 晚，${total} 起，税前" data-t-est1="1 晚，${total} 起，税前" data-t-est2="2 晚，${total} 起，税前" data-t-pick="请选择入住和退房日期" data-t-err="退房日期必须晚于入住日期" aria-label="通过 WhatsApp 申请预订">
+    <form class="booking-card" id="booking-form" data-t-age="第 {n} 位儿童年龄" data-t-under1="不满 1 岁" data-t-cap="此房型通常最多可住 {n} 人。我们会在 WhatsApp 上为您的团队推荐最合适的选择。" data-t-ages="请选择每位儿童的年龄" data-t-choose="请选择" data-t-est="{n} 晚，${total} 起，税前" data-t-est1="1 晚，${total} 起，税前" data-t-est2="2 晚，${total} 起，税前" data-t-pick="请选择入住和退房日期" data-t-err="退房日期必须晚于入住日期" aria-label="通过 WhatsApp 申请预订">
       <label class="field field-room">房型<select name="room" id="f-room">
-          <option value="Deluxe Room" data-price="32">豪华客房，$32 起</option>
-          <option value="Junior Suite" data-price="39">初级套房，$39 起</option>
-          <option value="Superior Suite" data-price="42">带阳台的高级套房，$42 起</option>
-          <option value="Executive Suite (2 bedrooms)" data-price="44">行政套房，2 间卧室，$44 起</option>
+          <option value="Deluxe Room" data-price="32" data-max="2">豪华客房，$32 起</option>
+          <option value="Junior Suite" data-price="39" data-max="3">初级套房，$39 起</option>
+          <option value="Superior Suite" data-price="42" data-max="3">带阳台的高级套房，$42 起</option>
+          <option value="Executive Suite (2 bedrooms)" data-price="44" data-max="5">行政套房，2 间卧室，$44 起</option>
         </select>
       </label>
       <label class="field">入住<input type="date" name="checkin" id="f-in" required>
       </label>
       <label class="field">退房<input type="date" name="checkout" id="f-out" required>
       </label>
-      <label class="field">人数<select name="guests" id="f-guests">
-          <option>1 位成人</option>
-          <option selected>2 位成人</option>
-          <option>2 位成人 + 1 名儿童</option>
-          <option>2 位成人 + 2 名儿童</option>
-          <option>3 位成人</option>
-          <option>家庭或团体（在 WhatsApp 告诉我们）</option>
-        </select>
+      <label class="field field-n">成人<select name="adults" id="f-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      </label>
+      <label class="field field-n">儿童<select name="children" id="f-children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
       </label>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>通过 WhatsApp 发送</button>
+      <div class="ages" id="f-ages" hidden></div>
       <p class="estimate" id="estimate" aria-live="polite"></p>
+      <p class="capacity" id="capacity" role="status" hidden></p>
     </form>
   </div>
 </section>
