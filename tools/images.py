@@ -10,7 +10,8 @@ import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PHOTOS = ROOT / "assets/img/photos"
-WIDTHS = (540, 800, 1080)
+DIRS = (PHOTOS, ROOT / "assets/img/places")
+WIDTHS = (540, 800, 1080, 1920)
 
 
 def jpeg_size(path):
@@ -39,6 +40,8 @@ def variants(jpg):
     out = []
     for width in WIDTHS:
         actual = min(width, w or width)
+        if width == WIDTHS[-1] and (w or 0) < WIDTHS[-1]:
+            continue
         out.append((jpg.with_name(f"{jpg.stem}-{width}.webp"), actual))
     return out
 
@@ -46,9 +49,11 @@ def variants(jpg):
 def ensure(verbose=True):
     cwebp = shutil.which("cwebp")
     made, skipped = 0, 0
-    for jpg in sorted(PHOTOS.glob("*.jpg")):
+    for jpg in sorted(j for d in DIRS for j in d.glob("*.jpg")):
         src_w, _ = jpeg_size(jpg)
         for out, width in variants(jpg):
+            if width < min(WIDTHS[-1], WIDTHS[-2] + 1) and out.name.endswith(f"-{WIDTHS[-1]}.webp"):
+                continue  # no 1920 variant for photos that are not that wide
             if out.exists():
                 continue
             if not cwebp:

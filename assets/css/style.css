@@ -603,10 +603,10 @@ picture{display:contents}
 .pin-off{border-radius:8px;width:auto;padding:0 8px;height:26px;gap:4px}
 .pfilter{margin:0 0 20px}
 .spots{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.place{display:grid;grid-template-columns:40px 1fr;gap:16px;background:#fff;border:1px solid var(--stone-dark);border-radius:var(--radius-sm);padding:18px 20px;scroll-margin-top:110px;transition:border-color .2s,box-shadow .2s}
+.place{display:grid;grid-template-columns:200px 1fr;background:#fff;border:1px solid var(--stone-dark);border-radius:var(--radius);overflow:hidden;scroll-margin-top:110px;transition:border-color .2s,box-shadow .2s,transform .2s}
 .place[hidden]{display:none}
 .place.is-hot{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,137,59,.25)}
-.place-num{width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.place-num{position:absolute;top:12px;inset-inline-start:12px;width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.3)}
 .place[data-cat="history"] .place-num{background:#8A6424}.place[data-cat="beach"] .place-num{background:#2D6E8E}.place[data-cat="town"] .place-num{background:#B2552A}.place[data-cat="desert"] .place-num{background:#9A7B3C}
 .place h3{font-size:24px;margin-bottom:8px}
 .place p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
@@ -637,7 +637,7 @@ html[lang="ar"] .plan .tag{letter-spacing:0}
 @media (max-width:1100px){.plan-grid,.tip-grid{grid-template-columns:1fr 1fr}.month-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (max-width:1000px){.explore-grid{grid-template-columns:1fr}}
 @media (max-width:860px){.ghero{padding:64px 0 60px}.plan-grid,.tip-grid{grid-template-columns:1fr}.month-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.pin{width:22px;height:22px;font-size:10px}.pin-hotel{width:24px;height:24px}.pin-hotel svg{width:13px;height:15px}}
-@media (max-width:560px){.month-grid{grid-template-columns:1fr 1fr}.place{grid-template-columns:32px 1fr;gap:12px;padding:16px}.place-num{width:30px;height:30px;font-size:13px}.ghero-stats strong{font-size:30px}}
+@media (max-width:560px){.month-grid{grid-template-columns:1fr 1fr}.place-num{width:32px;height:32px;font-size:13px}.ghero-stats strong{font-size:30px}}
 .pin-hotel{left:50.50%;top:45.80%}
 .pin-dahariz{left:51.79%;top:50.00%}
 .pin-baleed{left:48.61%;top:52.89%}
@@ -661,3 +661,45 @@ html[lang="ar"] .plan .tag{letter-spacing:0}
 .pin-mosque{left:43.5%;top:40%}.pin-haffa{left:43%;top:63%}.pin-baleed{left:45.5%;top:55%}.pin-dahariz{left:54%;top:54%}
 .pin-taqah{left:66%;top:57%}.pin-khor-rori{left:70%;top:45%}.pin-athum{left:66.5%;top:27%}.pin-darbat{left:72.5%;top:35%}
 .pin-razat{left:56%;top:28%}.pin-hamran{left:60.5%;top:36%}
+
+/* guide: photo cards, hero photo, map labels, credits */
+.place-media{position:relative;min-height:100%;background:var(--stone-dark);overflow:hidden}
+.place-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.place:hover .place-media img{transform:scale(1.06)}
+.place:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.place-art{background:linear-gradient(135deg,#2D6E8E,#174D45);display:flex;align-items:center;justify-content:center}
+.place-art::before{content:"";position:absolute;inset:0;background:url("../img/pattern.svg") center/120px repeat;opacity:.12}
+.place-art svg{width:56px;height:56px;color:#fff;opacity:.85;position:relative}
+.place-body{padding:18px 22px 20px}
+.ghero-bg{position:absolute;inset:0;overflow:hidden}
+.ghero-bg img{width:100%;height:100%;object-fit:cover;animation:kenburns 24s ease-out both}
+.ghero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,54,48,.92) 0%,rgba(15,54,48,.7) 50%,rgba(15,54,48,.35) 100%)}
+html[dir="rtl"] .ghero-bg::after{background:linear-gradient(270deg,rgba(15,54,48,.92) 0%,rgba(15,54,48,.7) 50%,rgba(15,54,48,.35) 100%)}
+.ghero::before{z-index:1}.ghero .container{z-index:2}
+.hero-bg img{animation:kenburns 26s ease-out both}
+@keyframes kenburns{from{transform:scale(1.12)}to{transform:scale(1)}}
+.maplabel{position:absolute;transform:translate(-50%,-50%);font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#5F6663;pointer-events:none;white-space:nowrap}
+html:is([lang="ar"],[lang="hi"],[lang="zh-Hans"]) .maplabel{letter-spacing:0;font-size:12px}
+.ml-salalah{left:47%;top:30%;font-size:13px;color:var(--charcoal)}.ml-taqah{left:66%;top:66%}.ml-mirbat{left:88%;top:68%}
+.ml-sea{left:62%;top:86%;color:#2D6E8E;letter-spacing:.3em}.ml-hills{left:22%;top:21%;color:#5E7F6E}
+.credits{background:var(--cream);padding:56px 0 64px;border-top:1px solid var(--stone-dark)}
+.credits h2{font-size:26px;margin-bottom:10px}
+.credits p{color:var(--muted);font-size:14px;margin:0 0 12px;max-width:760px}
+.credits ul{margin:0;padding:0;list-style:none;columns:2;column-gap:40px;font-size:12.5px;color:var(--muted)}
+.credits li{break-inside:avoid;margin:0 0 6px}
+.credits a{color:var(--green)}
+@media (max-width:700px){.place{grid-template-columns:1fr}.place-media{aspect-ratio:16/9;min-height:0}.credits ul{columns:1}.ml-hills,.ml-mirbat,.ml-salalah,.ml-taqah{display:none}}
+@media (prefers-reduced-motion:reduce){.hero-bg img,.ghero-bg img{animation:none}.place:hover,.place:hover .place-media img{transform:none}}
+
+.mobile-bar .btn{white-space:nowrap;padding:0 14px}
+html[lang="ar"] .mobile-bar .btn{font-size:15px}
+
+/* home: photo trip cards */
+.trip{overflow:hidden}
+.trip-img{position:relative;margin:-28px -28px 6px;aspect-ratio:16/10;overflow:hidden;background:var(--stone-dark)}
+.trip-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.trip:hover .trip-img img{transform:scale(1.06)}
+.trip-img svg{position:absolute;bottom:12px;inset-inline-start:12px;width:40px !important;height:40px !important;padding:8px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--green) !important}
+.trip.feature .trip-img svg{color:var(--green) !important}
+.trip{transition:transform .2s,box-shadow .2s}.trip:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+@media (prefers-reduced-motion:reduce){.trip:hover,.trip:hover .trip-img img{transform:none}}

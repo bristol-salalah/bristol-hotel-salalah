@@ -75,6 +75,10 @@ Hero and WhatsApp booking card · included-with-every-stay strip · welcome stor
 * **Links between pages** use `./` so the build keeps them in the same language (`./guide/`, `./../#rooms`).
 * Unlike the home page, the guide's Arabic version is generated: edit `data/i18n/ar.json`, not `ar/guide/index.html`.
 
+## Photos of places
+
+`assets/img/places/` holds 15 photos from Wikimedia Commons (CC BY / CC BY-SA). Authors, file pages and licences are in `data/photo-credits.json` and listed on the guide page (`#credits`); the home page footer links there. Keep the credits if you reuse a photo. Dahariz Beach and Fazayah Beach had no suitable free photo, so their cards use an illustrated panel; replace them with the hotel's own photos when available (`assets/img/places/dahariz.jpg`, `fazayah.jpg`, then rebuild).
+
 ## Structured data
 
 The guide carries an `ItemList` of `TouristAttraction`s. The home page carries two JSON-LD blocks that the build regenerates from the page text: the `Hotel` (address, geo, map link, amenities, and the four rooms as `HotelRoom` with size, beds, occupancy and the "from" price) and a `FAQPage` built from the FAQ. Occupancy and bed types come from `ROOM_FACTS` in `tools/build.py`, because they are not written on the page. No `aggregateRating` is included on purpose: Google's review-snippet policy only allows ratings collected on the site itself, not Booking.com's.

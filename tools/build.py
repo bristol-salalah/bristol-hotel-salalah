@@ -79,7 +79,7 @@ def hreflangs(page=""):
     return "\n".join(links)
 
 
-SIZES = {"hero-bg": "100vw", "g-open": "(max-width:860px) 50vw, 25vw", "panel-media": "(max-width:860px) 100vw, 33vw", "dining-media": "(max-width:860px) 50vw, 25vw"}
+SIZES = {"hero-bg": "100vw", "ghero-bg": "100vw", "place-media": "(max-width:700px) 100vw, 220px", "trip-img": "(max-width:560px) 100vw, (max-width:1100px) 50vw, 25vw", "g-open": "(max-width:860px) 50vw, 25vw", "panel-media": "(max-width:860px) 100vw, 33vw", "dining-media": "(max-width:860px) 50vw, 25vw"}
 # Rooms: occupancy and beds are not in the page text, so they live here (image name -> details).
 ROOM_FACTS = {"room-deluxe": (2, "King"), "suite-junior": (3, "King + sofa bed"), "suite-superior": (3, "King + sofa bed"), "suite-executive": (5, "King + 2 singles + sofa bed")}
 ROOM_RE = re.compile(r'<article class="room reveal">(.*?)</article>', re.S)
@@ -92,15 +92,15 @@ def responsive(html):
     """Every photo <img> gets a WebP srcset (540/800/1080) and a sizes hint from its context."""
     def fix(m):
         before, tag = m.group(1), m.group(2)
-        src = re.search(r'src="([^"]*photos/)([a-z0-9-]+)\.jpg"', tag)
+        src = re.search(r'src="([^"]*(?:photos|places)/)([a-z0-9-]+)\.jpg"', tag)
         if not src:
             return m.group(0)
         prefix, name = src.groups()
-        jpg = ROOT / "assets/img/photos" / f"{name}.jpg"
+        jpg = ROOT / "assets/img" / prefix.rstrip("/").split("/")[-1] / f"{name}.jpg"
         if not jpg.exists():
             return m.group(0)
         cands = [(p, w) for p, w in images.variants(jpg) if p.exists()]
-        if len(cands) < 3:
+        if len(cands) < 3 or len(cands) < len(images.variants(jpg)):
             return m.group(0)
         tag = re.sub(r' (?:srcset|sizes)="[^"]*"', "", tag)
         ctx = before[-400:]

@@ -35,6 +35,9 @@
  "A bedroom with a king bed plus a separate living room with a sofa bed and a kitchenette. Cook, work, spread out.": [
   "index.html"
  ],
+ "A blowhole spouting at Mughsail": [
+  "index.html"
+ ],
  "A car from Salalah International Airport straight to the hotel, about {0} minutes. Send us your flight number.": [
   "index.html"
  ],
@@ -140,6 +143,9 @@
  "Apr": [
   "guide/index.html",
   "index.html"
+ ],
+ "Arabian Sea": [
+  "guide/index.html"
  ],
  "Arabic & English": [
   "index.html"
@@ -439,6 +445,9 @@
  "Desert": [
   "guide/index.html"
  ],
+ "Dhofar Mountains": [
+  "guide/index.html"
+ ],
  "Dining": [
   "guide/index.html",
   "index.html"
@@ -586,6 +595,9 @@
  "Google rating, {0} reviews": [
   "index.html"
  ],
+ "Green hills above the sea near Salalah during the Khareef": [
+  "guide/index.html"
+ ],
  "Greenest hills, busiest weeks": [
   "guide/index.html"
  ],
@@ -718,6 +730,9 @@
  ],
  "Khareef weekend": [
   "guide/index.html"
+ ],
+ "Khor Rori lagoon below the ruins of Sumhuram": [
+  "index.html"
  ],
  "King + sofa bed": [
   "index.html"
@@ -899,11 +914,17 @@
  "Pets": [
   "index.html"
  ],
+ "Photo credits": [
+  "guide/index.html"
+ ],
  "Photo viewer": [
   "index.html"
  ],
  "Photos": [
   "index.html"
+ ],
+ "Photos of the places are from Wikimedia Commons and are used under the Creative Commons licences shown. Thank you to the photographers.": [
+  "guide/index.html"
  ],
  "Pizza": [
   "index.html"
@@ -986,7 +1007,9 @@
   "index.html"
  ],
  "Reviews quoted from verified guest reviews on Booking.com and Google.": [
-  "guide/index.html",
+  "guide/index.html"
+ ],
+ "Reviews quoted from verified guest reviews on Booking.com and Google. · <0>Photo credits</0>": [
   "index.html"
  ],
  "Room": [
@@ -1023,6 +1046,9 @@
  ],
  "Saadah · Salalah · Oman": [
   "index.html"
+ ],
+ "Salalah": [
+  "guide/index.html"
  ],
  "Salalah & Dhofar guide": [
   "guide/index.html"
@@ -1188,6 +1214,9 @@
  "Take a look inside.": [
   "index.html"
  ],
+ "Taqah": [
+  "guide/index.html"
+ ],
  "Taqah Castle": [
   "guide/index.html"
  ],
@@ -1311,6 +1340,9 @@
  ],
  "Wadi Darbat": [
   "guide/index.html",
+  "index.html"
+ ],
+ "Wadi Darbat in the Khareef": [
   "index.html"
  ],
  "Warm days, good for the desert": [

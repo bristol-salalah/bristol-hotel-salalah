@@ -97,6 +97,7 @@
 
 <main id="main">
 <section class="ghero" id="top">
+  <div class="ghero-bg"><img srcset="../../assets/img/places/hero-540.webp 540w, ../../assets/img/places/hero-800.webp 800w, ../../assets/img/places/hero-1080.webp 1080w, ../../assets/img/places/hero-1920.webp 1920w" sizes="100vw" src="../../assets/img/places/hero.jpg" alt="ख़रीफ़ के दौरान सलालाह के पास समुद्र के ऊपर हरी पहाड़ियाँ" width="1920" height="1440" fetchpriority="high"></div>
   <div class="container">
     <span class="eyebrow">सलालाह और ज़ोफ़ार गाइड</span>
     <h1><em>सलालाह</em> में करने लायक़ चीज़ें।</h1>
@@ -133,6 +134,11 @@
           <path d="M-36 356 L71 341 L121 326 L179 319 L236 315 L293 296 L357 274 L393 267 L407 237 L436 222 L486 213 L536 206 L607 204 L679 199 L714 200 L764 215 L821 226 L886 233 L929 215 L964 200 L1036 185" fill="none" stroke="#fff" stroke-width="3" opacity=".8"/>
           <path d="M120 395 Q300 375 520 390 T980 380" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
         </svg>
+        <span class="maplabel ml-salalah" aria-hidden="true">सलालाह</span>
+        <span class="maplabel ml-taqah" aria-hidden="true">तक़ाह</span>
+        <span class="maplabel ml-mirbat" aria-hidden="true">मिरबात</span>
+        <span class="maplabel ml-sea" aria-hidden="true">अरब सागर</span>
+        <span class="maplabel ml-hills" aria-hidden="true">ज़ोफ़ार पर्वत</span>
         <span class="pin pin-hotel"><svg aria-hidden="true"><use href="#i-mark"/></svg></span>
         <button class="pin pin-dahariz pin-cat-beach" type="button" data-id="p-dahariz" data-cat="beach" aria-label="दहारीज़ बीच">1</button>
         <button class="pin pin-baleed pin-cat-history" type="button" data-id="p-baleed" data-cat="history" aria-label="अल बलीद और लोबान भूमि संग्रहालय">2</button>
@@ -164,8 +170,8 @@
         </div>
         <ol class="spots">
         <li class="place reveal" id="p-dahariz" data-cat="beach">
-          <div class="place-num" aria-hidden="true">1</div>
-          <div>
+          <div class="place-media place-art"><svg aria-hidden="true"><use href="#i-wave"/></svg><span class="place-num" aria-hidden="true">1</span></div>
+          <div class="place-body">
             <h3>दहारीज़ बीच</h3>
             <ul class="chips"><li>समुद्र तट</li><li>6 किमी · 10 मिनट</li><li>सबसे अच्छा: साल भर</li></ul>
             <p>शहर के पूर्व में लंबा, शांत रेतीला तट, शाम की सैर के लिए बना।</p>
@@ -173,8 +179,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-baleed" data-cat="history">
-          <div class="place-num" aria-hidden="true">2</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/baleed-540.webp 540w, ../../assets/img/places/baleed-800.webp 800w, ../../assets/img/places/baleed-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/baleed.jpg" alt="अल बलीद और लोबान भूमि संग्रहालय" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">2</span></div>
+          <div class="place-body">
             <h3>अल बलीद और लोबान भूमि संग्रहालय</h3>
             <ul class="chips"><li>इतिहास</li><li>8 किमी · 15 मिनट</li><li>सबसे अच्छा: अक्टूबर – अप्रैल</li></ul>
             <p>मध्यकालीन बंदरगाह ज़फ़ार के खंडहर, यूनेस्को स्थल, और पास में लोबान व्यापार पर संग्रहालय।</p>
@@ -182,8 +188,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-haffa" data-cat="town">
-          <div class="place-num" aria-hidden="true">3</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/haffa-540.webp 540w, ../../assets/img/places/haffa-800.webp 800w, ../../assets/img/places/haffa-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/haffa.jpg" alt="अल हाफ़ा सूक़ और बीच" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">3</span></div>
+          <div class="place-body">
             <h3>अल हाफ़ा सूक़ और बीच</h3>
             <ul class="chips"><li>शहर और सूक़</li><li>8 किमी · 15 मिनट</li><li>सबसे अच्छा: साल भर</li></ul>
             <p>पुराने सलालाह का बाज़ार, लोबान, धूपदानों और इत्र के लिए, समुद्र तट की सड़क पर नारियल के ठेलों के साथ।</p>
@@ -191,8 +197,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-mosque" data-cat="town">
-          <div class="place-num" aria-hidden="true">4</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/mosque-540.webp 540w, ../../assets/img/places/mosque-800.webp 800w, ../../assets/img/places/mosque-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/mosque.jpg" alt="सुल्तान क़ाबूस मस्जिद" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">4</span></div>
+          <div class="place-body">
             <h3>सुल्तान क़ाबूस मस्जिद</h3>
             <ul class="chips"><li>शहर और सूक़</li><li>9 किमी · 15 मिनट</li><li>सबसे अच्छा: साल भर</li></ul>
             <p>सलालाह की भव्य मस्जिद। नमाज़ के समय के बाहर आगंतुकों का स्वागत है; शालीन कपड़े पहनें।</p>
@@ -200,8 +206,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-razat" data-cat="nature">
-          <div class="place-num" aria-hidden="true">5</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/razat-540.webp 540w, ../../assets/img/places/razat-800.webp 800w, ../../assets/img/places/razat-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/razat.jpg" alt="ऐन रज़ात" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">5</span></div>
+          <div class="place-body">
             <h3>ऐन रज़ात</h3>
             <ul class="chips"><li>प्रकृति</li><li>25 किमी · 30 मिनट</li><li>सबसे अच्छा: साल भर</li></ul>
             <p>पहाड़ों की तलहटी में झरने से सींचा पार्क, तालाबों, खजूर के पेड़ों और बगीचों के साथ।</p>
@@ -209,8 +215,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-hamran" data-cat="nature">
-          <div class="place-num" aria-hidden="true">6</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/hamran-540.webp 540w, ../../assets/img/places/hamran-800.webp 800w, ../../assets/img/places/hamran-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/hamran.jpg" alt="ऐन हमरान" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">6</span></div>
+          <div class="place-body">
             <h3>ऐन हमरान</h3>
             <ul class="chips"><li>प्रकृति</li><li>25 किमी · 30 मिनट</li><li>सबसे अच्छा: साल भर</li></ul>
             <p>छायादार झरना और धारा जहाँ पक्षी जुटते हैं, पार्किंग से थोड़ी दूरी पर।</p>
@@ -218,8 +224,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-job" data-cat="history">
-          <div class="place-num" aria-hidden="true">7</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/job-540.webp 540w, ../../assets/img/places/job-800.webp 800w, ../../assets/img/places/job-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/job.jpg" alt="पैग़ंबर अय्यूब की मज़ार (नबी अय्यूब)" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">7</span></div>
+          <div class="place-body">
             <h3>पैग़ंबर अय्यूब की मज़ार (नबी अय्यूब)</h3>
             <ul class="chips"><li>इतिहास</li><li>35 किमी · 40 मिनट</li><li>सबसे अच्छा: साल भर</li></ul>
             <p>पहाड़ी पर एक दरगाह, कोहरा छँटने पर मैदान का खुला नज़ारा।</p>
@@ -227,8 +233,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-taqah" data-cat="history">
-          <div class="place-num" aria-hidden="true">8</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/taqah-540.webp 540w, ../../assets/img/places/taqah-800.webp 800w, ../../assets/img/places/taqah-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/taqah.jpg" alt="तक़ाह किला" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">8</span></div>
+          <div class="place-body">
             <h3>तक़ाह किला</h3>
             <ul class="chips"><li>इतिहास</li><li>35 किमी · 35 मिनट</li><li>सबसे अच्छा: साल भर</li></ul>
             <p>मछुआरों के कस्बे में मरम्मत किया हुआ किला, जिसके कमरे पहले की तरह सजे हैं।</p>
@@ -236,8 +242,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-khor-rori" data-cat="history">
-          <div class="place-num" aria-hidden="true">9</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/khor-rori-540.webp 540w, ../../assets/img/places/khor-rori-800.webp 800w, ../../assets/img/places/khor-rori-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/khor-rori.jpg" alt="सुमहुरम और ख़ोर रोरी" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">9</span></div>
+          <div class="place-body">
             <h3>सुमहुरम और ख़ोर रोरी</h3>
             <ul class="chips"><li>इतिहास</li><li>40 किमी · 40 मिनट</li><li>सबसे अच्छा: साल भर</li></ul>
             <p>पक्षियों से भरी लैगून के ऊपर प्राचीन लोबान बंदरगाह के खंडहर।</p>
@@ -245,8 +251,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-darbat" data-cat="nature">
-          <div class="place-num" aria-hidden="true">10</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/darbat-540.webp 540w, ../../assets/img/places/darbat-800.webp 800w, ../../assets/img/places/darbat-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/darbat.jpg" alt="वादी दरबात" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">10</span></div>
+          <div class="place-body">
             <h3>वादी दरबात</h3>
             <ul class="chips"><li>प्रकृति</li><li>45 किमी · 50 मिनट</li><li>सबसे अच्छा: ख़रीफ़</li></ul>
             <p>झील, नावों और चरते ऊँटों वाली हरी घाटी, और ख़रीफ़ में झरना।</p>
@@ -254,8 +260,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-athum" data-cat="nature">
-          <div class="place-num" aria-hidden="true">11</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/athum-540.webp 540w, ../../assets/img/places/athum-800.webp 800w, ../../assets/img/places/athum-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/athum.jpg" alt="ऐन अथूम" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">11</span></div>
+          <div class="place-body">
             <h3>ऐन अथूम</h3>
             <ul class="chips"><li>प्रकृति</li><li>45 किमी · 50 मिनट</li><li>सबसे अच्छा: ख़रीफ़</li></ul>
             <p>पहाड़ों के नीचे घाटी में मौसमी झरना, बारिश के बाद सबसे सुंदर।</p>
@@ -263,8 +269,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-mughsail" data-cat="beach">
-          <div class="place-num" aria-hidden="true">12</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/mughsail-540.webp 540w, ../../assets/img/places/mughsail-800.webp 800w, ../../assets/img/places/mughsail-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/mughsail.jpg" alt="मुग़सैल बीच और ब्लोहोल" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">12</span></div>
+          <div class="place-body">
             <h3>मुग़सैल बीच और ब्लोहोल</h3>
             <ul class="chips"><li>समुद्र तट</li><li>50 किमी · 50 मिनट</li><li>सबसे अच्छा: साल भर</li></ul>
             <p>चट्टानों के नीचे सफ़ेद तट, और अल मरनीफ़ गुफा के ब्लोहोल जो ज्वार में फुहार छोड़ते हैं।</p>
@@ -272,8 +278,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-fazayah" data-cat="beach">
-          <div class="place-num" aria-hidden="true">13</div>
-          <div>
+          <div class="place-media place-art"><svg aria-hidden="true"><use href="#i-wave"/></svg><span class="place-num" aria-hidden="true">13</span></div>
+          <div class="place-body">
             <h3>फ़ज़ाया बीच</h3>
             <ul class="chips"><li>समुद्र तट</li><li>65 किमी · 1 घंटे 15 मिनट</li><li>सबसे अच्छा: अक्टूबर – अप्रैल</li></ul>
             <p>मुग़सैल के आगे घुमावदार सड़क के अंत में एकांत खाड़ी। पानी साथ रखें।</p>
@@ -281,8 +287,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-mirbat" data-cat="town">
-          <div class="place-num" aria-hidden="true">14</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/mirbat-540.webp 540w, ../../assets/img/places/mirbat-800.webp 800w, ../../assets/img/places/mirbat-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/mirbat.jpg" alt="मिरबात" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">14</span></div>
+          <div class="place-body">
             <h3>मिरबात</h3>
             <ul class="chips"><li>शहर और सूक़</li><li>75 किमी · 1 घंटे 10 मिनट</li><li>सबसे अच्छा: अक्टूबर – अप्रैल</li></ul>
             <p>नक़्क़ाशीदार लकड़ी के घरों वाला पुराना व्यापारिक कस्बा, एक किला और पास में बिन अली का गुंबददार मक़बरा।</p>
@@ -290,8 +296,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-samhan" data-cat="nature">
-          <div class="place-num" aria-hidden="true">15</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/samhan-540.webp 540w, ../../assets/img/places/samhan-800.webp 800w, ../../assets/img/places/samhan-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/samhan.jpg" alt="जबल समहान व्यूपॉइंट" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">15</span></div>
+          <div class="place-body">
             <h3>जबल समहान व्यूपॉइंट</h3>
             <ul class="chips"><li>प्रकृति</li><li>90 किमी · 1 घंटे 30 मिनट</li><li>सबसे अच्छा: अक्टूबर – अप्रैल</li></ul>
             <p>तट से बहुत ऊपर चट्टान पर एक व्यूपॉइंट, सर्दियों की सुबह सबसे साफ़।</p>
@@ -299,8 +305,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-desert" data-cat="desert">
-          <div class="place-num" aria-hidden="true">16</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/desert-540.webp 540w, ../../assets/img/places/desert-800.webp 800w, ../../assets/img/places/desert-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/desert.jpg" alt="उबार और रुब अल ख़ाली के टीले" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">16</span></div>
+          <div class="place-body">
             <h3>उबार और रुब अल ख़ाली के टीले</h3>
             <ul class="chips"><li>रेगिस्तान</li><li>170 किमी · 2 घंटे 30 मिनट</li><li>सबसे अच्छा: अक्टूबर – अप्रैल</li></ul>
             <p>पहाड़ों के पार उत्तर की ओर पूरे दिन की यात्रा, उबार के खंडहरों और रुब अल ख़ाली के पहले टीलों तक।</p>
@@ -398,6 +404,30 @@
       <article class="tip reveal"><svg aria-hidden="true"><use href="#i-check"/></svg><h3>ईंधन और पानी</h3><p>रेगिस्तान और तट के सुदूर पूर्व से पहले टंकी भरवा लें, वहाँ पेट्रोल पंप दूर-दूर हैं, और पानी साथ रखें।</p></article>
       <article class="tip reveal"><svg aria-hidden="true"><use href="#i-phone"/></svg><h3>हम मदद के लिए हैं</h3><p>निकलने से पहले हमें संदेश भेजें, हम बताएँगे कि क्या खुला है, मौसम कैसा है और कितना समय लगेगा।</p></article>
     </div>
+  </div>
+</section>
+
+<section class="credits" id="credits" aria-label="फ़ोटो श्रेय">
+  <div class="container">
+    <h2>फ़ोटो श्रेय</h2>
+    <p>जगहों की फ़ोटो विकिमीडिया कॉमन्स से हैं और दिखाए गए क्रिएटिव कॉमन्स लाइसेंस के तहत उपयोग की गई हैं। फ़ोटोग्राफ़रों का धन्यवाद।</p>
+    <ul translate="no">
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Al_Balid_Archeological_Park_1.jpg" target="_blank" rel="noopener">Al Balid Archeological Park 1.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Oman,_Salalah,_Haffa_Souq_(Souq_al-Hosn),_Frankincense.jpg" target="_blank" rel="noopener">Oman, Salalah, Haffa Souq (Souq al-Hosn), Frankincense.jpg</a>, by Dr. Thomas Liptak, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Sultan_Qaboos_Mosque_3.jpg" target="_blank" rel="noopener">Sultan Qaboos Mosque 3.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:OM-salalah-ain-razat-02.jpg" target="_blank" rel="noopener">OM-salalah-ain-razat-02.jpg</a>, by Balou46, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Ain_hamran.jpg" target="_blank" rel="noopener">Ain hamran.jpg</a>, by Aayan muhammed, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Job%27s_Tomb2.jpg" target="_blank" rel="noopener">Job&#x27;s Tomb2.jpg</a>, by 9591353082 at English Wikipedia, CC BY 2.5</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Taqah_Castle_7.jpg" target="_blank" rel="noopener">Taqah Castle 7.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Khor_Rori_2.jpg" target="_blank" rel="noopener">Khor Rori 2.jpg</a>, by Juozas Šalna, CC BY 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Wadi_darbat_(2).jpg" target="_blank" rel="noopener">Wadi darbat (2).jpg</a>, by Muiad123, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Ain_Athum_Waterfalls_(3).jpg" target="_blank" rel="noopener">Ain Athum Waterfalls (3).jpg</a>, by Muiad123, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Al_Mughsail_Beach_5.jpg" target="_blank" rel="noopener">Al Mughsail Beach 5.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Tomb_Bin_Ali_Mirbat_Dhofar_Oman.jpg" target="_blank" rel="noopener">Tomb Bin Ali Mirbat Dhofar Oman.jpg</a>, by StellarD, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Dhofar,_Jabal_Samhan,_grotta_di_taiq,_cratere_01.jpg" target="_blank" rel="noopener">Dhofar, Jabal Samhan, grotta di taiq, cratere 01.jpg</a>, by Francesco Bini, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Ar-Rub%27_Al-Khali_(Oman)_kz03.jpg" target="_blank" rel="noopener">Ar-Rub&#x27; Al-Khali (Oman) kz03.jpg</a>, by Krzysztof Ziarnek, Kenraiz, CC BY-SA 4.0</li>
+        <li>Khareef hills: <a href="https://commons.wikimedia.org/wiki/File:Khareef_season,salalah,Oman.jpg" target="_blank" rel="noopener">Khareef season,salalah,Oman.jpg</a>, by MURSHID THALI PARAMBAN, CC BY-SA 4.0</li>
+    </ul>
   </div>
 </section>
 

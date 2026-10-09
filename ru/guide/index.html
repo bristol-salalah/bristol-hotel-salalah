@@ -97,6 +97,7 @@
 
 <main id="main">
 <section class="ghero" id="top">
+  <div class="ghero-bg"><img srcset="../../assets/img/places/hero-540.webp 540w, ../../assets/img/places/hero-800.webp 800w, ../../assets/img/places/hero-1080.webp 1080w, ../../assets/img/places/hero-1920.webp 1920w" sizes="100vw" src="../../assets/img/places/hero.jpg" alt="Зелёные холмы над морем у Салалы в сезон харифа" width="1920" height="1440" fetchpriority="high"></div>
   <div class="container">
     <span class="eyebrow">Путеводитель по Салале и Дофару</span>
     <h1>Чем заняться в <em>Салале.</em></h1>
@@ -133,6 +134,11 @@
           <path d="M-36 356 L71 341 L121 326 L179 319 L236 315 L293 296 L357 274 L393 267 L407 237 L436 222 L486 213 L536 206 L607 204 L679 199 L714 200 L764 215 L821 226 L886 233 L929 215 L964 200 L1036 185" fill="none" stroke="#fff" stroke-width="3" opacity=".8"/>
           <path d="M120 395 Q300 375 520 390 T980 380" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
         </svg>
+        <span class="maplabel ml-salalah" aria-hidden="true">Салала</span>
+        <span class="maplabel ml-taqah" aria-hidden="true">Така</span>
+        <span class="maplabel ml-mirbat" aria-hidden="true">Мирбат</span>
+        <span class="maplabel ml-sea" aria-hidden="true">Аравийское море</span>
+        <span class="maplabel ml-hills" aria-hidden="true">Горы Дофар</span>
         <span class="pin pin-hotel"><svg aria-hidden="true"><use href="#i-mark"/></svg></span>
         <button class="pin pin-dahariz pin-cat-beach" type="button" data-id="p-dahariz" data-cat="beach" aria-label="Пляж Дахариз">1</button>
         <button class="pin pin-baleed pin-cat-history" type="button" data-id="p-baleed" data-cat="history" aria-label="Аль-Балид и Музей Земли ладана">2</button>
@@ -164,8 +170,8 @@
         </div>
         <ol class="spots">
         <li class="place reveal" id="p-dahariz" data-cat="beach">
-          <div class="place-num" aria-hidden="true">1</div>
-          <div>
+          <div class="place-media place-art"><svg aria-hidden="true"><use href="#i-wave"/></svg><span class="place-num" aria-hidden="true">1</span></div>
+          <div class="place-body">
             <h3>Пляж Дахариз</h3>
             <ul class="chips"><li>Пляжи</li><li>6 км · 10 мин</li><li>Лучше всего: круглый год</li></ul>
             <p>Длинный тихий песчаный пляж на востоке города, словно создан для вечерней прогулки.</p>
@@ -173,8 +179,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-baleed" data-cat="history">
-          <div class="place-num" aria-hidden="true">2</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/baleed-540.webp 540w, ../../assets/img/places/baleed-800.webp 800w, ../../assets/img/places/baleed-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/baleed.jpg" alt="Аль-Балид и Музей Земли ладана" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">2</span></div>
+          <div class="place-body">
             <h3>Аль-Балид и Музей Земли ладана</h3>
             <ul class="chips"><li>История</li><li>8 км · 15 мин</li><li>Лучше всего: октябрь – апрель</li></ul>
             <p>Руины средневекового порта Зафар, объект ЮНЕСКО, и рядом музей торговли ладаном.</p>
@@ -182,8 +188,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-haffa" data-cat="town">
-          <div class="place-num" aria-hidden="true">3</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/haffa-540.webp 540w, ../../assets/img/places/haffa-800.webp 800w, ../../assets/img/places/haffa-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/haffa.jpg" alt="Рынок и пляж Аль-Хаффа" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">3</span></div>
+          <div class="place-body">
             <h3>Рынок и пляж Аль-Хаффа</h3>
             <ul class="chips"><li>Город и рынки</li><li>8 км · 15 мин</li><li>Лучше всего: круглый год</li></ul>
             <p>Рынок старой Салалы: ладан, курильницы и духи, а вдоль пляжной дороги — лотки с кокосами.</p>
@@ -191,8 +197,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-mosque" data-cat="town">
-          <div class="place-num" aria-hidden="true">4</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/mosque-540.webp 540w, ../../assets/img/places/mosque-800.webp 800w, ../../assets/img/places/mosque-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/mosque.jpg" alt="Мечеть Султана Кабуса" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">4</span></div>
+          <div class="place-body">
             <h3>Мечеть Султана Кабуса</h3>
             <ul class="chips"><li>Город и рынки</li><li>9 км · 15 мин</li><li>Лучше всего: круглый год</li></ul>
             <p>Большая мечеть Салалы. Посетителей принимают вне времени молитв; одевайтесь скромно.</p>
@@ -200,8 +206,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-razat" data-cat="nature">
-          <div class="place-num" aria-hidden="true">5</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/razat-540.webp 540w, ../../assets/img/places/razat-800.webp 800w, ../../assets/img/places/razat-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/razat.jpg" alt="Айн-Разат" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">5</span></div>
+          <div class="place-body">
             <h3>Айн-Разат</h3>
             <ul class="chips"><li>Природа</li><li>25 км · 30 мин</li><li>Лучше всего: круглый год</li></ul>
             <p>Парк у родника с бассейнами, пальмами и садами у подножия гор.</p>
@@ -209,8 +215,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-hamran" data-cat="nature">
-          <div class="place-num" aria-hidden="true">6</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/hamran-540.webp 540w, ../../assets/img/places/hamran-800.webp 800w, ../../assets/img/places/hamran-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/hamran.jpg" alt="Айн-Хамран" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">6</span></div>
+          <div class="place-body">
             <h3>Айн-Хамран</h3>
             <ul class="chips"><li>Природа</li><li>25 км · 30 мин</li><li>Лучше всего: круглый год</li></ul>
             <p>Тенистый родник и ручей, у которых собираются птицы, в паре шагов от парковки.</p>
@@ -218,8 +224,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-job" data-cat="history">
-          <div class="place-num" aria-hidden="true">7</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/job-540.webp 540w, ../../assets/img/places/job-800.webp 800w, ../../assets/img/places/job-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/job.jpg" alt="Гробница пророка Айюба (Наби Аюб)" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">7</span></div>
+          <div class="place-body">
             <h3>Гробница пророка Айюба (Наби Аюб)</h3>
             <ul class="chips"><li>История</li><li>35 км · 40 мин</li><li>Лучше всего: круглый год</li></ul>
             <p>Святыня на холме с широким видом на равнину, когда рассеивается туман.</p>
@@ -227,8 +233,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-taqah" data-cat="history">
-          <div class="place-num" aria-hidden="true">8</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/taqah-540.webp 540w, ../../assets/img/places/taqah-800.webp 800w, ../../assets/img/places/taqah-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/taqah.jpg" alt="Крепость Така" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">8</span></div>
+          <div class="place-body">
             <h3>Крепость Така</h3>
             <ul class="chips"><li>История</li><li>35 км · 35 мин</li><li>Лучше всего: круглый год</li></ul>
             <p>Отреставрированная крепость в рыбацком городке, комнаты обставлены как в старину.</p>
@@ -236,8 +242,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-khor-rori" data-cat="history">
-          <div class="place-num" aria-hidden="true">9</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/khor-rori-540.webp 540w, ../../assets/img/places/khor-rori-800.webp 800w, ../../assets/img/places/khor-rori-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/khor-rori.jpg" alt="Сумхурам и Хор-Рори" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">9</span></div>
+          <div class="place-body">
             <h3>Сумхурам и Хор-Рори</h3>
             <ul class="chips"><li>История</li><li>40 км · 40 мин</li><li>Лучше всего: круглый год</li></ul>
             <p>Руины древнего порта ладана над лагуной, полной птиц.</p>
@@ -245,8 +251,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-darbat" data-cat="nature">
-          <div class="place-num" aria-hidden="true">10</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/darbat-540.webp 540w, ../../assets/img/places/darbat-800.webp 800w, ../../assets/img/places/darbat-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/darbat.jpg" alt="Вади-Дарбат" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">10</span></div>
+          <div class="place-body">
             <h3>Вади-Дарбат</h3>
             <ul class="chips"><li>Природа</li><li>45 км · 50 мин</li><li>Лучше всего: хариф</li></ul>
             <p>Зелёная долина с озером, лодками и пасущимися верблюдами, а в хариф — с водопадом.</p>
@@ -254,8 +260,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-athum" data-cat="nature">
-          <div class="place-num" aria-hidden="true">11</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/athum-540.webp 540w, ../../assets/img/places/athum-800.webp 800w, ../../assets/img/places/athum-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/athum.jpg" alt="Айн-Атум" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">11</span></div>
+          <div class="place-body">
             <h3>Айн-Атум</h3>
             <ul class="chips"><li>Природа</li><li>45 км · 50 мин</li><li>Лучше всего: хариф</li></ul>
             <p>Сезонный водопад в ущелье у подножия гор, лучше всего после дождей.</p>
@@ -263,8 +269,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-mughsail" data-cat="beach">
-          <div class="place-num" aria-hidden="true">12</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/mughsail-540.webp 540w, ../../assets/img/places/mughsail-800.webp 800w, ../../assets/img/places/mughsail-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/mughsail.jpg" alt="Пляж Мугсайль и морские гейзеры" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">12</span></div>
+          <div class="place-body">
             <h3>Пляж Мугсайль и морские гейзеры</h3>
             <ul class="chips"><li>Пляжи</li><li>50 км · 50 мин</li><li>Лучше всего: круглый год</li></ul>
             <p>Белый пляж под скалами и морские гейзеры у пещеры Аль-Марниф, бьющие в прилив.</p>
@@ -272,8 +278,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-fazayah" data-cat="beach">
-          <div class="place-num" aria-hidden="true">13</div>
-          <div>
+          <div class="place-media place-art"><svg aria-hidden="true"><use href="#i-wave"/></svg><span class="place-num" aria-hidden="true">13</span></div>
+          <div class="place-body">
             <h3>Пляж Фазайя</h3>
             <ul class="chips"><li>Пляжи</li><li>65 км · 1 ч 15 мин</li><li>Лучше всего: октябрь – апрель</li></ul>
             <p>Уединённая бухта в конце серпантина за Мугсайлем. Возьмите воду.</p>
@@ -281,8 +287,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-mirbat" data-cat="town">
-          <div class="place-num" aria-hidden="true">14</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/mirbat-540.webp 540w, ../../assets/img/places/mirbat-800.webp 800w, ../../assets/img/places/mirbat-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/mirbat.jpg" alt="Мирбат" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">14</span></div>
+          <div class="place-body">
             <h3>Мирбат</h3>
             <ul class="chips"><li>Город и рынки</li><li>75 км · 1 ч 10 мин</li><li>Лучше всего: октябрь – апрель</li></ul>
             <p>Старый торговый город с резными деревянными домами, крепостью и купольной гробницей Бин Али неподалёку.</p>
@@ -290,8 +296,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-samhan" data-cat="nature">
-          <div class="place-num" aria-hidden="true">15</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/samhan-540.webp 540w, ../../assets/img/places/samhan-800.webp 800w, ../../assets/img/places/samhan-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/samhan.jpg" alt="Смотровая площадка Джебель-Самхан" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">15</span></div>
+          <div class="place-body">
             <h3>Смотровая площадка Джебель-Самхан</h3>
             <ul class="chips"><li>Природа</li><li>90 км · 1 ч 30 мин</li><li>Лучше всего: октябрь – апрель</li></ul>
             <p>Смотровая площадка на скалах высоко над побережьем, самая ясная зимним утром.</p>
@@ -299,8 +305,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-desert" data-cat="desert">
-          <div class="place-num" aria-hidden="true">16</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/desert-540.webp 540w, ../../assets/img/places/desert-800.webp 800w, ../../assets/img/places/desert-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/desert.jpg" alt="Убар и барханы Руб-эль-Хали" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">16</span></div>
+          <div class="place-body">
             <h3>Убар и барханы Руб-эль-Хали</h3>
             <ul class="chips"><li>Пустыня</li><li>170 км · 2 ч 30 мин</li><li>Лучше всего: октябрь – апрель</li></ul>
             <p>Целый день на север через горы к руинам Убара и первым барханам Руб-эль-Хали.</p>
@@ -398,6 +404,30 @@
       <article class="tip reveal"><svg aria-hidden="true"><use href="#i-check"/></svg><h3>Топливо и вода</h3><p>Заправьтесь перед пустыней и дальним востоком побережья, где заправки далеко друг от друга, и возьмите воду.</p></article>
       <article class="tip reveal"><svg aria-hidden="true"><use href="#i-phone"/></svg><h3>Мы всегда поможем</h3><p>Напишите нам перед выездом, и мы расскажем, что открыто, какая погода и сколько ехать.</p></article>
     </div>
+  </div>
+</section>
+
+<section class="credits" id="credits" aria-label="Авторы фотографий">
+  <div class="container">
+    <h2>Авторы фотографий</h2>
+    <p>Фотографии мест взяты с Викисклада и используются по указанным лицензиям Creative Commons. Спасибо фотографам.</p>
+    <ul translate="no">
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Al_Balid_Archeological_Park_1.jpg" target="_blank" rel="noopener">Al Balid Archeological Park 1.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Oman,_Salalah,_Haffa_Souq_(Souq_al-Hosn),_Frankincense.jpg" target="_blank" rel="noopener">Oman, Salalah, Haffa Souq (Souq al-Hosn), Frankincense.jpg</a>, by Dr. Thomas Liptak, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Sultan_Qaboos_Mosque_3.jpg" target="_blank" rel="noopener">Sultan Qaboos Mosque 3.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:OM-salalah-ain-razat-02.jpg" target="_blank" rel="noopener">OM-salalah-ain-razat-02.jpg</a>, by Balou46, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Ain_hamran.jpg" target="_blank" rel="noopener">Ain hamran.jpg</a>, by Aayan muhammed, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Job%27s_Tomb2.jpg" target="_blank" rel="noopener">Job&#x27;s Tomb2.jpg</a>, by 9591353082 at English Wikipedia, CC BY 2.5</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Taqah_Castle_7.jpg" target="_blank" rel="noopener">Taqah Castle 7.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Khor_Rori_2.jpg" target="_blank" rel="noopener">Khor Rori 2.jpg</a>, by Juozas Šalna, CC BY 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Wadi_darbat_(2).jpg" target="_blank" rel="noopener">Wadi darbat (2).jpg</a>, by Muiad123, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Ain_Athum_Waterfalls_(3).jpg" target="_blank" rel="noopener">Ain Athum Waterfalls (3).jpg</a>, by Muiad123, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Al_Mughsail_Beach_5.jpg" target="_blank" rel="noopener">Al Mughsail Beach 5.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Tomb_Bin_Ali_Mirbat_Dhofar_Oman.jpg" target="_blank" rel="noopener">Tomb Bin Ali Mirbat Dhofar Oman.jpg</a>, by StellarD, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Dhofar,_Jabal_Samhan,_grotta_di_taiq,_cratere_01.jpg" target="_blank" rel="noopener">Dhofar, Jabal Samhan, grotta di taiq, cratere 01.jpg</a>, by Francesco Bini, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Ar-Rub%27_Al-Khali_(Oman)_kz03.jpg" target="_blank" rel="noopener">Ar-Rub&#x27; Al-Khali (Oman) kz03.jpg</a>, by Krzysztof Ziarnek, Kenraiz, CC BY-SA 4.0</li>
+        <li>Khareef hills: <a href="https://commons.wikimedia.org/wiki/File:Khareef_season,salalah,Oman.jpg" target="_blank" rel="noopener">Khareef season,salalah,Oman.jpg</a>, by MURSHID THALI PARAMBAN, CC BY-SA 4.0</li>
+    </ul>
   </div>
 </section>
 

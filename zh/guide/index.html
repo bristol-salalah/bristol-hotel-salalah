@@ -97,6 +97,7 @@
 
 <main id="main">
 <section class="ghero" id="top">
+  <div class="ghero-bg"><img srcset="../../assets/img/places/hero-540.webp 540w, ../../assets/img/places/hero-800.webp 800w, ../../assets/img/places/hero-1080.webp 1080w, ../../assets/img/places/hero-1920.webp 1920w" sizes="100vw" src="../../assets/img/places/hero.jpg" alt="雨季时塞拉莱附近海边的青翠山丘" width="1920" height="1440" fetchpriority="high"></div>
   <div class="container">
     <span class="eyebrow">塞拉莱与佐法尔指南</span>
     <h1><em>塞拉莱</em>玩什么。</h1>
@@ -133,6 +134,11 @@
           <path d="M-36 356 L71 341 L121 326 L179 319 L236 315 L293 296 L357 274 L393 267 L407 237 L436 222 L486 213 L536 206 L607 204 L679 199 L714 200 L764 215 L821 226 L886 233 L929 215 L964 200 L1036 185" fill="none" stroke="#fff" stroke-width="3" opacity=".8"/>
           <path d="M120 395 Q300 375 520 390 T980 380" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
         </svg>
+        <span class="maplabel ml-salalah" aria-hidden="true">塞拉莱</span>
+        <span class="maplabel ml-taqah" aria-hidden="true">塔卡</span>
+        <span class="maplabel ml-mirbat" aria-hidden="true">米尔巴特</span>
+        <span class="maplabel ml-sea" aria-hidden="true">阿拉伯海</span>
+        <span class="maplabel ml-hills" aria-hidden="true">佐法尔山脉</span>
         <span class="pin pin-hotel"><svg aria-hidden="true"><use href="#i-mark"/></svg></span>
         <button class="pin pin-dahariz pin-cat-beach" type="button" data-id="p-dahariz" data-cat="beach" aria-label="达哈里兹海滩">1</button>
         <button class="pin pin-baleed pin-cat-history" type="button" data-id="p-baleed" data-cat="history" aria-label="巴利德遗址与乳香之地博物馆">2</button>
@@ -164,8 +170,8 @@
         </div>
         <ol class="spots">
         <li class="place reveal" id="p-dahariz" data-cat="beach">
-          <div class="place-num" aria-hidden="true">1</div>
-          <div>
+          <div class="place-media place-art"><svg aria-hidden="true"><use href="#i-wave"/></svg><span class="place-num" aria-hidden="true">1</span></div>
+          <div class="place-body">
             <h3>达哈里兹海滩</h3>
             <ul class="chips"><li>海滩</li><li>6 公里 · 10 分钟</li><li>最佳：全年</li></ul>
             <p>城东一片安静的长沙滩，最适合傍晚散步。</p>
@@ -173,8 +179,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-baleed" data-cat="history">
-          <div class="place-num" aria-hidden="true">2</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/baleed-540.webp 540w, ../../assets/img/places/baleed-800.webp 800w, ../../assets/img/places/baleed-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/baleed.jpg" alt="巴利德遗址与乳香之地博物馆" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">2</span></div>
+          <div class="place-body">
             <h3>巴利德遗址与乳香之地博物馆</h3>
             <ul class="chips"><li>历史</li><li>8 公里 · 15 分钟</li><li>最佳：十月 – 四月</li></ul>
             <p>中世纪扎法尔港遗址，联合国教科文组织世界遗产，旁边是乳香贸易博物馆。</p>
@@ -182,8 +188,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-haffa" data-cat="town">
-          <div class="place-num" aria-hidden="true">3</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/haffa-540.webp 540w, ../../assets/img/places/haffa-800.webp 800w, ../../assets/img/places/haffa-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/haffa.jpg" alt="哈法集市与海滩" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">3</span></div>
+          <div class="place-body">
             <h3>哈法集市与海滩</h3>
             <ul class="chips"><li>城镇与集市</li><li>8 公里 · 15 分钟</li><li>最佳：全年</li></ul>
             <p>老塞拉莱的市场，售卖乳香、香炉和香水，海滨路上还有椰子摊。</p>
@@ -191,8 +197,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-mosque" data-cat="town">
-          <div class="place-num" aria-hidden="true">4</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/mosque-540.webp 540w, ../../assets/img/places/mosque-800.webp 800w, ../../assets/img/places/mosque-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/mosque.jpg" alt="苏丹卡布斯清真寺" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">4</span></div>
+          <div class="place-body">
             <h3>苏丹卡布斯清真寺</h3>
             <ul class="chips"><li>城镇与集市</li><li>9 公里 · 15 分钟</li><li>最佳：全年</li></ul>
             <p>塞拉莱大清真寺。非礼拜时间欢迎参观，请着装得体。</p>
@@ -200,8 +206,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-razat" data-cat="nature">
-          <div class="place-num" aria-hidden="true">5</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/razat-540.webp 540w, ../../assets/img/places/razat-800.webp 800w, ../../assets/img/places/razat-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/razat.jpg" alt="艾因拉扎特" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">5</span></div>
+          <div class="place-body">
             <h3>艾因拉扎特</h3>
             <ul class="chips"><li>自然</li><li>25 公里 · 30 分钟</li><li>最佳：全年</li></ul>
             <p>山脚下由泉水滋养的公园，有水池、棕榈和花园。</p>
@@ -209,8 +215,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-hamran" data-cat="nature">
-          <div class="place-num" aria-hidden="true">6</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/hamran-540.webp 540w, ../../assets/img/places/hamran-800.webp 800w, ../../assets/img/places/hamran-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/hamran.jpg" alt="艾因哈姆兰" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">6</span></div>
+          <div class="place-body">
             <h3>艾因哈姆兰</h3>
             <ul class="chips"><li>自然</li><li>25 公里 · 30 分钟</li><li>最佳：全年</li></ul>
             <p>林荫下的泉水和溪流，鸟儿聚集，离停车场只有几步路。</p>
@@ -218,8 +224,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-job" data-cat="history">
-          <div class="place-num" aria-hidden="true">7</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/job-540.webp 540w, ../../assets/img/places/job-800.webp 800w, ../../assets/img/places/job-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/job.jpg" alt="先知约伯墓（纳比阿尤布）" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">7</span></div>
+          <div class="place-body">
             <h3>先知约伯墓（纳比阿尤布）</h3>
             <ul class="chips"><li>历史</li><li>35 公里 · 40 分钟</li><li>最佳：全年</li></ul>
             <p>山顶圣陵，雾散时可远眺平原。</p>
@@ -227,8 +233,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-taqah" data-cat="history">
-          <div class="place-num" aria-hidden="true">8</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/taqah-540.webp 540w, ../../assets/img/places/taqah-800.webp 800w, ../../assets/img/places/taqah-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/taqah.jpg" alt="塔卡城堡" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">8</span></div>
+          <div class="place-body">
             <h3>塔卡城堡</h3>
             <ul class="chips"><li>历史</li><li>35 公里 · 35 分钟</li><li>最佳：全年</li></ul>
             <p>渔村里一座修复的堡垒，房间按旧时模样陈设。</p>
@@ -236,8 +242,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-khor-rori" data-cat="history">
-          <div class="place-num" aria-hidden="true">9</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/khor-rori-540.webp 540w, ../../assets/img/places/khor-rori-800.webp 800w, ../../assets/img/places/khor-rori-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/khor-rori.jpg" alt="苏姆胡拉姆与霍尔罗里" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">9</span></div>
+          <div class="place-body">
             <h3>苏姆胡拉姆与霍尔罗里</h3>
             <ul class="chips"><li>历史</li><li>40 公里 · 40 分钟</li><li>最佳：全年</li></ul>
             <p>鸟类云集的泻湖上方，一座古代乳香港口的遗址。</p>
@@ -245,8 +251,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-darbat" data-cat="nature">
-          <div class="place-num" aria-hidden="true">10</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/darbat-540.webp 540w, ../../assets/img/places/darbat-800.webp 800w, ../../assets/img/places/darbat-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/darbat.jpg" alt="达尔巴特河谷" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">10</span></div>
+          <div class="place-body">
             <h3>达尔巴特河谷</h3>
             <ul class="chips"><li>自然</li><li>45 公里 · 50 分钟</li><li>最佳：雨季</li></ul>
             <p>一片有湖泊、小船和吃草骆驼的绿色山谷，雨季还有瀑布。</p>
@@ -254,8 +260,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-athum" data-cat="nature">
-          <div class="place-num" aria-hidden="true">11</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/athum-540.webp 540w, ../../assets/img/places/athum-800.webp 800w, ../../assets/img/places/athum-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/athum.jpg" alt="艾因阿图姆" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">11</span></div>
+          <div class="place-body">
             <h3>艾因阿图姆</h3>
             <ul class="chips"><li>自然</li><li>45 公里 · 50 分钟</li><li>最佳：雨季</li></ul>
             <p>山脚峡谷中的季节性瀑布，雨后最美。</p>
@@ -263,8 +269,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-mughsail" data-cat="beach">
-          <div class="place-num" aria-hidden="true">12</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/mughsail-540.webp 540w, ../../assets/img/places/mughsail-800.webp 800w, ../../assets/img/places/mughsail-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/mughsail.jpg" alt="穆格赛尔海滩与喷水孔" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">12</span></div>
+          <div class="place-body">
             <h3>穆格赛尔海滩与喷水孔</h3>
             <ul class="chips"><li>海滩</li><li>50 公里 · 50 分钟</li><li>最佳：全年</li></ul>
             <p>悬崖下的白沙滩，以及马尔尼夫洞的海蚀喷水孔，涨潮时水柱冲天。</p>
@@ -272,8 +278,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-fazayah" data-cat="beach">
-          <div class="place-num" aria-hidden="true">13</div>
-          <div>
+          <div class="place-media place-art"><svg aria-hidden="true"><use href="#i-wave"/></svg><span class="place-num" aria-hidden="true">13</span></div>
+          <div class="place-body">
             <h3>法扎亚海滩</h3>
             <ul class="chips"><li>海滩</li><li>65 公里 · 1 小时 15 分钟</li><li>最佳：十月 – 四月</li></ul>
             <p>穆格赛尔之后盘山路尽头的僻静海湾。请自带饮用水。</p>
@@ -281,8 +287,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-mirbat" data-cat="town">
-          <div class="place-num" aria-hidden="true">14</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/mirbat-540.webp 540w, ../../assets/img/places/mirbat-800.webp 800w, ../../assets/img/places/mirbat-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/mirbat.jpg" alt="米尔巴特" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">14</span></div>
+          <div class="place-body">
             <h3>米尔巴特</h3>
             <ul class="chips"><li>城镇与集市</li><li>75 公里 · 1 小时 10 分钟</li><li>最佳：十月 – 四月</li></ul>
             <p>古老的商贸小镇，有雕花木屋、一座城堡，附近还有本·阿里的圆顶陵墓。</p>
@@ -290,8 +296,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-samhan" data-cat="nature">
-          <div class="place-num" aria-hidden="true">15</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/samhan-540.webp 540w, ../../assets/img/places/samhan-800.webp 800w, ../../assets/img/places/samhan-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/samhan.jpg" alt="萨姆汉山观景台" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">15</span></div>
+          <div class="place-body">
             <h3>萨姆汉山观景台</h3>
             <ul class="chips"><li>自然</li><li>90 公里 · 1 小时 30 分钟</li><li>最佳：十月 – 四月</li></ul>
             <p>海岸高处的悬崖观景台，冬日清晨视野最清晰。</p>
@@ -299,8 +305,8 @@
           </div>
         </li>
         <li class="place reveal" id="p-desert" data-cat="desert">
-          <div class="place-num" aria-hidden="true">16</div>
-          <div>
+          <div class="place-media"><img srcset="../../assets/img/places/desert-540.webp 540w, ../../assets/img/places/desert-800.webp 800w, ../../assets/img/places/desert-1080.webp 960w" sizes="(max-width:700px) 100vw, 220px" src="../../assets/img/places/desert.jpg" alt="乌巴尔与鲁卜哈利沙丘" width="960" height="640" loading="lazy"><span class="place-num" aria-hidden="true">16</span></div>
+          <div class="place-body">
             <h3>乌巴尔与鲁卜哈利沙丘</h3>
             <ul class="chips"><li>沙漠</li><li>170 公里 · 2 小时 30 分钟</li><li>最佳：十月 – 四月</li></ul>
             <p>向北翻越群山的一日游，前往乌巴尔遗址和鲁卜哈利沙漠的第一片沙丘。</p>
@@ -398,6 +404,30 @@
       <article class="tip reveal"><svg aria-hidden="true"><use href="#i-check"/></svg><h3>加油与饮水</h3><p>前往沙漠和海岸最东端前请加满油，那里加油站相距很远，并带上饮用水。</p></article>
       <article class="tip reveal"><svg aria-hidden="true"><use href="#i-phone"/></svg><h3>我们随时帮忙</h3><p>出发前给我们发消息，我们会告诉您哪些地方开放、天气如何、需要多久。</p></article>
     </div>
+  </div>
+</section>
+
+<section class="credits" id="credits" aria-label="图片来源">
+  <div class="container">
+    <h2>图片来源</h2>
+    <p>各地点照片来自维基共享资源，按所示知识共享许可使用。感谢各位摄影师。</p>
+    <ul translate="no">
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Al_Balid_Archeological_Park_1.jpg" target="_blank" rel="noopener">Al Balid Archeological Park 1.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Oman,_Salalah,_Haffa_Souq_(Souq_al-Hosn),_Frankincense.jpg" target="_blank" rel="noopener">Oman, Salalah, Haffa Souq (Souq al-Hosn), Frankincense.jpg</a>, by Dr. Thomas Liptak, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Sultan_Qaboos_Mosque_3.jpg" target="_blank" rel="noopener">Sultan Qaboos Mosque 3.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:OM-salalah-ain-razat-02.jpg" target="_blank" rel="noopener">OM-salalah-ain-razat-02.jpg</a>, by Balou46, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Ain_hamran.jpg" target="_blank" rel="noopener">Ain hamran.jpg</a>, by Aayan muhammed, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Job%27s_Tomb2.jpg" target="_blank" rel="noopener">Job&#x27;s Tomb2.jpg</a>, by 9591353082 at English Wikipedia, CC BY 2.5</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Taqah_Castle_7.jpg" target="_blank" rel="noopener">Taqah Castle 7.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Khor_Rori_2.jpg" target="_blank" rel="noopener">Khor Rori 2.jpg</a>, by Juozas Šalna, CC BY 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Wadi_darbat_(2).jpg" target="_blank" rel="noopener">Wadi darbat (2).jpg</a>, by Muiad123, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Ain_Athum_Waterfalls_(3).jpg" target="_blank" rel="noopener">Ain Athum Waterfalls (3).jpg</a>, by Muiad123, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Al_Mughsail_Beach_5.jpg" target="_blank" rel="noopener">Al Mughsail Beach 5.jpg</a>, by a Flickr photographer, CC BY-SA 2.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Tomb_Bin_Ali_Mirbat_Dhofar_Oman.jpg" target="_blank" rel="noopener">Tomb Bin Ali Mirbat Dhofar Oman.jpg</a>, by StellarD, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Dhofar,_Jabal_Samhan,_grotta_di_taiq,_cratere_01.jpg" target="_blank" rel="noopener">Dhofar, Jabal Samhan, grotta di taiq, cratere 01.jpg</a>, by Francesco Bini, CC BY-SA 4.0</li>
+        <li>Dahariz Beach: <a href="https://commons.wikimedia.org/wiki/File:Ar-Rub%27_Al-Khali_(Oman)_kz03.jpg" target="_blank" rel="noopener">Ar-Rub&#x27; Al-Khali (Oman) kz03.jpg</a>, by Krzysztof Ziarnek, Kenraiz, CC BY-SA 4.0</li>
+        <li>Khareef hills: <a href="https://commons.wikimedia.org/wiki/File:Khareef_season,salalah,Oman.jpg" target="_blank" rel="noopener">Khareef season,salalah,Oman.jpg</a>, by MURSHID THALI PARAMBAN, CC BY-SA 4.0</li>
+    </ul>
   </div>
 </section>
 
