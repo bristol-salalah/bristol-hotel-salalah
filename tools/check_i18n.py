@@ -10,6 +10,7 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import build  # noqa: E402
 import i18n  # noqa: E402
 
 DIR = pathlib.Path(__file__).resolve().parent.parent / "data/i18n"
@@ -18,7 +19,8 @@ codes = sys.argv[1:] or sorted(p.stem for p in DIR.glob("*.json") if not p.stem.
 bad = 0
 for code in codes:
     cat = json.loads((DIR / f"{code}.json").read_text(encoding="utf-8"))
-    missing = [k for k in source if k not in cat]
+    need = [k for k, pages in source.items() if any(build.path(code, pg.replace("index.html", "")) and code not in build.HAND[pg.replace("index.html", "")] for pg in pages)]
+    missing = [k for k in need if k not in cat]
     broken = [k for k in source if k in cat and i18n.tokens_of(cat[k]) != i18n.tokens_of(k)]
     extra = [k for k in cat if k not in source]
     print(f"{code}: {len(cat)} entries, {len(missing)} missing, {len(broken)} broken placeholders, {len(extra)} unknown keys")

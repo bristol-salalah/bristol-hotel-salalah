@@ -5,6 +5,15 @@
  "<0></0>April – June": [
   "index.html"
  ],
+ "<0></0>Beach season": [
+  "guide/index.html"
+ ],
+ "<0></0>Hot & dry": [
+  "guide/index.html"
+ ],
+ "<0></0>Khareef": [
+  "guide/index.html"
+ ],
  "<0></0>Late June – early September: the Khareef": [
   "index.html"
  ],
@@ -29,14 +38,32 @@
  "A car from Salalah International Airport straight to the hotel, about {0} minutes. Send us your flight number.": [
   "index.html"
  ],
+ "A clifftop lookout high above the coast, clearest on winter mornings.": [
+  "guide/index.html"
+ ],
+ "A full day north over the mountains to the ruins of Ubar and the first dunes of the Rub al Khali.": [
+  "guide/index.html"
+ ],
+ "A full day north to Ubar and the dunes of the Empty Quarter.": [
+  "guide/index.html"
+ ],
  "A generous {0} m² with a king-size bed, a city view and a proper bathroom. Everything you need for a night or two.": [
   "index.html"
+ ],
+ "A green valley with a lake, boats and grazing camels, and in the Khareef, the waterfall.": [
+  "guide/index.html"
  ],
  "A heated pool under a high ceiling, with a shallow children’s pool beside it and loungers around the edge.": [
   "index.html"
  ],
+ "A hilltop shrine with wide views over the plain when the mist lifts.": [
+  "guide/index.html"
+ ],
  "A jewel in the heart of <0>Saadah.</0>": [
   "index.html"
+ ],
+ "A long, quiet sand beach on the east side of the city, made for an evening walk.": [
+  "guide/index.html"
  ],
  "A pine sauna, a steam room and a massage room for the end of a day on the beach or in the mountains.": [
   "index.html"
@@ -44,11 +71,33 @@
  "A real person replies, in English or Arabic": [
   "index.html"
  ],
+ "A restored fort in a fishing town, its rooms laid out as they once were.": [
+  "guide/index.html"
+ ],
+ "A seasonal waterfall in a gorge below the mountains, at its best after the rains.": [
+  "guide/index.html"
+ ],
+ "A secluded cove at the end of the hairpin road past Mughsail. Bring water.": [
+  "guide/index.html"
+ ],
+ "A shaded spring and stream where birds gather, a short walk from the car park.": [
+  "guide/index.html"
+ ],
+ "A spring-fed park with pools, palms and gardens at the foot of the mountains.": [
+  "guide/index.html"
+ ],
+ "A white beach under the cliffs, and blowholes at Al Marneef cave that spout at high tide.": [
+  "guide/index.html"
+ ],
  "A {0}-star hotel with rooms and kitchenette suites in the Saadah district of Salalah, Dhofar, Oman.": [
+  "guide/index.html",
   "index.html"
  ],
  "Accessibility": [
   "index.html"
+ ],
+ "Afternoon": [
+  "guide/index.html"
  ],
  "Ahlan wa sahlan, welcome to Salalah.": [
   "index.html"
@@ -60,7 +109,14 @@
   "index.html"
  ],
  "Al Baleed & the Museum of the Frankincense Land": [
+  "guide/index.html",
   "index.html"
+ ],
+ "Al Baleed and the Museum of the Frankincense Land, then sunset at Al Haffa Souq.": [
+  "guide/index.html"
+ ],
+ "Al Baleed and the Museum of the Frankincense Land.": [
+  "guide/index.html"
  ],
  "Al Baleed’s UNESCO ruins, the Museum of the Frankincense Land and the Al Haffa souq, all {0} km away by the sea.": [
   "index.html"
@@ -68,13 +124,21 @@
  "Al Haffa Beach & frankincense souq": [
   "index.html"
  ],
+ "Al Haffa Souq & Beach": [
+  "guide/index.html"
+ ],
  "All": [
+  "guide/index.html",
   "index.html"
  ],
  "An offer for every season.": [
   "index.html"
  ],
+ "An old trading town with carved wooden houses, a fort and the domed tomb of Bin Ali nearby.": [
+  "guide/index.html"
+ ],
  "Apr": [
+  "guide/index.html",
   "index.html"
  ],
  "Arabic & English": [
@@ -93,6 +157,7 @@
   "index.html"
  ],
  "As Saadah Street, South Saadah": [
+  "guide/index.html",
   "index.html"
  ],
  "Ask about an event": [
@@ -110,6 +175,12 @@
  "Ask the price →": [
   "index.html"
  ],
+ "Ask us for a car": [
+  "guide/index.html"
+ ],
+ "Ask us to plan your day": [
+  "guide/index.html"
+ ],
  "At the door": [
   "index.html"
  ],
@@ -117,7 +188,23 @@
   "index.html"
  ],
  "Aug": [
+  "guide/index.html",
   "index.html"
+ ],
+ "Ayn Athum": [
+  "guide/index.html"
+ ],
+ "Ayn Hamran": [
+  "guide/index.html"
+ ],
+ "Ayn Razat": [
+  "guide/index.html"
+ ],
+ "Ayn Razat in the morning, Wadi Darbat and its waterfall at midday, Taqah Castle on the way back.": [
+  "guide/index.html"
+ ],
+ "Ayn Razat, or a walk on Dahariz Beach.": [
+  "guide/index.html"
  ],
  "Balcony": [
   "index.html"
@@ -134,8 +221,17 @@
  "Beach": [
   "index.html"
  ],
+ "Beach season at its best": [
+  "guide/index.html"
+ ],
+ "Beach season returns": [
+  "guide/index.html"
+ ],
  "Beach season: sunny, {0}–{1} °C by day and mild evenings. The best time for Al Baleed, Mughsail and boat trips.": [
   "index.html"
+ ],
+ "Beaches": [
+  "guide/index.html"
  ],
  "Bedroom with a bedside lamp and dark curtains": [
   "index.html"
@@ -146,11 +242,23 @@
  "Before you arrive.": [
   "index.html"
  ],
+ "Before you set off.": [
+  "guide/index.html"
+ ],
  "Before {0}:{1} noon": [
   "index.html"
  ],
  "Best value": [
   "index.html"
+ ],
+ "Best: Khareef": [
+  "guide/index.html"
+ ],
+ "Best: October – April": [
+  "guide/index.html"
+ ],
+ "Best: all year": [
+  "guide/index.html"
  ],
  "Big suites, a warm welcome, <0>and all of Salalah around you.</0>": [
   "index.html"
@@ -159,15 +267,22 @@
   "index.html"
  ],
  "Book": [
+  "guide/index.html",
   "index.html"
  ],
+ "Book a room": [
+  "guide/index.html"
+ ],
  "Book direct on WhatsApp <0>·</0><1>Free Wi-Fi & parking · Heated indoor pool</1>": [
+  "guide/index.html",
   "index.html"
  ],
  "Book on WhatsApp": [
+  "guide/index.html",
   "index.html"
  ],
  "Book your stay": [
+  "guide/index.html",
   "index.html"
  ],
  "Booking.com score, {0} reviews": [
@@ -188,6 +303,10 @@
  "Breakfast, lunch and dinner <0>under one roof.</0>": [
   "index.html"
  ],
+ "Bristol": [
+  "guide/index.html",
+  "index.html"
+ ],
  "Bristol Hotel Salalah at dusk: a blue glass tower with the hotel name lit on the roof": [
   "index.html"
  ],
@@ -201,6 +320,7 @@
   "index.html"
  ],
  "Bristol Hotel Salalah, home": [
+  "guide/index.html",
   "index.html"
  ],
  "Bristol Hotel at a glance": [
@@ -216,6 +336,7 @@
   "index.html"
  ],
  "Call <0>+{0} {1} {2}</0>": [
+  "guide/index.html",
   "index.html"
  ],
  "Can I cancel?": [
@@ -237,6 +358,7 @@
   "index.html"
  ],
  "Check dates": [
+  "guide/index.html",
   "index.html"
  ],
  "Check your dates": [
@@ -272,10 +394,14 @@
  "Cleanliness": [
   "index.html"
  ],
+ "Clear skies, calm sea": [
+  "guide/index.html"
+ ],
  "Close": [
   "index.html"
  ],
  "Close menu": [
+  "guide/index.html",
   "index.html"
  ],
  "Comfort": [
@@ -285,12 +411,17 @@
   "index.html"
  ],
  "Dahariz Beach": [
+  "guide/index.html",
   "index.html"
  ],
  "Daily housekeeping": [
   "index.html"
  ],
+ "Day {0}": [
+  "guide/index.html"
+ ],
  "Dec": [
+  "guide/index.html",
   "index.html"
  ],
  "Deluxe Room": [
@@ -305,11 +436,21 @@
  "Deluxe Room, from ${0}": [
   "index.html"
  ],
+ "Desert": [
+  "guide/index.html"
+ ],
  "Dining": [
+  "guide/index.html",
   "index.html"
  ],
  "Dining hall set with rows of tables and cream chairs under a coffered ceiling": [
   "index.html"
+ ],
+ "Directions": [
+  "guide/index.html"
+ ],
+ "Distances and driving times are from the hotel, by road, and approximate. Tap a number on the map to jump to the place.": [
+  "guide/index.html"
  ],
  "Do I pay in advance?": [
   "index.html"
@@ -320,11 +461,21 @@
  "Drizzle, mist and {0}–{1} °C, green hills and waterfalls, and the Salalah Tourism Festival in July and August. The busiest season, so book early.": [
   "index.html"
  ],
+ "East along the coast: Taqah, Sumhuram and Khor Rori, lunch in Mirbat.": [
+  "guide/index.html"
+ ],
+ "Evening": [
+  "guide/index.html"
+ ],
  "Events": [
+  "guide/index.html",
   "index.html"
  ],
  "Events & meetings": [
   "index.html"
+ ],
+ "Every place on this page is a day trip from Saadah. Tell us your dates and we’ll reply with your price and help you plan.": [
+  "guide/index.html"
  ],
  "Every room has air conditioning, a flat-screen TV with satellite channels, a fridge, a tea and coffee maker, a safe and free Wi-Fi. The suites add a living room and a kitchenette.": [
   "index.html"
@@ -339,16 +490,27 @@
   "index.html"
  ],
  "Explore": [
+  "guide/index.html",
   "index.html"
  ],
  "Family or group (tell us on WhatsApp)": [
   "index.html"
  ],
+ "Fazayah Beach": [
+  "guide/index.html"
+ ],
  "Feb": [
+  "guide/index.html",
   "index.html"
+ ],
+ "Fill up before the desert and the far east of the coast, where stations are far apart, and carry water.": [
+  "guide/index.html"
  ],
  "Filter photos": [
   "index.html"
+ ],
+ "Filter places": [
+  "guide/index.html"
  ],
  "Fitness centre": [
   "index.html"
@@ -359,11 +521,17 @@
  "Fitness centre with treadmills and weight machines": [
   "index.html"
  ],
+ "Fog can cut visibility to a few metres. Drive slowly with your lights on, and expect camels on the road.": [
+  "guide/index.html"
+ ],
  "Follow us on Instagram": [
   "index.html"
  ],
  "For families": [
   "index.html"
+ ],
+ "Frankincense and coconut at Al Haffa Souq.": [
+  "guide/index.html"
  ],
  "Free Wi-Fi": [
   "index.html"
@@ -386,16 +554,30 @@
  "From late June to early September the monsoon turns Dhofar green. Wadi Darbat, Ayn Razat and the Jabal Samhan viewpoints are all within an hour.": [
   "index.html"
  ],
+ "From the coast to the mountains.": [
+  "guide/index.html"
+ ],
+ "Fuel and water": [
+  "guide/index.html"
+ ],
  "Function hall for celebrations and ladies’ events": [
   "index.html"
  ],
  "Get directions": [
+  "guide/index.html",
   "index.html"
+ ],
+ "Getting around": [
+  "guide/index.html"
  ],
  "Getting here": [
   "index.html"
  ],
+ "Getting hot, quieter": [
+  "guide/index.html"
+ ],
  "Good to know": [
+  "guide/index.html",
   "index.html"
  ],
  "Good · {0} verified Booking.com reviews": [
@@ -403,6 +585,9 @@
  ],
  "Google rating, {0} reviews": [
   "index.html"
+ ],
+ "Greenest hills, busiest weeks": [
+  "guide/index.html"
  ],
  "Grills": [
   "index.html"
@@ -431,11 +616,20 @@
  "Here for the Khareef, a project in Salalah, or a month with the family? Our suites have a living room, a kitchenette with a fridge and microwave, and a dining table, so the bed isn’t the only place to sit and the restaurant isn’t the only place to eat.": [
   "index.html"
  ],
+ "Hills still green, sea calms": [
+  "guide/index.html"
+ ],
+ "History": [
+  "guide/index.html"
+ ],
  "Honeymoon & celebrations": [
   "index.html"
  ],
  "Hot & dry": [
   "index.html"
+ ],
+ "Hot and humid, lowest rates": [
+  "guide/index.html"
  ],
  "Hot and humid, {0}–{1} °C. Quiet months with lower rates, and the indoor pool and spa waiting for you.": [
   "index.html"
@@ -444,6 +638,7 @@
   "index.html"
  ],
  "Hotel · Salalah": [
+  "guide/index.html",
   "index.html"
  ],
  "How do I book?": [
@@ -457,6 +652,9 @@
  ],
  "Illustration, not to scale": [
   "index.html"
+ ],
+ "Illustration, not to scale. The Empty Quarter is off the map, {0} km to the north.": [
+  "guide/index.html"
  ],
  "In Saadah, with the beaches and the mountains in reach.": [
   "index.html"
@@ -485,13 +683,19 @@
  "Is there a discount for a week or a month?": [
   "index.html"
  ],
+ "Jabal Samhan viewpoint": [
+  "guide/index.html"
+ ],
  "Jan": [
+  "guide/index.html",
   "index.html"
  ],
  "Jul": [
+  "guide/index.html",
   "index.html"
  ],
  "Jun": [
+  "guide/index.html",
   "index.html"
  ],
  "Junior Suite": [
@@ -511,6 +715,9 @@
  ],
  "Khareef families": [
   "index.html"
+ ],
+ "Khareef weekend": [
+  "guide/index.html"
  ],
  "King + sofa bed": [
   "index.html"
@@ -539,6 +746,9 @@
  "Licence": [
   "index.html"
  ],
+ "Light clothes, a rain jacket in the Khareef, and covered shoulders and knees at mosques and in villages.": [
+  "guide/index.html"
+ ],
  "Living room": [
   "index.html"
  ],
@@ -549,6 +759,7 @@
   "index.html"
  ],
  "Location": [
+  "guide/index.html",
   "index.html"
  ],
  "Look for the blue glass tower with gold trim on As Saadah Street, opposite Al Saadah Health Centre.": [
@@ -558,9 +769,11 @@
   "index.html"
  ],
  "Main": [
+  "guide/index.html",
   "index.html"
  ],
  "Mar": [
+  "guide/index.html",
   "index.html"
  ],
  "Marwan, United Arab Emirates · Verified Booking.com review": [
@@ -573,16 +786,36 @@
   "index.html"
  ],
  "May": [
+  "guide/index.html",
   "index.html"
+ ],
+ "Message us before you set off and we’ll tell you what’s open, what the weather is doing and how long it takes.": [
+  "guide/index.html"
  ],
  "Message us on WhatsApp before you confirm and we’ll explain the cancellation terms for your dates. If your plans change later, tell us as early as you can.": [
   "index.html"
  ],
+ "Midday": [
+  "guide/index.html"
+ ],
  "Ministry of Heritage & Tourism licence MHT L{0}": [
+  "guide/index.html",
   "index.html"
  ],
  "Ministry of Heritage & Tourism · MHT L{0}": [
   "index.html"
+ ],
+ "Mirbat": [
+  "guide/index.html"
+ ],
+ "Mist, drizzle and the tourism festival": [
+  "guide/index.html"
+ ],
+ "Month by month": [
+  "guide/index.html"
+ ],
+ "Morning": [
+  "guide/index.html"
  ],
  "Moroccan": [
   "index.html"
@@ -590,8 +823,17 @@
  "Mountain & city view": [
   "index.html"
  ],
+ "Mountain roads in the Khareef": [
+  "guide/index.html"
+ ],
  "Mughsail & the west": [
   "index.html"
+ ],
+ "Mughsail Beach & the blowholes": [
+  "guide/index.html"
+ ],
+ "Nature": [
+  "guide/index.html"
  ],
  "Next photo": [
   "index.html"
@@ -606,24 +848,34 @@
   "index.html"
  ],
  "Nov": [
+  "guide/index.html",
   "index.html"
  ],
  "Oct": [
+  "guide/index.html",
   "index.html"
  ],
  "Old Salalah by the water": [
   "index.html"
  ],
+ "Old Salalah’s market for frankincense, burners and perfume, with coconut stalls along the beach road.": [
+  "guide/index.html"
+ ],
+ "One-day stopover": [
+  "guide/index.html"
+ ],
  "Open in Google Maps": [
   "index.html"
  ],
  "Open menu": [
+  "guide/index.html",
   "index.html"
  ],
  "Ophel V · Google review, October {0}": [
   "index.html"
  ],
  "Opposite Al Saadah Health Centre": [
+  "guide/index.html",
   "index.html"
  ],
  "Our family-friendly restaurant serves halal Indian, Arabic and international dishes, from biryani and butter chicken to grilled meats, pizza and the Omani favourites. Order at your table, or to your room.": [
@@ -656,6 +908,9 @@
  "Pizza": [
   "index.html"
  ],
+ "Places to visit": [
+  "guide/index.html"
+ ],
  "Plan a Khareef day →": [
   "index.html"
  ],
@@ -675,6 +930,7 @@
   "index.html"
  ],
  "Pool & spa": [
+  "guide/index.html",
   "index.html"
  ],
  "Pool, spa & gym": [
@@ -726,9 +982,11 @@
   "index.html"
  ],
  "Reviews": [
+  "guide/index.html",
   "index.html"
  ],
  "Reviews quoted from verified guest reviews on Booking.com and Google.": [
+  "guide/index.html",
   "index.html"
  ],
  "Room": [
@@ -741,13 +999,21 @@
   "index.html"
  ],
  "Rooms & prices": [
+  "guide/index.html",
   "index.html"
  ],
  "Rooms & suites": [
+  "guide/index.html",
   "index.html"
  ],
  "Rooms and kitchenette suites in Saadah, Salalah. Heated indoor pool, spa, gym and restaurant. Free Wi-Fi and parking. Book direct on WhatsApp.": [
   "index.html"
+ ],
+ "Ruins of an ancient frankincense port above a lagoon full of birds.": [
+  "guide/index.html"
+ ],
+ "Ruins of the medieval port of Zafar, a UNESCO site, and a museum on the frankincense trade beside them.": [
+  "guide/index.html"
  ],
  "Saadah commercial district": [
   "index.html"
@@ -758,20 +1024,37 @@
  "Saadah · Salalah · Oman": [
   "index.html"
  ],
+ "Salalah & Dhofar guide": [
+  "guide/index.html"
+ ],
  "Salalah International Airport": [
   "index.html"
  ],
  "Salalah can be hot, humid or raining, depending on the month. Inside, the pool and spa are the same all year.": [
   "index.html"
  ],
+ "Salalah guide": [
+  "guide/index.html",
+  "index.html"
+ ],
+ "Salalah has a beach season in winter and a green monsoon season in summer. Typical daytime highs:": [
+  "guide/index.html"
+ ],
  "Salalah has two summers.": [
   "index.html"
  ],
  "Salalah {0}, Sultanate of Oman": [
+  "guide/index.html",
   "index.html"
  ],
  "Salalah’s grand mosque": [
   "index.html"
+ ],
+ "Salalah’s grand mosque. Visitors are welcome outside prayer times; dress modestly.": [
+  "guide/index.html"
+ ],
+ "Sample plans": [
+  "guide/index.html"
  ],
  "Sauna & steam room": [
   "index.html"
@@ -783,6 +1066,9 @@
   "index.html"
  ],
  "Season chart: beach season October to March, hot and dry April to June, Khareef July to September": [
+  "index.html"
+ ],
+ "See our full Salalah guide: {0} places, maps and sample plans →": [
   "index.html"
  ],
  "See rooms & prices": [
@@ -807,6 +1093,7 @@
   "index.html"
  ],
  "Sep": [
+  "guide/index.html",
   "index.html"
  ],
  "Separate living room with a sofa bed and TV": [
@@ -824,7 +1111,11 @@
  "Silk Road Restaurant with cream chairs": [
   "index.html"
  ],
+ "Sixteen places worth the drive, from the frankincense ruins on the coast to the Khareef waterfalls and the dunes of the Empty Quarter, with distances from our door and the best time to go.": [
+  "guide/index.html"
+ ],
  "Skip to content": [
+  "guide/index.html",
   "index.html"
  ],
  "Sleeps {0}": [
@@ -848,6 +1139,9 @@
  "Staff was courteous and smiling. Family room was comfortable, we did cooking and had fun time in the pool too.": [
   "index.html"
  ],
+ "Stay in the middle of it all.": [
+  "guide/index.html"
+ ],
  "Suite kitchenette with white cupboards, a sink and a dining table": [
   "index.html"
  ],
@@ -867,7 +1161,14 @@
   "index.html"
  ],
  "Sultan Qaboos Mosque": [
+  "guide/index.html",
   "index.html"
+ ],
+ "Sultan Qaboos Mosque, then lunch at the Silk Road Restaurant.": [
+  "guide/index.html"
+ ],
+ "Sumhuram & Khor Rori": [
+  "guide/index.html"
  ],
  "Superior Suite": [
   "index.html"
@@ -886,6 +1187,9 @@
  ],
  "Take a look inside.": [
   "index.html"
+ ],
+ "Taqah Castle": [
+  "guide/index.html"
  ],
  "Tell us your dates and we’ll reply with your price and confirm your room. No booking fees, no payment until you arrive.": [
   "index.html"
@@ -908,6 +1212,12 @@
  "The Khareef": [
   "index.html"
  ],
+ "The Khareef arrives late in the month": [
+  "guide/index.html"
+ ],
+ "The Tomb of the Prophet Job through the misty hills, then the Mughsail blowholes and frankincense at Al Haffa Souq.": [
+  "guide/index.html"
+ ],
  "The blue glass façade from the street": [
   "index.html"
  ],
@@ -929,8 +1239,32 @@
  "The rooms are spacious and well set up, with a small kitchen and living area, which makes it feel more homely.": [
   "index.html"
  ],
+ "The sea": [
+  "guide/index.html"
+ ],
+ "The sea is rough during the Khareef and swimming is often not allowed. In winter, swim where it is calm and others are swimming.": [
+  "guide/index.html"
+ ],
+ "There are no tour buses between the sights. We arrange a car with a driver, a taxi or a hire car, usually the same day.": [
+  "guide/index.html"
+ ],
+ "Things to do in <0>Salalah.</0>": [
+  "guide/index.html"
+ ],
+ "Things to do in Salalah": [
+  "guide/index.html"
+ ],
+ "Things to do in Salalah | A local guide from Bristol Hotel Salalah": [
+  "guide/index.html"
+ ],
+ "Tomb of the Prophet Job (Nabi Ayoub)": [
+  "guide/index.html"
+ ],
  "Towels and loungers": [
   "index.html"
+ ],
+ "Town & souqs": [
+  "guide/index.html"
  ],
  "Treadmills, bikes, weight machines and free weights, free for guests.": [
   "index.html"
@@ -944,29 +1278,49 @@
  "Two bedrooms, one with a king bed and one with two singles, a living room with a sofa bed, a kitchenette and a balcony. Our biggest suite.": [
   "index.html"
  ],
+ "Two days, four days or one.": [
+  "guide/index.html"
+ ],
  "Two meeting rooms for business groups": [
   "index.html"
  ],
  "Two-bedroom Executive Suite for up to a family of five": [
   "index.html"
  ],
+ "UNESCO frankincense sites": [
+  "guide/index.html"
+ ],
  "UNESCO ruins by the sea": [
   "index.html"
  ],
+ "Ubar & the Empty Quarter dunes": [
+  "guide/index.html"
+ ],
  "Unwind without leaving the building.": [
   "index.html"
+ ],
+ "Use these as a starting point. We’ll book the car and adjust the plan to the weather on the day.": [
+  "guide/index.html"
  ],
  "Value": [
   "index.html"
  ],
  "Visit": [
+  "guide/index.html",
   "index.html"
  ],
  "Wadi Darbat": [
+  "guide/index.html",
   "index.html"
+ ],
+ "Warm days, good for the desert": [
+  "guide/index.html"
  ],
  "Waterfalls and green hills in the Khareef": [
   "index.html"
+ ],
+ "Waterfalls still running, fewer crowds": [
+  "guide/index.html"
  ],
  "We post our offers on Instagram through the year. These three are the ones guests ask about most.": [
   "index.html"
@@ -980,16 +1334,29 @@
  "Welcome · no cots or extra beds": [
   "index.html"
  ],
+ "West to the Mughsail blowholes and the cove at Fazayah.": [
+  "guide/index.html"
+ ],
  "We’ll help you see Salalah.": [
   "index.html"
  ],
  "We’re an independent hotel, and guests notice. On Booking.com our staff score {0} out of {1}, and the words that come up again and again are “clean”, “spacious” and “helpful”.": [
   "index.html"
  ],
+ "We’re here to help": [
+  "guide/index.html"
+ ],
  "What guests say": [
   "index.html"
  ],
+ "What to see in Salalah and Dhofar: Wadi Darbat, Al Baleed, Mughsail, Mirbat and the Empty Quarter, with distances from the hotel, maps, sample plans and the best months to go.": [
+  "guide/index.html"
+ ],
+ "What to wear": [
+  "guide/index.html"
+ ],
  "WhatsApp <0>+{0} {1} {2}</0>": [
+  "guide/index.html",
   "index.html"
  ],
  "Wheelchair accessible · accessible bathrooms": [
@@ -998,8 +1365,17 @@
  "When to come": [
   "index.html"
  ],
+ "When to go.": [
+  "guide/index.html"
+ ],
  "Where we are": [
   "index.html"
+ ],
+ "Winter highlights": [
+  "guide/index.html"
+ ],
+ "Winter sun for everything": [
+  "guide/index.html"
  ],
  "With a children’s pool and loungers": [
   "index.html"
@@ -1040,11 +1416,17 @@
  "per night, before taxes": [
   "index.html"
  ],
+ "places to visit": [
+  "guide/index.html"
+ ],
  "rooms & suites": [
   "index.html"
  ],
  "suites with a kitchenette": [
   "index.html"
+ ],
+ "to the nearest beach": [
+  "guide/index.html"
  ],
  "{0} adult": [
   "index.html"
@@ -1061,16 +1443,30 @@
  "{0} bedrooms": [
   "index.html"
  ],
+ "{0} day · any time of year": [
+  "guide/index.html"
+ ],
+ "{0} days · October – April": [
+  "guide/index.html"
+ ],
+ "{0} days · late June – early September": [
+  "guide/index.html"
+ ],
  "{0} king bed": [
   "index.html"
  ],
  "{0} km": [
   "index.html"
  ],
+ "{0} km · {1} h {2} min": [
+  "guide/index.html"
+ ],
  "{0} km · {1} min": [
+  "guide/index.html",
   "index.html"
  ],
  "{0} min": [
+  "guide/index.html",
   "index.html"
  ],
  "{0} m²": [
@@ -1088,6 +1484,9 @@
  "{0} rooms and kitchenette suites in Salalah’s commercial district, with a heated indoor pool, spa, gym and the Silk Road Restaurant. Fifteen minutes from the airport, and your room is one WhatsApp message away.": [
   "index.html"
  ],
+ "{0} °C": [
+  "guide/index.html"
+ ],
  "{0}-hour desk": [
   "index.html"
  ],
@@ -1104,6 +1503,7 @@
   "index.html"
  ],
  "© <0>{0}</0> Bristol Hotel Salalah · فندق بريستول صلالة": [
+  "guide/index.html",
   "index.html"
  ],
  "À la carte, plus room service": [

@@ -75,7 +75,7 @@ html[lang="ar"] em.accent{font-style:normal}
 .topbar a{color:var(--gold-soft);text-decoration:none;font-weight:600}
 .topbar .dot{opacity:.5;margin:0 8px}
 .header{position:sticky;top:0;z-index:40;background:rgba(248,244,236,.92);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid rgba(35,41,42,.08)}
-.header .container{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+.header .container{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px;max-width:1480px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--charcoal)}
 .brand svg{width:40px;height:46px;color:var(--gold);flex:none}
 .brand-text{display:flex;flex-direction:column;line-height:1}
@@ -338,8 +338,14 @@ html[lang="ar"] .footer .footer-h{letter-spacing:0;font-size:15px}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.room:hover .room-img img,.gallery-grid figure:hover img{transform:none}}
 
 /* responsive */
-@media (max-width:1300px){.header-actions .btn-wa-text{display:none}}
-@media (max-width:1400px){
+@media (max-width:1180px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .nav.open{display:flex;position:absolute;top:var(--header-h);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--cream);border-bottom:1px solid var(--stone-dark);padding:8px 24px 18px}
+  .nav.open a{padding:14px 0;border-bottom:1px solid var(--stone)}
+}
+@media (max-width:1500px){.header-actions .btn-wa-text{display:none}}
+@media (max-width:1640px){
   html:is([lang="de"],[lang="ru"],[lang="pl"],[lang="fr"],[lang="it"]) .nav{display:none}
   html:is([lang="de"],[lang="ru"],[lang="pl"],[lang="fr"],[lang="it"]) .menu-btn{display:inline-flex}
   html:is([lang="de"],[lang="ru"],[lang="pl"],[lang="fr"],[lang="it"]) .nav.open{display:flex;position:absolute;top:var(--header-h);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--cream);border-bottom:1px solid var(--stone-dark);padding:8px 24px 18px}
@@ -570,3 +576,88 @@ html[lang="ar"] .events .quote p{font-size:20px}
 .review-links{margin:18px 0 0;display:flex;flex-direction:column;gap:8px;font-size:15px}
 .review-links a{font-weight:700;text-decoration:none}
 picture{display:contents}
+
+/* ---------- guide page ---------- */
+.nav a[aria-current="page"]::after{transform:scaleX(1)}
+.ghero{background:var(--green-deep);color:#fff;position:relative;overflow:hidden;padding:96px 0 88px}
+.ghero::before{content:"";position:absolute;inset:0;background:url("../img/pattern.svg") center/160px repeat;opacity:.09;pointer-events:none}
+.ghero .container{position:relative;display:flex;flex-direction:column;gap:22px;max-width:var(--container)}
+.ghero h1{color:#fff;max-width:900px}.ghero h1 em{color:var(--gold-soft);font-style:italic}html[lang="ar"] .ghero h1 em{font-style:normal}
+.ghero .eyebrow{color:var(--gold-soft)}.ghero .lead{color:#D9E6E0;max-width:680px}
+.ghero-stats{display:flex;gap:30px;flex-wrap:wrap;margin:6px 0 0;padding:20px 0 0;border-top:1px solid rgba(255,255,255,.2);list-style:none}
+.ghero-stats li{display:flex;flex-direction:column}.ghero-stats strong{font-family:"Cormorant Garamond",serif;font-size:38px;line-height:1;color:var(--gold-soft)}.ghero-stats span{font-size:14px;color:#C4D6CF}
+.explore{background:var(--cream)}
+.explore-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start}
+@media (min-width:1001px){.gmap{position:sticky;top:96px}}
+.gmap{margin:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--stone-dark);background:#F4F1E8;box-shadow:var(--shadow)}
+.gmap-canvas{position:relative;aspect-ratio:1000/400}
+.gmap-canvas svg{position:absolute;inset:0;width:100%;height:100%}
+.gmap figcaption{padding:12px 16px;font-size:13px;color:var(--muted);border-top:1px solid var(--stone-dark);background:#fff}
+.pin{position:absolute;transform:translate(-50%,-50%);width:28px;height:28px;border-radius:50%;border:2px solid #fff;background:var(--green);color:#fff;font:800 12px/1 var(--sans);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;box-shadow:0 4px 10px rgba(0,0,0,.25);transition:transform .15s,background .15s}
+.pin:hover,.pin.is-hot,.pin:focus-visible{transform:translate(-50%,-50%) scale(1.25);background:var(--gold);color:var(--ink);z-index:3}
+.pin[hidden]{display:none}
+.pin-cat-history{background:#8A6424}.pin-cat-beach{background:#2D6E8E}.pin-cat-town{background:#B2552A}.pin-cat-desert{background:#9A7B3C}
+.pin-hotel{width:30px;height:30px;background:var(--ink);cursor:default;z-index:2}
+.pin-hotel svg{position:static;width:16px;height:19px;color:var(--gold-soft)}
+.pin-hotel:hover{transform:translate(-50%,-50%);background:var(--ink);color:#fff}
+.pin-off{border-radius:8px;width:auto;padding:0 8px;height:26px;gap:4px}
+.pfilter{margin:0 0 20px}
+.spots{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.place{display:grid;grid-template-columns:40px 1fr;gap:16px;background:#fff;border:1px solid var(--stone-dark);border-radius:var(--radius-sm);padding:18px 20px;scroll-margin-top:110px;transition:border-color .2s,box-shadow .2s}
+.place[hidden]{display:none}
+.place.is-hot{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,137,59,.25)}
+.place-num{width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.place[data-cat="history"] .place-num{background:#8A6424}.place[data-cat="beach"] .place-num{background:#2D6E8E}.place[data-cat="town"] .place-num{background:#B2552A}.place[data-cat="desert"] .place-num{background:#9A7B3C}
+.place h3{font-size:24px;margin-bottom:8px}
+.place p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
+.place .chips li:nth-child(2){background:var(--mist);border-color:#C9DCD3;color:var(--green-deep)}
+.place-links{display:flex;gap:18px;flex-wrap:wrap;font-size:14.5px}.place-links a{font-weight:700;text-decoration:none;display:inline-flex;gap:6px;align-items:center}.place-links svg{width:16px;height:16px}
+.plans{background:var(--stone)}
+.plan-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.plan{background:#fff;border-radius:var(--radius);padding:28px;border:1px solid var(--stone-dark);display:flex;flex-direction:column;gap:12px}
+.plan .tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--green);color:#fff;padding:5px 11px;border-radius:999px}
+html[lang="ar"] .plan .tag{letter-spacing:0}
+.plan-days{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:14px}
+.plan-days li{border-inline-start:3px solid var(--gold-line);padding-inline-start:14px}
+.plan-days strong{display:block;font-size:14px;color:var(--green);text-transform:uppercase;letter-spacing:.06em}html[lang="ar"] .plan-days strong{letter-spacing:0}
+.plan-days span{font-size:15.5px;color:var(--muted)}
+.monthly{background:var(--cream)}
+.month-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:0}
+.month{border-radius:var(--radius-sm);padding:16px;background:#fff;border:1px solid var(--stone-dark);border-top:5px solid var(--gold);display:flex;flex-direction:column;gap:4px}
+.month.m-hot{border-top-color:#B2552A}.month.m-khareef{border-top-color:var(--green)}
+.month b{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}html[lang="ar"] .month b{letter-spacing:0}
+.month strong{font-family:"Cormorant Garamond",serif;font-size:32px;line-height:1;color:var(--charcoal)}
+.month span{font-size:13.5px;color:var(--muted)}
+.month-key{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0 0;font-size:13.5px;color:var(--muted)}.month-key span{display:inline-flex;align-items:center;gap:8px}
+.tips{background:var(--mist)}
+.tip-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tip{background:#fff;border-radius:var(--radius);padding:24px;border:1px solid var(--stone-dark);display:flex;flex-direction:column;gap:10px}
+.tip svg{width:30px;height:30px;color:var(--green)}.tip h3{font-size:22px}.tip p{margin:0;color:var(--muted);font-size:15.5px}
+.guide-link{margin:28px 0 0;font-weight:700}.guide-link a{text-decoration:none}
+@media (max-width:1100px){.plan-grid,.tip-grid{grid-template-columns:1fr 1fr}.month-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:1000px){.explore-grid{grid-template-columns:1fr}}
+@media (max-width:860px){.ghero{padding:64px 0 60px}.plan-grid,.tip-grid{grid-template-columns:1fr}.month-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.pin{width:22px;height:22px;font-size:10px}.pin-hotel{width:24px;height:24px}.pin-hotel svg{width:13px;height:15px}}
+@media (max-width:560px){.month-grid{grid-template-columns:1fr 1fr}.place{grid-template-columns:32px 1fr;gap:12px;padding:16px}.place-num{width:30px;height:30px;font-size:13px}.ghero-stats strong{font-size:30px}}
+.pin-hotel{left:50.50%;top:45.80%}
+.pin-dahariz{left:51.79%;top:50.00%}
+.pin-baleed{left:48.61%;top:52.89%}
+.pin-haffa{left:47.14%;top:52.63%}
+.pin-mosque{left:45.57%;top:52.31%}
+.pin-razat{left:56.14%;top:30.56%}
+.pin-hamran{left:59.00%;top:36.48%}
+.pin-job{left:37.64%;top:35.93%}
+.pin-taqah{left:67.99%;top:48.61%}
+.pin-khor-rori{left:70.14%;top:48.33%}
+.pin-darbat{left:71.64%;top:36.30%}
+.pin-athum{left:68.79%;top:32.22%}
+.pin-mughsail{left:22.86%;top:78.70%}
+.pin-fazayah{left:11.43%;top:81.48%}
+.pin-mirbat{left:88.79%;top:56.85%}
+.pin-samhan{left:86.43%;top:27.78%}
+.pin-desert{left:14.29%;top:7.00%}
+.gmap .legend{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--ink);margin-inline-end:10px}
+.gmap .legend svg{width:14px;height:16px;color:var(--gold)}
+/* the city pins sit within a few km of each other: spread them out so they stay tappable */
+.pin-mosque{left:43.5%;top:40%}.pin-haffa{left:43%;top:63%}.pin-baleed{left:45.5%;top:55%}.pin-dahariz{left:54%;top:54%}
+.pin-taqah{left:66%;top:57%}.pin-khor-rori{left:70%;top:45%}.pin-athum{left:66.5%;top:27%}.pin-darbat{left:72.5%;top:35%}
+.pin-razat{left:56%;top:28%}.pin-hamran{left:60.5%;top:36%}

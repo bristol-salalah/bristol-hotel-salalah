@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 """Build the extra language versions of the site.
 
-index.html (English) and ar/index.html (Arabic) are written by hand. This script:
+Pages are listed in PAGES. The English version of each page is written by hand
+(index.html, guide/index.html); HAND says which other languages are hand-written
+for each page (ar/index.html). This script:
   1. keeps the language switcher and hreflang links in every page up to date,
-  2. writes data/i18n/_source.json, every English string on the page,
-  3. translates index.html into each language that has data/i18n/<code>.json,
-     and writes it to <code>/index.html,
+  2. writes data/i18n/_source.json, every English string and the pages it is on,
+  3. translates each English page into every language that has data/i18n/<code>.json
+     and is not hand-written for that page, and writes it to <code>/<page>,
   4. rewrites sitemap.xml.
+
+Links: a relative URL in an English page is rewritten to reach the same file from
+the language folder, except URLs starting with "./", which stay in the same language
+(use "./guide/" or "./../#rooms" for links between pages).
 
 Usage (from the repo root):  python3 tools/build.py
 No dependencies beyond the Python 3 standard library.
@@ -38,22 +44,27 @@ LANGS = [
     ("pl", "pl", "Polski", "pl_PL", "pl"),
     ("zh", "zh-Hans", "简体中文", "zh_CN", "zh-CN"),
 ]
-HAND = {"en", "ar"}  # written by hand, never generated
+PAGES = ["", "guide/"]  # folder of each page, relative to a language root
+HAND = {"": {"en", "ar"}, "guide/": {"en"}}  # languages written by hand, per page
 CATALOGS = {c: json.loads((I18N / f"{c}.json").read_text(encoding="utf-8"))
-            for c, *_ in LANGS if c not in HAND and (I18N / f"{c}.json").exists()}
-BUILT = [l for l in LANGS if l[0] in HAND or l[0] in CATALOGS]
+            for c, *_ in LANGS if c != "en" and (I18N / f"{c}.json").exists()}
+BUILT = [l for l in LANGS if l[0] == "en" or l[0] in CATALOGS or any(l[0] in h for h in HAND.values())]
 
 
-def url(code):
-    return BASE if code == "en" else f"{BASE}{code}/"
+def url(code, page=""):
+    return (BASE if code == "en" else f"{BASE}{code}/") + page
 
 
-def switcher(code):
-    """Language menu for the page in `code`. Links are relative to that page."""
-    up = "" if code == "en" else "../"
+def path(code, page=""):
+    return ROOT / ("" if code == "en" else code) / page / "index.html"
+
+
+def switcher(code, page=""):
+    """Language menu for `page` in `code`. Links are relative to that page."""
+    up = "../" * ((code != "en") + page.count("/"))
     cur = next(l for l in BUILT if l[0] == code)
     items = "".join(
-        f'<li><a href="{(up + ("" if c == "en" else c + "/")) or "./"}" hreflang="{h}" lang="{h}"'
+        f'<li><a href="{(up + ("" if c == "en" else c + "/") + page) or "./"}" hreflang="{h}" lang="{h}"'
         f'{" aria-current=\"true\"" if c == code else ""}>{n}</a></li>'
         for c, h, n, *_ in BUILT)
     return (f'<!--langs--><details class="langs" translate="no"><summary aria-label="Language: {cur[2]}">'
@@ -62,9 +73,9 @@ def switcher(code):
             f'{cur[1].split("-")[0].upper()}</summary><ul>{items}</ul></details><!--/langs-->')
 
 
-def hreflangs():
-    links = [f'<link rel="alternate" hreflang="{h}" href="{url(c)}">' for c, h, *_ in BUILT]
-    links.append(f'<link rel="alternate" hreflang="x-default" href="{url("en")}">')
+def hreflangs(page=""):
+    links = [f'<link rel="alternate" hreflang="{h}" href="{url(c, page)}">' for c, h, *_ in BUILT]
+    links.append(f'<link rel="alternate" hreflang="x-default" href="{url("en", page)}">')
     return "\n".join(links)
 
 
@@ -125,7 +136,11 @@ def structured_data(html, code):
             room["offers"] = {"@type": "Offer", "price": price.group(1), "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
         rooms.append(room)
     m = LD_RE.search(html)
+    if not m:
+        return html
     hotel = json.loads(m.group(1))
+    if hotel.get("@type") != "Hotel":
+        return html
     hotel["hasMap"] = "https://www.google.com/maps/search/?api=1&query=Bristol+Hotel+Salalah+As+Saadah+Street+Salalah"
     if rooms:
         hotel["containsPlace"] = rooms
@@ -153,22 +168,22 @@ def tel_nbsp(html):
     return re.sub(r'(<a [^>]*href="tel:[^"]*"[^>]*>)(.*?)(</a>)', fix, html, flags=re.S)
 
 
-def shared(html, code):
+def shared(html, code, page=""):
     """Switcher and hreflang links, the same in every language."""
     html = tel_nbsp(html)
     html = responsive(html)
     html = structured_data(html, code)
     html = re.sub(r'<!--langs-->.*?<!--/langs-->|<a class="lang" href="[^"]*" hreflang="[^"]*" lang="[^"]*">[^<]*</a>',
-                  lambda m: switcher(code), html, count=1, flags=re.S)
+                  lambda m: switcher(code, page), html, count=1, flags=re.S)
     html = re.sub(r'(?:<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?)+', "", html)
-    return html.replace("<link rel=\"canonical\"", hreflangs() + "\n<link rel=\"canonical\"", 1)
+    return html.replace("<link rel=\"canonical\"", hreflangs(page) + "\n<link rel=\"canonical\"", 1)
 
 
 def relink(html):
     """Paths are relative to the site root; a language page sits one folder down."""
     def fix(u):
         u = u.strip()
-        if not u or re.match(r"(#|[a-z][a-z0-9+.-]*:|/|\.\./)", u):
+        if not u or re.match(r"(#|[a-z][a-z0-9+.-]*:|/|\./)", u):
             return u
         return "../" + u
 
@@ -183,48 +198,54 @@ def relink(html):
     return re.sub(r'\b(href|src|srcset|imagesrcset)="([^"]*)"', attr, html)
 
 
-def localise(html, code):
+def localise(html, code, page=""):
     _, h, _, locale, hl = next(l for l in LANGS if l[0] == code)
-    html = html.replace('<html lang="en" dir="ltr">', f'<html lang="{h}" dir="ltr">', 1)
-    html = re.sub(r'(<link rel="canonical" href=")[^"]*', rf"\g<1>{url(code)}", html, count=1)
-    html = re.sub(r'(<meta property="og:url" content=")[^"]*', rf"\g<1>{url(code)}", html, count=1)
+    html = html.replace('<html lang="en" dir="ltr">', f'<html lang="{h}" dir="{"rtl" if code == "ar" else "ltr"}">', 1)
+    html = re.sub(r'(<link rel="canonical" href=")[^"]*', rf"\g<1>{url(code, page)}", html, count=1)
+    html = re.sub(r'(<meta property="og:url" content=")[^"]*', rf"\g<1>{url(code, page)}", html, count=1)
     html = re.sub(r'(<meta property="og:locale" content=")[^"]*', rf"\g<1>{locale}", html, count=1)
     return html.replace("&amp;output=embed", f"&amp;hl={hl}&amp;output=embed")
 
 
 def main():
     images.ensure()
-    en_path, ar_path = ROOT / "index.html", ROOT / "ar/index.html"
-    en = shared(en_path.read_text(encoding="utf-8"), "en")
-    en_path.write_text(en, encoding="utf-8")
-    ar_path.write_text(shared(ar_path.read_text(encoding="utf-8"), "ar"), encoding="utf-8")
-
-    keys = {}
-    for k in i18n.collect(en):
-        keys[k] = keys.get(k, 0) + 1
+    sources, keys = {}, {}
+    for page in PAGES:
+        for code in HAND[page]:
+            p = path(code, page)
+            out = shared(p.read_text(encoding="utf-8"), code, page)
+            p.write_text(out, encoding="utf-8")
+            if code == "en":
+                sources[page] = out
+        for k in i18n.collect(sources[page]):
+            keys.setdefault(k, set()).add(page + "index.html")
     I18N.mkdir(parents=True, exist_ok=True)
-    (I18N / "_source.json").write_text(json.dumps({k: ["index.html"] for k in sorted(keys)}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    (I18N / "_source.json").write_text(json.dumps({k: sorted(v) for k, v in sorted(keys.items())}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
-    for code, *_ in LANGS:
-        if code in HAND:
-            continue
-        if code not in CATALOGS:
-            print(f"  {code}: no data/i18n/{code}.json yet, skipped")
-            continue
-        out, missing = i18n.translate(relink(en), CATALOGS[code])
-        out = shared(localise(out, code), code)
-        if missing:
-            print(f"  {code}: {len(missing)} strings not translated (shown in English)")
-        (ROOT / code).mkdir(exist_ok=True)
-        (ROOT / code / "index.html").write_text(out, encoding="utf-8")
+    for page in PAGES:
+        for code, *_ in LANGS:
+            if code in HAND[page]:
+                continue
+            if code not in CATALOGS:
+                print(f"  {code}: no data/i18n/{code}.json yet, skipped")
+                continue
+            out, missing = i18n.translate(relink(sources[page]), CATALOGS[code])
+            out = shared(localise(out, code, page), code, page)
+            if missing:
+                print(f"  {code}/{page}: {len(missing)} strings not translated (shown in English)")
+            p = path(code, page)
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text(out, encoding="utf-8")
 
     today = date.today().isoformat()
-    alts = "".join(f'\n    <xhtml:link rel="alternate" hreflang="{h}" href="{url(c)}"/>' for c, h, *_ in BUILT)
-    urls = "".join(f"\n  <url>\n    <loc>{url(c)}</loc>{alts}\n    <lastmod>{today}</lastmod>\n  </url>" for c, *_ in BUILT)
+    urls = ""
+    for page in PAGES:
+        alts = "".join(f'\n    <xhtml:link rel="alternate" hreflang="{h}" href="{url(c, page)}"/>' for c, h, *_ in BUILT)
+        urls += "".join(f"\n  <url>\n    <loc>{url(c, page)}</loc>{alts}\n    <lastmod>{today}</lastmod>\n  </url>" for c, *_ in BUILT)
     (ROOT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
         f'xmlns:xhtml="http://www.w3.org/1999/xhtml">{urls}\n</urlset>\n', encoding="utf-8")
-    print(f"{len(keys)} strings; built {len(BUILT)} languages: {', '.join(c for c, *_ in BUILT)}")
+    print(f"{len(keys)} strings; {len(PAGES)} pages; built {len(BUILT)} languages: {', '.join(c for c, *_ in BUILT)}")
 
 
 if __name__ == "__main__":

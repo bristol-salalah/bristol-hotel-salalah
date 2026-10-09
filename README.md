@@ -8,8 +8,10 @@ There is no server code and no database. Bookings go straight to WhatsApp (+968 
 
 ```
 index.html            English home page (the source for the generated languages)
+guide/index.html      English "Things to do in Salalah" guide (source; every language incl. Arabic is generated)
 ar/index.html         Arabic home page (right to left, hand-written)
-hi/ de/ ru/ fr/ it/ pl/ zh/   Generated language pages (don't edit; run the build)
+hi/ de/ ru/ fr/ it/ pl/ zh/   Generated language pages, each with a guide/ (don't edit; run the build)
+ar/guide/             Generated Arabic guide (from data/i18n/ar.json)
 data/i18n/            Translation catalogs, one JSON per language (+ _source.json, written by the build)
 tools/                build.py, i18n.py, images.py, check_i18n.py, check_html.py (Python 3; images.py needs cwebp)
 404.html              "Page not found" page
@@ -64,9 +66,18 @@ Netlify and Cloudflare Pages also work: drag and drop the folder.
 
 Hero and WhatsApp booking card · included-with-every-stay strip · welcome story · numbers strip · rooms and suites (each card opens a 4-photo lightbox) · filterable photo gallery (27 photos) · suites for long stays · pool, spa and gym · Silk Road Restaurant · season guide (beach season, hot months, Khareef) · location with illustrated map and "Getting here" · reviews · Dhofar trips · seasonal offers · Laylati Hall events · good to know and FAQ · footer.
 
+## The Salalah guide
+
+`guide/index.html` lists 16 places with an illustrated map (numbered pins link to the cards), category filters, sample plans, a month-by-month table and travel tips. Each card has a Google Maps "Directions" link from the hotel and a WhatsApp link asking for a car (the message is in English on every language, so the front desk can read it).
+
+* **Distances and times** are approximate road figures from the hotel, written by hand in the cards. Check them against Google Maps before printing anything.
+* **Map pins** are placed from approximate coordinates (`.pin-<id>` rules near the end of `style.css`); the city pins are spread out on purpose so they stay tappable. The map says "not to scale".
+* **Links between pages** use `./` so the build keeps them in the same language (`./guide/`, `./../#rooms`).
+* Unlike the home page, the guide's Arabic version is generated: edit `data/i18n/ar.json`, not `ar/guide/index.html`.
+
 ## Structured data
 
-Each page carries two JSON-LD blocks that the build regenerates from the page text: the `Hotel` (address, geo, map link, amenities, and the four rooms as `HotelRoom` with size, beds, occupancy and the "from" price) and a `FAQPage` built from the FAQ. Occupancy and bed types come from `ROOM_FACTS` in `tools/build.py`, because they are not written on the page. No `aggregateRating` is included on purpose: Google's review-snippet policy only allows ratings collected on the site itself, not Booking.com's.
+The guide carries an `ItemList` of `TouristAttraction`s. The home page carries two JSON-LD blocks that the build regenerates from the page text: the `Hotel` (address, geo, map link, amenities, and the four rooms as `HotelRoom` with size, beds, occupancy and the "from" price) and a `FAQPage` built from the FAQ. Occupancy and bed types come from `ROOM_FACTS` in `tools/build.py`, because they are not written on the page. No `aggregateRating` is included on purpose: Google's review-snippet policy only allows ratings collected on the site itself, not Booking.com's.
 
 ## Where the facts came from
 

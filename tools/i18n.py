@@ -22,7 +22,7 @@ ATTRS = {"alt", "aria-label", "placeholder", "title", "data-title", "data-remove
          "data-t-bed", "data-t-err", "data-t-est", "data-t-est1", "data-t-est2", "data-t-pick", "data-t-per", "data-t-open", "data-t-close", "data-ui-night", "data-ui-nights"}
 META = {("name", "description"), ("property", "og:title"), ("property", "og:description")}
 # Names and brands that stay as they are.
-KEEP = {"Bristol Hotel Salalah", "Bristol", "WhatsApp", "Booking.com", "Google", "Google Maps", "Instagram @bristol_hotel_salalah", "MHT L{0}"}
+KEEP = {"Bristol Hotel Salalah", "WhatsApp", "Booking.com", "Google", "Google Maps", "Instagram @bristol_hotel_salalah", "MHT L{0}"}
 
 NUM = re.compile(r"\d+(?:[.,]\d+)*")
 TOKEN = re.compile(r"<(\d+)/>|<(\d+)>|</(\d+)>|\{(\d+)\}")

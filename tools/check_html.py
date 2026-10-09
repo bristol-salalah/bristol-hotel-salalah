@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 os.chdir(ROOT)
-PAGES = ["index.html", "404.html"] + sorted(str(x.relative_to(ROOT)) for x in ROOT.glob("*/index.html"))
+PAGES = ["404.html"] + sorted(str(x.relative_to(ROOT)) for x in ROOT.rglob("index.html") if not str(x.relative_to(ROOT)).startswith(("assets", "data", "tools", "node_modules", ".")))
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
 
 

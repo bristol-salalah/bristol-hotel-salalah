@@ -201,5 +201,35 @@
     });
   }
 
+  // guide: place filter, and map pins linked to the cards
+  var places = document.querySelectorAll(".place"), pins = document.querySelectorAll(".pin[data-id]");
+  document.querySelectorAll(".pfilter .tab").forEach(function (tab, _, all) {
+    tab.addEventListener("click", function () {
+      var f = tab.getAttribute("data-filter");
+      all.forEach(function (x) { var on = x === tab; x.classList.toggle("is-active", on); x.setAttribute("aria-pressed", on ? "true" : "false"); });
+      places.forEach(function (p) { p.hidden = !(f === "all" || p.getAttribute("data-cat") === f); if (!p.hidden) p.classList.add("in"); });
+      pins.forEach(function (p) { p.hidden = !(f === "all" || p.getAttribute("data-cat") === f); });
+    });
+  });
+  function hot(id, on) {
+    var card = document.getElementById(id), pin = document.querySelector('.pin[data-id="' + id + '"]');
+    if (card) card.classList.toggle("is-hot", on);
+    if (pin) pin.classList.toggle("is-hot", on);
+  }
+  pins.forEach(function (pin) {
+    var id = pin.getAttribute("data-id");
+    pin.addEventListener("click", function () {
+      var card = document.getElementById(id); if (!card) return;
+      card.classList.add("in");
+      card.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+      places.forEach(function (p) { p.classList.remove("is-hot"); });
+      hot(id, true); setTimeout(function () { hot(id, false); }, 2200);
+    });
+  });
+  places.forEach(function (card) {
+    card.addEventListener("mouseenter", function () { hot(card.id, true); });
+    card.addEventListener("mouseleave", function () { hot(card.id, false); });
+  });
+
   var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
 })();
