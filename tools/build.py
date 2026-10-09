@@ -158,6 +158,19 @@ def structured_data(html, code):
     return html
 
 
+def bust(html):
+    """Stamp local CSS/JS links with a content hash so browsers never use a stale copy."""
+    import hashlib
+    def fix(m):
+        rel = m.group(2)
+        f = ROOT / "assets" / rel
+        if not f.exists():
+            return m.group(0)
+        v = hashlib.md5(f.read_bytes()).hexdigest()[:8]
+        return f'{m.group(1)}{rel}?v={v}"'
+    return re.sub(r'((?:href|src)="(?:\.\./)*assets/)((?:css|js)/[a-z0-9-]+\.(?:css|js))(?:\?v=[0-9a-f]+)?"', fix, html)
+
+
 def tel_nbsp(html):
     """Digits inside a tel: link are joined with &nbsp; so the number never wraps."""
     def fix(m):
@@ -171,6 +184,7 @@ def tel_nbsp(html):
 def shared(html, code, page=""):
     """Switcher and hreflang links, the same in every language."""
     html = tel_nbsp(html)
+    html = bust(html)
     html = responsive(html)
     html = structured_data(html, code)
     html = re.sub(r'<!--langs-->.*?<!--/langs-->|<a class="lang" href="[^"]*" hreflang="[^"]*" lang="[^"]*">[^<]*</a>',

@@ -118,10 +118,7 @@ html[lang="ar"] .hero h1 em{font-style:normal}
 
 /* booking card */
 .booking{position:relative;z-index:2;margin-bottom:-74px;scroll-margin-top:100px}
-.booking-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:grid;grid-template-columns:1.3fr 1fr 1fr .6fr .6fr auto;gap:14px;align-items:end;border:1px solid rgba(23,77,69,.1)}
 .field{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.02em}
-.field select,.field input{min-height:52px;border:1.5px solid var(--stone-dark);border-radius:var(--radius-sm);padding:0 14px;font:inherit;font-weight:500;font-size:16px;color:var(--ink);background:#fff;width:100%}
-.field select:focus,.field input:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(184,137,59,.25)}
 .booking-note{margin:0 4px 44px;font-size:14px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
 .booking-note span{display:inline-flex;align-items:center;gap:8px}
 .booking-note svg{width:16px;height:16px;color:var(--gold)}
@@ -356,9 +353,6 @@ html[lang="ar"] .footer .footer-h{letter-spacing:0;font-size:15px}
   .menu-btn{display:inline-flex}
   .nav.open{display:flex;position:absolute;top:var(--header-h);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--cream);border-bottom:1px solid var(--stone-dark);padding:8px 24px 18px}
   .nav.open a{padding:14px 0;border-bottom:1px solid var(--stone)}
-  .booking-card{grid-template-columns:1fr 1fr}
-  .booking-card .field-room{grid-column:1 / -1}
-  .booking-card .btn{grid-column:1 / -1}
   .included-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
   .inc:nth-child(4){border-inline-start:0}
   .inc{border-top:1px solid var(--stone-dark)}
@@ -402,7 +396,6 @@ html[lang="ar"] .footer .footer-h{letter-spacing:0;font-size:15px}
   .lang{padding:10px 8px}
   .hero-facts{gap:20px}
   .hero-facts strong{font-size:28px}
-  .booking-card{grid-template-columns:1fr;padding:16px}
   .booking-note{margin-bottom:32px}
   .included-grid{grid-template-columns:1fr 1fr}
   .inc{border-inline-start:0 !important;border-top:1px solid var(--stone-dark) !important}
@@ -705,11 +698,61 @@ html[lang="ar"] .mobile-bar .btn{font-size:15px}
 @media (prefers-reduced-motion:reduce){.trip:hover,.trip:hover .trip-img img{transform:none}}
 
 /* guests: adults, children, ages, capacity note */
-.ages{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:12px;padding:14px 16px;background:var(--cream);border-radius:var(--radius-sm);border:1px dashed var(--stone-dark)}
 .ages[hidden]{display:none}
-.ages .field{width:140px}
 .capacity{grid-column:1 / -1;margin:0;font-size:14px;color:#8A4A1F;background:#FBF1E6;border:1px solid #EBCDAE;border-radius:var(--radius-sm);padding:10px 14px}
 .capacity[hidden]{display:none}
-@media (max-width:1100px){.booking-card .field-n{grid-column:span 1}}
-@media (max-width:560px){.booking-card{grid-template-columns:1fr 1fr}.booking-card .field-room,.booking-card .btn,.booking-card .field:not(.field-n):not(.field-age){grid-column:1 / -1}.ages .field{width:calc(50% - 6px)}}
-@media (max-width:1100px){.booking-card .ages{order:1}.booking-card .btn{order:2}.booking-card .estimate{order:3}.booking-card .capacity{order:4}.booking-card .form-msg{order:5}}
+
+/* ---------- booking form: two clear rows, same look in every browser ---------- */
+.booking-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(23,77,69,.1);padding:24px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:end}
+.booking-card .field-room{grid-column:span 2}
+.booking-card > .btn{grid-column:span 2;width:100%;min-height:54px}
+.booking-card .ages,.booking-card .estimate,.booking-card .capacity,.booking-card .form-msg{grid-column:1 / -1}
+.field select,.field input{display:block;width:100%;min-height:54px;margin:0;border:1.5px solid var(--stone-dark);border-radius:var(--radius-sm);padding:0 14px;font:500 16px/1.2 var(--sans);color:var(--ink);background-color:#fff;-webkit-appearance:none;appearance:none;box-sizing:border-box}
+.field select{padding-inline-end:42px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23174D45' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:18px;background-position:right 14px center;cursor:pointer;text-overflow:ellipsis}
+html[dir="rtl"] .field select{background-position:left 14px center}
+.field input[type="date"]{display:block;cursor:pointer;line-height:20px;padding-top:15px;padding-bottom:15px}
+.field input[type="date"]::-webkit-date-and-time-value{text-align:start;margin:0}
+.field input[type="date"]::-webkit-calendar-picker-indicator{opacity:.7;cursor:pointer}
+.field select:hover,.field input:hover{border-color:#C9BBA4}
+.field select:focus,.field input:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(184,137,59,.25)}
+.ages{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding:14px 16px;background:var(--cream);border-radius:var(--radius-sm);border:1px dashed var(--stone-dark)}
+.ages[hidden]{display:none}
+.estimate:empty{display:none}
+@media (max-width:700px){
+  .booking-card{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:16px}
+  .booking-card .field-room,.booking-card > .btn{grid-column:1 / -1}
+  .booking-card .ages{order:1}.booking-card > .btn{order:2}.booking-card .estimate{order:3}.booking-card .capacity{order:4}.booking-card .form-msg{order:5}
+  .field select,.field input{min-height:50px;padding:0 12px;font-size:16px}
+  .field select{padding-inline-end:36px;background-position:right 10px center}
+  html[dir="rtl"] .field select{background-position:left 10px center}
+  .ages{grid-template-columns:1fr 1fr;padding:12px}
+}
+@media (max-width:340px){
+  .container{padding:0 12px}
+  .brand svg{width:26px;height:30px}
+  .brand-name{font-size:16px;letter-spacing:.08em}
+  .langs summary{font-size:0;gap:0;padding:0 9px}
+  .langs summary svg{width:18px;height:18px}
+  .header-actions .btn-sm{padding:0 11px;min-height:40px}
+  .menu-btn{width:40px;height:40px}
+}
+@media (max-width:400px){.cta .btn{padding:8px 16px;font-size:15px;max-width:100%;white-space:normal;text-align:center}}
+@media (max-width:400px){.hero-ctas .btn,.ghero .btn,.cta .btn{white-space:normal;text-align:center;padding-top:8px;padding-bottom:8px;max-width:100%}}
+.hero-bg,.ghero-bg{contain:paint}
+.fact strong,.faq summary,.faq details p{overflow-wrap:anywhere;min-width:0}
+.know .container > *{min-width:0}
+@media (max-width:380px){.mobile-bar .btn{font-size:14px;padding:0 10px;gap:6px}.mobile-bar .btn svg{width:18px;height:18px}}
+.faq summary::after{flex:none;display:inline-block;width:24px;height:24px;line-height:24px;text-align:center}
+@media (max-width:400px){
+  .inc{min-width:0}.inc strong,.inc span{overflow-wrap:anywhere;-webkit-hyphens:auto;hyphens:auto}
+  .band{white-space:normal;line-height:1.1;font-size:11px;padding:0 4px;text-align:center}
+  .faq summary{gap:10px}
+  h1,h2,h3,.lead,p{-webkit-hyphens:auto;hyphens:auto}
+}
+@media (max-width:700px){
+  .field input[type="date"]{padding:13px 8px 13px 10px;font-size:15px}
+  .field input[type="date"]::-webkit-calendar-picker-indicator{margin:0;padding:0;width:16px;height:16px;flex:none}
+}
+@media (max-width:360px){.booking-card .field-date{grid-column:1 / -1}}
+.field select,.field input{height:54px}
+@media (max-width:700px){.field select,.field input{height:50px}}

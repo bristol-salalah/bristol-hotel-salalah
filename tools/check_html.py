@@ -63,6 +63,7 @@ for page in PAGES:
     for u in set(re.findall(r'(?:src|href)="([^"#]+)"', s)) | set(srcset):
         if u.startswith(("http", "mailto:", "tel:", "data:")) or not u:
             continue
+        u = u.split("?")[0]
         p = u.lstrip("/") if u.startswith("/") else os.path.normpath(os.path.join(base, u))
         if p.endswith("/") or p in (".", ""):
             p = os.path.join(p, "index.html") if p not in (".", "") else "index.html"
