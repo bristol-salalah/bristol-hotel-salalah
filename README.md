@@ -128,4 +128,4 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 
 Fonts: Fraunces (headings), Manrope, Tajawal and Noto Kufi Arabic, all under the SIL Open Font License. Russian headings use Cormorant Garamond, because Fraunces has no Cyrillic.
 
-Look (Oct 2026): navy from the hotel's blue glass, a frankincense-amber accent, square corners and no repeating pattern. The colour variables at the top of `style.css` keep their first names (`--green` is now the navy, `--gold` the amber); `--brass` is the logo gold. The home hero is the copy beside a three-photo collage, because the photos are 1080 px wide and blur when stretched across a wide screen.
+Look (Oct 2026): navy from the hotel's blue glass, a frankincense-amber accent, square corners and no repeating pattern. The colour variables at the top of `style.css` keep their first names (`--green` is now the navy, `--gold` the amber); `--brass` is the logo gold. The home hero is the copy beside a three-photo collage, because the photos are 1080 px wide and blur when stretched across a wide screen..
