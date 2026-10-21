@@ -1,5 +1,5 @@
 (function () {
-  var PHONE = "96897260111";
+  var PHONE = "96895318120";
   var isAr = document.documentElement.lang === "ar";
   var T = isAr ? {
     hello: "مرحباً فندق بريستول صلالة، أود الحجز:",

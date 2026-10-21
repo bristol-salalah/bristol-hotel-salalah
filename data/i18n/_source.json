@@ -29,9 +29,6 @@
  "<0>Parking</0> is free on site for the whole stay.": [
   "index.html"
  ],
- "<0>★★★★☆</0><1/>{0} reviews on Google": [
-  "index.html"
- ],
  "A bedroom with a king bed plus a separate living room with a sofa bed and a kitchenette. Cook, work, spread out.": [
   "index.html"
  ],
@@ -285,10 +282,6 @@
  "Book a room": [
   "guide/index.html"
  ],
- "Book direct on WhatsApp <0>·</0><1>Free Wi-Fi & parking · Heated indoor pool</1>": [
-  "guide/index.html",
-  "index.html"
- ],
  "Book on WhatsApp": [
   "guide/index.html",
   "index.html"
@@ -297,7 +290,11 @@
   "guide/index.html",
   "index.html"
  ],
- "Booking.com score, {0} reviews": [
+ "Bookings: call or WhatsApp <0>+{0} {1} {2}</0>": [
+  "index.html"
+ ],
+ "Bookings: call or WhatsApp <0>·</0><1>Free Wi-Fi & parking · Heated indoor pool</1>": [
+  "guide/index.html",
   "index.html"
  ],
  "Breakfast": [
@@ -406,7 +403,7 @@
  "City view": [
   "index.html"
  ],
- "Cleanliness": [
+ "Clean, spacious and helpful: the three words our guests use most. A few of them, from verified stays.": [
   "index.html"
  ],
  "Clear skies, calm sea": [
@@ -417,12 +414,6 @@
  ],
  "Close menu": [
   "guide/index.html",
-  "index.html"
- ],
- "Comfort": [
-  "index.html"
- ],
- "Couples rate the location {0} for a two-person trip.": [
   "index.html"
  ],
  "Dahariz Beach": [
@@ -511,6 +502,9 @@
   "guide/index.html",
   "index.html"
  ],
+ "Fast and free, everywhere in the hotel": [
+  "index.html"
+ ],
  "Fazayah Beach": [
   "guide/index.html"
  ],
@@ -572,6 +566,10 @@
  "From the coast to the mountains.": [
   "guide/index.html"
  ],
+ "Front desk <0>+{0} {1} {2}</0>": [
+  "guide/index.html",
+  "index.html"
+ ],
  "Fuel and water": [
   "guide/index.html"
  ],
@@ -595,12 +593,6 @@
   "guide/index.html",
   "index.html"
  ],
- "Good · {0} verified Booking.com reviews": [
-  "index.html"
- ],
- "Google rating, {0} reviews": [
-  "index.html"
- ],
  "Green hills above the sea near Salalah during the Khareef": [
   "guide/index.html"
  ],
@@ -620,6 +612,9 @@
   "index.html"
  ],
  "Heated indoor pool": [
+  "index.html"
+ ],
+ "Heated indoor pool with striped loungers": [
   "index.html"
  ],
  "Heated indoor pool with white tiles and wooden loungers": [
@@ -672,6 +667,9 @@
   "guide/index.html"
  ],
  "In Saadah, with the beaches and the mountains in reach.": [
+  "index.html"
+ ],
+ "In their own <0>words.</0>": [
   "index.html"
  ],
  "Included with every stay": [
@@ -984,12 +982,6 @@
  "Ramadan room rates and iftar menus at the Silk Road Restaurant are posted on Instagram every year.": [
   "index.html"
  ],
- "Rated {0} by guests, everywhere in the hotel": [
-  "index.html"
- ],
- "Read all {0} reviews on Booking.com →": [
-  "index.html"
- ],
  "Reception desk in cream marble under a crystal chandelier": [
   "index.html"
  ],
@@ -1106,9 +1098,6 @@
  "See rooms & prices": [
   "index.html"
  ],
- "See the reviews on Google →": [
-  "index.html"
- ],
  "See {0} photos of the Deluxe Room": [
   "index.html"
  ],
@@ -1163,9 +1152,6 @@
   "index.html"
  ],
  "Spa, sauna & steam room": [
-  "index.html"
- ],
- "Staff": [
   "index.html"
  ],
  "Staff was courteous and smiling. Family room was comfortable, we did cooking and had fun time in the pool too.": [
@@ -1265,6 +1251,9 @@
  "The hotel": [
   "index.html"
  ],
+ "The lobby and reception under a crystal chandelier": [
+  "index.html"
+ ],
  "The nearest stretch of sand": [
   "index.html"
  ],
@@ -1343,9 +1332,6 @@
  "Use these as a starting point. We’ll book the car and adjust the plan to the weather on the day.": [
   "guide/index.html"
  ],
- "Value": [
-  "index.html"
- ],
  "Visit": [
   "guide/index.html",
   "index.html"
@@ -1384,7 +1370,7 @@
  "We’ll help you see Salalah.": [
   "index.html"
  ],
- "We’re an independent hotel, and guests notice. On Booking.com our staff score {0} out of {1}, and the words that come up again and again are “clean”, “spacious” and “helpful”.": [
+ "We’re an independent hotel, and guests notice. The words that come up again and again in their reviews are “clean”, “spacious” and “helpful”.": [
   "index.html"
  ],
  "We’re here to help": [
@@ -1451,7 +1437,16 @@
  "from Salalah Airport": [
   "index.html"
  ],
+ "front desk, every day": [
+  "index.html"
+ ],
+ "h": [
+  "index.html"
+ ],
  "min": [
+  "index.html"
+ ],
+ "m²": [
   "index.html"
  ],
  "opened on As Saadah Street": [
@@ -1498,8 +1493,7 @@
   "index.html"
  ],
  "{0} min": [
-  "guide/index.html",
-  "index.html"
+  "guide/index.html"
  ],
  "{0} m²": [
   "index.html"
@@ -1528,9 +1522,6 @@
  "{0}:{1} – {2}:{3} · ${4} per person": [
   "index.html"
  ],
- "{0}–{1} m²": [
-  "index.html"
- ],
  "{n} nights from ${total}, before taxes": [
   "index.html"
  ],
@@ -1539,9 +1530,6 @@
   "index.html"
  ],
  "À la carte, plus room service": [
-  "index.html"
- ],
- "“Good” · {0} reviews on Booking.com": [
   "index.html"
  ]
 }

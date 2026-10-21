@@ -2,7 +2,7 @@
 
 A static website (HTML, CSS and a little JavaScript) for **Bristol Hotel Salalah**, a 3-star hotel on As Saadah Street in Salalah, Oman.
 English (`/`) and Arabic (`/ar/`, right to left) are written by hand. Seven more languages are generated from the English page by a small build script (see **Languages**): Hindi (`/hi/`), German (`/de/`), Russian (`/ru/`), French (`/fr/`), Italian (`/it/`), Polish (`/pl/`) and Simplified Chinese (`/zh/`).
-There is no server code and no database. Bookings go straight to WhatsApp (+968 9726 0111) with a pre-filled message.
+There is no server code and no database. Bookings go straight to WhatsApp (+968 9531 8120, the main booking number for calls and WhatsApp) with a pre-filled message.
 
 ## Files
 
@@ -64,7 +64,7 @@ Netlify and Cloudflare Pages also work: drag and drop the folder.
 
 ## Sections
 
-Hero and WhatsApp booking card · included-with-every-stay strip · welcome story · numbers strip · rooms and suites (each card opens a 4-photo lightbox) · filterable photo gallery (27 photos) · suites for long stays · pool, spa and gym · Silk Road Restaurant · season guide (beach season, hot months, Khareef) · location with illustrated map and "Getting here" · reviews · Dhofar trips · seasonal offers · Laylati Hall events · good to know and FAQ · footer.
+Hero (copy beside a photo collage) and WhatsApp booking card · included-with-every-stay strip · welcome story · numbers strip · rooms and suites (each card opens a 4-photo lightbox) · filterable photo gallery (27 photos) · suites for long stays · pool, spa and gym · Silk Road Restaurant · season guide (beach season, hot months, Khareef) · location with illustrated map and "Getting here" · reviews · Dhofar trips · seasonal offers · Laylati Hall events · good to know and FAQ · footer.
 
 ## The Salalah guide
 
@@ -99,7 +99,7 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 
 | Item | Current value on the site | Why it needs checking |
 |---|---|---|
-| WhatsApp number | +968 9726 0111 (`wa.me/96897260111`) | From the Instagram bio ("للإستفسار والحجز 23321666 / 97260111"). Confirm it is on WhatsApp and who answers it |
+| Booking number | +968 9531 8120 (`wa.me/96895318120`, `tel:+96895318120`) | Given by the hotel in Oct 2026 as the main booking contact (calls and WhatsApp). It replaced 97260111; the landline 23 321666 stays in the footer as "Front desk" |
 | Domain | `www.bristolhotelsalalah.com` (in canonical, og, sitemap, robots) | The hotel owns the domain (GoDaddy builder placeholder). Replace if they use another |
 | Prices | Deluxe $32, Junior Suite $39, Superior Suite $42, Executive Suite $44, breakfast $5 pp | Booking.com, 8–9 Oct 2026, before taxes (about +20%). The hotel may prefer OMR |
 | Number of rooms | 42 | Booking/Expedia/Trip.com say 42, topomanhotels says 53 |
@@ -121,9 +121,11 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 
 * **Guests:** the form has separate Adults (1–8) and Children (0–6) menus; choosing children adds one required age menu per child (Under 1, 1–17), and the WhatsApp message lists them, e.g. "2 adults, 2 children (ages: under 1, 7)".
 * **Prices:** search `index.html` and `ar/index.html` for `$32` / `$39` / `$42` / `$44`, update the `<option>` labels and their `data-price` values in the booking form (the estimate line multiplies `data-price` by the nights), then run `python3 tools/build.py` (numbers are placeholders, so the other languages pick them up without a new translation).
-* **WhatsApp number:** change `PHONE` in `assets/js/main.js` and the `wa.me/96897260111` links in `index.html` and `ar/index.html`, then run the build.
+* **Booking number:** change `PHONE` in `assets/js/main.js` and the `wa.me/96895318120` and `tel:+96895318120` links in `index.html`, `ar/index.html` and `guide/index.html`, then run the build.
 * **Photos:** replace files in `assets/img/photos/` with the same names, delete that photo's `-540/-800/-1080.webp` variants, and run the build to remake them. Photos are 1080 px wide; larger originals from the hotel will improve the site, especially `hero.jpg`.
-* **Reviews:** verbatim quotes from verified Booking.com reviews (English page: Khalid, Prasath, Marwan; Arabic page: Asim, Mohamed, Khuwar, Rashedi) and Google (Renny J, Ophel V). Keep the attribution if you change them.
+* **Reviews:** verbatim quotes from verified Booking.com reviews (English page: Khalid, Prasath, Marwan; Arabic page: Asim, Mohamed, Khuwar, Rashedi) and Google (Renny J, Ophel V). Keep the attribution if you change them. The site shows no review scores (Booking.com 7.9, Google 4.0) on purpose, at the hotel's request; don't add them back.
 * **Arabic page:** `ar/index.html` is written by hand; keep it in step with `index.html` when you change facts. The other languages follow `index.html` automatically through the build.
 
-Fonts: Cormorant Garamond, Manrope, Tajawal and Noto Kufi Arabic, all under the SIL Open Font License.
+Fonts: Fraunces (headings), Manrope, Tajawal and Noto Kufi Arabic, all under the SIL Open Font License. Russian headings use Cormorant Garamond, because Fraunces has no Cyrillic.
+
+Look (Oct 2026): navy from the hotel's blue glass, a frankincense-amber accent, square corners and no repeating pattern. The colour variables at the top of `style.css` keep their first names (`--green` is now the navy, `--gold` the amber); `--brass` is the logo gold. The home hero is the copy beside a three-photo collage, because the photos are 1080 px wide and blur when stretched across a wide screen.
