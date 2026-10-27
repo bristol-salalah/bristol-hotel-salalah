@@ -64,7 +64,7 @@ Netlify and Cloudflare Pages also work: drag and drop the folder.
 
 ## Sections
 
-Hero (copy beside a photo collage) and WhatsApp booking card · included-with-every-stay strip · welcome story · numbers strip · rooms and suites (each card opens a 4-photo lightbox) · filterable photo gallery (27 photos) · suites for long stays · pool, spa and gym · Silk Road Restaurant · season guide (beach season, hot months, Khareef) · location with illustrated map and "Getting here" · reviews · Dhofar trips · seasonal offers · Instagram (profile card and six photo tiles, all linking to @bristol_hotel_salalah) · Laylati Hall events · good to know and FAQ · footer.
+Hero (copy beside a photo collage) and WhatsApp booking card · included-with-every-stay strip · welcome story · numbers strip · rooms and suites (each card opens a 4-photo lightbox) · filterable photo gallery (27 photos) · Instagram (profile card and six photo tiles, all linking to @bristol_hotel_salalah) · suites for long stays · pool, spa and gym · Silk Road Restaurant · season guide (beach season, hot months, Khareef) · location with illustrated map and "Getting here" · reviews · Dhofar trips · seasonal offers · Laylati Hall events · good to know and FAQ · footer.
 
 ## The Salalah guide
 
