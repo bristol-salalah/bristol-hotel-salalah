@@ -796,11 +796,9 @@ em.accent,.hero h1 em,.suite h2 em,.ghero h1 em{font-style:italic;font-weight:35
 html:is([lang="ar"],[lang="hi"],[lang="zh-Hans"]) :is(em.accent,.hero h1 em,.suite h2 em,.ghero h1 em){font-style:normal;font-weight:inherit}
 html[lang="ar"] :is(h1,h2,h3){font-weight:700}
 
-/* section labels: a running number instead of the gold rule */
-main{counter-reset:sec}
+/* section labels */
 .eyebrow{font-size:12.5px;letter-spacing:.18em;color:var(--gold-text);gap:12px}
-.eyebrow::before{counter-increment:sec;content:counter(sec,decimal-leading-zero);width:auto;height:auto;background:none;font:italic 400 17px/1 var(--display);letter-spacing:0;color:var(--gold);padding-inline-end:12px;border-inline-end:1px solid currentColor}
-.hero .eyebrow::before,.ghero .eyebrow::before{content:"";counter-increment:none;width:8px;height:8px;border-radius:50%;background:var(--gold);padding:0;border:0}
+.hero .eyebrow::before,.ghero .eyebrow::before{width:8px;height:8px;border-radius:50%;background:var(--gold);padding:0;border:0}
 :is(.suite,.events,.glance,.ghero,.cta) .eyebrow,:is(.suite,.events) .eyebrow::before{color:var(--gold-soft)}
 
 /* buttons: squared, quieter */
