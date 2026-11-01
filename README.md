@@ -107,7 +107,7 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 | Check-in / out | 2:00–11:00 pm / before 12:00 noon | Booking.com house rules |
 | Payment | "At the hotel, cash accepted; ask about card" | Booking.com lists cash only, Trip.com says cash and cards |
 | Room capacity | Booking form notes when guests exceed: Deluxe 2, Junior 3, Superior 3, Executive 5 (`data-max` on the room options) | Booking showed max 2 for a 2-adult search; bed counts suggest more. The note is advice only, it never blocks the request |
-| Events hall name | "Laylati Hall" (قاعة ليلتي) | Taken from an Instagram highlight title; confirm the name and what it hosts |
+| Events hall name and photo | "Laylati Hall" (قاعة ليلتي); the section shows the lounge photo (`lobby-seating.jpg`) | Name from an Instagram highlight title; confirm it. The hotel said (1 Nov 2026) that `hall.jpg` is the restaurant, not the hall, so it was taken out of the events section; none of the 46 photos shows the hall itself. Ask the hotel for a photo of it |
 | Cancellation | "We'll explain the terms on WhatsApp" | Not published for direct bookings |
 | Massage / spa prices | "charged separately" | Not published |
 | Languages | Arabic & English | Reviews mention Omani, Egyptian and Indian staff |
