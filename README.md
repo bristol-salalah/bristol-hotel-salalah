@@ -20,6 +20,7 @@ assets/css/fonts.css  Self-hosted fonts (no Google requests), incl. Latin-extend
 assets/js/main.js     WhatsApp booking form, photo lightbox, gallery filter, language menu, mobile menu, animations
 assets/img/           logo.png + logo-light.png (the hotel's logo, transparent; light one for the footer), favicon.svg, apple-touch-icon.png (the hotel's own B logo), og-image.jpg, map.svg, pattern.svg
 favicon.ico           32 px icon for older browsers
+assets/img/hero/      The home hero's Khareef photo: Ayn Athum (Wikimedia Commons, CC BY-SA 4.0, by Muiad123; the 5446 px original cropped to portrait), as WebP at 720/1080/1440/2160 px plus a 1440 px JPEG. Not touched by the build; its srcset is written by hand in index.html and ar/index.html
 assets/img/photos/    46 hotel photos as JPEG plus WebP variants at 540/800/1080 px (made by tools/images.py); each room card opens a 4-photo set
 robots.txt, sitemap.xml, .nojekyll
 ```
@@ -133,4 +134,4 @@ Fonts: Fraunces (headings), Manrope, Tajawal and Noto Kufi Arabic, all under the
 
 Colour refresh (1 Nov 2026, asked for by the hotel: "more colourful and eye-catching"): the `2026-11 colour refresh` block at the end of `style.css` adds Khareef green, lagoon turquoise and warm sand on top of the navy/amber base (gradient buttons, coloured section backgrounds, coloured chips and icon badges, a rainbow stripe under the header and above the footer) and a full-bleed Khareef photo band (`#khareef`, Ayn Athum photo from `assets/img/places/`) between the seasons and location sections. To go back to the quieter look, delete that block and the band.
 
-Look (Oct 2026): navy from the hotel's blue glass, a frankincense-amber accent, square corners and no repeating pattern. The colour variables at the top of `style.css` keep their first names (`--green` is now the navy, `--gold` the amber); `--brass` is the logo gold. The home hero is the copy beside a three-photo collage, because the photos are 1080 px wide and blur when stretched across a wide screen..
+Look (Oct 2026): navy from the hotel's blue glass, a frankincense-amber accent, square corners and no repeating pattern. The colour variables at the top of `style.css` keep their first names (`--green` is now the navy, `--gold` the amber); `--brass` is the logo gold. The home hero (1 Nov 2026, the hotel asked for a Khareef picture "in ultra HD", in the style of the Golden Hotel Amman site) is the copy beside a tall arch with the Ayn Athum waterfall, the hotel building in a small arch over it and a round price badge; the `2026-11 hero` block at the end of `style.css`. Before that it was a three-photo collage of the hotel.
