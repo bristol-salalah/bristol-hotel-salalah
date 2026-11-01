@@ -131,4 +131,6 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 
 Fonts: Fraunces (headings), Manrope, Tajawal and Noto Kufi Arabic, all under the SIL Open Font License. Russian headings use Cormorant Garamond, because Fraunces has no Cyrillic.
 
+Colour refresh (1 Nov 2026, asked for by the hotel: "more colourful and eye-catching"): the `2026-11 colour refresh` block at the end of `style.css` adds Khareef green, lagoon turquoise and warm sand on top of the navy/amber base (gradient buttons, coloured section backgrounds, coloured chips and icon badges, a rainbow stripe under the header and above the footer) and a full-bleed Khareef photo band (`#khareef`, Ayn Athum photo from `assets/img/places/`) between the seasons and location sections. To go back to the quieter look, delete that block and the band.
+
 Look (Oct 2026): navy from the hotel's blue glass, a frankincense-amber accent, square corners and no repeating pattern. The colour variables at the top of `style.css` keep their first names (`--green` is now the navy, `--gold` the amber); `--brass` is the logo gold. The home hero is the copy beside a three-photo collage, because the photos are 1080 px wide and blur when stretched across a wide screen..
