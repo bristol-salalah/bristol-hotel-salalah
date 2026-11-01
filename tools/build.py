@@ -122,7 +122,7 @@ def structured_data(html, code):
         desc = text(re.search(r'<div class="room-body">.*?<p>(.*?)</p>', block, re.S).group(1))
         chips = [text(c) for c in re.findall(r"<li>(.*?)</li>", re.search(r'<ul class="chips">(.*?)</ul>', block, re.S).group(1), re.S)]
         size = next((int(re.search(r"\d+", c).group(0)) for c in chips if re.search(r"\d+\s*(m²|م²|वर्ग|平方)", c)), None)
-        price = re.search(r'<div class="price">.*?(\d+)', block, re.S)
+        price = re.search(r'<div class="price">.*?(\d+(?:\.\d+)?)', block, re.S)
         img = re.search(r"photos/([a-z0-9-]+)\.jpg", block).group(1)
         occ, bed = ROOM_FACTS.get(img, (None, None))
         room = {"@type": "HotelRoom", "name": name, "description": desc}
@@ -133,7 +133,7 @@ def structured_data(html, code):
         if bed:
             room["bed"] = {"@type": "BedDetails", "typeOfBed": bed}
         if price:
-            room["offers"] = {"@type": "Offer", "price": price.group(1), "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+            room["offers"] = {"@type": "Offer", "price": price.group(1), "priceCurrency": "OMR", "availability": "https://schema.org/InStock"}
         rooms.append(room)
     m = LD_RE.search(html)
     if not m:

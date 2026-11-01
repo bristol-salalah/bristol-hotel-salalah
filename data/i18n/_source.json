@@ -1,7 +1,4 @@
 {
- "/ night": [
-  "index.html"
- ],
  "<0></0>April – June": [
   "index.html"
  ],
@@ -285,6 +282,10 @@
  "Book a room": [
   "guide/index.html"
  ],
+ "Book now": [
+  "guide/index.html",
+  "index.html"
+ ],
  "Book on WhatsApp": [
   "guide/index.html",
   "index.html"
@@ -293,7 +294,7 @@
   "guide/index.html",
   "index.html"
  ],
- "Bookings: call or WhatsApp <0>+{0} {1} {2}</0>": [
+ "Bookings: call <0>+{0} {1} {2}</0>": [
   "index.html"
  ],
  "Bookings: call or WhatsApp <0>·</0><1>Free Wi-Fi & parking · Heated indoor pool</1>": [
@@ -306,17 +307,13 @@
  "Breakfast buffet with chafing dishes": [
   "index.html"
  ],
- "Breakfast for ${0} per person": [
+ "Breakfast for OMR {0} per person": [
   "index.html"
  ],
  "Breakfast is continental and halal. Add it when you book, or decide in the morning.": [
   "index.html"
  ],
  "Breakfast, lunch and dinner <0>under one roof.</0>": [
-  "index.html"
- ],
- "Bristol": [
-  "guide/index.html",
   "index.html"
  ],
  "Bristol Hotel Salalah at dusk: a blue glass tower with the hotel name lit on the roof": [
@@ -375,10 +372,6 @@
  "Check availability": [
   "index.html"
  ],
- "Check dates": [
-  "guide/index.html",
-  "index.html"
- ],
  "Check your dates": [
   "index.html"
  ],
@@ -425,6 +418,10 @@
   "guide/index.html",
   "index.html"
  ],
+ "Contact us": [
+  "guide/index.html",
+  "index.html"
+ ],
  "Dahariz Beach": [
   "guide/index.html",
   "index.html"
@@ -448,7 +445,7 @@
  "Deluxe Room with a king bed, white linen and a brown bed runner": [
   "index.html"
  ],
- "Deluxe Room, from ${0}": [
+ "Deluxe Room, from OMR {0}": [
   "index.html"
  ],
  "Desert": [
@@ -504,7 +501,7 @@
  "Executive Suite living room with a long sofa, dining table and wall-mounted TV": [
   "index.html"
  ],
- "Executive Suite, {0} bedrooms, from ${1}": [
+ "Executive Suite, {0} bedrooms, from OMR {1}": [
   "index.html"
  ],
  "Explore": [
@@ -662,10 +659,6 @@
  "Hotel corridor with marble floors": [
   "index.html"
  ],
- "Hotel · Salalah": [
-  "guide/index.html",
-  "index.html"
- ],
  "How do I book?": [
   "index.html"
  ],
@@ -702,9 +695,6 @@
  "Indoor pool with loungers along the wall": [
   "index.html"
  ],
- "Instagram": [
-  "index.html"
- ],
  "International": [
   "index.html"
  ],
@@ -735,7 +725,7 @@
  "Junior Suite living room with a teal sofa and coffee table": [
   "index.html"
  ],
- "Junior Suite, from ${0}": [
+ "Junior Suite, from OMR {0}": [
   "index.html"
  ],
  "Khalid, United Arab Emirates · Verified Booking.com review": [
@@ -883,6 +873,9 @@
  ],
  "Nov": [
   "guide/index.html",
+  "index.html"
+ ],
+ "OMR {0} <0>/ night</0>": [
   "index.html"
  ],
  "Oct": [
@@ -1215,7 +1208,7 @@
  "Superior Suite sitting area with an armchair beside a tall window": [
   "index.html"
  ],
- "Superior Suite with balcony, from ${0}": [
+ "Superior Suite with balcony, from OMR {0}": [
   "index.html"
  ],
  "Table setting with placemats and cutlery": [
@@ -1519,10 +1512,10 @@
  "{0} m²": [
   "index.html"
  ],
- "{0} night from ${total}, before taxes": [
+ "{0} night from {total}, before taxes": [
   "index.html"
  ],
- "{0} nights from ${total}, before taxes": [
+ "{0} nights from {total}, before taxes": [
   "index.html"
  ],
  "{0} photos": [
@@ -1540,10 +1533,10 @@
  "{0}:{1} pm – {2}:{3} pm": [
   "index.html"
  ],
- "{0}:{1} – {2}:{3} · ${4} per person": [
+ "{0}:{1} – {2}:{3} · OMR {4} per person": [
   "index.html"
  ],
- "{n} nights from ${total}, before taxes": [
+ "{n} nights from {total}, before taxes": [
   "index.html"
  ],
  "© <0>{0}</0> Bristol Hotel Salalah · فندق بريستول صلالة": [

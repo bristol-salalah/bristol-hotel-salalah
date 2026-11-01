@@ -1,5 +1,5 @@
 (function () {
-  var PHONE = "96895318120";
+  var PHONE = "96895194666";
   var isAr = document.documentElement.lang === "ar";
   var T = isAr ? {
     hello: "مرحباً فندق بريستول صلالة، أود الحجز:",
@@ -28,20 +28,19 @@
   });
   document.querySelectorAll("a[data-wa-fixed]").forEach(function (a) { a.target = "_blank"; a.rel = "noopener"; });
 
-  // dates: default to tomorrow -> +2 nights, never in the past
+  // dates: default to today -> 1 night, never in the past
   var fin = document.getElementById("f-in"), fout = document.getElementById("f-out");
   function iso(d) { var z = new Date(d.getTime() - d.getTimezoneOffset() * 60000); return z.toISOString().slice(0, 10); }
   if (fin && fout) {
     var t = new Date(); t.setHours(0, 0, 0, 0);
     var a = new Date(t); a.setDate(a.getDate() + 1);
-    var b = new Date(t); b.setDate(b.getDate() + 3);
     fin.min = iso(t); fout.min = iso(a);
-    fin.value = iso(a); fout.value = iso(b);
+    fin.value = iso(t); fout.value = iso(a);
     fin.addEventListener("change", function () {
       if (!fin.value) return;
       var n = new Date(fin.value); n.setDate(n.getDate() + 1);
       fout.min = iso(n);
-      if (!fout.value || fout.value <= fin.value) { var m = new Date(fin.value); m.setDate(m.getDate() + 2); fout.value = iso(m); }
+      if (!fout.value || fout.value <= fin.value) { fout.value = iso(n); }
     });
   }
 
@@ -53,7 +52,8 @@
     var nights = (fin.value && fout.value) ? Math.round((new Date(fout.value) - new Date(fin.value)) / 86400000) : 0;
     if (!price || nights < 1) { est.innerHTML = ""; return; }
     var tpl = form.getAttribute(nights === 1 ? "data-t-est1" : nights === 2 ? "data-t-est2" : "data-t-est") || form.getAttribute("data-t-est") || "";
-    est.innerHTML = tpl.replace("{n}", nights).replace("${total}", "<strong>$" + (nights * price) + "</strong>");
+    var amt = String(Math.round(nights * price * 10) / 10);
+    est.innerHTML = tpl.replace("{n}", nights).replace("{total}", "<strong>" + (isAr ? amt + " ر.ع." : "OMR " + amt) + "</strong>");
   }
 
   // guests: adults + children, one age picker per child, and a gentle note when the room is small
@@ -277,4 +277,13 @@
   });
 
   var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
+
+  // fixed "Contact us" button: a small panel of ways to reach the hotel
+  var cbtn = document.querySelector(".contact-btn"), cpanel = document.getElementById("contact-panel");
+  if (cbtn && cpanel) {
+    var setC = function (open) { cpanel.hidden = !open; cbtn.setAttribute("aria-expanded", open ? "true" : "false"); };
+    cbtn.addEventListener("click", function (e) { e.stopPropagation(); setC(cpanel.hidden); });
+    document.addEventListener("click", function (e) { if (!cpanel.hidden && !cpanel.contains(e.target)) setC(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !cpanel.hidden) { setC(false); cbtn.focus(); } });
+  }
 })();

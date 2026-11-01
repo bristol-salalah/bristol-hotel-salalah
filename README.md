@@ -2,7 +2,7 @@
 
 A static website (HTML, CSS and a little JavaScript) for **Bristol Hotel Salalah**, a 3-star hotel on As Saadah Street in Salalah, Oman.
 English (`/`) and Arabic (`/ar/`, right to left) are written by hand. Seven more languages are generated from the English page by a small build script (see **Languages**): Hindi (`/hi/`), German (`/de/`), Russian (`/ru/`), French (`/fr/`), Italian (`/it/`), Polish (`/pl/`) and Simplified Chinese (`/zh/`).
-There is no server code and no database. Bookings go straight to WhatsApp (+968 9531 8120, the main booking number for calls and WhatsApp) with a pre-filled message.
+There is no server code and no database. Bookings go straight to WhatsApp (+968 9519 4666) with a pre-filled message; calls go to +968 9531 8120.
 
 ## Files
 
@@ -18,7 +18,7 @@ tools/                build.py, i18n.py, images.py, check_i18n.py, check_html.py
 assets/css/style.css  All styles (colours and fonts are set at the top in :root)
 assets/css/fonts.css  Self-hosted fonts (no Google requests), incl. Latin-extended and Cyrillic subsets
 assets/js/main.js     WhatsApp booking form, photo lightbox, gallery filter, language menu, mobile menu, animations
-assets/img/           favicon.svg, apple-touch-icon.png (the hotel's own B logo), og-image.jpg, map.svg, pattern.svg
+assets/img/           logo.png + logo-light.png (the hotel's logo, transparent; light one for the footer), favicon.svg, apple-touch-icon.png (the hotel's own B logo), og-image.jpg, map.svg, pattern.svg
 favicon.ico           32 px icon for older browsers
 assets/img/photos/    46 hotel photos as JPEG plus WebP variants at 540/800/1080 px (made by tools/images.py); each room card opens a 4-photo set
 robots.txt, sitemap.xml, .nojekyll
@@ -99,9 +99,10 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 
 | Item | Current value on the site | Why it needs checking |
 |---|---|---|
-| Booking number | +968 9531 8120 (`wa.me/96895318120`, `tel:+96895318120`) | Given by the hotel in Oct 2026 as the main booking contact (calls and WhatsApp). It replaced 97260111; the landline 23 321666 stays in the footer as "Front desk" |
+| Booking numbers | WhatsApp +968 9519 4666 (`wa.me/96895194666`); calls +968 9531 8120 (`tel:+96895318120`) | Hotel's change list, 1 Nov 2026: WhatsApp moved to 9519 4666, calls stay on 9531 8120 (it replaced 97260111 in Oct). The landline 23 321666 stays in the footer as "Front desk" |
+| Social links | Facebook `facebook.com/bristol.hotel.salalah.2025`, X `x.com/bristol_salalah`, Instagram `@bristol_hotel_salalah` | Found online 1 Nov 2026. An older Facebook page (`/p/Bristol-Hotel-Salalah-100037322954591`) also exists; the 2025 one is the active page |
 | Domain | `www.bristolhotelsalalah.com` (in canonical, og, sitemap, robots) | The hotel owns the domain (GoDaddy builder placeholder). Replace if they use another |
-| Prices | Deluxe $32, Junior Suite $39, Superior Suite $42, Executive Suite $44, breakfast $5 pp | Booking.com, 8–9 Oct 2026, before taxes (about +20%). The hotel may prefer OMR |
+| Prices | Deluxe OMR 12.5, Junior Suite OMR 15, Superior Suite OMR 16, Executive Suite OMR 17, breakfast OMR 2 pp | Booking.com USD prices (8–9 Oct 2026, before taxes, about +20%) converted at 1 OMR = 2.6 USD and rounded to 0.5. Placeholders until the hotel sends its own OMR rates |
 | Number of rooms | 42 | Booking/Expedia/Trip.com say 42, topomanhotels says 53 |
 | Check-in / out | 2:00–11:00 pm / before 12:00 noon | Booking.com house rules |
 | Payment | "At the hotel, cash accepted; ask about card" | Booking.com lists cash only, Trip.com says cash and cards |
@@ -120,8 +121,10 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 ## Editing
 
 * **Guests:** the form has separate Adults (1–8) and Children (0–6) menus; choosing children adds one required age menu per child (Under 1, 1–17), and the WhatsApp message lists them, e.g. "2 adults, 2 children (ages: under 1, 7)".
-* **Prices:** search `index.html` and `ar/index.html` for `$32` / `$39` / `$42` / `$44`, update the `<option>` labels and their `data-price` values in the booking form (the estimate line multiplies `data-price` by the nights), then run `python3 tools/build.py` (numbers are placeholders, so the other languages pick them up without a new translation).
-* **Booking number:** change `PHONE` in `assets/js/main.js` and the `wa.me/96895318120` and `tel:+96895318120` links in `index.html`, `ar/index.html` and `guide/index.html`, then run the build.
+* **Prices (OMR):** search `index.html` for `OMR 12.5` / `OMR 15` / `OMR 16` / `OMR 17` and `ar/index.html` for `ر.ع.`, update the `<option>` labels and their `data-price` values in the booking form (the estimate line multiplies `data-price` by the nights), then run `python3 tools/build.py` (numbers are placeholders, so the other languages pick them up without a new translation).
+* **Booking numbers:** WhatsApp is `PHONE` in `assets/js/main.js` plus every `wa.me/96895194666` link and the shown `9519 4666`; calls are the `tel:+96895318120` links. Both live in `index.html`, `ar/index.html` and `guide/index.html`; run the build after.
+* **Contact buttons:** the fixed "Contact us" / "Book now" pair (`.mobile-bar`, shown on every screen size) is at the end of each page; "Contact us" opens a panel of WhatsApp, call, Facebook, X and Instagram. The same four icons (`.socials`) sit in the closing call-to-action and the footer.
+* **Booking dates:** the form starts on today → tomorrow (1 night); see `assets/js/main.js`.
 * **Photos:** replace files in `assets/img/photos/` with the same names, delete that photo's `-540/-800/-1080.webp` variants, and run the build to remake them. Photos are 1080 px wide; larger originals from the hotel will improve the site, especially `hero.jpg`.
 * **Reviews:** verbatim quotes from verified Booking.com reviews (English page: Khalid, Prasath, Marwan; Arabic page: Asim, Mohamed, Khuwar, Rashedi) and Google (Renny J, Ophel V). Keep the attribution if you change them. The site shows no review scores (Booking.com 7.9, Google 4.0) on purpose, at the hotel's request; don't add them back.
 * **Arabic page:** `ar/index.html` is written by hand; keep it in step with `index.html` when you change facts. The other languages follow `index.html` automatically through the build.
