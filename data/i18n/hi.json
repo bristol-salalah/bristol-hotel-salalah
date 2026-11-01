@@ -8,6 +8,8 @@
  "<0>By air:</0> Salalah International Airport (SLL) has direct flights from Muscat, Dubai, Doha, Riyadh, Jeddah and Kuwait, and from Indian cities in season. Fifteen minutes by taxi.": "<0>हवाई मार्ग से:</0> सलालाह अंतरराष्ट्रीय हवाई अड्डे (SLL) के लिए मस्कट, दुबई, दोहा, रियाद, जेद्दा और कुवैत से सीधी उड़ानें हैं, और मौसम में भारतीय शहरों से भी। टैक्सी से पंद्रह मिनट।",
  "<0>By road from Muscat:</0> about {0} km on Route {1}, around {2} hours’ driving. From Dubai about {3} km.": "<0>मस्कट से सड़क मार्ग से:</0> रूट {1} पर लगभग {0} किमी, करीब {2} घंटे की ड्राइव। दुबई से लगभग {3} किमी।",
  "<0>Parking</0> is free on site for the whole stay.": "<0>पार्किंग</0> पूरे ठहराव के दौरान होटल में मुफ़्त है।",
+ "<0>{0}</0> min from the airport": "हवाई अड्डे से <0>{0}</0> मिनट",
+ "<0>{0}</0> rooms & suites": "<0>{0}</0> कमरे और सुइट",
  "@bristol_hotel_salalah": "@bristol_hotel_salalah",
  "A bedroom with a king bed plus a separate living room with a sofa bed and a kitchenette. Cook, work, spread out.": "किंग बेड वाला बेडरूम और सोफ़ा-बेड व किचनेट वाला अलग लिविंग रूम। खाना बनाइए, काम कीजिए, आराम से रहिए।",
  "A blowhole spouting at Mughsail": "मुग़सैल में फुहार छोड़ता ब्लोहोल",

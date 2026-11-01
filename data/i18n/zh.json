@@ -8,6 +8,8 @@
  "<0>By air:</0> Salalah International Airport (SLL) has direct flights from Muscat, Dubai, Doha, Riyadh, Jeddah and Kuwait, and from Indian cities in season. Fifteen minutes by taxi.": "<0>乘飞机：</0>塞拉莱国际机场（SLL）有来自马斯喀特、迪拜、多哈、利雅得、吉达和科威特的直飞航班，旺季还有印度城市的航班。乘出租车十五分钟。",
  "<0>By road from Muscat:</0> about {0} km on Route {1}, around {2} hours’ driving. From Dubai about {3} km.": "<0>从马斯喀特自驾：</0>沿 {1} 号公路约 {0} 公里，车程约 {2} 小时。从迪拜约 {3} 公里。",
  "<0>Parking</0> is free on site for the whole stay.": "<0>停车</0>整个住宿期间在酒店内免费。",
+ "<0>{0}</0> min from the airport": "距机场 <0>{0}</0> 分钟",
+ "<0>{0}</0> rooms & suites": "<0>{0}</0> 间客房和套房",
  "@bristol_hotel_salalah": "@bristol_hotel_salalah",
  "A bedroom with a king bed plus a separate living room with a sofa bed and a kitchenette. Cook, work, spread out.": "一间配特大床的卧室，加上带沙发床和小厨房的独立客厅。做饭、办公、尽情舒展。",
  "A blowhole spouting at Mughsail": "穆格赛尔喷涌的海蚀喷水孔",

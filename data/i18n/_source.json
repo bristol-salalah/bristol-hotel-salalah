@@ -26,6 +26,12 @@
  "<0>Parking</0> is free on site for the whole stay.": [
   "index.html"
  ],
+ "<0>{0}</0> min from the airport": [
+  "index.html"
+ ],
+ "<0>{0}</0> rooms & suites": [
+  "index.html"
+ ],
  "@bristol_hotel_salalah": [
   "index.html"
  ],

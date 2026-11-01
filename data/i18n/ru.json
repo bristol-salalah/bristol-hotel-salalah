@@ -8,6 +8,8 @@
  "<0>By air:</0> Salalah International Airport (SLL) has direct flights from Muscat, Dubai, Doha, Riyadh, Jeddah and Kuwait, and from Indian cities in season. Fifteen minutes by taxi.": "<0>Самолётом:</0> в международный аэропорт Салалы (SLL) летают прямые рейсы из Маската, Дубая, Дохи, Эр-Рияда, Джидды и Кувейта, а в сезон — из городов Индии. Пятнадцать минут на такси.",
  "<0>By road from Muscat:</0> about {0} km on Route {1}, around {2} hours’ driving. From Dubai about {3} km.": "<0>На машине из Маската:</0> около {0} км по трассе {1}, примерно {2} часов в пути. Из Дубая около {3} км.",
  "<0>Parking</0> is free on site for the whole stay.": "<0>Парковка</0> на территории бесплатна на всё время проживания.",
+ "<0>{0}</0> min from the airport": "<0>{0}</0> мин от аэропорта",
+ "<0>{0}</0> rooms & suites": "<0>{0}</0> номера и люксы",
  "@bristol_hotel_salalah": "@bristol_hotel_salalah",
  "A bedroom with a king bed plus a separate living room with a sofa bed and a kitchenette. Cook, work, spread out.": "Спальня с кроватью king плюс отдельная гостиная с диваном-кроватью и мини-кухней. Готовьте, работайте, располагайтесь.",
  "A blowhole spouting at Mughsail": "Морской гейзер в Мугсайле",
