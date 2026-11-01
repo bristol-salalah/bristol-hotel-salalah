@@ -2,7 +2,7 @@
 
 A static website (HTML, CSS and a little JavaScript) for **Bristol Hotel Salalah**, a 3-star hotel on As Saadah Street in Salalah, Oman.
 English (`/`) and Arabic (`/ar/`, right to left) are written by hand. Seven more languages are generated from the English page by a small build script (see **Languages**): Hindi (`/hi/`), German (`/de/`), Russian (`/ru/`), French (`/fr/`), Italian (`/it/`), Polish (`/pl/`) and Simplified Chinese (`/zh/`).
-There is no server code and no database. Bookings go straight to WhatsApp (+968 9519 4666) with a pre-filled message; calls go to +968 9531 8120.
+There is no server code and no database. Bookings go straight to WhatsApp (+968 9519 4666, also the number for calls) with a pre-filled message.
 
 ## Files
 
@@ -99,7 +99,7 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 
 | Item | Current value on the site | Why it needs checking |
 |---|---|---|
-| Booking numbers | WhatsApp +968 9519 4666 (`wa.me/96895194666`); calls +968 9531 8120 (`tel:+96895318120`) | Hotel's change list, 1 Nov 2026: WhatsApp moved to 9519 4666, calls stay on 9531 8120 (it replaced 97260111 in Oct). The landline 23 321666 stays in the footer as "Front desk" |
+| Booking number | +968 9519 4666 for WhatsApp and calls (`wa.me/96895194666`, `tel:+96895194666`) | Hotel, 1 Nov 2026: WhatsApp moved to 9519 4666, then "only one number", so 9531 8120 (which had replaced 97260111 in Oct) is gone. The landline 23 321666 stays in the footer as "Front desk" |
 | Social links | Facebook `facebook.com/bristol.hotel.salalah.2025`, X `x.com/bristol_salalah`, Instagram `@bristol_hotel_salalah` | Found online 1 Nov 2026. An older Facebook page (`/p/Bristol-Hotel-Salalah-100037322954591`) also exists; the 2025 one is the active page |
 | Domain | `www.bristolhotelsalalah.com` (in canonical, og, sitemap, robots) | The hotel owns the domain (GoDaddy builder placeholder). Replace if they use another |
 | Prices | Deluxe OMR 12.5, Junior Suite OMR 15, Superior Suite OMR 16, Executive Suite OMR 17, breakfast OMR 2 pp | Booking.com USD prices (8–9 Oct 2026, before taxes, about +20%) converted at 1 OMR = 2.6 USD and rounded to 0.5. Placeholders until the hotel sends its own OMR rates |
@@ -122,7 +122,7 @@ The guide carries an `ItemList` of `TouristAttraction`s. The home page carries t
 
 * **Guests:** the form has separate Adults (1–8) and Children (0–6) menus; choosing children adds one required age menu per child (Under 1, 1–17), and the WhatsApp message lists them, e.g. "2 adults, 2 children (ages: under 1, 7)".
 * **Prices (OMR):** search `index.html` for `OMR 12.5` / `OMR 15` / `OMR 16` / `OMR 17` and `ar/index.html` for `ر.ع.`, update the `<option>` labels and their `data-price` values in the booking form (the estimate line multiplies `data-price` by the nights), then run `python3 tools/build.py` (numbers are placeholders, so the other languages pick them up without a new translation).
-* **Booking numbers:** WhatsApp is `PHONE` in `assets/js/main.js` plus every `wa.me/96895194666` link and the shown `9519 4666`; calls are the `tel:+96895318120` links. Both live in `index.html`, `ar/index.html` and `guide/index.html`; run the build after.
+* **Booking numbers:** one number for WhatsApp and calls: `PHONE` in `assets/js/main.js`, every `wa.me/96895194666` and `tel:+96895194666` link, and the shown `9519 4666`. Both live in `index.html`, `ar/index.html` and `guide/index.html`; run the build after.
 * **Contact buttons:** the fixed "Contact us" / "Book now" pair (`.mobile-bar`, shown on every screen size) is at the end of each page; "Contact us" opens a panel of WhatsApp, call, Facebook, X and Instagram. The same four icons (`.socials`) sit in the closing call-to-action and the footer.
 * **Booking dates:** the form starts on today → tomorrow (1 night); see `assets/js/main.js`.
 * **Photos:** replace files in `assets/img/photos/` with the same names, delete that photo's `-540/-800/-1080.webp` variants, and run the build to remake them. Photos are 1080 px wide; larger originals from the hotel will improve the site, especially `hero.jpg`.
