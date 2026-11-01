@@ -1024,10 +1024,10 @@ em.accent,.hero h1 em{color:var(--khareef)}
 .topbar a{color:#FFE6B8}
 
 /* hero: a soft colour wash and two glows behind the photos */
-.hero{background:linear-gradient(160deg,#FFF6E8 0%,#F7F0E4 38%,var(--lagoon-soft) 100%);overflow:hidden}
+.hero{background:linear-gradient(160deg,#FFF6E8 0%,#F7F0E4 38%,var(--lagoon-soft) 100%)} /* no overflow:hidden: the booking card hangs below the hero's edge */
 .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none}
-.hero::before{width:520px;height:520px;background:var(--khareef-soft);inset-inline-end:-120px;top:-160px}
-.hero::after{width:420px;height:420px;background:var(--sand-deep);inset-inline-start:-140px;bottom:-200px}
+.hero::before{width:520px;height:520px;background:var(--khareef-soft);inset-inline-end:0;top:0}
+.hero::after{width:420px;height:420px;background:var(--sand-deep);inset-inline-start:0;bottom:0}
 .hero-inner{position:relative;z-index:1}
 .hm{border-radius:14px;box-shadow:0 24px 50px -30px rgba(15,42,58,.55)}
 .hm-b{border-radius:14px 14px 14px 60px}
