@@ -1349,3 +1349,68 @@ html[dir="rtl"] .hero-bg::before{inset:0 0 0 auto;background:linear-gradient(270
   /* body text may hyphenate on narrow phones; headings and the big quotes must not */
   h1,h2,h3,.quote p{-webkit-hyphens:manual;hyphens:manual}
 }
+
+/* ---------- 2026-11 professional pass: one accent (Khareef green, gold as the second), flat colour, consistent shapes ---------- */
+:root{--accent:var(--khareef-deep);--accent-soft:var(--khareef-soft);--paper:#F6F1E7;--r-ctl:8px}
+/* the rainbow stripes and glows go; a single hairline carries the brand colour */
+.header::after,.footer::before{height:3px;background:var(--accent)}
+.eyebrow::before{width:24px;height:2px;border-radius:0;background:var(--gold)}
+:is(.suite,.events,.glance,.ghero,.cta,.khareef) .eyebrow::before{background:var(--gold-soft)}
+.booking-card{border-top:3px solid var(--accent);border-image:none;box-shadow:0 24px 50px -36px rgba(15,42,58,.45)}
+.panel-media::after{content:none}
+.topbar{background:var(--green-deep);color:#D6E4DC}
+.topbar a{color:#F3D9B4}
+/* buttons: flat, one radius */
+.btn{border-radius:var(--r-ctl)}
+.btn-primary,.room-foot .btn,.mobile-bar .btn-primary{background:var(--accent);box-shadow:none}
+.btn-primary:hover,.room-foot .btn:hover,.mobile-bar .btn-primary:hover{background:var(--green-deep)}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:none}
+.btn-gold:hover{background:#97491C;color:#fff}
+:is(.suite,.events,.cta,.khareef) .btn-gold{background:#fff;color:var(--ink)}
+:is(.suite,.events,.cta,.khareef) .btn-gold:hover{background:var(--paper);color:var(--ink)}
+.gallery-more .btn,.offers .btn-ghost{border-color:var(--accent);color:var(--accent);background:transparent}
+.gallery-more .btn:hover,.offers .btn-ghost:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab:hover{border-color:var(--accent);color:var(--accent)}
+.tab.is-active{background:var(--accent);border-color:var(--accent);color:#fff}
+.insta-profile .btn{background:var(--ink);color:#fff;border-radius:999px}
+.insta-tile::after{content:none}
+/* chips, tags and icon badges: one quiet style each */
+.chips li:nth-child(n),.menu-tags li:nth-child(n){background:var(--paper);color:var(--charcoal);font-weight:600}
+.room:nth-child(n) .room-tag{background:var(--accent)}
+.inc:nth-child(n) svg{background:var(--accent-soft);color:var(--accent)}
+.num{background:var(--accent)}
+.trip-img svg,.trip.feature .trip-img svg{background:var(--accent)}
+.trip.feature{background:var(--green-deep)}
+.hero-hotel-row .hero-badge{background:var(--accent)}
+.hero .eyebrow::before,.ghero .eyebrow::before{width:8px;height:8px;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+/* dark bands: flat */
+.glance,.suite,.cta,.ghero{background:var(--green-deep)}
+.events{background:var(--ink)}
+.glance strong{background:none;color:var(--gold-soft);-webkit-text-fill-color:var(--gold-soft)}
+.glance strong small{color:#B9C9C2;-webkit-text-fill-color:#B9C9C2}
+.suite h2 em,.khareef h2 em{color:var(--gold-soft)}
+.suite-list svg,.cta svg{color:var(--gold-soft)}
+/* section tints: white and paper, alternating */
+.rooms,.gallery,.dining,.reviews,.offers{background:var(--paper)}
+.unwind,.seasons,.location,.trips,.know,.insta,.story{background:#fff}
+.getting{background:var(--paper)}
+.hours div:nth-child(n){border-inline-start-color:var(--accent)}
+.band-sun,.dot-sun{background:var(--gold)}
+.band-sun{color:#fff}
+.band-hot,.dot-hot{background:#B2552A}
+.band-khareef,.dot-khareef{background:var(--accent)}
+.season:nth-child(n){border-top-color:var(--accent)}
+/* accents that were turquoise */
+.places .t,.trip a,.fact small,.faq summary::after,.hero-call svg,.signature svg,.getting .ticks svg,.contact-panel svg,.booking-note svg,.ticks svg,.rooms-foot svg{color:var(--accent)}
+.hero-call:hover strong{color:var(--accent)}
+.trip.feature a{color:var(--gold-soft)}
+.quote::before{color:var(--gold);opacity:.3}
+.quote cite::before{background:var(--gold)}
+.cta .socials a:hover{background:#fff;border-color:#fff;color:var(--ink)}
+.footer .socials a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+/* photo corners: one radius everywhere */
+.story-media .a,.story-media .b,.dining-media figure:nth-child(n),.suite-media,.events-media,.hm,.hm-b,.hm-c,
+html[dir="rtl"] .suite-media,html[dir="rtl"] .events-media,html[dir="rtl"] .hm-b,html[dir="rtl"] .hm-c{border-radius:14px}
+.location .map-card{position:relative} /* keeps the "not to scale" caption inside the card (static let it escape to the hero) */
+.dining .menu-tags li:nth-child(n){background:#fff;border:1px solid var(--stone-dark)}
+.story-media .b{border-color:#fff}
