@@ -29,7 +29,7 @@
 <link rel="preload" href="assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css?v=7eb357cc">
-<link rel="stylesheet" href="assets/css/style.css?v=265d5efd">
+<link rel="stylesheet" href="assets/css/style.css?v=e93936d7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -141,7 +141,7 @@
     {
       "@type": "HotelRoom",
       "name": "Junior Suite",
-      "description": "A bedroom with a king bed plus a separate living room with a sofa bed and a kitchenette. Cook, work, spread out.",
+      "description": "A bedroom with a king bed plus a separate living room with a sofa bed, two bathrooms and a kitchenette. Cook, work, spread out.",
       "floorSize": {
         "@type": "QuantitativeValue",
         "value": 70,
@@ -157,7 +157,7 @@
       },
       "offers": {
         "@type": "Offer",
-        "price": "15",
+        "price": "16",
         "priceCurrency": "OMR",
         "availability": "https://schema.org/InStock"
       }
@@ -189,7 +189,7 @@
     {
       "@type": "HotelRoom",
       "name": "Executive Suite",
-      "description": "Two bedrooms, one with a king bed and one with two singles, a living room with a sofa bed, a kitchenette and a balcony. Our biggest suite.",
+      "description": "Two bedrooms, one with a king bed and one with two singles, a living room with a sofa bed, three bathrooms, a kitchenette and a balcony. Our biggest suite.",
       "floorSize": {
         "@type": "QuantitativeValue",
         "value": 95,
@@ -205,7 +205,7 @@
       },
       "offers": {
         "@type": "Offer",
-        "price": "17",
+        "price": "18",
         "priceCurrency": "OMR",
         "availability": "https://schema.org/InStock"
       }
@@ -308,9 +308,9 @@
       <label class="field field-room">Room
         <select name="room" id="f-room">
           <option value="Deluxe Room" data-price="12.5" data-max="2">Deluxe Room, from OMR 12.5</option>
-          <option value="Junior Suite" data-price="15" data-max="3">Junior Suite, from OMR 15</option>
+          <option value="Junior Suite" data-price="16" data-max="3">Junior Suite, from OMR 16</option>
           <option value="Superior Suite" data-price="16" data-max="3">Superior Suite with balcony, from OMR 16</option>
-          <option value="Executive Suite (2 bedrooms)" data-price="17" data-max="5">Executive Suite, 2 bedrooms, from OMR 17</option>
+          <option value="Executive Suite (2 bedrooms)" data-price="18" data-max="5">Executive Suite, 2 bedrooms, from OMR 18</option>
         </select>
       </label>
       <label class="field field-date">Check-in
@@ -416,10 +416,10 @@
           </ul></div>
         <div class="room-body">
           <h3>Junior Suite</h3>
-          <p>A bedroom with a king bed plus a separate living room with a sofa bed and a kitchenette. Cook, work, spread out.</p>
-          <ul class="chips"><li>70 m²</li><li>King + sofa bed</li><li>Living room</li><li>Kitchenette</li></ul>
+          <p>A bedroom with a king bed plus a separate living room with a sofa bed, two bathrooms and a kitchenette. Cook, work, spread out.</p>
+          <ul class="chips"><li>70 m²</li><li>King + sofa bed</li><li>Living room</li><li>2 bathrooms</li><li>Kitchenette</li></ul>
           <div class="room-foot">
-            <div class="price"><small>From</small><strong>OMR 15 <span>/ night</span></strong></div>
+            <div class="price"><small>From</small><strong>OMR 16 <span>/ night</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Junior Suite">Book</a>
           </div>
         </div>
@@ -450,10 +450,10 @@
           </ul></div>
         <div class="room-body">
           <h3>Executive Suite</h3>
-          <p>Two bedrooms, one with a king bed and one with two singles, a living room with a sofa bed, a kitchenette and a balcony. Our biggest suite.</p>
-          <ul class="chips"><li>95 m²</li><li>2 bedrooms</li><li>King + 2 singles + sofa bed</li><li>Balcony</li></ul>
+          <p>Two bedrooms, one with a king bed and one with two singles, a living room with a sofa bed, three bathrooms, a kitchenette and a balcony. Our biggest suite.</p>
+          <ul class="chips"><li>95 m²</li><li>2 bedrooms</li><li>3 bathrooms</li><li>King + 2 singles + sofa bed</li><li>Balcony</li></ul>
           <div class="room-foot">
-            <div class="price"><small>From</small><strong>OMR 17 <span>/ night</span></strong></div>
+            <div class="price"><small>From</small><strong>OMR 18 <span>/ night</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Executive Suite (2 bedrooms)">Book</a>
           </div>
         </div>
@@ -482,7 +482,7 @@
         <button class="tab" type="button" data-filter="hotel" aria-pressed="false">The hotel</button>
       </div>
     </div>
-    <div class="gallery-grid" data-lightbox="gallery">
+    <div class="gallery-grid" id="gallery-photos" data-lightbox="gallery">
       <figure class="g-wide reveal" data-cat="spa"><button class="g-open" type="button"><img srcset="assets/img/photos/pool-540.webp 540w, assets/img/photos/pool-800.webp 800w, assets/img/photos/pool-1080.webp 1080w" sizes="(max-width:860px) 50vw, 25vw" src="assets/img/photos/pool.jpg" alt="Heated indoor pool with white tiles and wooden loungers" width="1080" height="700" loading="lazy"></button></figure>
       <figure class="reveal" data-cat="hotel"><button class="g-open" type="button"><img srcset="assets/img/photos/lounge-gold-540.webp 540w, assets/img/photos/lounge-gold-800.webp 800w, assets/img/photos/lounge-gold-1080.webp 1080w" sizes="(max-width:860px) 50vw, 25vw" src="assets/img/photos/lounge-gold.jpg" alt="Lobby lounge with a gold sofa against a marble wall" width="1080" height="700" loading="lazy"></button></figure>
       <figure class="g-tall reveal" data-cat="spa"><button class="g-open" type="button"><img srcset="assets/img/photos/gym-2-540.webp 540w, assets/img/photos/gym-2-800.webp 800w, assets/img/photos/gym-2-1080.webp 1080w" sizes="(max-width:860px) 50vw, 25vw" src="assets/img/photos/gym-2.jpg" alt="Fitness centre with treadmills and weight machines" width="1080" height="700" loading="lazy"></button></figure>
@@ -511,6 +511,7 @@
       <figure class="reveal" data-cat="dining"><button class="g-open" type="button"><img srcset="assets/img/photos/restaurant-2-540.webp 540w, assets/img/photos/restaurant-2-800.webp 800w, assets/img/photos/restaurant-2-1080.webp 1080w" sizes="(max-width:860px) 50vw, 25vw" src="assets/img/photos/restaurant-2.jpg" alt="Silk Road Restaurant with cream chairs" width="1080" height="700" loading="lazy"></button></figure>
       <figure class="reveal" data-cat="spa"><button class="g-open" type="button"><img srcset="assets/img/photos/pool-hall-540.webp 540w, assets/img/photos/pool-hall-800.webp 800w, assets/img/photos/pool-hall-1080.webp 1080w" sizes="(max-width:860px) 50vw, 25vw" src="assets/img/photos/pool-hall.jpg" alt="The pool hall with its high ceiling" width="1080" height="700" loading="lazy"></button></figure>
     </div>
+    <p class="gallery-more"><button class="btn btn-ghost" type="button" id="gal-more" aria-controls="gallery-photos" aria-expanded="false" data-t-less="Show fewer photos">Show all 27 photos</button></p>
   </div>
 </section>
 
@@ -682,6 +683,12 @@
         <li><span class="num">6</span><div><strong>Sultan Qaboos Mosque</strong><span class="d">Salalah’s grand mosque</span></div><span class="t">9 km</span></li>
         <li><span class="num">7</span><div><strong>Wadi Darbat</strong><span class="d">Waterfalls and green hills in the Khareef</span></div><span class="t">45 km · 50 min</span></li>
       </ol>
+    </div>
+    <div class="loc-aside">
+      <figure class="map-card reveal">
+        <img src="assets/img/map.svg" alt="Illustrated map: Bristol Hotel in the Saadah district, the airport to the west, Al Baleed and Al Haffa to the south-west, Dahariz Beach to the south-east and the Dhofar mountains to the north" width="720" height="560" loading="lazy">
+        <figcaption>Illustration, not to scale</figcaption>
+      </figure>
       <figure class="find-us"><img srcset="assets/img/photos/exterior-day-540.webp 540w, assets/img/photos/exterior-day-800.webp 800w, assets/img/photos/exterior-day-1080.webp 1080w" sizes="(max-width:860px) 100vw, 50vw" src="assets/img/photos/exterior-day.jpg" alt="Bristol Hotel Salalah by day: a tall blue glass building with gold trim" width="1023" height="700" loading="lazy"><figcaption>Look for the blue glass tower with gold trim on As Saadah Street, opposite Al Saadah Health Centre.</figcaption></figure>
       <div class="getting reveal">
         <h3>Getting here</h3>
@@ -693,10 +700,6 @@
       </div>
       <p class="u-mt-24"><a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Bristol+Hotel+Salalah+As+Saadah+Street+Salalah" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Open in Google Maps</a></p>
     </div>
-    <figure class="map-card reveal">
-      <img src="assets/img/map.svg" alt="Illustrated map: Bristol Hotel in the Saadah district, the airport to the west, Al Baleed and Al Haffa to the south-west, Dahariz Beach to the south-east and the Dhofar mountains to the north" width="720" height="560" loading="lazy">
-      <figcaption>Illustration, not to scale</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -904,7 +907,7 @@
   <button class="lb-next" type="button" aria-label="Next photo"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
 </div>
 
-<script src="assets/js/main.js?v=d6f0a174" defer></script>
+<script src="assets/js/main.js?v=82cb40a1" defer></script>
 <script type="application/ld+json" data-ld="faq">
 {
   "@context": "https://schema.org",

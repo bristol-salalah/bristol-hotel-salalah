@@ -171,14 +171,33 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") langs.open = false; });
   }
 
-  // gallery filter tabs
+  // gallery: the first photos only, the rest behind "Show all" (a filter always shows every match)
   var gal = document.querySelector("[data-lightbox='gallery']");
+  var galMore = document.getElementById("gal-more");
+  function setCollapsed(on) {
+    if (!gal || !galMore) return;
+    gal.classList.toggle("is-collapsed", on);
+    galMore.textContent = on ? galMore.getAttribute("data-t-more") : galMore.getAttribute("data-t-less");
+    galMore.setAttribute("aria-expanded", on ? "false" : "true");
+  }
+  if (gal && galMore) {
+    galMore.setAttribute("data-t-more", galMore.textContent);
+    setCollapsed(true);
+    galMore.addEventListener("click", function () {
+      var collapse = !gal.classList.contains("is-collapsed");
+      setCollapsed(collapse);
+      if (collapse) gal.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  // gallery filter tabs
   var tabs = document.querySelectorAll(".tabs .tab");
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
       var f = tab.getAttribute("data-filter");
       tabs.forEach(function (x) { var on = x === tab; x.classList.toggle("is-active", on); x.setAttribute("aria-pressed", on ? "true" : "false"); });
       if (!gal) return;
+      if (galMore) { galMore.hidden = f !== "all"; if (f !== "all") setCollapsed(false); }
       gal.querySelectorAll("figure").forEach(function (fig) {
         var show = f === "all" || fig.getAttribute("data-cat") === f;
         fig.hidden = !show;

@@ -35,7 +35,7 @@
  "@bristol_hotel_salalah": [
   "index.html"
  ],
- "A bedroom with a king bed plus a separate living room with a sofa bed and a kitchenette. Cook, work, spread out.": [
+ "A bedroom with a king bed plus a separate living room with a sofa bed, two bathrooms and a kitchenette. Cook, work, spread out.": [
   "index.html"
  ],
  "A blowhole spouting at Mughsail": [
@@ -1160,6 +1160,12 @@
  "Service for events was very commendable… price is reasonable… staff are good and honest.": [
   "index.html"
  ],
+ "Show all {0} photos": [
+  "index.html"
+ ],
+ "Show fewer photos": [
+  "index.html"
+ ],
  "Silk Road Restaurant": [
   "index.html"
  ],
@@ -1339,7 +1345,7 @@
  "Twin room with a window onto the street": [
   "index.html"
  ],
- "Two bedrooms, one with a king bed and one with two singles, a living room with a sofa bed, a kitchenette and a balcony. Our biggest suite.": [
+ "Two bedrooms, one with a king bed and one with two singles, a living room with a sofa bed, three bathrooms, a kitchenette and a balcony. Our biggest suite.": [
   "index.html"
  ],
  "Two days, four days or one.": [
@@ -1503,6 +1509,9 @@
  ],
  "to the nearest beach": [
   "guide/index.html"
+ ],
+ "{0} bathrooms": [
+  "index.html"
  ],
  "{0} bedrooms": [
   "index.html"
