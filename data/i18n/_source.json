@@ -256,12 +256,6 @@
  "Beaches": [
   "guide/index.html"
  ],
- "Bedroom with a bedside lamp and dark curtains": [
-  "index.html"
- ],
- "Bedroom with a king bed and a small sitting area": [
-  "index.html"
- ],
  "Before you arrive.": [
   "index.html"
  ],
@@ -356,6 +350,9 @@
   "index.html"
  ],
  "Bristol Hotel opened in {0} on As Saadah Street, in the busy commercial heart of Salalah. Behind the blue glass front are {1} rooms and suites, most of them with a living room and a kitchenette, so you can stay a night, a week or a whole Khareef season and still feel at home.": [
+  "index.html"
+ ],
+ "Bristol Hotels slippers laid out on the wardrobe shelf": [
   "index.html"
  ],
  "Buffet and set menus from our own kitchen": [
@@ -456,6 +453,9 @@
  "Deluxe Room with a king bed and a desk": [
   "index.html"
  ],
+ "Deluxe Room with a king bed and two armchairs": [
+  "index.html"
+ ],
  "Deluxe Room with a king bed, white linen and a brown bed runner": [
   "index.html"
  ],
@@ -470,6 +470,9 @@
  ],
  "Dining": [
   "guide/index.html",
+  "index.html"
+ ],
+ "Dining table in the Superior Suite, set for two beside the kitchen counter": [
   "index.html"
  ],
  "Directions": [
@@ -490,6 +493,9 @@
  "East along the coast: Taqah, Sumhuram and Khor Rori, lunch in Mirbat.": [
   "guide/index.html"
  ],
+ "Embroidered hand towels by the bathroom basin": [
+  "index.html"
+ ],
  "Evening": [
   "guide/index.html"
  ],
@@ -509,7 +515,13 @@
  "Executive Suite": [
   "index.html"
  ],
- "Executive Suite living room with a long sofa, dining table and wall-mounted TV": [
+ "Executive Suite kitchenette with a sink, microwave and fridge": [
+  "index.html"
+ ],
+ "Executive Suite living room with a blue sofa, coffee table and the bathroom beyond": [
+  "index.html"
+ ],
+ "Executive Suite lounge with brown sofas, a rug and a wall TV": [
   "index.html"
  ],
  "Executive Suite, {0} bedrooms, from OMR {1}": [
@@ -739,7 +751,16 @@
  "Junior Suite": [
   "index.html"
  ],
- "Junior Suite living room with a teal sofa and coffee table": [
+ "Junior Suite bathroom with a glass shower, basin and embroidered towel": [
+  "index.html"
+ ],
+ "Junior Suite bedroom with a king bed, a red cushion and a patterned rug": [
+  "index.html"
+ ],
+ "Junior Suite kitchenette with glossy cupboards, a fridge, microwave and kettle": [
+  "index.html"
+ ],
+ "Junior Suite living room with a red sofa, coffee table and wall TV": [
   "index.html"
  ],
  "Junior Suite, from OMR {0}": [
@@ -766,6 +787,15 @@
  "King + {0} singles + sofa bed": [
   "index.html"
  ],
+ "King bed in the Junior Suite with towel swans and rose petals": [
+  "index.html"
+ ],
+ "King bed in the Superior Suite with white linen and a gold and brown runner": [
+  "index.html"
+ ],
+ "King bedroom in the Executive Suite with towel swans on the bed": [
+  "index.html"
+ ],
  "King bedroom with towel swans on the bed and a window onto the city": [
   "index.html"
  ],
@@ -781,6 +811,12 @@
  "Languages": [
   "index.html"
  ],
+ "Laylati Hall by day, with round tables set for a banquet beside the windows": [
+  "index.html"
+ ],
+ "Laylati Hall set for a celebration: round tables, chair covers and a lit dance floor": [
+  "index.html"
+ ],
  "Laylati Hall, for the days that matter.": [
   "index.html"
  ],
@@ -793,10 +829,10 @@
  "Living room": [
   "index.html"
  ],
- "Lobby lounge with a gold sofa against a marble wall": [
+ "Lobby lounge with a green velvet sofa under the tree mural": [
   "index.html"
  ],
- "Lobby seating with armchairs and a mirror": [
+ "Lobby lounge with black velvet armchairs, white cushions and gold glass tables": [
   "index.html"
  ],
  "Location": [
@@ -804,9 +840,6 @@
   "index.html"
  ],
  "Look for the blue glass tower with gold trim on As Saadah Street, opposite Al Saadah Health Centre.": [
-  "index.html"
- ],
- "Lounge seating with velvet armchairs and the hotel monogram on the glass screens": [
   "index.html"
  ],
  "Lunch & dinner": [
@@ -1120,9 +1153,6 @@
  "Sauna & steam room": [
   "index.html"
  ],
- "Sauna bench with a wooden bucket": [
-  "index.html"
- ],
  "Sauna, steam room, fitness centre": [
   "index.html"
  ],
@@ -1203,19 +1233,10 @@
  "Stay in the middle of it all.": [
   "guide/index.html"
  ],
- "Suite kitchenette with white cupboards, a sink and a dining table": [
-  "index.html"
- ],
- "Suite living room with a desk, wall TV and sofa": [
+ "Steam room lined with blue mosaic tiles": [
   "index.html"
  ],
  "Suite living room with a sofa and wall-mounted TV": [
-  "index.html"
- ],
- "Suite living room with a sofa, TV and side table": [
-  "index.html"
- ],
- "Suite living room with a teal sofa, coffee table and the door to the bedroom": [
   "index.html"
  ],
  "Suites for families & long stays": [
@@ -1234,7 +1255,13 @@
  "Superior Suite": [
   "index.html"
  ],
- "Superior Suite sitting area with an armchair beside a tall window": [
+ "Superior Suite bedroom with towel swans on the bed and a balcony looking over Salalah": [
+  "index.html"
+ ],
+ "Superior Suite bedroom, with the balcony door open onto the city and the mountains": [
+  "index.html"
+ ],
+ "Superior Suite living room with a green sofa, dining table and open kitchenette": [
   "index.html"
  ],
  "Superior Suite with balcony, from OMR {0}": [
@@ -1285,7 +1312,7 @@
  "The Tomb of the Prophet Job through the misty hills, then the Mughsail blowholes and frankincense at Al Haffa Souq.": [
   "guide/index.html"
  ],
- "The blue glass façade from the street": [
+ "The blue glass tower of Bristol Hotel Salalah against a clear sky": [
   "index.html"
  ],
  "The cleanliness and service were excellent, and the staff were very polite, friendly, and helpful. The hotel is quiet and comfortable, with a good location.": [
@@ -1295,6 +1322,9 @@
   "index.html"
  ],
  "The hotel": [
+  "index.html"
+ ],
+ "The hotel entrance, with the Bristol Hotel sign above the door and a row of flags": [
   "index.html"
  ],
  "The nearest stretch of sand": [
@@ -1339,10 +1369,10 @@
  "Treadmills, bikes, weight machines and free weights, free for guests.": [
   "index.html"
  ],
- "Twin bedroom in the Executive Suite": [
+ "Tufted armchairs by the window in Laylati Hall": [
   "index.html"
  ],
- "Twin room with a window onto the street": [
+ "Twin bedroom in the Executive Suite with two single beds": [
   "index.html"
  ],
  "Two bedrooms, one with a king bed and one with two singles, a living room with a sofa bed, three bathrooms, a kitchenette and a balcony. Our biggest suite.": [
@@ -1402,6 +1432,9 @@
   "index.html"
  ],
  "Welcome to Bristol": [
+  "index.html"
+ ],
+ "Welcome trolley with Omani coffee, dates and sweets in the lobby": [
   "index.html"
  ],
  "Welcome · no cots or extra beds": [

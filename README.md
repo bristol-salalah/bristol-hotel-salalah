@@ -21,7 +21,7 @@ assets/js/main.js     WhatsApp booking form, photo lightbox, gallery filter, lan
 assets/img/           logo.png + logo-light.png (the hotel's logo, transparent; light one for the footer), favicon.svg, apple-touch-icon.png (the hotel's own B logo), og-image.jpg, map.svg, pattern.svg
 favicon.ico           32 px icon for older browsers
 assets/img/hero/      The home hero's Khareef photo: Ayn Athum (Wikimedia Commons, CC BY-SA 4.0, by Muiad123, 5446 px original). `khareef-athum-wide-*` (top 17 % cropped off, WebP 1280–3840 px + a 1920 px JPEG) for screens over 860 px; `khareef-athum-tall-*` (a 3:4 crop around the falls, WebP 720–1440 px) for phones, through a <picture> source. Not touched by the build; the srcsets are written by hand in index.html and ar/index.html
-assets/img/photos/    46 hotel photos as JPEG plus WebP variants at 540/800/1080 px (made by tools/images.py); each room card opens a 4-photo set
+assets/img/photos/    57 hotel photos as JPEG (up to 1920 px) plus WebP variants at 540/800/1080(/1920) px (made by tools/images.py); each room card opens a 4- or 5-photo set. The hotel's professional photos carry a branded strip at the bottom, cropped off (19 %) before use
 robots.txt, sitemap.xml, .nojekyll
 ```
 
