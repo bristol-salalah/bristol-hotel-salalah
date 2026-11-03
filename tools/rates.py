@@ -1,4 +1,4 @@
-"""Room and breakfast prices come from data/rates.json, the one file hotel staff edit.
+"""Room and breakfast prices come from rates.json, the one file hotel staff edit.
 
 Every element in the hand-written pages (index.html, ar/index.html) that shows a price
 carries data-rate="<key>": deluxe, junior, superior, executive, min (the cheapest room,
@@ -11,7 +11,7 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-FILE = ROOT / "data/rates.json"
+FILE = ROOT / "rates.json"
 ROOM_KEYS = {"deluxe": "Deluxe Room", "junior": "Junior Suite", "superior": "Superior Suite", "executive": "Executive Suite"}
 NUM = re.compile(r"\d+(?:\.\d+)?")
 
@@ -25,19 +25,19 @@ def load():
     try:
         data = json.loads(FILE.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
-        raise ValueError(f"data/rates.json is not valid JSON: {e}. Check for a missing comma or quote.") from e
+        raise ValueError(f"rates.json is not valid JSON: {e}. Check for a missing comma or quote.") from e
     rooms = data.get("rooms")
     if not isinstance(rooms, dict):
-        raise ValueError('data/rates.json needs a "rooms" object')
+        raise ValueError('rates.json needs a "rooms" object')
     rates = {}
     for key, name in ROOM_KEYS.items():
         v = rooms.get(name)
         if not isinstance(v, (int, float)) or isinstance(v, bool) or v <= 0:
-            raise ValueError(f'data/rates.json: "{name}" must be a number above 0 (got {v!r}). Keep the room names exactly as they are.')
+            raise ValueError(f'rates.json: "{name}" must be a number above 0 (got {v!r}). Keep the room names exactly as they are.')
         rates[key] = v
     b = data.get("breakfast_per_person")
     if not isinstance(b, (int, float)) or isinstance(b, bool) or b < 0:
-        raise ValueError(f'data/rates.json: "breakfast_per_person" must be a number (got {b!r})')
+        raise ValueError(f'rates.json: "breakfast_per_person" must be a number (got {b!r})')
     rates["breakfast"] = b
     rates["min"] = min(rates[k] for k in ROOM_KEYS)
     rates["max"] = max(rates[k] for k in ROOM_KEYS)
