@@ -1,0 +1,10 @@
+{
+ "_how_to_change": "Prices in Omani rials (OMR), per room per night before taxes. Change only the numbers, keep the room names exactly as they are, then press 'Commit changes'. The website rebuilds itself and shows the new prices in about three minutes. Use a dot for halves: 12.5",
+ "rooms": {
+  "Deluxe Room": 12.5,
+  "Junior Suite": 16,
+  "Superior Suite": 16,
+  "Executive Suite": 18
+ },
+ "breakfast_per_person": 2
+}

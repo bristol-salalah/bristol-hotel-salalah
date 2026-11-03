@@ -27,6 +27,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import html as htmlmod  # noqa: E402
 import i18n  # noqa: E402
 import images  # noqa: E402
+import rates  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = "https://www.bristolhotelsalalah.com/"
@@ -82,6 +83,7 @@ def hreflangs(page=""):
 SIZES = {"hero-bg": "100vw", "ghero-bg": "100vw", "place-media": "(max-width:700px) 100vw, 220px", "trip-img": "(max-width:560px) 100vw, (max-width:1100px) 50vw, 25vw", "g-open": "(max-width:860px) 50vw, 25vw", "panel-media": "(max-width:860px) 100vw, 33vw", "dining-media": "(max-width:860px) 50vw, 25vw"}
 # Rooms: occupancy and beds are not in the page text, so they live here (image name -> details).
 ROOM_FACTS = {"room-deluxe": (2, "King"), "junior-bed": (3, "King + sofa bed"), "superior-balcony-bed": (3, "King + sofa bed"), "executive-living": (5, "King + 2 singles + sofa bed")}
+RATES = None  # data/rates.json, loaded in main()
 ROOM_RE = re.compile(r'<article class="room reveal">(.*?)</article>', re.S)
 FAQ_RE = re.compile(r'<details(?: open)?><summary>(.*?)</summary><p>(.*?)</p></details>', re.S)
 LD_RE = re.compile(r'<script type="application/ld\+json">\s*(\{.*?\})\s*</script>', re.S)
@@ -183,6 +185,7 @@ def tel_nbsp(html):
 
 def shared(html, code, page=""):
     """Switcher and hreflang links, the same in every language."""
+    html = rates.apply(html, RATES)
     html = tel_nbsp(html)
     html = bust(html)
     html = responsive(html)
@@ -222,6 +225,11 @@ def localise(html, code, page=""):
 
 
 def main():
+    global RATES
+    try:
+        RATES = rates.load()
+    except ValueError as e:
+        sys.exit(f"error: {e}")
     images.ensure()
     sources, keys = {}, {}
     for page in PAGES:

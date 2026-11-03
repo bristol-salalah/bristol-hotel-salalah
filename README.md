@@ -13,7 +13,9 @@ ar/index.html         Arabic home page (right to left, hand-written)
 hi/ de/ ru/ fr/ it/ pl/ zh/   Generated language pages, each with a guide/ (don't edit; run the build)
 ar/guide/             Generated Arabic guide (from data/i18n/ar.json)
 data/i18n/            Translation catalogs, one JSON per language (+ _source.json, written by the build)
-tools/                build.py, i18n.py, images.py, check_i18n.py, check_html.py (Python 3; images.py needs cwebp)
+data/rates.json       Room and breakfast prices, the one file to edit for a price change (see **Changing the prices**)
+.github/workflows/    build.yaml: rebuilds and commits the pages when data/rates.json changes
+tools/                build.py, rates.py, i18n.py, images.py, check_i18n.py, check_html.py (Python 3; images.py needs cwebp)
 404.html              "Page not found" page
 assets/css/style.css  All styles (colours and fonts are set at the top in :root)
 assets/css/fonts.css  Self-hosted fonts (no Google requests), incl. Latin-extended and Cyrillic subsets
@@ -24,6 +26,18 @@ assets/img/hero/      The home hero's Khareef photo: Ayn Athum (Wikimedia Common
 assets/img/photos/    57 hotel photos as JPEG (up to 1920 px) plus WebP variants at 540/800/1080(/1920) px (made by tools/images.py); each room card opens a 4- or 5-photo set. The hotel's professional photos carry a branded strip at the bottom, cropped off (19 %) before use
 robots.txt, sitemap.xml, .nojekyll
 ```
+
+## Changing the prices (no technical knowledge needed)
+
+All room prices and the breakfast price live in one file: **`data/rates.json`**.
+
+1. Open `data/rates.json` on GitHub and press the pencil (**Edit**) icon.
+2. Change the number next to a room. Keep the room names and the quotes exactly as they are; use a dot for halves (`12.5`).
+3. Press **Commit changes** (twice). Within about three minutes the new prices are on the website, in every language: the room cards, the booking form, the "from OMR" badge at the top and the breakfast lines.
+
+If a number is typed wrongly (for example a missing comma), the **Actions** tab shows a red cross and the website keeps the old prices until the file is fixed.
+
+How it works: the `Build site` action (`.github/workflows/build.yaml`) runs `tools/build.py` whenever `data/rates.json` changes and commits the rebuilt pages. In the pages, every element that shows a price carries `data-rate="…"` (`tools/rates.py` fills in the numbers). Prices typed straight into the HTML are overwritten on the next build.
 
 ## Languages
 

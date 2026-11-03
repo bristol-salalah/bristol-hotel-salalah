@@ -48,7 +48,7 @@
     "@type": "Rating",
     "ratingValue": "3"
   },
-  "priceRange": "OMR 12.5–25",
+  "priceRange": "OMR 12.5–18",
   "checkinTime": "14:00",
   "checkoutTime": "12:00",
   "petsAllowed": false,
@@ -294,7 +294,7 @@
       <div class="hero-hotel-row">
         <figure class="hero-hotel"><img srcset="../assets/img/photos/hero-540.webp 540w, ../assets/img/photos/hero-800.webp 800w, ../assets/img/photos/hero-1080.webp 1023w" sizes="(max-width:860px) 100vw, 50vw" src="../assets/img/photos/hero.jpg" alt="黄昏时的塞拉莱布里斯托酒店：蓝色玻璃大楼，楼顶酒店名字亮着灯" width="1023" height="700"></figure>
         <div class="hero-hotel-facts">
-          <div class="hero-badge"><strong>OMR 12.5+</strong><span>每晚，税前</span></div>
+          <div class="hero-badge"><strong data-rate="min">OMR 12.5+</strong><span>每晚，税前</span></div>
           <ul class="hero-facts2"><li><strong>42</strong> 间客房和套房</li><li>恒温室内泳池</li><li>距机场 <strong>15</strong> 分钟</li></ul>
         </div>
       </div>
@@ -304,10 +304,10 @@
   <div class="container booking" id="book">
     <form class="booking-card" id="booking-form" data-t-age="第 {n} 位儿童年龄" data-t-under1="不满 1 岁" data-t-cap="此房型通常最多可住 {n} 人。我们会在 WhatsApp 上为您的团队推荐最合适的选择。" data-t-ages="请选择每位儿童的年龄" data-t-choose="请选择" data-t-est="{n} 晚，{total} 起，税前" data-t-est1="1 晚，{total} 起，税前" data-t-est2="2 晚，{total} 起，税前" data-t-pick="请选择入住和退房日期" data-t-err="退房日期必须晚于入住日期" aria-label="通过 WhatsApp 申请预订">
       <label class="field field-room">房型<select name="room" id="f-room">
-          <option value="Deluxe Room" data-price="12.5" data-max="2">豪华客房，OMR 12.5 起</option>
-          <option value="Junior Suite" data-price="16" data-max="3">初级套房，OMR 16 起</option>
-          <option value="Superior Suite" data-price="16" data-max="3">带阳台的高级套房，OMR 16 起</option>
-          <option value="Executive Suite (2 bedrooms)" data-price="18" data-max="5">行政套房，2 间卧室，OMR 18 起</option>
+          <option value="Deluxe Room" data-rate="deluxe" data-price="12.5" data-max="2">豪华客房，OMR 12.5 起</option>
+          <option value="Junior Suite" data-rate="junior" data-price="16" data-max="3">初级套房，OMR 16 起</option>
+          <option value="Superior Suite" data-rate="superior" data-price="16" data-max="3">带阳台的高级套房，OMR 16 起</option>
+          <option value="Executive Suite (2 bedrooms)" data-rate="executive" data-price="18" data-max="5">行政套房，18 间卧室，OMR 18 起</option>
         </select>
       </label>
       <label class="field field-date">入住<input type="date" name="checkin" id="f-in" required>
@@ -395,7 +395,7 @@
           <p>宽敞的 40 平方米，配特大床、城市景观和完整浴室。住一两晚所需的一切。</p>
           <ul class="chips"><li>40 平方米</li><li>1 张特大床</li><li>可住 2 人</li><li>城市景观</li></ul>
           <div class="room-foot">
-            <div class="price"><small>起价</small><strong>OMR 12.5 <span>/ 晚</span></strong></div>
+            <div class="price"><small>起价</small><strong data-rate="deluxe">OMR 12.5 <span>/ 晚</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Deluxe Room">预订</a>
           </div>
         </div>
@@ -413,7 +413,7 @@
           <p>一间配特大床的卧室，另有独立客厅（带沙发床）、两间浴室和一个小厨房。做饭、办公，尽情舒展。</p>
           <ul class="chips"><li>70 平方米</li><li>特大床 + 沙发床</li><li>客厅</li><li>2 间浴室</li><li>小厨房</li></ul>
           <div class="room-foot">
-            <div class="price"><small>起价</small><strong>OMR 16 <span>/ 晚</span></strong></div>
+            <div class="price"><small>起价</small><strong data-rate="junior">OMR 16 <span>/ 晚</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Junior Suite">预订</a>
           </div>
         </div>
@@ -431,7 +431,7 @@
           <p>位于高楼层的初级套房格局，阳台和露台越过城市望向佐法尔山脉。</p>
           <ul class="chips"><li>70 平方米</li><li>特大床 + 沙发床</li><li>阳台</li><li>山景与城市景观</li></ul>
           <div class="room-foot">
-            <div class="price"><small>起价</small><strong>OMR 16 <span>/ 晚</span></strong></div>
+            <div class="price"><small>起价</small><strong data-rate="superior">OMR 16 <span>/ 晚</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Superior Suite">预订</a>
           </div>
         </div>
@@ -449,7 +449,7 @@
           <p>两间卧室，一间配特大床，一间配两张单人床，另有带沙发床的客厅、三间浴室、小厨房和阳台。我们最大的套房。</p>
           <ul class="chips"><li>95 平方米</li><li>2 间卧室</li><li>3 间浴室</li><li>特大床 + 2 张单人床 + 沙发床</li><li>阳台</li></ul>
           <div class="room-foot">
-            <div class="price"><small>起价</small><strong>OMR 18 <span>/ 晚</span></strong></div>
+            <div class="price"><small>起价</small><strong data-rate="executive">OMR 18 <span>/ 晚</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Executive Suite (2 bedrooms)">预订</a>
           </div>
         </div>
@@ -459,7 +459,7 @@
       <div class="every-room">
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>免费 Wi-Fi 和停车</span>
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>每日客房清洁</span>
-        <span><svg aria-hidden="true"><use href="#i-check"/></svg>早餐每人 OMR 2</span>
+        <span data-rate="breakfast"><svg aria-hidden="true"><use href="#i-check"/></svg>早餐每人 OMR 2</span>
       </div>
       <span>价格为每间每晚、税前，随季节变动。我们会在 WhatsApp 确认您的准确价格。</span>
     </div>
@@ -627,7 +627,7 @@
         <li>印度菜</li><li>阿拉伯及阿曼菜</li><li>摩洛哥菜</li><li>烧烤</li><li>披萨</li><li>国际菜</li><li>清真</li>
       </ul>
       <div class="hours">
-        <div><small>早餐</small><strong>7:00 – 10:30 · 每人 OMR 2</strong></div>
+        <div><small>早餐</small><strong data-rate="breakfast">2:00 – 10:30 · 每人 OMR 2</strong></div>
         <div><small>午餐和晚餐</small><strong>单点，另有客房送餐</strong></div>
       </div>
       <p class="fine u-mt-18">早餐为欧陆式清真早餐。可在预订时添加，也可早上再决定。</p>
@@ -809,7 +809,7 @@
       <div class="facts">
         <div class="fact"><small>入住</small><strong>2:00 pm – 11:00 pm</strong></div>
         <div class="fact"><small>退房</small><strong>中午 12:00 之前</strong></div>
-        <div class="fact"><small>早餐</small><strong>7:00 – 10:30 · 每人 OMR 2</strong></div>
+        <div class="fact"><small>早餐</small><strong data-rate="breakfast">2:00 – 10:30 · 每人 OMR 2</strong></div>
         <div class="fact"><small>付款</small><strong>酒店付款 · 接受现金</strong></div>
         <div class="fact"><small>儿童</small><strong>欢迎 · 不提供婴儿床或加床</strong></div>
         <div class="fact"><small>宠物</small><strong>不允许</strong></div>

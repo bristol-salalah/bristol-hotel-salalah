@@ -49,7 +49,7 @@
     "@type": "Rating",
     "ratingValue": "3"
   },
-  "priceRange": "OMR 12.5–25",
+  "priceRange": "OMR 12.5–18",
   "checkinTime": "14:00",
   "checkoutTime": "12:00",
   "petsAllowed": false,
@@ -296,7 +296,7 @@
       <div class="hero-hotel-row">
         <figure class="hero-hotel"><img srcset="assets/img/photos/hero-540.webp 540w, assets/img/photos/hero-800.webp 800w, assets/img/photos/hero-1080.webp 1023w" sizes="(max-width:860px) 100vw, 50vw" src="assets/img/photos/hero.jpg" alt="Bristol Hotel Salalah at dusk: a blue glass tower with the hotel name lit on the roof" width="1023" height="700"></figure>
         <div class="hero-hotel-facts">
-          <div class="hero-badge"><strong>OMR 12.5+</strong><span>per night, before taxes</span></div>
+          <div class="hero-badge"><strong data-rate="min">OMR 12.5+</strong><span>per night, before taxes</span></div>
           <ul class="hero-facts2"><li><strong>42</strong> rooms &amp; suites</li><li>Heated indoor pool</li><li><strong>15</strong> min from the airport</li></ul>
         </div>
       </div>
@@ -307,10 +307,10 @@
     <form class="booking-card" id="booking-form" data-t-age="Age of child {n}" data-t-under1="Under 1" data-t-cap="This room usually sleeps up to {n}. We’ll suggest the best option for your group on WhatsApp." data-t-ages="Please choose the age of each child" data-t-choose="Choose" data-t-est="{n} nights from {total}, before taxes" data-t-est1="1 night from {total}, before taxes" data-t-est2="2 nights from {total}, before taxes" data-t-pick="Please choose your check-in and check-out dates" data-t-err="Check-out must be after check-in" aria-label="Request a booking on WhatsApp">
       <label class="field field-room">Room
         <select name="room" id="f-room">
-          <option value="Deluxe Room" data-price="12.5" data-max="2">Deluxe Room, from OMR 12.5</option>
-          <option value="Junior Suite" data-price="16" data-max="3">Junior Suite, from OMR 16</option>
-          <option value="Superior Suite" data-price="16" data-max="3">Superior Suite with balcony, from OMR 16</option>
-          <option value="Executive Suite (2 bedrooms)" data-price="18" data-max="5">Executive Suite, 2 bedrooms, from OMR 18</option>
+          <option value="Deluxe Room" data-rate="deluxe" data-price="12.5" data-max="2">Deluxe Room, from OMR 12.5</option>
+          <option value="Junior Suite" data-rate="junior" data-price="16" data-max="3">Junior Suite, from OMR 16</option>
+          <option value="Superior Suite" data-rate="superior" data-price="16" data-max="3">Superior Suite with balcony, from OMR 16</option>
+          <option value="Executive Suite (2 bedrooms)" data-rate="executive" data-price="18" data-max="5">Executive Suite, 18 bedrooms, from OMR 18</option>
         </select>
       </label>
       <label class="field field-date">Check-in
@@ -402,7 +402,7 @@
           <p>A generous 40 m² with a king-size bed, a city view and a proper bathroom. Everything you need for a night or two.</p>
           <ul class="chips"><li>40 m²</li><li>1 king bed</li><li>Sleeps 2</li><li>City view</li></ul>
           <div class="room-foot">
-            <div class="price"><small>From</small><strong>OMR 12.5 <span>/ night</span></strong></div>
+            <div class="price"><small>From</small><strong data-rate="deluxe">OMR 12.5 <span>/ night</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Deluxe Room">Book</a>
           </div>
         </div>
@@ -420,7 +420,7 @@
           <p>A bedroom with a king bed plus a separate living room with a sofa bed, two bathrooms and a kitchenette. Cook, work, spread out.</p>
           <ul class="chips"><li>70 m²</li><li>King + sofa bed</li><li>Living room</li><li>2 bathrooms</li><li>Kitchenette</li></ul>
           <div class="room-foot">
-            <div class="price"><small>From</small><strong>OMR 16 <span>/ night</span></strong></div>
+            <div class="price"><small>From</small><strong data-rate="junior">OMR 16 <span>/ night</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Junior Suite">Book</a>
           </div>
         </div>
@@ -438,7 +438,7 @@
           <p>The Junior Suite layout on a high floor, with a balcony and terrace looking over the city to the Dhofar mountains.</p>
           <ul class="chips"><li>70 m²</li><li>King + sofa bed</li><li>Balcony</li><li>Mountain &amp; city view</li></ul>
           <div class="room-foot">
-            <div class="price"><small>From</small><strong>OMR 16 <span>/ night</span></strong></div>
+            <div class="price"><small>From</small><strong data-rate="superior">OMR 16 <span>/ night</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Superior Suite">Book</a>
           </div>
         </div>
@@ -456,7 +456,7 @@
           <p>Two bedrooms, one with a king bed and one with two singles, a living room with a sofa bed, three bathrooms, a kitchenette and a balcony. Our biggest suite.</p>
           <ul class="chips"><li>95 m²</li><li>2 bedrooms</li><li>3 bathrooms</li><li>King + 2 singles + sofa bed</li><li>Balcony</li></ul>
           <div class="room-foot">
-            <div class="price"><small>From</small><strong>OMR 18 <span>/ night</span></strong></div>
+            <div class="price"><small>From</small><strong data-rate="executive">OMR 18 <span>/ night</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Executive Suite (2 bedrooms)">Book</a>
           </div>
         </div>
@@ -466,7 +466,7 @@
       <div class="every-room">
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>Free Wi-Fi &amp; parking</span>
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>Daily housekeeping</span>
-        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Breakfast for OMR 2 per person</span>
+        <span data-rate="breakfast"><svg aria-hidden="true"><use href="#i-check"/></svg>Breakfast for OMR 2 per person</span>
       </div>
       <span>Prices are per room per night, before taxes, and change with the season. We confirm your exact price on WhatsApp.</span>
     </div>
@@ -634,7 +634,7 @@
         <li>Indian</li><li>Arabic &amp; Omani</li><li>Moroccan</li><li>Grills</li><li>Pizza</li><li>International</li><li>Halal</li>
       </ul>
       <div class="hours">
-        <div><small>Breakfast</small><strong>7:00 – 10:30 · OMR 2 per person</strong></div>
+        <div><small>Breakfast</small><strong data-rate="breakfast">2:00 – 10:30 · OMR 2 per person</strong></div>
         <div><small>Lunch &amp; dinner</small><strong>À la carte, plus room service</strong></div>
       </div>
       <p class="fine u-mt-18">Breakfast is continental and halal. Add it when you book, or decide in the morning.</p>
@@ -816,7 +816,7 @@
       <div class="facts">
         <div class="fact"><small>Check-in</small><strong>2:00 pm – 11:00 pm</strong></div>
         <div class="fact"><small>Check-out</small><strong>Before 12:00 noon</strong></div>
-        <div class="fact"><small>Breakfast</small><strong>7:00 – 10:30 · OMR 2 per person</strong></div>
+        <div class="fact"><small>Breakfast</small><strong data-rate="breakfast">2:00 – 10:30 · OMR 2 per person</strong></div>
         <div class="fact"><small>Payment</small><strong>At the hotel · cash accepted</strong></div>
         <div class="fact"><small>Children</small><strong>Welcome · no cots or extra beds</strong></div>
         <div class="fact"><small>Pets</small><strong>Not allowed</strong></div>

@@ -50,7 +50,7 @@
     "@type": "Rating",
     "ratingValue": "3"
   },
-  "priceRange": "OMR 12.5–25",
+  "priceRange": "OMR 12.5–18",
   "checkinTime": "14:00",
   "checkoutTime": "12:00",
   "petsAllowed": false,
@@ -254,7 +254,7 @@
       <div class="hero-hotel-row">
         <figure class="hero-hotel"><img srcset="../assets/img/photos/hero-540.webp 540w, ../assets/img/photos/hero-800.webp 800w, ../assets/img/photos/hero-1080.webp 1023w" sizes="(max-width:860px) 100vw, 50vw" src="../assets/img/photos/hero.jpg" alt="فندق بريستول صلالة عند الغروب: برج زجاجي أزرق واسم الفندق مضاء على السطح" width="1023" height="700"></figure>
         <div class="hero-hotel-facts">
-          <div class="hero-badge"><strong><bdi>12.5+</bdi> ر.ع.</strong><span>لليلة، قبل الضرائب</span></div>
+          <div class="hero-badge"><strong data-rate="min"><bdi>12.5+</bdi> ر.ع.</strong><span>لليلة، قبل الضرائب</span></div>
           <ul class="hero-facts2"><li><strong>42</strong> غرفة وجناحاً</li><li>مسبح داخلي مدفأ</li><li><strong>15</strong> دقيقة من المطار</li></ul>
         </div>
       </div>
@@ -265,10 +265,10 @@
     <form class="booking-card" id="booking-form" data-t-age="عمر الطفل {n}" data-t-under1="أقل من سنة" data-t-cap="السعة المعتادة لهذه الغرفة: {n} ضيوف كحد أقصى. سنقترح عليك الخيار الأنسب لمجموعتك عبر واتساب." data-t-ages="يرجى اختيار عمر كل طفل" data-t-choose="اختر" data-t-est="{n} ليالٍ من {total}، قبل الضرائب" data-t-est1="ليلة واحدة من {total}، قبل الضرائب" data-t-est2="ليلتان من {total}، قبل الضرائب" data-t-pick="يرجى اختيار تاريخ الوصول والمغادرة" data-t-err="يجب أن يكون تاريخ المغادرة بعد تاريخ الوصول" aria-label="طلب حجز عبر واتساب">
       <label class="field field-room">الغرفة
         <select name="room" id="f-room">
-          <option value="غرفة ديلوكس" data-price="12.5" data-max="2">غرفة ديلوكس، من 12.5 ر.ع.</option>
-          <option value="جناح جونيور" data-price="16" data-max="3">جناح جونيور، من 16 ر.ع.</option>
-          <option value="جناح سوبيريور" data-price="16" data-max="3">جناح سوبيريور مع شرفة، من 16 ر.ع.</option>
-          <option value="جناح تنفيذي بغرفتي نوم" data-price="18" data-max="5">جناح تنفيذي بغرفتي نوم، من 18 ر.ع.</option>
+          <option value="غرفة ديلوكس" data-rate="deluxe" data-price="12.5" data-max="2">غرفة ديلوكس، من 12.5 ر.ع.</option>
+          <option value="جناح جونيور" data-rate="junior" data-price="16" data-max="3">جناح جونيور، من 16 ر.ع.</option>
+          <option value="جناح سوبيريور" data-rate="superior" data-price="16" data-max="3">جناح سوبيريور مع شرفة، من 16 ر.ع.</option>
+          <option value="جناح تنفيذي بغرفتي نوم" data-rate="executive" data-price="18" data-max="5">جناح تنفيذي بغرفتي نوم، من 18 ر.ع.</option>
         </select>
       </label>
       <label class="field field-date">تاريخ الوصول
@@ -360,7 +360,7 @@
           <p>مساحة رحبة 40 م² مع سرير كينج وإطلالة على المدينة وحمام كامل. كل ما تحتاجه لليلة أو ليلتين.</p>
           <ul class="chips"><li>40 م²</li><li>سرير كينج</li><li>لشخصين</li><li>إطلالة على المدينة</li></ul>
           <div class="room-foot">
-            <div class="price"><small>من</small><strong><span>12.5 ر.ع.</span> <span>/ لليلة</span></strong></div>
+            <div class="price"><small>من</small><strong data-rate="deluxe"><span>12.5 ر.ع.</span> <span>/ لليلة</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="غرفة ديلوكس">احجز</a>
           </div>
         </div>
@@ -378,7 +378,7 @@
           <p>غرفة نوم بسرير كينج وغرفة معيشة منفصلة مع أريكة سرير وحمّامين ومطبخ صغير. اطبخ، اعمل، وخذ راحتك.</p>
           <ul class="chips"><li>70 م²</li><li>كينج + أريكة سرير</li><li>غرفة معيشة</li><li>حمّامان</li><li>مطبخ صغير</li></ul>
           <div class="room-foot">
-            <div class="price"><small>من</small><strong><span>16 ر.ع.</span> <span>/ لليلة</span></strong></div>
+            <div class="price"><small>من</small><strong data-rate="junior"><span>16 ر.ع.</span> <span>/ لليلة</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="جناح جونيور">احجز</a>
           </div>
         </div>
@@ -396,7 +396,7 @@
           <p>تصميم جناح جونيور في طابق مرتفع، مع شرفة وتراس يطلان على المدينة وجبال ظفار.</p>
           <ul class="chips"><li>70 م²</li><li>كينج + أريكة سرير</li><li>شرفة</li><li>إطلالة على الجبال والمدينة</li></ul>
           <div class="room-foot">
-            <div class="price"><small>من</small><strong><span>16 ر.ع.</span> <span>/ لليلة</span></strong></div>
+            <div class="price"><small>من</small><strong data-rate="superior"><span>16 ر.ع.</span> <span>/ لليلة</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="جناح سوبيريور">احجز</a>
           </div>
         </div>
@@ -414,7 +414,7 @@
           <p>غرفتا نوم، إحداهما بسرير كينج والأخرى بسريرين مفردين، وغرفة معيشة مع أريكة سرير وثلاثة حمّامات ومطبخ صغير وشرفة. أكبر أجنحتنا.</p>
           <ul class="chips"><li>95 م²</li><li>غرفتا نوم</li><li>3 حمّامات</li><li>كينج + سريران مفردان + أريكة سرير</li><li>شرفة</li></ul>
           <div class="room-foot">
-            <div class="price"><small>من</small><strong><span>18 ر.ع.</span> <span>/ لليلة</span></strong></div>
+            <div class="price"><small>من</small><strong data-rate="executive"><span>18 ر.ع.</span> <span>/ لليلة</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="جناح تنفيذي بغرفتي نوم">احجز</a>
           </div>
         </div>
@@ -424,7 +424,7 @@
       <div class="every-room">
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>إنترنت ومواقف مجانية</span>
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>تنظيف يومي</span>
-        <span><svg aria-hidden="true"><use href="#i-check"/></svg>الإفطار بـ 2 ر.ع. للشخص</span>
+        <span data-rate="breakfast"><svg aria-hidden="true"><use href="#i-check"/></svg>الإفطار بـ 2 ر.ع. للشخص</span>
       </div>
       <span>الأسعار للغرفة في الليلة، قبل الضرائب، وتتغير مع الموسم. نؤكد لك السعر الدقيق عبر واتساب.</span>
     </div>
@@ -592,7 +592,7 @@
         <li>هندي</li><li>عربي وعماني</li><li>مغربي</li><li>مشاوي</li><li>بيتزا</li><li>عالمي</li><li>حلال</li>
       </ul>
       <div class="hours">
-        <div><small>الإفطار</small><strong>7:00 – 10:30 · 2 ر.ع. للشخص</strong></div>
+        <div><small>الإفطار</small><strong data-rate="breakfast">2:00 – 10:30 · 2 ر.ع. للشخص</strong></div>
         <div><small>الغداء والعشاء</small><strong>حسب الطلب، مع خدمة الغرف</strong></div>
       </div>
       <p class="fine u-mt-18">الإفطار كونتيننتال وحلال. أضفه عند الحجز، أو قرر في الصباح.</p>
@@ -774,7 +774,7 @@
       <div class="facts">
         <div class="fact"><small>تسجيل الوصول</small><strong>2:00 م – 11:00 م</strong></div>
         <div class="fact"><small>تسجيل المغادرة</small><strong>قبل 12:00 ظهراً</strong></div>
-        <div class="fact"><small>الإفطار</small><strong>7:00 – 10:30 · 2 ر.ع. للشخص</strong></div>
+        <div class="fact"><small>الإفطار</small><strong data-rate="breakfast">2:00 – 10:30 · 2 ر.ع. للشخص</strong></div>
         <div class="fact"><small>الدفع</small><strong>في الفندق · نقبل الدفع نقداً</strong></div>
         <div class="fact"><small>الأطفال</small><strong>مرحب بهم · لا توجد أسرّة أطفال أو أسرّة إضافية</strong></div>
         <div class="fact"><small>الحيوانات الأليفة</small><strong>غير مسموح بها</strong></div>

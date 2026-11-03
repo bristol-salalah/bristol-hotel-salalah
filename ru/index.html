@@ -48,7 +48,7 @@
     "@type": "Rating",
     "ratingValue": "3"
   },
-  "priceRange": "OMR 12.5–25",
+  "priceRange": "OMR 12.5–18",
   "checkinTime": "14:00",
   "checkoutTime": "12:00",
   "petsAllowed": false,
@@ -274,7 +274,7 @@
       <div class="hero-hotel-row">
         <figure class="hero-hotel"><img srcset="../assets/img/photos/hero-540.webp 540w, ../assets/img/photos/hero-800.webp 800w, ../assets/img/photos/hero-1080.webp 1023w" sizes="(max-width:860px) 100vw, 50vw" src="../assets/img/photos/hero.jpg" alt="Bristol Hotel Salalah в сумерках: синяя стеклянная башня с подсвеченным названием отеля на крыше" width="1023" height="700"></figure>
         <div class="hero-hotel-facts">
-          <div class="hero-badge"><strong>OMR 12.5+</strong><span>за ночь, без налогов</span></div>
+          <div class="hero-badge"><strong data-rate="min">OMR 12.5+</strong><span>за ночь, без налогов</span></div>
           <ul class="hero-facts2"><li><strong>42</strong> номера и люксы</li><li>Подогреваемый крытый бассейн</li><li><strong>15</strong> мин от аэропорта</li></ul>
         </div>
       </div>
@@ -284,10 +284,10 @@
   <div class="container booking" id="book">
     <form class="booking-card" id="booking-form" data-t-age="Возраст ребёнка {n}" data-t-under1="До 1 года" data-t-cap="Обычно в этом номере размещаются до {n} человек. Мы предложим в WhatsApp лучший вариант для вашей группы." data-t-ages="Укажите возраст каждого ребёнка" data-t-choose="Выбрать" data-t-est="Ночей: {n}, от {total}, без налогов" data-t-est1="1 ночь от {total}, без налогов" data-t-est2="2 ночи от {total}, без налогов" data-t-pick="Выберите даты заезда и выезда" data-t-err="Выезд должен быть позже заезда" aria-label="Запросить бронирование в WhatsApp">
       <label class="field field-room">Номер<select name="room" id="f-room">
-          <option value="Deluxe Room" data-price="12.5" data-max="2">Номер Deluxe, от OMR 12.5</option>
-          <option value="Junior Suite" data-price="16" data-max="3">Люкс Junior, от OMR 16</option>
-          <option value="Superior Suite" data-price="16" data-max="3">Люкс Superior с балконом, от OMR 16</option>
-          <option value="Executive Suite (2 bedrooms)" data-price="18" data-max="5">Люкс Executive, 2 спальни, от OMR 18</option>
+          <option value="Deluxe Room" data-rate="deluxe" data-price="12.5" data-max="2">Номер Deluxe, от OMR 12.5</option>
+          <option value="Junior Suite" data-rate="junior" data-price="16" data-max="3">Люкс Junior, от OMR 16</option>
+          <option value="Superior Suite" data-rate="superior" data-price="16" data-max="3">Люкс Superior с балконом, от OMR 16</option>
+          <option value="Executive Suite (2 bedrooms)" data-rate="executive" data-price="18" data-max="5">Люкс Executive, 18 спальни, от OMR 18</option>
         </select>
       </label>
       <label class="field field-date">Заезд<input type="date" name="checkin" id="f-in" required>
@@ -375,7 +375,7 @@
           <p>Просторные 40 м² с кроватью king-size, видом на город и полноценной ванной. Всё, что нужно на ночь или две.</p>
           <ul class="chips"><li>40 м²</li><li>1 кровать кинг-сайз</li><li>До 2 гостей</li><li>Вид на город</li></ul>
           <div class="room-foot">
-            <div class="price"><small>От</small><strong>OMR 12.5 <span>/ ночь</span></strong></div>
+            <div class="price"><small>От</small><strong data-rate="deluxe">OMR 12.5 <span>/ ночь</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Deluxe Room">Забронировать</a>
           </div>
         </div>
@@ -393,7 +393,7 @@
           <p>Спальня с кроватью king-size плюс отдельная гостиная с диваном-кроватью, две ванные комнаты и мини-кухня. Готовьте, работайте, живите просторно.</p>
           <ul class="chips"><li>70 м²</li><li>Кинг-сайз + диван-кровать</li><li>Гостиная</li><li>2 ванные</li><li>Мини-кухня</li></ul>
           <div class="room-foot">
-            <div class="price"><small>От</small><strong>OMR 16 <span>/ ночь</span></strong></div>
+            <div class="price"><small>От</small><strong data-rate="junior">OMR 16 <span>/ ночь</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Junior Suite">Забронировать</a>
           </div>
         </div>
@@ -411,7 +411,7 @@
           <p>Планировка люкса Junior на высоком этаже, с балконом и террасой с видом через город на горы Дофара.</p>
           <ul class="chips"><li>70 м²</li><li>Кинг-сайз + диван-кровать</li><li>Балкон</li><li>Вид на горы и город</li></ul>
           <div class="room-foot">
-            <div class="price"><small>От</small><strong>OMR 16 <span>/ ночь</span></strong></div>
+            <div class="price"><small>От</small><strong data-rate="superior">OMR 16 <span>/ ночь</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Superior Suite">Забронировать</a>
           </div>
         </div>
@@ -429,7 +429,7 @@
           <p>Две спальни — одна с кроватью king-size, другая с двумя односпальными, гостиная с диваном-кроватью, три ванные комнаты, мини-кухня и балкон. Наш самый большой люкс.</p>
           <ul class="chips"><li>95 м²</li><li>2 спальни</li><li>3 ванные</li><li>Кинг-сайз + 2 односпальные + диван-кровать</li><li>Балкон</li></ul>
           <div class="room-foot">
-            <div class="price"><small>От</small><strong>OMR 18 <span>/ ночь</span></strong></div>
+            <div class="price"><small>От</small><strong data-rate="executive">OMR 18 <span>/ ночь</span></strong></div>
             <a class="btn btn-primary btn-sm" href="#book" data-room="Executive Suite (2 bedrooms)">Забронировать</a>
           </div>
         </div>
@@ -439,7 +439,7 @@
       <div class="every-room">
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>Бесплатные Wi-Fi и парковка</span>
         <span><svg aria-hidden="true"><use href="#i-check"/></svg>Ежедневная уборка</span>
-        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Завтрак за OMR 2 с человека</span>
+        <span data-rate="breakfast"><svg aria-hidden="true"><use href="#i-check"/></svg>Завтрак за OMR 2 с человека</span>
       </div>
       <span>Цены за номер за ночь, без налогов, и меняются по сезону. Точную цену подтверждаем в WhatsApp.</span>
     </div>
@@ -607,7 +607,7 @@
         <li>Индийская</li><li>Арабская и оманская</li><li>Марокканская</li><li>Гриль</li><li>Пицца</li><li>Международная</li><li>Халяль</li>
       </ul>
       <div class="hours">
-        <div><small>Завтрак</small><strong>7:00 – 10:30 · OMR 2 с человека</strong></div>
+        <div><small>Завтрак</small><strong data-rate="breakfast">2:00 – 10:30 · OMR 2 с человека</strong></div>
         <div><small>Обед и ужин</small><strong>А-ля карт, плюс обслуживание номеров</strong></div>
       </div>
       <p class="fine u-mt-18">Завтрак континентальный и халяльный. Добавьте его при бронировании или решите утром.</p>
@@ -789,7 +789,7 @@
       <div class="facts">
         <div class="fact"><small>Заезд</small><strong>2:00 pm – 11:00 pm</strong></div>
         <div class="fact"><small>Выезд</small><strong>До 12:00, полдень</strong></div>
-        <div class="fact"><small>Завтрак</small><strong>7:00 – 10:30 · OMR 2 с человека</strong></div>
+        <div class="fact"><small>Завтрак</small><strong data-rate="breakfast">2:00 – 10:30 · OMR 2 с человека</strong></div>
         <div class="fact"><small>Оплата</small><strong>В отеле · наличные принимаются</strong></div>
         <div class="fact"><small>Дети</small><strong>Добро пожаловать · без детских кроваток и дополнительных кроватей</strong></div>
         <div class="fact"><small>Животные</small><strong>Не допускаются</strong></div>
