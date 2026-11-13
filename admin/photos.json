@@ -1,0 +1,458 @@
+[
+ {
+  "path": "assets/img/photos/hero.jpg",
+  "w": 1023,
+  "h": 700,
+  "thumb": "assets/img/photos/hero-540.webp",
+  "group": "Top of the page",
+  "label": "Bristol Hotel Salalah at dusk: a blue glass tower with the hotel name lit on the roof"
+ },
+ {
+  "path": "assets/img/photos/reception.jpg",
+  "w": 1080,
+  "h": 690,
+  "thumb": "assets/img/photos/reception-540.webp",
+  "group": "About the hotel",
+  "label": "Reception desk in cream marble under a crystal chandelier"
+ },
+ {
+  "path": "assets/img/photos/monogram-wall.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/monogram-wall-540.webp",
+  "group": "About the hotel",
+  "label": "The Bristol B monogram in gold and white on the lobby wall"
+ },
+ {
+  "path": "assets/img/photos/room-deluxe.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/room-deluxe-540.webp",
+  "group": "Deluxe Room",
+  "label": "Deluxe Room with a king bed, white linen and a brown bed runner"
+ },
+ {
+  "path": "assets/img/photos/deluxe-armchairs.jpg",
+  "w": 1023,
+  "h": 768,
+  "thumb": "assets/img/photos/deluxe-armchairs-540.webp",
+  "group": "Deluxe Room",
+  "label": "Deluxe Room with a king bed and two armchairs"
+ },
+ {
+  "path": "assets/img/photos/room-deluxe-2.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/room-deluxe-2-540.webp",
+  "group": "Deluxe Room",
+  "label": "Deluxe Room with a king bed and a desk"
+ },
+ {
+  "path": "assets/img/photos/bathroom.jpg",
+  "w": 1067,
+  "h": 700,
+  "thumb": "assets/img/photos/bathroom-540.webp",
+  "group": "Deluxe Room",
+  "label": "Bathroom with beige tiles and a glass shower"
+ },
+ {
+  "path": "assets/img/photos/junior-bed.jpg",
+  "w": 1920,
+  "h": 1280,
+  "thumb": "assets/img/photos/junior-bed-540.webp",
+  "group": "Junior Suite",
+  "label": "Junior Suite bedroom with a king bed, a red cushion and a patterned rug"
+ },
+ {
+  "path": "assets/img/photos/junior-living.jpg",
+  "w": 1920,
+  "h": 1280,
+  "thumb": "assets/img/photos/junior-living-540.webp",
+  "group": "Junior Suite",
+  "label": "Junior Suite living room with a red sofa, coffee table and wall TV"
+ },
+ {
+  "path": "assets/img/photos/junior-kitchen.jpg",
+  "w": 1920,
+  "h": 1280,
+  "thumb": "assets/img/photos/junior-kitchen-540.webp",
+  "group": "Junior Suite",
+  "label": "Junior Suite kitchenette with glossy cupboards, a fridge, microwave and kettle"
+ },
+ {
+  "path": "assets/img/photos/junior-swans.jpg",
+  "w": 1600,
+  "h": 864,
+  "thumb": "assets/img/photos/junior-swans-540.webp",
+  "group": "Junior Suite",
+  "label": "King bed in the Junior Suite with towel swans and rose petals"
+ },
+ {
+  "path": "assets/img/photos/junior-bath.jpg",
+  "w": 1920,
+  "h": 1280,
+  "thumb": "assets/img/photos/junior-bath-540.webp",
+  "group": "Junior Suite",
+  "label": "Junior Suite bathroom with a glass shower, basin and embroidered towel"
+ },
+ {
+  "path": "assets/img/photos/superior-balcony-bed.jpg",
+  "w": 1600,
+  "h": 843,
+  "thumb": "assets/img/photos/superior-balcony-bed-540.webp",
+  "group": "Superior Suite",
+  "label": "Superior Suite bedroom with towel swans on the bed and a balcony looking over Salalah"
+ },
+ {
+  "path": "assets/img/photos/superior-balcony-view.jpg",
+  "w": 1600,
+  "h": 864,
+  "thumb": "assets/img/photos/superior-balcony-view-540.webp",
+  "group": "Superior Suite",
+  "label": "Superior Suite bedroom, with the balcony door open onto the city and the mountains"
+ },
+ {
+  "path": "assets/img/photos/superior-living.jpg",
+  "w": 1920,
+  "h": 1440,
+  "thumb": "assets/img/photos/superior-living-540.webp",
+  "group": "Superior Suite",
+  "label": "Superior Suite living room with a green sofa, dining table and open kitchenette"
+ },
+ {
+  "path": "assets/img/photos/superior-dining.jpg",
+  "w": 1920,
+  "h": 1440,
+  "thumb": "assets/img/photos/superior-dining-540.webp",
+  "group": "Superior Suite",
+  "label": "Dining table in the Superior Suite, set for two beside the kitchen counter"
+ },
+ {
+  "path": "assets/img/photos/superior-bed.jpg",
+  "w": 1920,
+  "h": 1440,
+  "thumb": "assets/img/photos/superior-bed-540.webp",
+  "group": "Superior Suite",
+  "label": "King bed in the Superior Suite with white linen and a gold and brown runner"
+ },
+ {
+  "path": "assets/img/photos/executive-living.jpg",
+  "w": 1600,
+  "h": 1200,
+  "thumb": "assets/img/photos/executive-living-540.webp",
+  "group": "Executive Suite",
+  "label": "Executive Suite living room with a blue sofa, coffee table and the bathroom beyond"
+ },
+ {
+  "path": "assets/img/photos/executive-twin.jpg",
+  "w": 1600,
+  "h": 864,
+  "thumb": "assets/img/photos/executive-twin-540.webp",
+  "group": "Executive Suite",
+  "label": "Twin bedroom in the Executive Suite with two single beds"
+ },
+ {
+  "path": "assets/img/photos/executive-king.jpg",
+  "w": 1600,
+  "h": 864,
+  "thumb": "assets/img/photos/executive-king-540.webp",
+  "group": "Executive Suite",
+  "label": "King bedroom in the Executive Suite with towel swans on the bed"
+ },
+ {
+  "path": "assets/img/photos/executive-lounge.jpg",
+  "w": 1920,
+  "h": 1280,
+  "thumb": "assets/img/photos/executive-lounge-540.webp",
+  "group": "Executive Suite",
+  "label": "Executive Suite lounge with brown sofas, a rug and a wall TV"
+ },
+ {
+  "path": "assets/img/photos/executive-kitchen.jpg",
+  "w": 1600,
+  "h": 864,
+  "thumb": "assets/img/photos/executive-kitchen-540.webp",
+  "group": "Executive Suite",
+  "label": "Executive Suite kitchenette with a sink, microwave and fridge"
+ },
+ {
+  "path": "assets/img/photos/pool.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/pool-540.webp",
+  "group": "Photo gallery",
+  "label": "Heated indoor pool with white tiles and wooden loungers"
+ },
+ {
+  "path": "assets/img/photos/entrance-flags.jpg",
+  "w": 1920,
+  "h": 1440,
+  "thumb": "assets/img/photos/entrance-flags-540.webp",
+  "group": "Photo gallery",
+  "label": "The hotel entrance, with the Bristol Hotel sign above the door and a row of flags"
+ },
+ {
+  "path": "assets/img/photos/lobby-tree-tall.jpg",
+  "w": 1920,
+  "h": 2560,
+  "thumb": "assets/img/photos/lobby-tree-tall-540.webp",
+  "group": "Photo gallery",
+  "label": "Lobby lounge with a green velvet sofa under the tree mural"
+ },
+ {
+  "path": "assets/img/photos/laylati-hall.jpg",
+  "w": 1920,
+  "h": 1440,
+  "thumb": "assets/img/photos/laylati-hall-540.webp",
+  "group": "Photo gallery",
+  "label": "Laylati Hall set for a celebration: round tables, chair covers and a lit dance floor"
+ },
+ {
+  "path": "assets/img/photos/restaurant.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/restaurant-540.webp",
+  "group": "Photo gallery",
+  "label": "Silk Road Restaurant dining room with cream chairs and marble floors"
+ },
+ {
+  "path": "assets/img/photos/lobby-armchairs.jpg",
+  "w": 1920,
+  "h": 1440,
+  "thumb": "assets/img/photos/lobby-armchairs-540.webp",
+  "group": "Photo gallery",
+  "label": "Lobby lounge with black velvet armchairs, white cushions and gold glass tables"
+ },
+ {
+  "path": "assets/img/photos/steam-room.jpg",
+  "w": 1280,
+  "h": 690,
+  "thumb": "assets/img/photos/steam-room-540.webp",
+  "group": "Photo gallery",
+  "label": "Steam room lined with blue mosaic tiles"
+ },
+ {
+  "path": "assets/img/photos/welcome-coffee.jpg",
+  "w": 1920,
+  "h": 1440,
+  "thumb": "assets/img/photos/welcome-coffee-540.webp",
+  "group": "Photo gallery",
+  "label": "Welcome trolley with Omani coffee, dates and sweets in the lobby"
+ },
+ {
+  "path": "assets/img/photos/sauna.jpg",
+  "w": 1080,
+  "h": 667,
+  "thumb": "assets/img/photos/sauna-540.webp",
+  "group": "Photo gallery",
+  "label": "Wood-panelled sauna with a bucket and ladle"
+ },
+ {
+  "path": "assets/img/photos/dining-window.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/dining-window-540.webp",
+  "group": "Photo gallery",
+  "label": "Restaurant tables set for dinner by the window"
+ },
+ {
+  "path": "assets/img/photos/laylati-banquet.jpg",
+  "w": 1599,
+  "h": 899,
+  "thumb": "assets/img/photos/laylati-banquet-540.webp",
+  "group": "Photo gallery",
+  "label": "Laylati Hall by day, with round tables set for a banquet beside the windows"
+ },
+ {
+  "path": "assets/img/photos/terrace.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/terrace-540.webp",
+  "group": "Photo gallery",
+  "label": "Outdoor terrace with tables and chairs beside the hotel entrance"
+ },
+ {
+  "path": "assets/img/photos/pool-loungers.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/pool-loungers-540.webp",
+  "group": "Photo gallery",
+  "label": "Indoor pool with loungers along the wall"
+ },
+ {
+  "path": "assets/img/photos/coffee.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/coffee-540.webp",
+  "group": "Photo gallery",
+  "label": "Arabic coffee and a rose on a tray"
+ },
+ {
+  "path": "assets/img/photos/exterior-tower.jpg",
+  "w": 1920,
+  "h": 1440,
+  "thumb": "assets/img/photos/exterior-tower-540.webp",
+  "group": "Photo gallery",
+  "label": "The blue glass tower of Bristol Hotel Salalah against a clear sky"
+ },
+ {
+  "path": "assets/img/photos/towels.jpg",
+  "w": 1067,
+  "h": 1296,
+  "thumb": "assets/img/photos/towels-540.webp",
+  "group": "Photo gallery",
+  "label": "Embroidered hand towels by the bathroom basin"
+ },
+ {
+  "path": "assets/img/photos/gym-2.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/gym-2-540.webp",
+  "group": "Photo gallery",
+  "label": "Fitness centre with treadmills and weight machines"
+ },
+ {
+  "path": "assets/img/photos/buffet.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/buffet-540.webp",
+  "group": "Photo gallery",
+  "label": "Breakfast buffet with chafing dishes"
+ },
+ {
+  "path": "assets/img/photos/laylati-lounge.jpg",
+  "w": 1920,
+  "h": 1440,
+  "thumb": "assets/img/photos/laylati-lounge-540.webp",
+  "group": "Photo gallery",
+  "label": "Tufted armchairs by the window in Laylati Hall"
+ },
+ {
+  "path": "assets/img/photos/terrace-umbrella.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/terrace-umbrella-540.webp",
+  "group": "Photo gallery",
+  "label": "Terrace tables under a parasol by the glass façade"
+ },
+ {
+  "path": "assets/img/photos/pool-columns.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/pool-columns-540.webp",
+  "group": "Photo gallery",
+  "label": "Indoor pool seen between marble columns"
+ },
+ {
+  "path": "assets/img/photos/dining-table.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/dining-table-540.webp",
+  "group": "Photo gallery",
+  "label": "Table setting with placemats and cutlery"
+ },
+ {
+  "path": "assets/img/photos/reception-2.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/reception-2-540.webp",
+  "group": "Photo gallery",
+  "label": "Reception desk under a chandelier"
+ },
+ {
+  "path": "assets/img/photos/gym-wide.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/gym-wide-540.webp",
+  "group": "Photo gallery",
+  "label": "Gym with weight machines and a wooden ceiling"
+ },
+ {
+  "path": "assets/img/photos/slippers.jpg",
+  "w": 1920,
+  "h": 1280,
+  "thumb": "assets/img/photos/slippers-540.webp",
+  "group": "Photo gallery",
+  "label": "Bristol Hotels slippers laid out on the wardrobe shelf"
+ },
+ {
+  "path": "assets/img/photos/restaurant-2.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/restaurant-2-540.webp",
+  "group": "Photo gallery",
+  "label": "Silk Road Restaurant with cream chairs"
+ },
+ {
+  "path": "assets/img/photos/corridor.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/corridor-540.webp",
+  "group": "Photo gallery",
+  "label": "Hotel corridor with marble floors"
+ },
+ {
+  "path": "assets/img/photos/pool-hall.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/pool-hall-540.webp",
+  "group": "Photo gallery",
+  "label": "The pool hall with its high ceiling"
+ },
+ {
+  "path": "assets/img/photos/exterior-day.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/exterior-day-540.webp",
+  "group": "Instagram strip",
+  "label": ""
+ },
+ {
+  "path": "assets/img/photos/food.jpg",
+  "w": 675,
+  "h": 700,
+  "thumb": "assets/img/photos/food-540.webp",
+  "group": "Instagram strip",
+  "label": ""
+ },
+ {
+  "path": "assets/img/photos/pool-2.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/pool-2-540.webp",
+  "group": "Pool and wellness",
+  "label": "Indoor pool with a basket of striped towels on a lounger"
+ },
+ {
+  "path": "assets/img/photos/gym.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/gym-540.webp",
+  "group": "Pool and wellness",
+  "label": "Fitness centre with a row of treadmills"
+ },
+ {
+  "path": "assets/img/photos/restaurant-window.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/restaurant-window-540.webp",
+  "group": "Restaurant",
+  "label": "Restaurant tables set with white napkins beside a window onto the street"
+ },
+ {
+  "path": "assets/img/photos/suite-tv.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/suite-tv-540.webp",
+  "group": "Offers",
+  "label": "Suite living room with a sofa and wall-mounted TV"
+ },
+ {
+  "path": "assets/img/photos/room-king-window.jpg",
+  "w": 1080,
+  "h": 700,
+  "thumb": "assets/img/photos/room-king-window-540.webp",
+  "group": "Offers",
+  "label": "King bedroom with towel swans on the bed and a window onto the city"
+ }
+]

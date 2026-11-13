@@ -1,6 +1,6 @@
-# Rebuilds the site when the prices file changes, so hotel staff can edit
-# rates.json on GitHub and see the new prices online a few minutes later.
-# Can also be started by hand from the Actions tab (Run workflow).
+# Rebuilds the site when the prices file changes, so a save from the dashboard at
+# /admin/ (prices and photos), or an edit of rates.json on GitHub, is online a few
+# minutes later. Can also be started by hand from the Actions tab (Run workflow).
 name: Build site
 
 on:
@@ -23,10 +23,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install cwebp, which makes the smaller copies of each photo
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq webp
+      # A replaced photo keeps its file name, so its smaller copies still show the old
+      # picture. Remove them and the build makes new ones.
+      - name: Drop the smaller copies of photos that were replaced
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            BEFORE=$(git rev-parse HEAD~1)
+          fi
+          git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'assets/img/photos/*.jpg' | while read -r jpg; do
+            echo "replaced: $jpg"
+            rm -f "${jpg%.jpg}"-540.webp "${jpg%.jpg}"-800.webp "${jpg%.jpg}"-1080.webp "${jpg%.jpg}"-1920.webp
+          done
       - name: Build the pages from rates.json and the translations
         run: |
           python3 tools/build.py
@@ -40,6 +56,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nothing changed."
           else
-            git commit -m "Build: prices from rates.json [skip ci]"
+            git commit -m "Build: pages from the latest prices and photos [skip ci]"
             git push
           fi

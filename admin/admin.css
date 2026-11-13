@@ -1,0 +1,130 @@
+/* Bristol Hotel Salalah — website dashboard. Same palette and fonts as the site. */
+:root {
+  --sand: #faf7f2;
+  --stone: #f1ebe2;
+  --stone-deep: #cfc3b1;
+  --ink: #111820;
+  --ink-soft: #5b6268;
+  --night: #1b4660;
+  --night-deep: #0f2a3a;
+  --ember: #b05e2a;
+  --ember-deep: #97491c;
+  --teal: #1f6f86;
+  --white: #ffffff;
+  --line: rgba(31, 26, 20, .16);
+  --good: #1d6b45;
+  --bad: #a32a1c;
+  --display: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --arabic: "Tajawal", "Geeza Pro", "Noto Sans Arabic", system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--body); font-size: 16px; line-height: 1.5; color: var(--ink); background: var(--sand); }
+body.has-bar { padding-bottom: 96px; }
+[hidden] { display: none !important; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.boot { text-align: center; padding: 80px 16px; color: var(--ink-soft); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+h1 { font-family: var(--display); font-weight: 600; font-size: 30px; line-height: 1.15; margin: 22px 0 6px; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 21px; margin: 0 0 10px; }
+.intro { margin: 0 0 18px; color: var(--ink-soft); }
+.note, .foot { color: var(--ink-soft); font-size: 14px; margin: 18px 0 0; }
+.foot { margin: 28px 0 32px; }
+.hint { display: block; color: var(--ink-soft); font-size: 13.5px; margin: 0; }
+.hint.warn { color: var(--ember-deep); }
+
+/* ---- header and tabs ---- */
+.top { background: var(--night-deep); color: var(--white); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.brand img { width: auto; height: 34px; flex: none; }
+.brand { flex-wrap: wrap; }
+.brand b { display: block; font-family: var(--display); font-size: 18px; font-weight: 600; line-height: 1.2; }
+.brand span { display: block; font-size: 13px; opacity: .75; }
+.top-links { display: flex; align-items: center; gap: 16px; flex: none; font-size: 14.5px; }
+.top-links a, .link { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.link { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; }
+
+.tabs { background: var(--night); position: sticky; top: 0; z-index: 5; }
+.tabs .wrap { display: flex; gap: 4px; overflow-x: auto; padding-top: 8px; padding-bottom: 8px; scrollbar-width: none; }
+.tabs .wrap::-webkit-scrollbar { display: none; }
+.tabs button { flex: none; font: inherit; font-size: 14.5px; font-weight: 600; color: rgba(255, 253, 249, .8); background: none; border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+.tabs button.on { background: var(--white); color: var(--night-deep); }
+
+/* ---- cards, lines, fields ---- */
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px; margin: 0 0 12px; }
+.card.review { padding: 14px 16px; display: grid; gap: 10px; }
+.group { margin: 0 0 30px; }
+.line { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+.line:first-child { border-top: 0; }
+.line .name { flex: 1; min-width: 0; font-weight: 600; }
+.line .name small { display: block; font-weight: 400; font-size: 13.5px; color: var(--ink-soft); }
+.money { display: inline-flex; align-items: center; gap: 6px; flex: none; }
+.unit { color: var(--ink-soft); font-weight: 600; font-size: 14.5px; }
+.trip-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.tools { display: flex; gap: 6px; }
+
+input[type="text"], input[type="password"], textarea {
+  width: 100%; font: inherit; color: var(--ink); background: #fff; border: 1.5px solid var(--stone-deep); border-radius: 10px; padding: 10px 12px; min-height: 44px;
+}
+textarea { resize: vertical; line-height: 1.5; }
+input.num { width: 84px; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+input.ar, textarea.ar { font-family: var(--arabic); }
+input:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible, label.btn:focus-within { outline: 3px solid var(--teal); outline-offset: 2px; }
+.field { display: grid; gap: 5px; }
+.lbl { font-size: 13.5px; font-weight: 600; color: var(--ink-soft); }
+
+/* ---- buttons ---- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--night-deep); background: var(--night-deep); color: var(--white); font: inherit; font-weight: 700; cursor: pointer; text-decoration: none; }
+.btn.primary { background: var(--ember); border-color: var(--ember); }
+.btn.primary:hover { background: var(--ember-deep); border-color: var(--ember-deep); }
+.btn.ghost { background: transparent; color: var(--night-deep); }
+.btn.ghost.light { color: var(--white); border-color: rgba(255, 253, 249, .55); }
+.btn.small { min-height: 38px; padding: 6px 14px; font-size: 14.5px; }
+.btn:disabled, .icon:disabled { opacity: .4; cursor: default; }
+.icon { width: 40px; height: 40px; border-radius: 10px; border: 1.5px solid var(--stone-deep); background: #fff; color: var(--ink); font: inherit; font-size: 18px; line-height: 1; cursor: pointer; }
+.icon.del { color: var(--bad); }
+
+/* ---- photos ---- */
+.photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; align-items: start; }
+.photo { margin: 0; background: var(--white); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.photo.new { border-color: var(--ember); box-shadow: 0 0 0 2px var(--ember); }
+.frame { position: relative; background: var(--stone); }
+.frame img { display: block; width: 100%; height: auto; }
+.badge { position: absolute; left: 8px; top: 8px; background: var(--ember); color: #fff; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+.photo figcaption { display: grid; gap: 8px; padding: 10px 12px 12px; font-size: 14.5px; }
+.photo-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* ---- messages ---- */
+.status { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px 12px; margin: 16px 0 0; padding: 12px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--white); font-weight: 600; }
+.status.good { border-color: var(--good); color: var(--good); }
+.status.bad { border-color: var(--bad); color: var(--bad); }
+.status.warn { border-color: var(--ember-deep); color: var(--ember-deep); }
+.status a { color: inherit; }
+.status ul { margin: 6px 0 0; padding-left: 20px; font-weight: 400; }
+.spin { flex: none; width: 18px; height: 18px; margin-top: 3px; border-radius: 50%; border: 3px solid var(--stone-deep); border-top-color: var(--ember); animation: spin .9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spin { animation-duration: 4s; } }
+
+/* ---- publish bar ---- */
+.bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--night-deep); color: var(--white); box-shadow: 0 -10px 30px -12px rgba(21, 22, 46, .6); }
+.bar .what { min-width: 0; font-size: 14.5px; font-weight: 600; }
+.bar-btns { display: flex; gap: 8px; flex: none; }
+
+/* ---- sign in ---- */
+.signin { max-width: 420px; margin: 0 auto; padding: 56px 20px; text-align: center; }
+.signin img { width: 220px; height: auto; }
+.signin h1 { margin-top: 14px; }
+.signin form { display: grid; gap: 12px; margin: 24px 0 14px; text-align: start; }
+
+@media (max-width: 480px) {
+  h1 { font-size: 26px; }
+  .line.room, .line.score { flex-wrap: wrap; }
+  .line.room .name, .line.score .name { flex-basis: 100%; }
+  .bar { flex-direction: column; align-items: stretch; }
+  .bar-btns .btn { flex: 1; }
+}
+
+.photo figcaption b { font-weight: 600; font-size: 13.5px; line-height: 1.35; }

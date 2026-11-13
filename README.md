@@ -14,8 +14,9 @@ hi/ de/ ru/ fr/ it/ pl/ zh/   Generated language pages, each with a guide/ (don'
 ar/guide/             Generated Arabic guide (from data/i18n/ar.json)
 data/i18n/            Translation catalogs, one JSON per language (+ _source.json, written by the build)
 rates.json       Room and breakfast prices, the one file to edit for a price change (see **Changing the prices**)
-.github/workflows/    build.yaml: rebuilds and commits the pages when rates.json changes
-tools/                build.py, rates.py, i18n.py, images.py, check_i18n.py, check_html.py (Python 3; images.py needs cwebp)
+.github/workflows/    build.yaml: rebuilds and commits the pages when rates.json changes (a dashboard save always changes it)
+admin/                The hotel's dashboard for prices and photos (see **The hotel's dashboard**)
+tools/                build.py, rates.py, dashboard.py, i18n.py, images.py, check_i18n.py, check_html.py (Python 3; images.py needs cwebp), make_login.mjs (Node)
 404.html              "Page not found" page
 assets/css/style.css  All styles (colours and fonts are set at the top in :root)
 assets/css/fonts.css  Self-hosted fonts (no Google requests), incl. Latin-extended and Cyrillic subsets
@@ -27,7 +28,32 @@ assets/img/photos/    57 hotel photos as JPEG (up to 1920 px) plus WebP variants
 robots.txt, sitemap.xml, .nojekyll
 ```
 
-## Changing the prices (no technical knowledge needed)
+## The hotel's dashboard
+
+`/admin/` (https://www.bristolhotelsalalah.com/admin/) is a page for hotel staff: the four room
+prices, the breakfast price, and replacing any of the hotel's photos. It asks for a login and a
+password and needs no knowledge of GitHub. A save shows on the website about three minutes later.
+
+It has no server. It commits `rates.json` and the new photos (`assets/img/photos/<name>.jpg`, cut
+to the size of the photo they replace) to `main` through the GitHub API; the `Build site` action
+then makes the smaller WebP copies of a replaced photo and rebuilds the pages.
+
+| What | Where |
+|---|---|
+| The page | `admin/` (`index.html`, `admin.js`, `admin.css`) |
+| The photo list it shows, and the stamp that tells it a save is live | `admin/photos.json`, `admin/built.json`, written by `tools/dashboard.py` on every build |
+| The login | `admin/access.json`, written by `tools/make_login.mjs` |
+
+The login and password are not checked anywhere: the password decrypts, in the browser, a GitHub
+access key stored locked in `access.json`. That key must be a fine-grained token for this repository
+only (Contents: read and write), made by the account that owns the repository. Set or change the
+login with `BH_TOKEN=github_pat_... node tools/make_login.mjs <login> [password]`, then commit and
+push `access.json`. Deleting the token on GitHub locks everyone out.
+
+`/admin/?branch=<name>` saves to another branch instead of `main`, which changes nothing on the
+website: use it to try the dashboard.
+
+## Changing the prices by hand on GitHub
 
 All room prices and the breakfast price live in one file: **`rates.json`**.
 

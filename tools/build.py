@@ -26,6 +26,7 @@ from datetime import date
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import html as htmlmod  # noqa: E402
 import i18n  # noqa: E402
+import dashboard  # noqa: E402
 import images  # noqa: E402
 import rates  # noqa: E402
 
@@ -241,6 +242,7 @@ def main():
                 sources[page] = out
         for k in i18n.collect(sources[page]):
             keys.setdefault(k, set()).add(page + "index.html")
+    dashboard.write(sources[""])
     I18N.mkdir(parents=True, exist_ok=True)
     (I18N / "_source.json").write_text(json.dumps({k: sorted(v) for k, v in sorted(keys.items())}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
